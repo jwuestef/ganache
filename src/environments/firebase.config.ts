@@ -4,3 +4,5 @@
 //   databaseURL: 'https://lms-by-haj.firebaseio.com',
 //   storageBucket: 'lms-by-haj.appspot.com'
 // };
+
+// OUTDATED INFO ^^ STOLEN FROM PREVIOUS PROJECT
