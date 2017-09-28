@@ -54,6 +54,7 @@ export class ContactComponent {
       } else {
         // Successful login!
         $('.modal-backdrop').remove();
+        location.reload();
       }
     });
   }
