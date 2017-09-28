@@ -4,5 +4,6 @@
   <li><a href="/chocolates">Our Chocolates</a></li>
   <li><a href="/shop">Shop</a></li>
   <li><a href="/contact">Contact Us</a></li>
+  <li *ngIf="isAdmin"><a href="" (click)="logout()">Logout</a></li>
 </ul>
 
