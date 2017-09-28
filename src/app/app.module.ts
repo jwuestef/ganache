@@ -23,12 +23,16 @@ import { firebaseConfig } from '../environments/firebase.config';
 
 // Services
 import { AuthService } from './services/auth.service';
+<<<<<<< HEAD
 import { TrufflesComponent } from './truffles/truffles.component';
 import { CreamsComponent } from './creams/creams.component';
 import { BarksComponent } from './barks/barks.component';
 import { FudgeComponent } from './fudge/fudge.component';
 import { MorechocComponent } from './morechoc/morechoc.component';
 import { SeasonalComponent } from './seasonal/seasonal.component';
+=======
+import { FooterComponent } from './footer/footer.component';
+>>>>>>> 7291f9c1c4bf9abf8900a737aa21ff8ca34c2420
 
 
 @NgModule({
@@ -40,12 +44,16 @@ import { SeasonalComponent } from './seasonal/seasonal.component';
     ChocolatesComponent,
     ShopComponent,
     ContactComponent,
+<<<<<<< HEAD
     TrufflesComponent,
     CreamsComponent,
     BarksComponent,
     FudgeComponent,
     MorechocComponent,
     SeasonalComponent
+=======
+    FooterComponent
+>>>>>>> 7291f9c1c4bf9abf8900a737aa21ff8ca34c2420
   ],
   imports: [
     BrowserModule,
