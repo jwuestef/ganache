@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
+import * as $ from 'jquery';
 
 // Components
 import { AppComponent } from './app.component';
@@ -18,10 +19,10 @@ import { ContactComponent } from './contact/contact.component';
 
 // Configuration
 import { routes } from './services/routes';
-// import { firebaseConfig } from '../environments/firebase.config';
+import { firebaseConfig } from '../environments/firebase.config';
 
 // Services
-// must also include under providers
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -38,11 +39,12 @@ import { routes } from './services/routes';
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    // AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(firebaseConfig),
   ],
   providers: [
     AngularFireAuth,
-    AngularFireDatabase
+    AngularFireDatabase,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

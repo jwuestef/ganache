@@ -1,8 +1,9 @@
-// export const firebaseConfig = {
-//   apiKey: 'AIzaSyCzw4sf3Qi7KcUZW-_L2is6F0V-QgGFpWs',
-//   authDomain: 'lms-by-haj.firebaseapp.com',
-//   databaseURL: 'https://lms-by-haj.firebaseio.com',
-//   storageBucket: 'lms-by-haj.appspot.com'
-// };
-
-// OUTDATED INFO ^^ STOLEN FROM PREVIOUS PROJECT
+// Found in Firebase console under Project Settings, in sidebar next to Overview, select "Add Firebase to your web app"
+export const firebaseConfig = {
+  apiKey: 'AIzaSyDxoRH_PfiV1akr09aPJ1nALrcz9HxtEKg',
+  authDomain: 'ganache-chocolatier.firebaseapp.com',
+  databaseURL: 'https://ganache-chocolatier.firebaseio.com',
+  projectId: 'ganache-chocolatier',
+  storageBucket: 'ganache-chocolatier.appspot.com',
+  messagingSenderId: '622171220245'
+};
