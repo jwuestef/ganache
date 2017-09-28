@@ -7,7 +7,12 @@
   In addition, we offer a select variety online. Click here to shop our <a href="#"><strong>online store</strong></a></p>
 <div>
   <ul *ngIf="!this.admin else otherTmpl">
-    <li *ngFor= "let chocolate of myChocolates">{{chocolate}}</li>
+    <li><a href="/truffles">Gourmet Truffles</a></li>
+    <li><a href="/creams">Assorted Creams</a></li>
+    <li><a href="/barks">Barks and Toffee</a></li>
+    <li><a href="/fudge">Fudge</a></li>
+    <li><a href="/morechoc">More Chocolates</a></li>
+    <li><a href="/seasonal">Seasonal Treats</a></li>
   </ul>
 </div>
 <ng-template #otherTmpl>
