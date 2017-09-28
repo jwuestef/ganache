@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chocolates.component.css']
 })
 export class ChocolatesComponent implements OnInit {
+  myChocolates = ['Buttercreme','Vanilla','Swirl'];
 
   constructor() { }
 
