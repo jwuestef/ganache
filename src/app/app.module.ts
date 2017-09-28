@@ -23,6 +23,7 @@ import { firebaseConfig } from '../environments/firebase.config';
 
 // Services
 import { AuthService } from './services/auth.service';
+import { ContentService } from './services/content.service';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { AuthService } from './services/auth.service';
   providers: [
     AngularFireAuth,
     AngularFireDatabase,
-    AuthService
+    AuthService,
+    ContentService
   ],
   bootstrap: [AppComponent]
 })
