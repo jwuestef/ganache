@@ -23,6 +23,7 @@ import { firebaseConfig } from '../environments/firebase.config';
 
 // Services
 import { AuthService } from './services/auth.service';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { AuthService } from './services/auth.service';
     AboutComponent,
     ChocolatesComponent,
     ShopComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
