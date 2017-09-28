@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.navbar{
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(brown), to(white));
+  background-image: -webkit-linear-gradient(top, white, brown, white);
+  background-image: -moz-linear-gradient(top, white, brown, white);
+  background-image: linear-gradient(to left, white, brown, white);
+  color: black;
+}

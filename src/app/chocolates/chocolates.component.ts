@@ -8,15 +8,16 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./chocolates.component.css']
 })
 export class ChocolatesComponent implements OnInit {
-  myChocolates = ['Buttercreme','Vanilla','Swirl'];
   isAdmin = false;
+  myChocolates = ['Gourmet Truffles', 'Assorted Creams', 'Barks and Toffee', 'Fudge', 'More Chocolates', 'Seasonal Treats'];
 
-    // The contructor function runs automatically on component load, each and every time it's called
-    constructor(public as: AuthService) {
-      this.isAdmin = this.as.isAuthed();
-    }
-    ngOnInit(){
+  // The contructor function runs automatically on component load, each and every time it's called
+  constructor(public as: AuthService) {
+    this.isAdmin = this.as.isAuthed();
+  }
 
-    }
+  ngOnInit() {
+
+  }
 
 }

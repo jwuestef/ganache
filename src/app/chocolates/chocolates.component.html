@@ -1,11 +1,10 @@
-<p>
-  chocolates works!
-</p>
-
 <p *ngIf="isAdmin">Is admin!!!</p>
 
-<h1>Ganache Chocolatier</h1>
-<h2>We have the following chocolates available today!</h2>
+<p>Our business prides itself on our artfully crafted, locally made chocolates.
+  Beginning with the finest ingredients, Ganache Choclatier provides customers with a finished product that's made in house with the richest flavors.
+  With treats almost too pretty to eat, your tastebudes are sure to dance.
+  All of our prodcuts are available in store.
+  In addition, we offer a select variety online. Click here to shop our <a href="#"><strong>online store</strong></a></p>
 <div>
   <ul *ngIf="!this.admin else otherTmpl">
     <li *ngFor= "let chocolate of myChocolates">{{chocolate}}</li>
