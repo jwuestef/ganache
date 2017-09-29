@@ -23,6 +23,12 @@ import { firebaseConfig } from '../environments/firebase.config';
 
 // Services
 import { AuthService } from './services/auth.service';
+import { TrufflesComponent } from './truffles/truffles.component';
+import { CreamsComponent } from './creams/creams.component';
+import { BarksComponent } from './barks/barks.component';
+import { FudgeComponent } from './fudge/fudge.component';
+import { MorechocComponent } from './morechoc/morechoc.component';
+import { SeasonalComponent } from './seasonal/seasonal.component';
 import { FooterComponent } from './footer/footer.component';
 
 
@@ -35,6 +41,12 @@ import { FooterComponent } from './footer/footer.component';
     ChocolatesComponent,
     ShopComponent,
     ContactComponent,
+    TrufflesComponent,
+    CreamsComponent,
+    BarksComponent,
+    FudgeComponent,
+    MorechocComponent,
+    SeasonalComponent,
     FooterComponent
   ],
   imports: [
