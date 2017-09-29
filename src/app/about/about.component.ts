@@ -4,7 +4,7 @@ import { NgModel } from '@angular/forms';
 
 import { AuthService } from '../services/auth.service';
 import { ContentService } from '../services/content.service';
-import { AngularFireDatabase } from 'angularfire2/database/';
+import { AngularFireDatabase } from 'angularfire2/database/database';
 
 
 @Component({
