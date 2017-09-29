@@ -5,4 +5,18 @@
 </p>
 
 <p *ngIf="isAdmin">Is admin!!!</p>
+
+<h1 *ngIf="!isAdmin else inputHeader" [innerText]="mainHeader"></h1>
+<ng-template #inputHeader>
+  <input type="text" [(ngModel)]="mainHeader">
+  <button (click)="updateMainHeader()">Update</button>
+</ng-template>
+
+
+
+<p>Cookie sweet jujubes gummies chocolate cake. Sweet roll chocolate cake fruitcake tart biscuit. Toffee jelly cupcake. Sugar
+  plum gummies brownie bonbon liquorice cake sugar plum marzipan wafer.</p>
+
+  <p>image slider here</p>
+
 </div>

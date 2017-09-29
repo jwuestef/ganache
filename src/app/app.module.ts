@@ -30,6 +30,7 @@ import { FudgeComponent } from './fudge/fudge.component';
 import { MorechocComponent } from './morechoc/morechoc.component';
 import { SeasonalComponent } from './seasonal/seasonal.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContentService } from './services/content.service';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { FooterComponent } from './footer/footer.component';
   providers: [
     AngularFireAuth,
     AngularFireDatabase,
-    AuthService
+    AuthService,
+    ContentService
   ],
   bootstrap: [AppComponent]
 })
