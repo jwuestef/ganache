@@ -1,17 +1,17 @@
-<p>
-  chocolates works!
-</p>
+<div class="container-fluid">
+  <p>chocolates works!</p>
 
-<p *ngIf="isAdmin">Is admin!!!</p>
+  <p *ngIf="isAdmin">Is admin!!!</p>
 
-<h1>Ganache Chocolatier</h1>
-<h2>We have the following chocolates available today!</h2>
-<div>
-  <ul *ngIf="!this.admin else otherTmpl">
+  <h1>Ganache Chocolatier</h1>
+  <h2>We have the following chocolates available today!</h2>
+  <div>
+    <ul *ngIf="isAdmin else otherTmpl">
+      <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
+      <button>Update</button>
+    </ul>
+  </div>
+  <ng-template #otherTmpl>
     <li *ngFor= "let chocolate of myChocolates">{{chocolate}}</li>
-  </ul>
+  </ng-template>
 </div>
-<ng-template #otherTmpl>
-  <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
-  <button>Update</button>
-</ng-template>
