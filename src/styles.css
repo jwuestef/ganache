@@ -20,11 +20,20 @@ nav{
 footer {
   text-align: center;
   font-size: 2em;
+<<<<<<< HEAD
   color: pink;
+=======
+  color: black;
+>>>>>>> fac653e3c7de3b410a76c72845591d91291c3b15
   position:absolute;
   bottom:0px;
   width: 100%;
   margin: 0;
+<<<<<<< HEAD
   background-color: #000;
   height: 80px;/* or however high you would like */
+=======
+  /* background-color: #000; */
+  height: 40px;/* or however high you would like */
+>>>>>>> fac653e3c7de3b410a76c72845591d91291c3b15
 }
