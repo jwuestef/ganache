@@ -1,3 +1,14 @@
-<p>
-  barks works!
-</p>
+
+<p *ngIf="isAdmin">Is admin!!!</p>
+
+<h1>Barks and Toffee</h1>
+
+<div>
+  <ul *ngIf="!this.admin else otherTmpl">
+    <li *ngFor= "At Ganache Chocolatier, we go crazy for the incredible flavor combinations of chocolate and nuts. The more nuts, the better! Afterall, sometimes, the simplicity of almonds and dark chocolate at the end of the day or with a delicious cup of coffee or tea is all you need. As well as mouthwatering English Toffee as the toffee, milk chocolate, and ground almonds.">{{chocolate}}</li>
+  </ul>
+</div>
+<ng-template #otherTmpl>
+  <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
+  <button>Update</button>
+</ng-template>
