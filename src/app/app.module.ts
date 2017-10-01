@@ -17,6 +17,8 @@ import { ChocolatesComponent } from './chocolates/chocolates.component';
 import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './contact/contact.component';
 
+
+
 // Configuration
 import { routes } from './services/routes';
 import { firebaseConfig } from '../environments/firebase.config';
