@@ -32,7 +32,7 @@ export class AboutComponent {
 
 
   // Pulls page content from Firebase and assigns it to content based on admin status
-  getContent() {
+  public getContent() {
     const thisSaved = this;
     this.cs.getPageContent('aboutPage').then(function (pageContent) {
       if (thisSaved.isAdmin) {
