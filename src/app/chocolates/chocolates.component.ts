@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-
-import { AuthService } from '../services/auth.service';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  AuthService
+} from '../services/auth.service';
 
 
 @Component({
@@ -10,7 +14,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class ChocolatesComponent implements OnInit {
   isAdmin = false;
-  myChocolates = ['Buttercreme', 'Vanilla', 'Swirl'];
+  // myChocolates = ['Gourmet Truffles', 'Assorted Creams', 'Barks and Toffee', 'Fudge', 'More Chocolates', 'Seasonal Treats'];
 
   // The contructor function runs automatically on component load, each and every time it's called
   constructor(public as: AuthService) {

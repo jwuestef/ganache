@@ -1,0 +1,24 @@
+<p *ngIf="isAdmin">
+  Is admin!!!</p>
+
+<div class-="row">
+  <div class="col-md-6">
+
+  </div>
+  <div class="col-md-6">
+    <h1><strong><p class="text-center">Barks and Toffee</p></strong></h1>
+
+    <div>
+      <ul *ngIf="!this.admin else otherTmpl">
+        <h2> At Ganache Chocolatier, we go crazy for the incredible flavor combinations of chocolate and nuts. The more nuts,
+          the better! Afterall, sometimes, the simplicity of almonds and dark chocolate at the end of the day or with a delicious
+          cup of coffee or tea is all you need. As well as mouthwatering English Toffee as the toffee, milk chocolate, and
+          ground almonds.{{chocolate}}</h2>
+      </ul>
+    </div>
+    <ng-template #otherTmpl>
+      <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
+      <button>Update</button>
+    </ng-template>
+  </div>
+</div>
