@@ -3,7 +3,9 @@ import { AboutComponent } from '../about/about.component';
 import { ChocolatesComponent } from '../chocolates/chocolates.component';
 import { ShopComponent } from '../shop/shop.component';
 import { ContactComponent } from '../contact/contact.component';
-
+import { BarksComponent } from '../barks/barks.component';
+import { FudgeComponent } from '../fudge/fudge.component';
+import { MorechocComponent} from '../morechoc/morechoc.component';
 
 export const routes = [
   {
@@ -17,6 +19,15 @@ export const routes = [
   {
     path: 'chocolates',
     component: ChocolatesComponent
+  },
+  {path:'barks',
+   component: BarksComponent
+  },
+  {path:'fudge',
+   component: FudgeComponent
+  },
+  {path: 'morechoc',
+   component: MorechocComponent
   },
   {
     path: 'shop',

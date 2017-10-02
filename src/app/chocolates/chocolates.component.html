@@ -6,7 +6,7 @@
   All of our prodcuts are available in store.
   In addition, we offer a select variety online. Click here to shop our <a href="#"><strong>online store</strong></a></p>
 <div>
-  <ul *ngIf="!this.admin else otherTmpl">
+  <ul *ngIf="!this.isAdmin else otherTmpl">
     <li><a href="/truffles">Gourmet Truffles</a></li>
     <li><a href="/creams">Assorted Creams</a></li>
     <li><a href="/barks">Barks and Toffee</a></li>
@@ -15,3 +15,9 @@
     <li><a href="/seasonal">Seasonal Treats</a></li>
   </ul>
 </div>
+<ng-template #otherTmpl>
+  <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
+  <button>Update</button>
+</ng-template>
+
+<!-- <a href="/#/update" class="btn contact">Update My Profile</a> -->
