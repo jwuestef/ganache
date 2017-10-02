@@ -1,3 +1,17 @@
 <p>
   chocolates works!
 </p>
+
+<p *ngIf="isAdmin">Is admin!!!</p>
+
+<h1>Ganache Chocolatier</h1>
+<h2>We have the following chocolates available today!</h2>
+<div>
+  <ul *ngIf="!this.isAdmin else otherTmpl">
+    <li *ngFor= "let chocolate of myChocolates">{{chocolate}}</li>
+  </ul>
+</div>
+<ng-template #otherTmpl>
+  <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
+  <button>Update</button>
+</ng-template>

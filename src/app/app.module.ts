@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
+import * as $ from 'jquery';
 
 // Components
 import { AppComponent } from './app.component';
@@ -15,13 +16,15 @@ import { AboutComponent } from './about/about.component';
 import { ChocolatesComponent } from './chocolates/chocolates.component';
 import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './contact/contact.component';
+import { TexteditorComponent } from './services/texteditor.component';
 
 // Configuration
 import { routes } from './services/routes';
-// import { firebaseConfig } from '../environments/firebase.config';
+import { firebaseConfig } from '../environments/firebase.config';
 
 // Services
-// must also include under providers
+import { AuthService } from './services/auth.service';
+import { ContentService } from './services/content.service';
 
 
 @NgModule({
@@ -32,17 +35,20 @@ import { routes } from './services/routes';
     AboutComponent,
     ChocolatesComponent,
     ShopComponent,
-    ContactComponent
+    ContactComponent,
+    TexteditorComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    // AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(firebaseConfig),
   ],
   providers: [
     AngularFireAuth,
-    AngularFireDatabase
+    AngularFireDatabase,
+    AuthService,
+    ContentService
   ],
   bootstrap: [AppComponent]
 })

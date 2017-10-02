@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { AuthService } from '../services/auth.service';
+
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
+  isAdmin = false;
 
-  constructor() { }
+    // The contructor function runs automatically on component load, each and every time it's called
+    constructor(public as: AuthService) {
+      this.isAdmin = this.as.isAuthed();
+    }
 
-  ngOnInit() {
-  }
+    logout() {
+      this.as.logout();
+    }
 
 }
