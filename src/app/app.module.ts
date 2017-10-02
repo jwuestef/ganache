@@ -46,6 +46,7 @@ import { ContentService } from './services/content.service';
     ChocolatesComponent,
     ShopComponent,
     ContactComponent,
+    TexteditorComponent,
     TrufflesComponent,
     CreamsComponent,
     BarksComponent,

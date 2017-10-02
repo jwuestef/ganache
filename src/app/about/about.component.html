@@ -6,8 +6,8 @@
 
 <p *ngIf="isAdmin">Is admin!!!</p>
 
-<h1 *ngIf="!isAdmin else inputHeader" id="mainHeader"></h1>
-<ng-template #inputHeader>
+<h1 *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></h1>
+<ng-template #inputMainHeader>
 
   <texteditor [elementId]="'mainHeader'"></texteditor>
   <button (click)="saveMainHeader()">Update</button>
