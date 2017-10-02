@@ -1,16 +1,24 @@
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
+<div class="container-fluid">
+  <div class="row">
+    <div class= "col-md-6 col-md-6-offset">
+      <div>
+        <img src="../../assets/ganachesign.png" alt="Vendor Sign" style="width:40%; height:40%;">
+      </div>
     </div>
+  </div>
+</div>
+<nav class="navbar" style="margin:0;">
+  <div class="container-fluid col-md-6 col-md-offset-4">
+    <!-- <div class="navbar-header">
+    </div> -->
     <ul class="nav navbar-nav">
-      <img src="../../assets/ganachesign.png" alt="Vendor Sign" style="margin-top: -20px; width:20%; height:20%; float:left;">
      <!-- <li class="navbar-brand" href="#">Ganache</li> -->
-      <li><a href="/home">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/chocolates">Our Chocolates</a></li>
-      <li><a href="/shop">Shop</a></li>
-      <li><a href="/contact">Contact Us</a></li>
-      <li *ngIf="isAdmin" (click)="logout()"><a href="">Logout</a></li>
+      <li><a href="/home" class="navvy">Home</a></li>
+      <li><a href="/about" class="navvy">About</a></li>
+      <li><a href="/chocolates" class="navvy">Our Chocolates</a></li>
+      <li><a href="/shop" class="navvy">Shop</a></li>
+      <li><a href="/contact" class="navvy">Contact Us</a></li>
+      <li *ngIf="isAdmin" (click)="logout()"><a href="" class="navvy">Logout</a></li>
     </ul>
   </div>
 </nav>
