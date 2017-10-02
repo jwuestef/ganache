@@ -16,6 +16,7 @@ import { AboutComponent } from './about/about.component';
 import { ChocolatesComponent } from './chocolates/chocolates.component';
 import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './contact/contact.component';
+import { TexteditorComponent } from './services/texteditor.component';
 
 // Configuration
 import { routes } from './services/routes';
@@ -23,6 +24,7 @@ import { firebaseConfig } from '../environments/firebase.config';
 
 // Services
 import { AuthService } from './services/auth.service';
+import { ContentService } from './services/content.service';
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { AuthService } from './services/auth.service';
     AboutComponent,
     ChocolatesComponent,
     ShopComponent,
-    ContactComponent
+    ContactComponent,
+    TexteditorComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { AuthService } from './services/auth.service';
   providers: [
     AngularFireAuth,
     AngularFireDatabase,
-    AuthService
+    AuthService,
+    ContentService
   ],
   bootstrap: [AppComponent]
 })

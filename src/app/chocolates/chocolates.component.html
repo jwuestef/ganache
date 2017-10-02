@@ -7,7 +7,7 @@
 <h1>Ganache Chocolatier</h1>
 <h2>We have the following chocolates available today!</h2>
 <div>
-  <ul *ngIf="!this.admin else otherTmpl">
+  <ul *ngIf="!this.isAdmin else otherTmpl">
     <li *ngFor= "let chocolate of myChocolates">{{chocolate}}</li>
   </ul>
 </div>
