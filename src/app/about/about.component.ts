@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NgModel } from '@angular/forms';
-import { AngularFireDatabase } from 'angularfire2/database/database';
 
 import { AuthService } from '../services/auth.service';
 import { ContentService } from '../services/content.service';

@@ -1,23 +1,25 @@
-<p *ngIf="isAdmin">Is admin!!!</p>
+<div class="container-fluid">
+  <p *ngIf="isAdmin">Is admin!!!</p>
 
-<p>Our business prides itself on our artfully crafted, locally made chocolates.
+  <p>Our business prides itself on our artfully crafted, locally made chocolates.
   Beginning with the finest ingredients, Ganache Choclatier provides customers with a finished product that's made in house with the richest flavors.
   With treats almost too pretty to eat, your tastebudes are sure to dance.
   All of our prodcuts are available in store.
-  In addition, we offer a select variety online. Click here to shop our <a href="#"><strong>online store</strong></a></p>
-<div>
-  <ul *ngIf="!this.isAdmin else otherTmpl">
-    <li><a href="/truffles">Gourmet Truffles</a></li>
-    <li><a href="/creams">Assorted Creams</a></li>
-    <li><a href="/barks">Barks and Toffee</a></li>
-    <li><a href="/fudge">Fudge</a></li>
-    <li><a href="/morechoc">More Chocolates</a></li>
-    <li><a href="/seasonal">Seasonal Treats</a></li>
-  </ul>
-</div>
-<ng-template #otherTmpl>
-  <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
-  <button>Update</button>
-</ng-template>
-
+  In addition, we offer a select variety online. Click here to shop our <a href="#"><strong>online store</strong></a>
+  </p>
+  <div>
+    <ul *ngIf="!this.isAdmin else otherTmpl">
+      <li><a href="/truffles">Gourmet Truffles</a></li>
+      <li><a href="/creams">Assorted Creams</a></li>
+      <li><a href="/barks">Barks and Toffee</a></li>
+      <li><a href="/fudge">Fudge</a></li>
+      <li><a href="/morechoc">More Chocolates</a></li>
+      <li><a href="/seasonal">Seasonal Treats</a></li>
+    </ul>
+  </div>
+  <ng-template #otherTmpl>
+    <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
+    <button>Update</button>
+  </ng-template>
 <!-- <a href="/#/update" class="btn contact">Update My Profile</a> -->
+</div>

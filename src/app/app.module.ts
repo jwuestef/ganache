@@ -50,7 +50,8 @@ import { ContentService } from './services/content.service';
     FudgeComponent,
     MorechocComponent,
     SeasonalComponent,
-    FooterComponent
+    FooterComponent,
+    TexteditorComponent
   ],
   imports: [
     BrowserModule,
