@@ -25,7 +25,6 @@ import { MorechocComponent } from './morechoc/morechoc.component';
 import { SeasonalComponent } from './seasonal/seasonal.component';
 import { FooterComponent } from './footer/footer.component';
 
-
 // Configuration
 import { routes } from './services/routes';
 import { firebaseConfig } from '../environments/firebase.config';
@@ -33,7 +32,6 @@ import { firebaseConfig } from '../environments/firebase.config';
 // Services
 import { AuthService } from './services/auth.service';
 import { ContentService } from './services/content.service';
-import { UploadService } from './services/upload.service';
 
 
 @NgModule({
@@ -64,8 +62,7 @@ import { UploadService } from './services/upload.service';
     AngularFireAuth,
     AngularFireDatabase,
     AuthService,
-    ContentService,
-    UploadService
+    ContentService
   ],
   bootstrap: [AppComponent]
 })

@@ -28,7 +28,7 @@ export class TexteditorComponent implements AfterViewInit, OnDestroy {
       relative_urls: false,
       paste_data_images: false,
       toolbar: [
-        'undo redo | cut copy paste | bold italic underline strikethrough | alignleft aligncenter alignright | indent outdent',
+        'undo redo | cut copy paste | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | indent outdent',
         'fontselect fontsizeselect textcolor forecolor colorpicker | subscript superscript | bullist numlist link image preview'
       ],
       plugins: ['link lists preview textcolor image paste colorpicker'],
