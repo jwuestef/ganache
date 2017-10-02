@@ -17,8 +17,13 @@ import { ChocolatesComponent } from './chocolates/chocolates.component';
 import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './contact/contact.component';
 import { TexteditorComponent } from './services/texteditor.component';
-
-
+import { TrufflesComponent } from './truffles/truffles.component';
+import { CreamsComponent } from './creams/creams.component';
+import { BarksComponent } from './barks/barks.component';
+import { FudgeComponent } from './fudge/fudge.component';
+import { MorechocComponent } from './morechoc/morechoc.component';
+import { SeasonalComponent } from './seasonal/seasonal.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 // Configuration
@@ -27,14 +32,8 @@ import { firebaseConfig } from '../environments/firebase.config';
 
 // Services
 import { AuthService } from './services/auth.service';
-import { TrufflesComponent } from './truffles/truffles.component';
-import { CreamsComponent } from './creams/creams.component';
-import { BarksComponent } from './barks/barks.component';
-import { FudgeComponent } from './fudge/fudge.component';
-import { MorechocComponent } from './morechoc/morechoc.component';
-import { SeasonalComponent } from './seasonal/seasonal.component';
-import { FooterComponent } from './footer/footer.component';
 import { ContentService } from './services/content.service';
+import { UploadService } from './services/upload.service';
 
 
 @NgModule({
@@ -65,7 +64,8 @@ import { ContentService } from './services/content.service';
     AngularFireAuth,
     AngularFireDatabase,
     AuthService,
-    ContentService
+    ContentService,
+    UploadService
   ],
   bootstrap: [AppComponent]
 })

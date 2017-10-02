@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { NgModel } from '@angular/forms';
-
+import { AngularFireDatabase } from 'angularfire2/database/database';
 
 import { AuthService } from '../services/auth.service';
 import { ContentService } from '../services/content.service';
-import { AngularFireDatabase } from 'angularfire2/database/database';
+import { UploadService } from '../services/upload.service';
+import { Upload } from '../services/upload';
 
 
 @Component({
@@ -14,11 +15,12 @@ import { AngularFireDatabase } from 'angularfire2/database/database';
 })
 export class AboutComponent {
   isAdmin = false;
-
+  selectedFiles: FileList;
+  currentUpload: Upload;
 
 
   // The contructor function runs automatically on component load, each and every time it's called
-  constructor(public as: AuthService, public cs: ContentService, public afd: AngularFireDatabase) {
+  constructor(public as: AuthService, public cs: ContentService, public afd: AngularFireDatabase, public us: UploadService) {
     // Check to see if this is the logged in administrator
     this.isAdmin = this.as.isAuthed();
     // Pull updated content from Firebase
@@ -49,6 +51,21 @@ export class AboutComponent {
   saveMainHeader() {
     this.cs.savePageContent('aboutPage', 'mainHeader', tinymce.get('mainHeader').getContent());
   }
+
+
+
+  detectFiles(event) {
+    this.selectedFiles = event.target.files;
+  }
+
+
+
+  uploadImage() {
+    this.currentUpload = new Upload(this.selectedFiles.item(0));
+    this.us.pushUpload(this.currentUpload);
+  }
+
+
 
 
 
