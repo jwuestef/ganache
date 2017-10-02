@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
 import * as firebase from 'firebase';
+import { FlashMessagesService } from 'angular2-flash-messages';
 
 import { Image } from './image';
 
@@ -12,7 +13,7 @@ export class ContentService {
 
 
   // The contructor function runs automatically on service load, each and every time it's called
-  constructor(public afd: AngularFireDatabase) {
+  constructor(public afd: AngularFireDatabase, public fms: FlashMessagesService) {
 
   }
 
@@ -43,21 +44,31 @@ export class ContentService {
       (snapshot) => {
         // upload in progress
         const snap = snapshot as firebase.storage.UploadTaskSnapshot;
-        upload.progress = (snap.bytesTransferred / snap.totalBytes) * 100;
+        upload.progress = Math.round((snap.bytesTransferred / snap.totalBytes) * 100);
+        this.fms.show('Upload In Progress: ' + upload.progress + '%', { cssClass: 'alert-warning', timeout: 2000 });
       },
       (error) => {
         // upload failed
-        console.log('error in upload.service.ts in the pushUpload function:');
+        console.log('Error in content.service.ts in the pushUpload function:');
         console.log(error);
+        this.fms.show('Error Updating Image', { cssClass: 'alert-danger', timeout: 2000 });
       },
       () => {
         // upload success
         upload.url = uploadTask.snapshot.downloadURL;
         upload.name = upload.file.name;
         // write file details to db
+        const thisSaved = this;
         this.afd.database.ref('/' + pageName + '/' + whichElement).update({
           description: upload.description,
           url: upload.url
+        }).then(function() {
+          console.log('Yey!');
+          thisSaved.fms.show('Image Updated', { cssClass: 'alert-success', timeout: 3000 });
+        }).catch(function(err) {
+          console.log('Error updating new image URL inside content.service.ts:');
+          console.log(err);
+          thisSaved.fms.show('Error Updating Image', { cssClass: 'alert-danger', timeout: 2000 });
         });
         return undefined;
       }

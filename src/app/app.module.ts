@@ -7,6 +7,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import * as $ from 'jquery';
+import { FlashMessagesModule } from 'angular2-flash-messages';
+
 
 // Components
 import { AppComponent } from './app.component';
@@ -58,6 +60,7 @@ import { ContentService } from './services/content.service';
     RouterModule.forRoot(routes),
     FormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    FlashMessagesModule
   ],
   providers: [
     AngularFireAuth,
