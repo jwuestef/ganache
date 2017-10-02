@@ -16,6 +16,7 @@ import { AboutComponent } from './about/about.component';
 import { ChocolatesComponent } from './chocolates/chocolates.component';
 import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './contact/contact.component';
+import { TexteditorComponent } from './services/texteditor.component';
 
 
 
@@ -33,6 +34,7 @@ import { FudgeComponent } from './fudge/fudge.component';
 import { MorechocComponent } from './morechoc/morechoc.component';
 import { SeasonalComponent } from './seasonal/seasonal.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContentService } from './services/content.service';
 
 
 @NgModule({
@@ -44,6 +46,7 @@ import { FooterComponent } from './footer/footer.component';
     ChocolatesComponent,
     ShopComponent,
     ContactComponent,
+    TexteditorComponent,
     TrufflesComponent,
     CreamsComponent,
     BarksComponent,
@@ -61,7 +64,8 @@ import { FooterComponent } from './footer/footer.component';
   providers: [
     AngularFireAuth,
     AngularFireDatabase,
-    AuthService
+    AuthService,
+    ContentService
   ],
   bootstrap: [AppComponent]
 })

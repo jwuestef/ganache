@@ -4,5 +4,27 @@
   background-image: -webkit-linear-gradient(top, white, brown, white);
   background-image: -moz-linear-gradient(top, white, brown, white);
   background-image: linear-gradient(to left, white, brown, white);
+  align-content: center;
+}
+.navvy{
+  color:black;
+}
+nav{
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.panel{
+  border:solid;
+}
+footer {
+  text-align: center;
+  font-size: 2em;
   color: black;
+  position:absolute;
+  bottom:0px;
+  width: 100%;
+  margin: 0;
+  /* background-color: #000; */
+  height: 40px;/* or however high you would like */
 }
