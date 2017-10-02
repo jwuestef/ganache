@@ -18,6 +18,9 @@ import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './contact/contact.component';
 import { TexteditorComponent } from './services/texteditor.component';
 
+
+
+
 // Configuration
 import { routes } from './services/routes';
 import { firebaseConfig } from '../environments/firebase.config';
