@@ -16,6 +16,7 @@ import { AboutComponent } from './about/about.component';
 import { ChocolatesComponent } from './chocolates/chocolates.component';
 import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './contact/contact.component';
+import { TexteditorComponent } from './services/texteditor.component';
 
 // Configuration
 import { routes } from './services/routes';
@@ -34,7 +35,8 @@ import { ContentService } from './services/content.service';
     AboutComponent,
     ChocolatesComponent,
     ShopComponent,
-    ContactComponent
+    ContactComponent,
+    TexteditorComponent
   ],
   imports: [
     BrowserModule,

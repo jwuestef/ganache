@@ -15,10 +15,18 @@ export class ContentService {
 
 
 
+  // Retrieves and returns content for a particular page from Firebase
   getPageContent(pageName) {
     return this.afd.database.ref('/' + pageName).once('value').then(function (pageContent) {
       return pageContent.val();
     });
+  }
+
+
+
+  // Saves a particular piece of page content
+  savePageContent(pageName, whichElement, newContent) {
+    return this.afd.database.ref('/' + pageName).update({ [whichElement]: newContent });
   }
 
 

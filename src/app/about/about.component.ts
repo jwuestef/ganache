@@ -13,7 +13,6 @@ import { ContentService } from '../services/content.service';
 })
 export class AboutComponent {
   isAdmin = false;
-  mainHeader;
 
 
 
@@ -27,23 +26,28 @@ export class AboutComponent {
 
 
 
-  // Pulls page content from Firebase and assigns it to variables
+  // Pulls page content from Firebase and assigns it to content based on admin status
   getContent() {
     const thisSaved = this;
-    this.cs.getPageContent('aboutPage').then(function(pageContent) {
-      console.log(pageContent);
-      thisSaved.mainHeader = pageContent.mainHeader;
+    this.cs.getPageContent('aboutPage').then(function (pageContent) {
+      if (thisSaved.isAdmin) {
+        // If they're an admin, set the content of the editors
+        tinymce.get('mainHeader').setContent(pageContent.mainHeader);
+        // TO DO - repeat for all fields
+      } else {
+        // Otherwise, set the content of the regularly displayed header
+        $('#mainHeader').html(pageContent.mainHeader);
+        // TO DO - repeat for all fields
+      }
     });
   }
 
 
-  updateMainHeader() {
-    const thisSaved = this;
-    this.afd.database.ref('/aboutPage').update({
-      mainHeader: thisSaved.mainHeader
-    });
-  }
 
+  // As an admin, saves the content of the editor for the main header of the page
+  saveMainHeader() {
+    this.cs.savePageContent('aboutPage', 'mainHeader', tinymce.get('mainHeader').getContent());
+  }
 
 
 

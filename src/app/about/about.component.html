@@ -4,10 +4,12 @@
 
 <p *ngIf="isAdmin">Is admin!!!</p>
 
-<h1 *ngIf="!isAdmin else inputHeader" [innerText]="mainHeader"></h1>
+<h1 *ngIf="!isAdmin else inputHeader" id="mainHeader"></h1>
 <ng-template #inputHeader>
-  <input type="text" [(ngModel)]="mainHeader">
-  <button (click)="updateMainHeader()">Update</button>
+
+  <texteditor [elementId]="'mainHeader'"></texteditor>
+  <button (click)="saveMainHeader()">Update</button>
+
 </ng-template>
 
 
