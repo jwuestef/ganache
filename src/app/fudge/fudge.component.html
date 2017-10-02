@@ -1,3 +1,35 @@
-<p>
-  fudge works!
-</p>
+\<p *ngIf="isAdmin">
+  Is admin!!!</p>
+
+<div class-="row">
+  <div class="col-md-6">
+
+  </div>
+  <div class="col-md-6">
+   
+    <h1><strong><p class="text-center">Fudge</p></strong></h1>
+   
+    <div>
+      <ul *ngIf="!this.admin else otherTmpl">
+        <h2>For many of us, our childhood memories contain a memory of our mother or grandmother standing in the kitchen, stiring a pot with an eagle-eye, making the perfect fudge. Indulge with one of our 9 flavors of fudge, close your eyes,and take a trip down memory lane.{{chocolate}}</h2>
+      </ul>
+
+      <ul *ngIf="!this.admin else otherTmpl">
+        <h3>Fudge Flavors</h3>
+    <li><a href="/chocfudge">Chocolate</a></li>
+    <li><a href="/chocpecan">Chocolate Pecan</a></li>
+    <li><a href="/choccaramel">Chocolate Caramel Pecan</a></li>
+    <li><a href="/peanutbutter">Peanut Butter</a></li>
+    <li><a href="/chocpeanut">Chocolate and Peanut Butter</a></li>
+    <li><a href="/vanilla">Vanilla</a></li>
+    <li><a href="/vanillawalnut">Vanilla Walnut</a></li>
+    <li><a href="/vanillamaple">Maple Vanilla</a></li>
+    <li><a href="/maple">Maple</a></li>
+  </ul>
+    </div>
+    <ng-template #otherTmpl>
+      <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
+      <button>Update</button>
+    </ng-template>
+  </div>
+</div>

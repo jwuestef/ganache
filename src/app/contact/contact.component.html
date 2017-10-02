@@ -1,38 +1,81 @@
 <div class="container-fluid">
-<p>
-  contact works!
-</p>
+  <p *ngIf="isAdmin">Is admin!!!</p>
 
-<p *ngIf="isAdmin">Is admin!!!</p>
+  <!-- Hidden admin login button, causes modal to pop up -->
 
-<!-- Hidden admin login button, causes modal to pop up -->
-<button type="button" class="btn btn-primary btn-large" data-toggle="modal" data-target="#myModal">Super Secret Admin Login</button>
+  <!-- Admin login form -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
 
-<!-- Admin login form -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <p>Administrator Login</p>
+        </div>
 
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <p>Administrator Login</p>
+        <div class="modal-body">
+          <input type="email" [(ngModel)]="loginModel.email">
+          <p *ngIf="loginErrors.email" class="validation">{{loginErrors.email}}</p>
+          <br>
+          <input type="password" [(ngModel)]="loginModel.pass">
+          <p *ngIf="loginErrors.pass" class="validation">{{loginErrors.pass}}</p>
+          <br>
+        </div>
+
+        <div class="modal-footer">
+          <button id="login-btn" class="btn btn-primary" (click)="adminLogin()">Login</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+
       </div>
-
-      <div class="modal-body">
-        <input type="email" [(ngModel)]="loginModel.email">
-        <p *ngIf="loginErrors.email" class="validation">{{loginErrors.email}}</p>
-        <br>
-        <input type="password" [(ngModel)]="loginModel.pass">
-        <p *ngIf="loginErrors.pass" class="validation">{{loginErrors.pass}}</p>
-        <br>
-      </div>
-
-      <div class="modal-footer">
-        <button id="login-btn" class="btn btn-primary" (click)="adminLogin()">Login</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-      </div>
-
     </div>
   </div>
-</div>
+
+  <div class="contactText">
+    <div class="row col-md-4" style="margin: 1em 0em 1em 0em;">
+      <h2>Visit Ganache Chocolatier!</h2>
+      <p>The only way to truly see the detail in our chocolates is to visit us. Come to the shop and fill your nose with the
+        sweet smell of chocolate and let your taste buds indulge.
+      </p>
+      <br>
+      <br>
+      <br>
+
+      <h3>Consultations</h3>
+      <p>In addition to providing business on a small scale, Ganache Chocolatier is able to cater your party, engagement, wedding,
+        or business meeting with delectable chocolates, truffles and more. Inquire toady for more information!
+      </p>
+    </div>
+    <div class="row col-md-4" style="margin: 1em 0em 1em 0em;">
+      <h2>Contact Ganache Chocolatier</h2>
+      <p>
+        If you want more information about Ganache Chocolatiers or have questions, please feel free to contact us. We value our customers
+        and hope to help in any way possible.
+      </p>
+      <form action="input">
+        Name:<br>
+        <input type="text" name="Name"><br> Phone:
+        <br>
+        <input type="num" name="Phone"><br> Email:
+        <br>
+        <input type="email" name="Email"><br> Comment/Question:
+        <br>
+        <textarea></textarea><br>
+        <input type="submit" value="Continue" class="btn btn-primary" style="background-color:#4E2E28;">
+
+      </form>
+    </div>
+    <div class="row col-md-4">
+      <h2>Hours</h2>
+      <p>Monday-Friday: 10 AM to 5:30 PM</p><br>
+      <p>Saturday: 10 AM to 5 PM</p><br>
+      <p>Sunday: Closed</p><br>
+      <iframe width="400" height="250" frameborder="0" style="border:0;" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJCU4tcGNVE4gRE8YUUt6U21k&key=AIzaSyDNN1lmTogQWRQCgcVisoiv-MhLiqNqD5Q"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+
+  <button type="button" class="btn btn-primary btn-large" data-toggle="modal" data-target="#myModal">Super Secret Admin Login</button>
 </div>
