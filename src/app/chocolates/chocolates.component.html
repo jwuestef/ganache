@@ -8,6 +8,10 @@
   In addition, we offer a select variety online. Click here to shop our <a href="#"><strong>online store</strong></a>
   </p>
   <div>
+    <ul *ngIf="!this.isAdmin else otherTmpl"></ul>
+    <p>images here</p>
+  </div>
+  <div>
     <ul *ngIf="!this.isAdmin else otherTmpl">
       <li><a href="/truffles">Gourmet Truffles</a></li>
       <li><a href="/creams">Assorted Creams</a></li>
