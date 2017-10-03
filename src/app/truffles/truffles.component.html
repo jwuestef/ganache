@@ -1,12 +1,28 @@
-<div>
+<p *ngIf="isAdmin">
+  Is Admin!
+</p>
+<div class="row">
+  <div class="col-md-6">
   <!-- truffle id cards go here -->
-</div>
-<div>
-  <h3><i>Gourmet Truffles</i></h3>
-  <p>At Ganache Chocolatier, truffles are really our specialty.
-    It is what inspired the name of our shop!
-    Each truffle has a center of ganache, a mixture of chocolate and cream, with a carefully decorated outer shell that indicates each flavor.
-    We offer 13 different regular truffles, 6 liqueur truffles, 12 mini truffles, and 2 mini liqueur truffles.
-    We even offer a small selectional of seasonal truffles.
-    Click on our Truffle ID Card for more information on each of the truffles.</p>
+  </div>
+
+  <div class="col-md-6">
+    <h1><strong><p class="text-center">Gourmet Truffles</p></strong></h1>
+    <div>
+        <ul *ngIf="!this.admin else otherTmpl">
+          <li>
+          <p>At Ganache Chocolatier, truffles are really our specialty.
+            It is what inspired the name of our shop!
+            Each truffle has a center of ganache, a mixture of chocolate and cream, with a carefully decorated outer shell that indicates each flavor.
+            We offer 13 different regular truffles, 6 liqueur truffles, 12 mini truffles, and 2 mini liqueur truffles.
+            We even offer a small selectional of seasonal truffles.
+            Click on our Truffle ID Card for more information on each of the truffles.</p>
+          </li>
+        </ul>
+    </div>
+    <ng-template #otherTmpl>
+        <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
+        <button>Update</button>
+    </ng-template>
+  </div>
 </div>

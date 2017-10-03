@@ -2,14 +2,14 @@
   <p *ngIf="isAdmin">Is admin!!!</p>
 
   <p>Our business prides itself on our artfully crafted, locally made chocolates.
-  Beginning with the finest ingredients, Ganache Choclatier provides customers with a finished product that's made in house with the richest flavors.
+  Beginning with the finest ingredients, Ganache Chocolatier provides customers with a finished product that's made in house with the richest flavors.
   With treats almost too pretty to eat, your tastebudes are sure to dance.
   All of our prodcuts are available in store.
   In addition, we offer a select variety online. Click here to shop our <a href="#"><strong>online store</strong></a></p>
-  <div id="carousel">
+  <div class="col-md-6" id="carousel">
     <div
       ng2-carouselamos
-      class="slides-wrapper"
+      class="slides-wrapper col-md-8"
       [items]="items"
       [width]="500"
       [$prev]="prev"
@@ -18,7 +18,7 @@
     >
   </div>
 
-  <div id="selection">
+  <div class="col-md-4" id="selection">
     <ul *ngIf="!this.admin else otherTmpl">
       <li><a href="/truffles">Gourmet Truffles</a></li>
       <li><a href="/creams">Assorted Creams</a></li>

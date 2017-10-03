@@ -1,6 +1,8 @@
 #carousel {
   width: 60%;
   background: white;
+  float: left;
+  position: relative;
 }
 
 .items {
@@ -14,5 +16,11 @@
 
 #selection {
   width: 30%;
+  position: relative;
   float: right;
+}
+
+p {
+  text-indent: 25px;
+  font-size: 150%;
 }
