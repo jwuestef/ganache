@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
-import * as firebase from 'firebase';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import * as firebase from 'firebase';
 
 import { Image } from './image';
 
@@ -37,7 +37,6 @@ export class ContentService {
 
   // Uploads file to Firebase storage, and updates the database with the file's URL
   pushUpload(pageName, whichElement, upload: Image) {
-
     // Returns a promise, so we can use .then() when pushUpload is called
     return new Promise((resolve, reject) => {
       // Upload the file
@@ -79,7 +78,7 @@ export class ContentService {
         }
       ); // End of uploadTask.on()
     }); // End of returned promise
-  } // End of pushUpload
+  } // End of pushUpload()
 
 
 
