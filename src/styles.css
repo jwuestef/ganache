@@ -38,3 +38,9 @@ footer {
   /* background-color: #000; */
   height: 40px;
 }
+
+.alert-success, .alert-warning, .alert-danger {
+  max-width: 30rem;
+  margin: auto;
+  text-align: center;
+}

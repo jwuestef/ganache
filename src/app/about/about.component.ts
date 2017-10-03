@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgModel } from '@angular/forms';
+import { FlashMessagesService } from 'angular2-flash-messages';
 
 import { AuthService } from '../services/auth.service';
 import { ContentService } from '../services/content.service';
@@ -19,8 +20,9 @@ export class AboutComponent {
   image1Src: string;
 
 
+
   // The contructor function runs automatically on component load, each and every time it's called
-  constructor(public as: AuthService, public cs: ContentService) {
+  constructor(public as: AuthService, public cs: ContentService, public fms: FlashMessagesService) {
     // Check to see if this is the logged in administrator
     this.isAdmin = this.as.isAuthed();
     // Pull updated content from Firebase
@@ -30,7 +32,7 @@ export class AboutComponent {
 
 
   // Pulls page content from Firebase and assigns it to content based on admin status
-  getContent() {
+  public getContent() {
     const thisSaved = this;
     this.cs.getPageContent('aboutPage').then(function (pageContent) {
       if (thisSaved.isAdmin) {
@@ -53,15 +55,22 @@ export class AboutComponent {
 
   // As an admin, saves the content of the editor for the main header of the page
   saveMainHeader() {
-    this.cs.savePageContent('aboutPage', 'mainHeader', tinymce.get('mainHeader').getContent());
+    const thisSaved = this;
+    this.cs.savePageContent('aboutPage', 'mainHeader', tinymce.get('mainHeader').getContent()).then(function () {
+      thisSaved.fms.show('Main Header Updated', { cssClass: 'alert-success', timeout: 2000 });
+    });
   }
 
 
 
   // As an admin, saves the content of the editor for the about paragraph
   saveAboutParagraph() {
-    this.cs.savePageContent('aboutPage', 'aboutParagraph', tinymce.get('aboutParagraph').getContent());
+    const thisSaved = this;
+    this.cs.savePageContent('aboutPage', 'aboutParagraph', tinymce.get('aboutParagraph').getContent()).then(function () {
+      thisSaved.fms.show('About Paragraph Updated', { cssClass: 'alert-success', timeout: 2000 });
+    });
   }
+
 
 
   // Detects when a new image has been inserted and fills the appropriate variable
