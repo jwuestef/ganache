@@ -4,23 +4,23 @@
   <div class="row">
     <div class="col-md-6">
     <!-- Creams id cards go here -->
-    </div>
+  </div>
 
-    <div class="col-md-6">
-      <h1><strong><p class="text-center">Assorted Chocolates</p></strong></h1>
-      <div>
-          <ul *ngIf="!this.admin else otherTmpl">
-            <li>
-            <p>In addition to truffles, we also offer a wide selection of assorted creams, or chocolate bon-bons.
-                Each chocolate is easily recognizable thanks to their beautiful designs.
-            </p>
-            </li>
-            <li>
-            <p>Are you as big of a caramel fan as we are?
-                From chewy sea salt or chocolate caramels and four different turtles to our soft caramel suprises, we have everything to satisfy your caramel needs!
-            </p>
-            </li>
-          </ul>
+  <div class="col-md-6">
+    <h1><strong><p class="text-center">Assorted Chocolates</p></strong></h1>
+    <div>
+        <ul *ngIf="!this.admin else otherTmpl">
+          <li>
+          <p>In addition to truffles, we also offer a wide selection of assorted creams, or chocolate bon-bons.
+              Each chocolate is easily recognizable thanks to their beautiful designs.
+          </p>
+          </li>
+          <li>
+          <p>Are you as big of a caramel fan as we are?
+              From chewy sea salt or chocolate caramels and four different turtles to our soft caramel suprises, we have everything to satisfy your caramel needs!
+          </p>
+          </li>
+        </ul>
       </div>
       <ng-template #otherTmpl>
           <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
