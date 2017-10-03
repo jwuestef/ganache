@@ -88,8 +88,12 @@ export class AboutComponent {
     this.currentUpload.description = this.image1Description;
     // Set the name
     this.currentUpload.name = 'image1';
+    const thisSaved = this;
     // Upload the file via UploadService (pageName, whichElement, newImage)
-    this.cs.pushUpload('aboutPage', 'image1', this.currentUpload);
+    this.cs.pushUpload('aboutPage', 'image1', this.currentUpload).then(function(newURL) {
+      // Updates thumbnail image
+      thisSaved.image1Src = newURL.toString();
+    });
   }
 
 
