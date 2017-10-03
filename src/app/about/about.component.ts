@@ -82,6 +82,9 @@ export class AboutComponent {
 
   // Uploads a new image
   uploadImage1() {
+    if (!this.image1Description) {
+      return;
+    }
     // Set file-to-be-uploaded to the file taken from the input field
     this.currentUpload = new Image(this.selectedFiles.item(0));
     // Include the image description
@@ -90,7 +93,7 @@ export class AboutComponent {
     this.currentUpload.name = 'image1';
     const thisSaved = this;
     // Upload the file via UploadService (pageName, whichElement, newImage)
-    this.cs.pushUpload('aboutPage', 'image1', this.currentUpload).then(function(newURL) {
+    this.cs.pushUpload('aboutPage', 'image1', this.currentUpload).then(function (newURL) {
       // Updates thumbnail image
       thisSaved.image1Src = newURL.toString();
     });
