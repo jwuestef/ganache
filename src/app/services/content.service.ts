@@ -47,7 +47,6 @@ export class ContentService {
           // Upload in progress, show a flash message with the % complete
           const snap = snapshot as firebase.storage.UploadTaskSnapshot;
           upload.progress = Math.round((snap.bytesTransferred / snap.totalBytes) * 100);
-          this.fms.show('Upload In Progress: ' + upload.progress + '%', { cssClass: 'alert-warning', timeout: 2000 });
         },
         (error) => {
           // Upload failed, output error to the console and show a flash error message
@@ -66,8 +65,7 @@ export class ContentService {
             description: upload.description,
             url: upload.url
           }).then(function () {
-            // Successfully updated database. Show success flash message, and return the new url
-            thisSaved.fms.show('Image Updated', { cssClass: 'alert-success', timeout: 3000 });
+            // Successfully updated database, return the new url
             resolve(upload.url);
           }).catch(function (err) {
             // Error updating url in database, output error to console and show flash error message.
