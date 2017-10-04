@@ -34,7 +34,8 @@
         "../node_modules/tinymce/plugins/preview/plugin.js",
         "../node_modules/tinymce/plugins/textcolor/plugin.js",
         "../node_modules/tinymce/plugins/colorpicker/plugin.js",
-        "../node_modules/tinymce/plugins/image/plugin.js"
+        "../node_modules/tinymce/plugins/image/plugin.js",
+        "../node_modules/tinymce/plugins/media/plugin.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
