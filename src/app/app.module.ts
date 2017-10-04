@@ -6,9 +6,9 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import * as $ from 'jquery';
 import { FlashMessagesModule } from 'angular2-flash-messages';
+import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
 
 
 // Components
@@ -62,7 +62,7 @@ import { ContentService } from './services/content.service';
     FormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     FlashMessagesModule,
-    Ng2CarouselamosModule
+    AngularFontAwesomeModule
   ],
   providers: [
     AngularFireAuth,
