@@ -1,12 +1,73 @@
-<div>
-  <h3><i>Assorted Chocolates</i></h3>
-  <p>In addition to truffles, we also offer a wide selection of assorted creams, or chocolate bon-bons.
-     Each chocolate is easily recognizable thanks to their beautiful designs.
-  </p>
-  <p>Are you as big of a caramel fan as we are?
-    From chewy sea salt or chocolate caramels and four different turtles to our soft caramel suprises, we have everything to satisfy your caramel needs!
-  </p>
+<div class="container-fluid">
+
+  <!-- Main introduction header -->
+  <h1 *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></h1>
+  <ng-template #inputMainHeader>
+    <texteditor [elementId]="'mainHeader'"></texteditor>
+    <button (click)="saveMainHeader()">Update</button>
+  </ng-template>
+
+
+  <div class="row">
+    <!-- Creams images -->
+    <div class="col-sm-7">
+        <!-- If not admin, show image -->
+        <img *ngIf="(!isAdmin && image1Src) else inputImage1" [src]="image1Src" [alt]="image1Description">
+        <!-- If yes admin, show form to update image -->
+        <ng-template #inputImage1>
+          <div style="border: 2px solid gray" *ngIf="image1Src">
+            <img *ngIf="image1Src" style="width: 100px; height: auto" [src]="image1Src" [alt]="image1Description">
+            <hr>
+            <input type="file" (change)="detectImage1($event)">
+            <input type="text" placeholder="description" id="image1Description" [(ngModel)]="image1Description">
+            <br>
+            <button (click)="uploadImage1()">Upload this image</button>
+          </div>
+        </ng-template>
+      </div>
+
+    <!-- Creams paragraph, describes creams -->
+    <div class="col-sm-5">
+      <!-- If not admin, show paragraph -->
+      <p *ngIf="!isAdmin else inputCreamsParagraph" id="creamsParagraph"></p>
+      <!-- If yes admin, show form to update content -->
+      <ng-template #inputTrufflesParagraph>
+        <texteditor [elementId]="'creamsParagraph'"></texteditor>
+        <button (click)="saveCreamsParagraph()">Update</button>
+      </ng-template>
+    </div>
+  </div>
+
+
+  <!-- End of container-fluid -->
 </div>
-<div>
-  <!-- Cream ID Cards go here -->
-</div>
+<!-- <p *ngIf="isAdmin">
+    Is Admin!
+  </p>
+  <div class="row">
+    <div class="col-md-6"> -->
+    <!-- Creams id cards go here -->
+  <!-- </div>
+
+  <div class="col-md-6">
+    <h1><strong><p class="text-center">Assorted Chocolates</p></strong></h1>
+    <div>
+        <ul *ngIf="!this.admin else otherTmpl">
+          <li>
+          <p>In addition to truffles, we also offer a wide selection of assorted creams, or chocolate bon-bons.
+              Each chocolate is easily recognizable thanks to their beautiful designs.
+          </p>
+          </li>
+          <li>
+          <p>Are you as big of a caramel fan as we are?
+              From chewy sea salt or chocolate caramels and four different turtles to our soft caramel suprises, we have everything to satisfy your caramel needs!
+          </p>
+          </li>
+        </ul>
+      </div>
+      <ng-template #otherTmpl>
+          <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
+          <button>Update</button>
+      </ng-template>
+    </div>
+  </div> -->
