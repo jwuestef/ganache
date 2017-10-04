@@ -6,7 +6,10 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import * as $ from 'jquery';
+import { FlashMessagesModule } from 'angular2-flash-messages';
+
 
 // Components
 import { AppComponent } from './app.component';
@@ -17,16 +20,6 @@ import { ChocolatesComponent } from './chocolates/chocolates.component';
 import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './contact/contact.component';
 import { TexteditorComponent } from './services/texteditor.component';
-
-
-
-
-// Configuration
-import { routes } from './services/routes';
-import { firebaseConfig } from '../environments/firebase.config';
-
-// Services
-import { AuthService } from './services/auth.service';
 import { TrufflesComponent } from './truffles/truffles.component';
 import { CreamsComponent } from './creams/creams.component';
 import { BarksComponent } from './barks/barks.component';
@@ -34,6 +27,13 @@ import { FudgeComponent } from './fudge/fudge.component';
 import { MorechocComponent } from './morechoc/morechoc.component';
 import { SeasonalComponent } from './seasonal/seasonal.component';
 import { FooterComponent } from './footer/footer.component';
+
+// Configuration
+import { routes } from './services/routes';
+import { firebaseConfig } from '../environments/firebase.config';
+
+// Services
+import { AuthService } from './services/auth.service';
 import { ContentService } from './services/content.service';
 
 
@@ -53,13 +53,16 @@ import { ContentService } from './services/content.service';
     FudgeComponent,
     MorechocComponent,
     SeasonalComponent,
-    FooterComponent
+    FooterComponent,
+    TexteditorComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    FlashMessagesModule,
+    Ng2CarouselamosModule
   ],
   providers: [
     AngularFireAuth,

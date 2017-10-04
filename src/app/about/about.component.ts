@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { NgModel } from '@angular/forms';
-
+import { FlashMessagesService } from 'angular2-flash-messages';
 
 import { AuthService } from '../services/auth.service';
 import { ContentService } from '../services/content.service';
-import { AngularFireDatabase } from 'angularfire2/database/database';
+import { Image } from '../services/image';
 
 
 @Component({
@@ -14,11 +14,15 @@ import { AngularFireDatabase } from 'angularfire2/database/database';
 })
 export class AboutComponent {
   isAdmin = false;
+  selectedFiles: FileList;
+  currentUpload: Image;
+  image1Description: string;
+  image1Src: string;
 
 
 
   // The contructor function runs automatically on component load, each and every time it's called
-  constructor(public as: AuthService, public cs: ContentService, public afd: AngularFireDatabase) {
+  constructor(public as: AuthService, public cs: ContentService, public fms: FlashMessagesService) {
     // Check to see if this is the logged in administrator
     this.isAdmin = this.as.isAuthed();
     // Pull updated content from Firebase
@@ -28,18 +32,22 @@ export class AboutComponent {
 
 
   // Pulls page content from Firebase and assigns it to content based on admin status
-  getContent() {
+  public getContent() {
     const thisSaved = this;
     this.cs.getPageContent('aboutPage').then(function (pageContent) {
       if (thisSaved.isAdmin) {
         // If they're an admin, set the content of the editors
         tinymce.get('mainHeader').setContent(pageContent.mainHeader);
-        // TO DO - repeat for all fields
+        tinymce.get('aboutParagraph').setContent(pageContent.aboutParagraph);
+        $('#image1Description').val(pageContent.image1.description);
       } else {
-        // Otherwise, set the content of the regularly displayed header
+        // Otherwise, set the content of the regularly displayed fields
         $('#mainHeader').html(pageContent.mainHeader);
-        // TO DO - repeat for all fields
+        $('#aboutParagraph').html(pageContent.aboutParagraph);
       }
+      // The image gets displayed regardless of admin status
+      thisSaved.image1Src = pageContent.image1.url;
+      thisSaved.image1Description = pageContent.image1.description;
     });
   }
 
@@ -47,7 +55,45 @@ export class AboutComponent {
 
   // As an admin, saves the content of the editor for the main header of the page
   saveMainHeader() {
-    this.cs.savePageContent('aboutPage', 'mainHeader', tinymce.get('mainHeader').getContent());
+    const thisSaved = this;
+    this.cs.savePageContent('aboutPage', 'mainHeader', tinymce.get('mainHeader').getContent()).then(function () {
+      thisSaved.fms.show('Main Header Updated', { cssClass: 'alert-success', timeout: 2000 });
+    });
+  }
+
+
+
+  // As an admin, saves the content of the editor for the about paragraph
+  saveAboutParagraph() {
+    const thisSaved = this;
+    this.cs.savePageContent('aboutPage', 'aboutParagraph', tinymce.get('aboutParagraph').getContent()).then(function () {
+      thisSaved.fms.show('About Paragraph Updated', { cssClass: 'alert-success', timeout: 2000 });
+    });
+  }
+
+
+
+  // Detects when a new image has been inserted and fills the appropriate variable
+  detectImage1(event) {
+    this.selectedFiles = event.target.files;
+  }
+
+
+
+  // Uploads a new image
+  uploadImage1() {
+    // Set file-to-be-uploaded to the file taken from the input field
+    this.currentUpload = new Image(this.selectedFiles.item(0));
+    // Include the image description
+    this.currentUpload.description = this.image1Description;
+    // Set the name
+    this.currentUpload.name = 'image1';
+    const thisSaved = this;
+    // Upload the file via UploadService (pageName, whichElement, newImage)
+    this.cs.pushUpload('aboutPage', 'image1', this.currentUpload).then(function(newURL) {
+      // Updates thumbnail image
+      thisSaved.image1Src = newURL.toString();
+    });
   }
 
 
