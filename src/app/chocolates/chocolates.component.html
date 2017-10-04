@@ -1,10 +1,10 @@
 <div class="container-fluid">
-    <!-- Main introduction header -->
-    <h1 *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></h1>
-    <ng-template #inputMainHeader>
-      <texteditor [elementId]="'mainHeader'"></texteditor>
-      <button (click)="saveMainHeader()">Update</button>
-    </ng-template>
+  <!-- Main introduction header -->
+  <h1 *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></h1>
+  <ng-template #inputMainHeader>
+    <texteditor [elementId]="'mainHeader'"></texteditor>
+    <button (click)="saveMainHeader()">Update</button>
+  </ng-template>
 
   <!-- <p>Our business prides itself on our artfully crafted, locally made chocolates.
   Beginning with the finest ingredients, Ganache Chocolatier provides customers with a finished product that's made in house with the richest flavors.
@@ -13,13 +13,13 @@
   In addition, we offer a select variety online. Click here to shop our <a href="#"><strong>online store</strong></a></p> -->
 
   <div id="chocSlider">
-      <figure>
-          <img src="../../assets/chainsign.png" alt="Happy people with cats">
-          <img src="../../assets/ganachetest.png" alt="Happy people with cats">
-          <img src="../../assets/gahnash.jpg" alt="Happy people with cats">
-          <img src="../../assets/sampleChocolate.png" alt="Happy people with cats">
-          <img src="../../assets/chainsign.png" alt="Happy people with cats">
-      </figure>
+    <figure>
+      <img src="../../assets/chainsign.png" alt="Happy people with cats">
+      <img src="../../assets/ganachetest.png" alt="Happy people with cats">
+      <img src="../../assets/gahnash.jpg" alt="Happy people with cats">
+      <img src="../../assets/sampleChocolate.png" alt="Happy people with cats">
+      <img src="../../assets/chainsign.png" alt="Happy people with cats">
+    </figure>
   </div>
 
   <div class="col-md-4" id="selection">
@@ -33,15 +33,14 @@
     </ul>
   </div>
 
-<ng-template #item let-item let-i="index">
+  <ng-template #item let-item let-i="index">
 
-<div class="items">
-  <img src="{{ item.name }}">
-  <ng-template #otherTmpl>
-    <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
-    <button>Update</button>
+    <div class="items">
+      <img src="{{ item.name }}">
+      <ng-template #otherTmpl>
+        <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
+        <button>Update</button>
+      </ng-template>
+      <!-- <a href="/#/update" class="btn contact">Update My Profile</a> -->
+    </div>
   </ng-template>
-<!-- <a href="/#/update" class="btn contact">Update My Profile</a> -->
-
-</div>
-</ng-template>
