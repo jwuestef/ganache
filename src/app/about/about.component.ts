@@ -93,6 +93,9 @@ export class AboutComponent {
 
   // Uploads a new image
   uploadImage1() {
+    if (!this.image1Description) {
+      return;
+    }
     // Display the upload progress bar for image 1 and no others
     this.uploadingImage1 = true;
     this.uploadingImage2 = false;
