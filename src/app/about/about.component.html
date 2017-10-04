@@ -5,6 +5,10 @@
   <ng-template #inputMainHeader>
     <texteditor [elementId]="'mainHeader'"></texteditor>
     <button (click)="saveMainHeader()">Update</button>
+    <!-- After successful update, show confirmation -->
+    <span class="alert-success updated" *ngIf="mainHeaderUpdated">
+      <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+    </span>
   </ng-template>
 
 
@@ -18,6 +22,10 @@
       <ng-template #inputAboutParagraph>
         <texteditor [elementId]="'aboutParagraph'"></texteditor>
         <button (click)="saveAboutParagraph()">Update</button>
+        <!-- After successful update, show confirmation -->
+        <span class="alert-success updated" *ngIf="aboutParagraphUpdated">
+          <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+        </span>
       </ng-template>
     </div>
 
@@ -34,12 +42,11 @@
           <input type="text" placeholder="description" id="image1Description" [(ngModel)]="image1Description">
           <br>
           <button (click)="uploadImage1()">Upload this image</button>
-
+          <!-- Progress bar -->
           <div *ngIf="uploadingImage1">
             <p>Progress: {{currentUpload?.progress}}% Complete</p>
             <progress class="progress is-success" min=1 max=100 value="{{ currentUpload?.progress }}"></progress>
           </div>
-
         </div>
       </ng-template>
     </div>
@@ -61,12 +68,11 @@
         <input type="text" placeholder="description" id="image2Description" [(ngModel)]="image2Description">
         <br>
         <button (click)="uploadImage2()">Upload this image</button>
-
+        <!-- Progress bar -->
         <div *ngIf="uploadingImage2">
           <p>Progress: {{currentUpload?.progress}}% Complete</p>
           <progress class="progress is-success" min=1 max=100 value="{{ currentUpload?.progress }}"></progress>
         </div>
-
       </div>
     </ng-template>
   </div>

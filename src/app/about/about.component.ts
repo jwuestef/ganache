@@ -16,6 +16,8 @@ export class AboutComponent {
   isAdmin = false;
   selectedFiles: FileList;
   currentUpload: Image;
+  mainHeaderUpdated = false;
+  aboutParagraphUpdated = false;
   image1Description: string;
   image1Src: string;
   uploadingImage1 = false;
@@ -60,21 +62,23 @@ export class AboutComponent {
 
 
 
-  // As an admin, saves the content of the editor for the main header of the page
+  // As an admin, saves the content of the editor for the main header of the page, and then shows a success message
   saveMainHeader() {
+    this.mainHeaderUpdated = false;
     const thisSaved = this;
     this.cs.savePageContent('aboutPage', 'mainHeader', tinymce.get('mainHeader').getContent()).then(function () {
-      thisSaved.fms.show('Main Header Updated', { cssClass: 'alert-success', timeout: 2000 });
+      thisSaved.mainHeaderUpdated = true;
     });
   }
 
 
 
-  // As an admin, saves the content of the editor for the about paragraph
+  // As an admin, saves the content of the editor for the about paragraph, and then shows a success message
   saveAboutParagraph() {
+    this.aboutParagraphUpdated = false;
     const thisSaved = this;
     this.cs.savePageContent('aboutPage', 'aboutParagraph', tinymce.get('aboutParagraph').getContent()).then(function () {
-      thisSaved.fms.show('About Paragraph Updated', { cssClass: 'alert-success', timeout: 2000 });
+      thisSaved.aboutParagraphUpdated = true;
     });
   }
 
