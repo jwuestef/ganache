@@ -32,7 +32,7 @@ nav{
 footer {
   text-align: center;
   font-size: 1.4em;
-  color: black;
+  color:#3b2314;
   position:flex;
   bottom: 0;
   width: 100%;
@@ -55,4 +55,13 @@ footer {
 
 body {
   background-color: #bcb1ac;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration:none;
+  color: #453c18;
 }
