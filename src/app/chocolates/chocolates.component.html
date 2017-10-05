@@ -1,4 +1,5 @@
 <div class="container-fluid">
+<<<<<<< HEAD
   <!-- Main introduction header -->
   <p *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></p>
   <ng-template #inputMainHeader>
@@ -11,6 +12,14 @@
   With treats almost too pretty to eat, your tastebudes are sure to dance.
   All of our prodcuts are available in store.
   In addition, we offer a select variety online. Click here to shop our <a href="#"><strong>online store</strong></a></p> -->
+=======
+    <!-- Main introduction header -->
+    <p *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></p>
+    <ng-template #inputMainHeader>
+      <texteditor [elementId]="'mainHeader'"></texteditor>
+      <button (click)="saveMainHeader()">Update</button>
+    </ng-template>
+>>>>>>> 5a34f20d079d7c0e1fd827387fd80d7c5cb96a37
 
   <div id="chocSlider">
     <figure>
