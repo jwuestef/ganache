@@ -24,7 +24,7 @@ import { TrufflesComponent } from './truffles/truffles.component';
 import { CreamsComponent } from './creams/creams.component';
 import { BarksComponent } from './barks/barks.component';
 import { FudgeComponent } from './fudge/fudge.component';
-import { MorechocComponent } from './morechoc/morechoc.component';
+import { OtherchocComponent } from './otherchoc/otherchoc.component';
 import { SeasonalComponent } from './seasonal/seasonal.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -51,10 +51,10 @@ import { ContentService } from './services/content.service';
     CreamsComponent,
     BarksComponent,
     FudgeComponent,
-    MorechocComponent,
+    OtherchocComponent,
     SeasonalComponent,
     FooterComponent,
-    TexteditorComponent
+    TexteditorComponent,
   ],
   imports: [
     BrowserModule,
