@@ -1,16 +1,7 @@
 <div class="container-fluid">
-
-  <!-- Main introduction header -->
-  <h1 *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></h1>
-  <ng-template #inputMainHeader>
-    <texteditor [elementId]="'mainHeader'"></texteditor>
-    <button (click)="saveMainHeader()">Update</button>
-  </ng-template>
-
-
   <div class="row">
     <!-- Creams paragraph, describes creams -->
-    <div class="col-sm-6">
+    <div class="col-sm-6" id="para">
       <!-- If not admin, show paragraph -->
       <p *ngIf="!isAdmin else inputCreamsParagraph" id="creamsParagraph"></p>
       <!-- If yes admin, show form to update content -->
@@ -20,7 +11,7 @@
       </ng-template>
     </div>
     <!-- Creams images -->
-    <div class="col-sm-6">
+    <div class="col-sm-6" id="img">
         <!-- If not admin, show image -->
         <img *ngIf="(!isAdmin && image1Src) else inputImage1" [src]="image1Src" [alt]="image1Description">
         <!-- If yes admin, show form to update image -->
@@ -36,7 +27,5 @@
         </ng-template>
       </div>
   </div>
-
-
   <!-- End of container-fluid -->
 </div>

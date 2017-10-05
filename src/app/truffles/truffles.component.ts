@@ -32,25 +32,15 @@ public getContent() {
   this.cs.getPageContent('trufflesPage').then(function (pageContent) {
     if (thisSaved.isAdmin) {
       // If they're an admin, set the content of the editors
-      tinymce.get('mainHeader').setContent(pageContent.mainHeader);
       tinymce.get('trufflesParagraph').setContent(pageContent.trufflesParagraph);
       $('#image1Description').val(pageContent.image1.description);
     } else {
       // Otherwise, set the content of the regularly displayed fields
-      $('#mainHeader').html(pageContent.mainHeader);
       $('#trufflesParagraph').html(pageContent.trufflesParagraph);
     }
     // The image gets displayed regardless of admin status
     thisSaved.image1Src = pageContent.image1.url;
     thisSaved.image1Description = pageContent.image1.description;
-  });
-}
-
- // As an admin, saves the content of the editor for the main header of the page
-saveMainHeader() {
-  const thisSaved = this;
-  this.cs.savePageContent('trufflesPage', 'mainHeader', tinymce.get('mainHeader').getContent()).then(function () {
-    thisSaved.fms.show('Main Header Updated', { cssClass: 'alert-success', timeout: 2000 });
   });
 }
 

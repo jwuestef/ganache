@@ -8,6 +8,8 @@
 }
 .navvy{
   color:black;
+  margin: 0 5px 0 5px;
+  text-align: center;
 }
 nav{
   font-size: 1.6em;
@@ -49,4 +51,8 @@ footer {
 .alert-success.updated {
   padding: 3rem;
   font-size: 1.5rem;
+}
+
+body {
+  background-color: #bcb1ac;
 }
