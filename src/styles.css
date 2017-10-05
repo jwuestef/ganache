@@ -1,31 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-.navbar{
-  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(black), to(white));
-  background-image: -webkit-linear-gradient(top, white, black, white);
-  background-image: -moz-linear-gradient(top, white, black, white);
-  background-image: linear-gradient(to left, white, #a05236,#6b301b,#a05236, white);
-  justify-content: center;
-}
-.navvy{
-  color:black;
-}
-nav{
-  font-size: 1.6em;
-  display: block;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-.navImg{
-  align-content: center;
-}
-.panel{
-  border:solid;
-  /* border-image: url("assets/border.jpg");
-  border-image-slice: 27 27 27 27;
-  border-image-width: 20px 20px 20px 20px;
-  border-image-outset: 0px 0px 0px 0px;
-  border-image-repeat: stretch stretch; */
-}
+
 /* this is where the rules for the footer are defined, :flex keeps the footer at the bottom */
 footer {
   text-align: center;
@@ -49,4 +23,10 @@ footer {
 .alert-success.updated {
   padding: 3rem;
   font-size: 1.5rem;
+}
+body{
+  background-color: #bcb1ac;
+}
+div{
+  margin:10px;
 }

@@ -7,6 +7,28 @@
     </ng-template>
 
   <div id="chocSlider">
+      <figure>
+          <img src="../../assets/2to1test.jpg" alt="Happy people with cats">
+          <img src="../../assets/ganachetest.png" alt="Happy people with cats">
+          <img src="../../assets/gahnash.jpg" alt="Happy people with cats">
+          <img src="../../assets/sampleChocolate.png" alt="Happy people with cats">
+          <img src="../../assets/chainsign.png" alt="Happy people with cats">
+      </figure>
+=======
+  <!-- Main introduction header -->
+  <h1 *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></h1>
+  <ng-template #inputMainHeader>
+    <texteditor [elementId]="'mainHeader'"></texteditor>
+    <button (click)="saveMainHeader()">Update</button>
+  </ng-template>
+
+  <!-- <p>Our business prides itself on our artfully crafted, locally made chocolates.
+  Beginning with the finest ingredients, Ganache Chocolatier provides customers with a finished product that's made in house with the richest flavors.
+  With treats almost too pretty to eat, your tastebudes are sure to dance.
+  All of our prodcuts are available in store.
+  In addition, we offer a select variety online. Click here to shop our <a href="#"><strong>online store</strong></a></p> -->
+
+  <div id="chocSlider">
     <figure>
       <img src="../../assets/chainsign.png" alt="Happy people with cats">
       <img src="../../assets/ganachetest.png" alt="Happy people with cats">
@@ -14,6 +36,7 @@
       <img src="../../assets/sampleChocolate.png" alt="Happy people with cats">
       <img src="../../assets/chainsign.png" alt="Happy people with cats">
     </figure>
+>>>>>>> 243fc82bae20e9ba42ddce3163c52d36324e879d
   </div>
 
   <div class="col-md-4" id="selection">

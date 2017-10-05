@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <div>
+    <div class="col-md-6 col-md-6-offset">
       <div>
         <img class="navImg" src="../../assets/ganachesign.png" alt="Vendor Sign" style="width:40%; height:40%;">
       </div>
@@ -8,7 +8,7 @@
   </div>
 </div>
 <nav class="navbar" style="margin:0;">
-  <div class="container-fluid">
+  <div class="container-fluid col-md-6 col-md-offset-4">
     <!-- <div class="navbar-header">
     </div> -->
     <ul class="nav navbar-nav">
