@@ -55,3 +55,8 @@ div#chocSlider figure {
   95%  { left: -300%; }
   100% { left: -400%; }
 }
+ #mainHeader {
+  line-height: 2em;
+  margin: 2em 0 2em 0;
+  font-size: 130%;
+ }
