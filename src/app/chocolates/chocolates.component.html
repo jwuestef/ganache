@@ -1,4 +1,5 @@
 <div class="container-fluid">
+<<<<<<< HEAD
     <!-- Main introduction header -->
     <p *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></p>
     <ng-template #inputMainHeader>
@@ -15,8 +16,10 @@
           <img src="../../assets/chainsign.png" alt="Happy people with cats">
       </figure>
 =======
+=======
+>>>>>>> 36c263402ed1bdf435db91f47c154d653898b26d
   <!-- Main introduction header -->
-  <h1 *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></h1>
+  <p *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></p>
   <ng-template #inputMainHeader>
     <texteditor [elementId]="'mainHeader'"></texteditor>
     <button (click)="saveMainHeader()">Update</button>
@@ -36,7 +39,6 @@
       <img src="../../assets/sampleChocolate.png" alt="Happy people with cats">
       <img src="../../assets/chainsign.png" alt="Happy people with cats">
     </figure>
->>>>>>> 243fc82bae20e9ba42ddce3163c52d36324e879d
   </div>
 
   <div class="col-md-4" id="selection">
