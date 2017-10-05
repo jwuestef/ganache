@@ -1,10 +1,17 @@
 <div class="container-fluid">
-    <!-- Main introduction header -->
-    <p *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></p>
-    <ng-template #inputMainHeader>
-      <texteditor [elementId]="'mainHeader'"></texteditor>
-      <button (click)="saveMainHeader()">Update</button>
-    </ng-template>
+
+  <!-- Main introduction header -->
+  <p *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></p>
+  <ng-template #inputMainHeader>
+    <texteditor [elementId]="'mainHeader'"></texteditor>
+    <button (click)="saveMainHeader()">Update</button>
+  </ng-template>
+
+  <!-- <p>Our business prides itself on our artfully crafted, locally made chocolates.
+  Beginning with the finest ingredients, Ganache Chocolatier provides customers with a finished product that's made in house with the richest flavors.
+  With treats almost too pretty to eat, your tastebudes are sure to dance.
+  All of our prodcuts are available in store.
+  In addition, we offer a select variety online. Click here to shop our <a href="#"><strong>online store</strong></a></p> -->
 
   <div id="chocSlider">
     <figure>
