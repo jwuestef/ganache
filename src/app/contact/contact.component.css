@@ -1,12 +1,40 @@
 form{
-  justify-content: center;
+  text-align: center;
 }
 form input{
   border: 1px solid #000;
+  width:80%
 }
 form textarea{
   border: 1px solid #000;
+  width:80%
+}
+form label{
+  width:80%;
+  text-align: left;
+  font-size: 1.3em;
+}
+h1{
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+h3{
+  text-align: center;
 }
 h4{
   text-align: center;
+}
+h5{
+  text-align: center;
+}
+iframe{
+display:block;
+margin:auto;
+border: 10px solid #000000;
+}
+#booton{
+  background-color:#4E2E28;
+  width:20%;
 }

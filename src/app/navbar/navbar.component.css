@@ -27,7 +27,7 @@ a{
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(black), to(white));
   background-image: -webkit-linear-gradient(top, white, black, white);
   background-image: -moz-linear-gradient(top, white, black, white);
-  background-image: linear-gradient(to left, white, #3b2314,#3b2314,#3b2314, white);
+  background-image: linear-gradient(to left, #fff, #3b2314, #3b2314, #3b2314, #3b2314, #3b2314,#3b2314,#3b2314, #fff);
   /* justify-content: center; */
   height: 80px;
   color: #000;
@@ -75,6 +75,14 @@ a{
   position: relative;
   /* display: inline-block; */
   margin-left: 100px;
+  float: left;
+  /* border:3px solid black; */
+  padding-bottom: -1px;
+}
+.droppydown {
+  position: relative;
+  /* display: inline-block; */
+  margin-left: 50px;
   float: left;
   /* border:3px solid black; */
   padding-bottom: -1px;
