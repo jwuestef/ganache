@@ -55,19 +55,19 @@ div#chocSlider figure {
   95%  { left: -300%; }
   100% { left: -400%; }
 }
- #mainHeader {
+
+#chocolatesParagraph {
   line-height: 2em;
   margin: 2em 0 2em 0;
   font-size: 130%;
- }
+}
 
+a {
+  text-decoration: none;
+  color: black;
+}
 
- a {
-   text-decoration: none;
-   color: black;
- }
-
- a:hover {
+a:hover {
   text-decoration:none;
   color: #453c18;
 }
