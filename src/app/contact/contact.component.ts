@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AngularFireDatabase } from 'angularfire2/database';
 
 import { AuthService } from '../services/auth.service';
 
@@ -16,7 +15,7 @@ export class ContactComponent {
 
 
   // The contructor function runs automatically on component load, each and every time it's called
-  constructor(public as: AuthService, public afd: AngularFireDatabase) {
+  constructor(public as: AuthService) {
     this.isAdmin = this.as.isAuthed();
     // Wipe any pre-existing login info
     this.loginModel = { email: '', pass: '' };

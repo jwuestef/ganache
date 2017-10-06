@@ -6,15 +6,12 @@ import { AngularFireDatabase } from 'angularfire2/database';
 
 @Injectable()
 export class AuthService {
-  authState;
 
 
 
   // The contructor function runs automatically on service load, each and every time it's called
   constructor(public afa: AngularFireAuth, public router: Router, public afd: AngularFireDatabase) {
-    this.afa.authState.subscribe((authState) => {
-      this.authState = authState;
-    });
+
   }
 
 

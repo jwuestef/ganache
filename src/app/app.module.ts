@@ -7,6 +7,9 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import * as $ from 'jquery';
+import { FlashMessagesModule } from 'angular2-flash-messages';
+import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
+
 
 // Components
 import { AppComponent } from './app.component';
@@ -17,6 +20,13 @@ import { ChocolatesComponent } from './chocolates/chocolates.component';
 import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './contact/contact.component';
 import { TexteditorComponent } from './services/texteditor.component';
+import { TrufflesComponent } from './truffles/truffles.component';
+import { CreamsComponent } from './creams/creams.component';
+import { BarksComponent } from './barks/barks.component';
+import { FudgeComponent } from './fudge/fudge.component';
+import { OtherchocComponent } from './otherchoc/otherchoc.component';
+import { SeasonalComponent } from './seasonal/seasonal.component';
+import { FooterComponent } from './footer/footer.component';
 
 // Configuration
 import { routes } from './services/routes';
@@ -36,13 +46,23 @@ import { ContentService } from './services/content.service';
     ChocolatesComponent,
     ShopComponent,
     ContactComponent,
-    TexteditorComponent
+    TexteditorComponent,
+    TrufflesComponent,
+    CreamsComponent,
+    BarksComponent,
+    FudgeComponent,
+    OtherchocComponent,
+    SeasonalComponent,
+    FooterComponent,
+    TexteditorComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    FlashMessagesModule,
+    AngularFontAwesomeModule
   ],
   providers: [
     AngularFireAuth,

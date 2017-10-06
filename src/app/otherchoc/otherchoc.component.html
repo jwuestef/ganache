@@ -1,0 +1,55 @@
+<p *ngIf="isAdmin">
+  Is admin!!!</p>
+
+<div class="container-fluid">
+  <div class-="row">
+
+    <div class="col-md-6">
+    </div>
+
+
+    <div class="col-md-6">
+      <h1><strong><p class="text-center">More Chocolates</p></strong></h1>
+
+      <div>
+        <ul *ngIf="!this.admin else otherTmpl">
+          <h2>For those who are looking for something sweet other than truffles, we offer an extensive selection of other chocolates
+            and candles to satisfy just about any sweet tooth! We are also proud to offer sugar-free items and non-chocolate
+            items for those interested. Love our chocolate? We have singular pound bags of Semi-Sweet Chocolate (65% Cacao)
+            Chips or chunks prepared, ready for your chocolate adventures at home!</h2>
+        </ul>
+
+        <ul *ngIf="!this.admin else otherTmpl">
+          <div class-="row">
+            <div class="col-md-6">
+              <li>Dark or Milk Chocolate Covered Almonds</li>
+              <li>Dark Chocolate Covered Peanuts</li>
+              <li>Milk Chocolate Double Dipped Peanuts</li>
+              <li>Milk Chocolate Covered Amaretto Pecans</li>
+              <li>Dark or Milk Chocolate Covered Raising</li>
+              <li>Dark or Milk Chocolate Maltballs</li>
+              <li>Dark, Milk, or White Chocolate Covered Pretzels</li>
+              <li>Dark or Milk Chocolate Sea Salt Caramels</li>
+              <li>Dark Chocolate Covered Espresso Beans</li>
+            </div>
+            <div class-="row">
+              <div class="col-md-6">
+                <li>Mini Dark Peppermint Cups</li>
+                <li>Mini Caramel Turtles</li>
+                <li>Sour Inch Worms</li>
+                <li>Twelve Flavor Gummi Bears</li>
+                <li>Mini Swedish Fish</li>
+                <li>Strawberry and Blueberry Non Pareils</li>
+                <li>Blackberry and Rasberry Non Pareils</li>
+                <li>Licorice Bridge Mix</li>
+                <li>Salted Deluxe Cashews</li>
+                <li>Deluxe Mixed Nuts</li>
+
+
+              </div>
+              <ng-template #otherTmpl>
+                <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
+                <button>Update</button>
+              </ng-template>
+            </div>
+          </div>
