@@ -1,6 +1,4 @@
 <div class="container-fluid">
-  <p *ngIf="isAdmin">Is admin!!!</p>
-
   <!-- Hidden admin login button, causes modal to pop up -->
 
   <!-- Admin login form -->
@@ -30,8 +28,9 @@
       </div>
     </div>
   </div>
-
+  <!-- Content of the page begins here -->
   <div class="contactText">
+      <!-- The left most div -->
     <div class="row col-md-4 col-xs-11" style="margin: 1em 0em 1em 0em;">
       <h2>Visit Ganache Chocolatier!</h2>
       <h4>The only way to truly see the detail in our chocolates is to visit us. Come to the shop and fill your nose with the
@@ -40,41 +39,42 @@
       <br>
       <br>
       <br>
-
       <h2>Consultations</h2>
       <h4>In addition to providing business on a small scale, Ganache Chocolatier is able to cater your party, engagement, wedding,
-        or business meeting with delectable chocolates, truffles and more. Inquire toady for more information!
+        or business meeting with delectable chocolates, truffles and more. Inquire today for more information!
       </h4>
     </div>
+
+    <!-- The center div which contains the contact form -->
     <div class="row col-md-4 col-xs-11" style="margin: 1em 0em 1em 0em;">
       <h2>Contact Ganache Chocolatier</h2>
       <h4>
         If you want more information about Ganache Chocolatiers or have questions, please feel free to contact us. We value our customers
         and hope to help in any way possible.
       </h4>
+      <!-- This is the contact form which forwards through formspree via the action= tag, pointing towards the client's email address -->
       <form action="https://formspree.io/GANACHE@EMAIL.COMGOESHERE">
         <label for="name">Name</label><br>
-        <input type="text" name="Name" id="name"><br> 
+        <input type="text" name="Name" id="name"><br>
         <label for="phone">Phone</label><br>
         <input type="num" name="Phone" id="phone"><br>
         <label for="email">Email</label><br>
-        <input type="email" name="Email"><br> 
+        <input type="email" name="Email"><br>
         <label for="comments">Comment/Question</label><br>
-        <textarea id="comments"></textarea><br>
+        <textarea id="comments" name="Comments"></textarea><br>
         <input type="submit" value="Continue" class="btn btn-primary" id="booton">
       </form>
     </div>
+    <!-- The right most div contains map -->
     <div class="row col-md-4 col-xs-11" style="margin: 1em 0em 1em 0em;">
       <h2>Hours</h2>
       <h4>Monday-Friday 10 AM to 5:30 PM</h4>
       <h4>Saturday 10 AM to 5 PM</h4>
       <h4>Sunday Closed</h4>
+      <!-- This iframe contains the embedded map -->
       <iframe width="65%" height="250" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJCU4tcGNVE4gRE8YUUt6U21k&key=AIzaSyDNN1lmTogQWRQCgcVisoiv-MhLiqNqD5Q"
         allowfullscreen>
       </iframe>
     </div>
   </div>
-
-
-  <button type="button" class="btn btn-primary btn-large" data-toggle="modal" data-target="#myModal" style="float:right;">Super Secret Admin Login</button>
 </div>

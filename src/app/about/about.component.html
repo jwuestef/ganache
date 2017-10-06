@@ -40,5 +40,35 @@
       </ng-template>
     </div>
 
+      <!-- Hidden admin login button, causes modal to pop up -->
+
+  <!-- Admin login form -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <p>Administrator Login</p>
+        </div>
+
+        <div class="modal-body">
+          <input type="email" [(ngModel)]="loginModel.email">
+          <p *ngIf="loginErrors.email" class="validation">{{loginErrors.email}}</p>
+          <br>
+          <input type="password" [(ngModel)]="loginModel.pass">
+          <p *ngIf="loginErrors.pass" class="validation">{{loginErrors.pass}}</p>
+          <br>
+        </div>
+
+        <div class="modal-footer">
+          <button id="login-btn" class="btn btn-primary" (click)="adminLogin()">Login</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   </div>
 </div>
