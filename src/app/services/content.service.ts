@@ -56,14 +56,14 @@ export class ContentService {
         },
         () => {
           // Upload succeeded, update the url in the database
-          // Pull relevant information out of variables
+          // Pull relevant information out of the returned info from storage
           upload.url = uploadTask.snapshot.downloadURL;
-          upload.name = upload.file.name;
           // Make database call to update info
           const thisSaved = this;
           this.afd.database.ref('/' + pageName + '/' + whichElement).update({
             description: upload.description,
-            url: upload.url
+            url: upload.url,
+            link: upload.link
           }).then(function () {
             // Successfully updated database, return the new url
             resolve(upload.url);
