@@ -1,5 +1,5 @@
 /* this is where the rules for the footer are defined, :flex keeps the footer at the bottom */
-h3 {
+footer {
   text-align: center;
   font-size: 1.4em;
   color: black;
