@@ -1,6 +1,6 @@
 #truffleImgs {
   border: 1em solid black;
-  margin: 5vh 3vw 5vh -1vw;
+  margin: 5vh 3vw 5vh 2em;
   overflow: hidden;
 }
 img {
