@@ -1,39 +1,23 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6 col-md-6-offset">
-      <div>
-        <img class="navImg" src="../../assets/ganachesign.png" alt="Vendor Sign" style="width:40%; height:40%;">
-      </div>
-    </div>
-  </div>
+
+  <header role="banner">
+    <img id="logo-main" src="../../assets/genuineLogo.jpg" width="400" alt="Logo Thing main logo" style="align-content: center;">
+    <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
+      <!-- <div class="container-fluid"> -->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- <div class="collapse navbar-collapse" id="navbar-primary-collapse"> -->
+          <ul class="nav navbar-nav">
+            <li class="tabby col-md-1" style="margin-left:50px;"><a href="/home">Home</a></li>
+            <li class="tabby col-md-2"><a href="/about">About</a></li>
+            <li class="tabby col-md-3 offset-col-1"><a href="/chocolates">Our Chocolates</a></li>
+            <li class="tabby col-md-1"><a href="/shop">Shop</a></li>
+            <li class="tabby col-md-3"><a href="/contact">Contact Us</a></li>
+            <!-- <li class="col-md-1"></li> -->
+            <li *ngIf="isAdmin" (click)="logout()"><a href="" class="navvy">Logout</a></li>
+          </ul>
+        <!--</div> /.navbar-collapse -->
+      <!--</div> /.container-fluid -->
+    </nav>
+  </header><!-- header role="banner" -->
+
 </div>
-<nav class="navbar" style="margin:0;">
-  <div class="container-fluid col-md-6 col-md-offset-4">
-    <!-- <div class="navbar-header">
-    </div> -->
-    <ul class="nav navbar-nav">
-      <!-- <li class="navbar-brand" href="#">Ganache</li> -->
-      <li><a href="/home" class="navvy">Home</a></li>
-      <li><a href="/about" class="navvy">About</a></li>
-      <li>
-          <a class="navvy dropdown-toggle" href="/chocolates" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-    Our Chocolates
-          </a>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <ul>
-            <li><a class="dropdown-item" href="/truffles">Gourmet Truffles</a></li>
-            <li><a class="dropdown-item" href="/creams">Assorted Creams</a></li>
-            <li><a class="dropdown-item" href="/barks">Barks and Toffee</a></li>
-            <li><a class="dropdown-item" href="/fudge">Fudge</a></li>
-            <li><a class="dropdown-item" href="/morechoc">More Chocolates</a></li>
-            <li><a class="dropdown-item" href="/seasonal">Seasonal Treats</a></li>
-            </ul>
-          </div>
-      </li>
-      <li><a href="/shop" class="navvy">Shop</a></li>
-      <li><a href="/contact" class="navvy">Contact Us</a></li>
-      <li *ngIf="isAdmin" (click)="logout()"><a href="" class="navvy">Logout</a></li>
-    </ul>
-  </div>
-</nav>

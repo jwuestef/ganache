@@ -1,3 +1,56 @@
-.navbar {
-  opacity: 50%;
+header[role="banner"] #logo-main {
+  display: block;
+  margin: 30px auto;
+}
+#navbar-primary.navbar-default {
+  background: transparent;
+  border: none;
+}
+#navbar-primary.navbar-default .navbar-nav {
+  width: 100%;
+  text-align: center;
+}
+#navbar-primary.navbar-default .navbar-nav > li {
+  display: inline-block;
+  float: none;
+}
+#navbar-primary.navbar-default .navbar-nav > li > a {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+a{
+  font-size: 1.6em;
+  /* margin-left:50px; */
+  color:#000;
+}
+.navbar-nav{
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(black), to(white));
+  background-image: -webkit-linear-gradient(top, white, black, white);
+  background-image: -moz-linear-gradient(top, white, black, white);
+  background-image: linear-gradient(to left, white, #3b2314,#3b2314,#3b2314, white);
+  /* justify-content: center; */
+  height: 80px;
+  color: #000;
+}
+li:hover{
+  border: 1px solid #000;
+}
+
+.navvy{
+  color:black;
+  margin: 0 5px 0 5px;
+  text-align: center;
+}
+nav{
+  font-size: 1.6em;
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+#navImg{
+  align-content: center;
+}
+.navbar-default .navbar-nav>li>a {
+  color: #000;
+  margin-top:10px;
 }
