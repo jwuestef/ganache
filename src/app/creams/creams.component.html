@@ -4,7 +4,7 @@
     <div class="col-sm-6" id="para">
       <div id="creamsPara">
         <!-- If not admin, show paragraph -->
-        <p *ngIf="!isAdmin else inputCreamsParagraph" id="creamsParagraph"></p>
+        <h1 *ngIf="!isAdmin else inputCreamsParagraph" id="creamsParagraph"></h1>
         <!-- If yes admin, show form to update content -->
         <ng-template #inputCreamsParagraph>
           <texteditor [elementId]="'creamsParagraph'"></texteditor>
