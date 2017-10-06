@@ -58,7 +58,7 @@ nav{
 .dropbtn {
   background-color: transparent;
   color: white;
-  padding: 15px;
+  margin: 15px;
   font-size: 1em;
   border: none;
   cursor: pointer;
@@ -114,6 +114,6 @@ a{
 ul{
   border: none;
 }
-.dropbtn{
-  padding-bottom: 0 ;
+.dropbtn .active{
+  border: 3px solid black ;
 }

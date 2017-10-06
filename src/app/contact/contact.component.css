@@ -1,6 +1,12 @@
+form{
+  justify-content: center;
+}
 form input{
   border: 1px solid #000;
 }
 form textarea{
   border: 1px solid #000;
+}
+h4{
+  text-align: center;
 }
