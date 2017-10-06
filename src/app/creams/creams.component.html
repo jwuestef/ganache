@@ -2,16 +2,19 @@
   <div class="row">
     <!-- Creams paragraph, describes creams -->
     <div class="col-sm-6" id="para">
-      <!-- If not admin, show paragraph -->
-      <p *ngIf="!isAdmin else inputCreamsParagraph" id="creamsParagraph"></p>
-      <!-- If yes admin, show form to update content -->
-      <ng-template #inputCreamsParagraph>
-        <texteditor [elementId]="'creamsParagraph'"></texteditor>
-        <button (click)="saveCreamsParagraph()">Update</button>
-      </ng-template>
+      <div id="creamsPara">
+        <!-- If not admin, show paragraph -->
+        <p *ngIf="!isAdmin else inputCreamsParagraph" id="creamsParagraph"></p>
+        <!-- If yes admin, show form to update content -->
+        <ng-template #inputCreamsParagraph>
+          <texteditor [elementId]="'creamsParagraph'"></texteditor>
+          <button (click)="saveCreamsParagraph()">Update</button>
+        </ng-template>
+      </div>
     </div>
     <!-- Creams images -->
     <div class="col-sm-6" id="img">
+      <div id="creamsImg">
         <!-- If not admin, show image -->
         <img *ngIf="(!isAdmin && image1Src) else inputImage1" [src]="image1Src" [alt]="image1Description">
         <!-- If yes admin, show form to update image -->
@@ -26,6 +29,7 @@
           </div>
         </ng-template>
       </div>
+    </div>
   </div>
   <!-- End of container-fluid -->
 </div>
