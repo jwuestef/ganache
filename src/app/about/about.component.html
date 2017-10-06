@@ -1,17 +1,4 @@
 <div class="container-fluid">
-
-  <!-- Main introduction header -->
-  <h1 *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></h1>
-  <ng-template #inputMainHeader>
-    <texteditor [elementId]="'mainHeader'"></texteditor>
-    <button (click)="saveMainHeader()">Update</button>
-    <!-- After successful update, show confirmation -->
-    <span class="alert-success updated" *ngIf="mainHeaderUpdated">
-      <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
-    </span>
-  </ng-template>
-
-
   <div class="row">
 
     <!-- About paragraph, describes shop -->
@@ -54,34 +41,4 @@
     </div>
 
   </div>
-  <!-- End of row -->
-
-
-  <!-- Image2 of shop -->
-  <div class="col-sm-5">
-    <!-- If not admin, show image -->
-    <img *ngIf="(!isAdmin && image2Src) else inputImage2" [src]="image2Src" [alt]="image2Description">
-    <!-- If yes admin, show form to update image -->
-    <ng-template #inputImage2>
-      <div style="border: 2px solid gray" *ngIf="image2Src">
-        <img *ngIf="image2Src" style="width: 100px; height: auto" [src]="image2Src" [alt]="image2Description">
-        <hr>
-        <input type="file" (change)="detectImage2($event)">
-        <input type="text" placeholder="description" id="image2Description" [(ngModel)]="image2Description">
-        <br>
-        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
-        <br>
-        <button (click)="uploadImage2()">Upload this image</button>
-        <!-- Progress bar -->
-        <div *ngIf="uploadingImage2">
-          <p>Progress: {{currentUpload?.progress}}% Complete</p>
-          <progress class="progress is-success" min=1 max=100 value="{{ currentUpload?.progress }}"></progress>
-        </div>
-      </div>
-    </ng-template>
-  </div>
-
-
-
-  <!-- End of container-fluid -->
 </div>
