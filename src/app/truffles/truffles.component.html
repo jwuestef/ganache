@@ -23,7 +23,7 @@
     <div class="col-sm-6">
       <div id="trufflePara">
         <!-- If not admin, show paragraph -->
-        <p *ngIf="!isAdmin else inputTrufflesParagraph" id="trufflesParagraph"></p>
+        <h1 *ngIf="!isAdmin else inputTrufflesParagraph" id="trufflesParagraph"></h1>
         <!-- If yes admin, show form to update content -->
         <ng-template #inputTrufflesParagraph>
           <texteditor [elementId]="'trufflesParagraph'"></texteditor>

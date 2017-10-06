@@ -6,9 +6,15 @@
 img {
   width: 100%;
 }
-#trufflePara{
+/* #trufflePara{
   line-height: 7vh;
-  margin-top: 20vh;
-  font-size: 15px;
+  margin-top: 15vh;
   margin-left: 3vw;
+} */
+
+h1 {
+  line-height: 7vh;
+  margin-top: 15vh;
+  margin-left: 3vw;
+  font-size: 120%;
 }
