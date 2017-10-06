@@ -1,0 +1,12 @@
+/* this is where the rules for the footer are defined, :flex keeps the footer at the bottom */
+footer {
+  text-align: center;
+  font-size: 1.4em;
+  color: black;
+  position:flex;
+  margin-bottom: -10px;
+  width: 100%;
+  margin: 0;
+  /* background-color: #000; */
+  height: 40px;
+}

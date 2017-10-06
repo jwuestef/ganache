@@ -1,13 +1,13 @@
-div#chocSlider {
+#chocSlider {
   overflow: hidden;
   position: relative;
   float: left;
   padding: 0;
-  max-width: 55vw;
-  height: 40vh;
+  width: 55vw;
+  max-height: 55vh;
   margin: 0 auto;
   margin-left: 5vw;
-  margin-bottom: 1.5em;
+  margin-bottom: 5vh;
   background-color: rgba(189,189,189, 0.5);
   border: solid;
   border-width: 1em;
@@ -15,15 +15,15 @@ div#chocSlider {
   color: black;
 }
 
-#selection {
+/* #selection {
   position: relative;
   float: right;
-}
+} */
 
 li {
   list-style: none;
   font-size: 150%;
-  margin: 15px 0 15px 0;
+  margin: 4vh 0 4vh 0;
   text-align: center;
 }
 
@@ -36,7 +36,7 @@ div#chocSlider figure img {
 div#chocSlider figure {
   position: relative;
   width: 500%;
-  height: 200px;
+  height: 100%;
   margin: 0;
   left: 0;
   text-align: left;
@@ -55,8 +55,19 @@ div#chocSlider figure {
   95%  { left: -300%; }
   100% { left: -400%; }
 }
- #mainHeader {
+
+#chocolatesParagraph {
   line-height: 2em;
   margin: 2em 0 2em 0;
   font-size: 130%;
- }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration:none;
+  color: #453c18;
+}

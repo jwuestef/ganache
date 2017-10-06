@@ -1,62 +1,143 @@
+
 <div class="container-fluid">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 5e3ccc8c6e6cd58fceb66ea09f627d391ed22bfa
-  <!-- Main introduction header -->
-  <p *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></p>
-  <ng-template #inputMainHeader>
-    <texteditor [elementId]="'mainHeader'"></texteditor>
-    <button (click)="saveMainHeader()">Update</button>
-  </ng-template>
-
-  <!-- <p>Our business prides itself on our artfully crafted, locally made chocolates.
-  Beginning with the finest ingredients, Ganache Chocolatier provides customers with a finished product that's made in house with the richest flavors.
-  With treats almost too pretty to eat, your tastebudes are sure to dance.
-  All of our prodcuts are available in store.
-  In addition, we offer a select variety online. Click here to shop our <a href="#"><strong>online store</strong></a></p> -->
-<<<<<<< HEAD
-=======
-    <!-- Main introduction header -->
-    <p *ngIf="!isAdmin else inputMainHeader" id="mainHeader"></p>
-    <ng-template #inputMainHeader>
-      <texteditor [elementId]="'mainHeader'"></texteditor>
-      <button (click)="saveMainHeader()">Update</button>
+  <div class="row">
+    <!-- Chocolates paragraph, describes chocolates -->
+    <!-- If not admin, show paragraph -->
+    <h1 *ngIf="!isAdmin else inputChocolatesParagraph" id="chocolatesParagraph"></h1>
+    <!-- If yes admin, show form to update content -->
+    <ng-template #inputChocolatesParagraph>
+      <texteditor [elementId]="'chocolatesParagraph'"></texteditor>
+      <button (click)="saveChocolatesParagraph()">Update</button>
+      <!-- After successful update, show confirmation -->
+      <span class="alert-success updated" *ngIf="chocolatesParagraphUpdated">
+        <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+      </span>
     </ng-template>
->>>>>>> 5a34f20d079d7c0e1fd827387fd80d7c5cb96a37
-=======
->>>>>>> 5e3ccc8c6e6cd58fceb66ea09f627d391ed22bfa
-
-  <div id="chocSlider">
+  </div>
+  <!-- Image slider -->
+  <div class="col-md-8" id="chocSlider">
     <figure>
-      <img src="../../assets/chainsign.png" alt="Happy people with cats">
-      <img src="../../assets/ganachetest.png" alt="Happy people with cats">
-      <img src="../../assets/gahnash.jpg" alt="Happy people with cats">
-      <img src="../../assets/sampleChocolate.png" alt="Happy people with cats">
-      <img src="../../assets/chainsign.png" alt="Happy people with cats">
+      <img *ngIf="image1Src" [src]="image1Src" [alt]="image1Description">
+      <img *ngIf="image2Src" [src]="image2Src" [alt]="image2Description">
+      <img *ngIf="image3Src" [src]="image3Src" [alt]="image3Description">
+      <img *ngIf="image4Src" [src]="image4Src" [alt]="image4Description">
+      <img *ngIf="image5Src" [src]="image5Src" [alt]="image5Description">
     </figure>
   </div>
-
+  <!-- Links to pages -->
   <div class="col-md-4" id="selection">
-    <ul *ngIf="!this.admin else otherTmpl">
+    <ul>
       <li><a href="/truffles">Gourmet Truffles</a></li>
       <li><a href="/creams">Assorted Creams</a></li>
       <li><a href="/barks">Barks and Toffee</a></li>
       <li><a href="/fudge">Fudge</a></li>
-      <li><a href="/morechoc">More Chocolates</a></li>
+      <li><a href="/otherchoc">Other Chocolates</a></li>
       <li><a href="/seasonal">Seasonal Treats</a></li>
     </ul>
   </div>
-
-  <ng-template #item let-item let-i="index">
-
-    <div class="items">
-      <img src="{{ item.name }}">
-      <ng-template #otherTmpl>
-        <textarea name="chocolates" id="" cols="30" rows="10"></textarea>
-        <button>Update</button>
-      </ng-template>
-      <!-- <a href="/#/update" class="btn contact">Update My Profile</a> -->
+  <!-- Image1 upload -->
+  <div class="col-sm-5">
+    <!-- If yes admin, show form to update image -->
+    <div *ngIf="isAdmin">
+      <div style="border: 2px solid gray" *ngIf="image1Src">
+        <img *ngIf="image1Src" style="width: 100px; height: auto" [src]="image1Src" [alt]="image1Description">
+        <hr>
+        <input type="file" (change)="detectImage1($event)">
+        <input type="text" placeholder="description" id="image1Description" [(ngModel)]="image1Description">
+        <br>
+        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
+        <br>
+        <button (click)="uploadImage1()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="uploadingImage1">
+          <p>Progress: {{currentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ currentUpload?.progress }}"></progress>
+        </div>
+      </div>
     </div>
-  </ng-template>
+  </div>
+  <!-- Image2 upload -->
+  <div class="col-sm-5">
+    <!-- If yes admin, show form to update image -->
+    <div *ngIf="isAdmin">
+      <div style="border: 2px solid gray" *ngIf="image2Src">
+        <img *ngIf="image2Src" style="width: 100px; height: auto" [src]="image2Src" [alt]="image2Description">
+        <hr>
+        <input type="file" (change)="detectImage2($event)">
+        <input type="text" placeholder="description" id="image2Description" [(ngModel)]="image2Description">
+        <br>
+        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
+        <br>
+        <button (click)="uploadImage2()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="uploadingImage2">
+          <p>Progress: {{currentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ currentUpload?.progress }}"></progress>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Image3 upload -->
+  <div class="col-sm-5">
+    <!-- If yes admin, show form to update image -->
+    <div *ngIf="isAdmin">
+      <div style="border: 2px solid gray" *ngIf="image3Src">
+        <img *ngIf="image3Src" style="width: 100px; height: auto" [src]="image3Src" [alt]="image3Description">
+        <hr>
+        <input type="file" (change)="detectImage3($event)">
+        <input type="text" placeholder="description" id="image3Description" [(ngModel)]="image3Description">
+        <br>
+        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
+        <br>
+        <button (click)="uploadImage3()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="uploadingImage3">
+          <p>Progress: {{currentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ currentUpload?.progress }}"></progress>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Image4 upload -->
+  <div class="col-sm-5">
+    <!-- If yes admin, show form to update image -->
+    <div *ngIf="isAdmin">
+      <div style="border: 2px solid gray" *ngIf="image4Src">
+        <img *ngIf="image4Src" style="width: 100px; height: auto" [src]="image4Src" [alt]="image4Description">
+        <hr>
+        <input type="file" (change)="detectImage4($event)">
+        <input type="text" placeholder="description" id="image4Description" [(ngModel)]="image4Description">
+        <br>
+        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
+        <br>
+        <button (click)="uploadImage4()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="uploadingImage4">
+          <p>Progress: {{currentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ currentUpload?.progress }}"></progress>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Image5 upload -->
+  <div class="col-sm-5">
+    <!-- If yes admin, show form to update image -->
+    <div *ngIf="isAdmin">
+      <div style="border: 2px solid gray" *ngIf="image5Src">
+        <img *ngIf="image5Src" style="width: 100px; height: auto" [src]="image5Src" [alt]="image5Description">
+        <hr>
+        <input type="file" (change)="detectImage5($event)">
+        <input type="text" placeholder="description" id="image5Description" [(ngModel)]="image5Description">
+        <br>
+        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
+        <br>
+        <button (click)="uploadImage5()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="uploadingImage5">
+          <p>Progress: {{currentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ currentUpload?.progress }}"></progress>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

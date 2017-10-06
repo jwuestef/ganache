@@ -1,9 +1,13 @@
-div#aboutSlider {
+div#homeSlider {
   overflow: hidden;
+  position: relative;
+  float: left;
   padding: 0;
-  max-width: 50%;
+  max-width: 55vw;
+  height: 40vh;
   margin: 0 auto;
-  margin-bottom: 1em;
+  margin-left: 5vw;
+  margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
   border: solid;
   border-width: 1em;
@@ -11,20 +15,21 @@ div#aboutSlider {
   color: black;
 }
 
-div#aboutSlider figure img {
+div#homeSlider figure img {
   width: 20%;
-  float: right;
+  position: relative;
+  float: left;
 }
 
-div#aboutSlider figure {
-position: flex;
-width: 500%;
-height: 200px;
-margin: 0;
-left: 0;
-text-align: left;
-font-size: 0;
-animation: 30s slidy infinite;
+div#homeSlider figure {
+  position: relative;
+  width: 500%;
+  height: 200px;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite;
 }
 
 @keyframes slidy {

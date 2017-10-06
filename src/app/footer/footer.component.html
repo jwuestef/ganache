@@ -1,10 +1,43 @@
 <div class="container-fluid">
   <div class="row col-md-12 col-xs-12 col-sm-12">
     <footer>
-      55 E Pine St. | Zionsville, Indiana 46077 | (317)873-6948      <div style="float: right">
+      55 E Pine St. | Zionsville, Indiana 46077 | (317) 873-6948  &copy;<small>Ganache Chocolatier</small>
+      <div style="float: right">
           <a href="https://www.instagram.com/ganachechoc/?hl=en" target="_blank"><img src="../../assets/instagram.png" alt="Instagram Logo" width="30px;"></a>
           <a href="https://www.facebook.com/GanacheZionsville/" target="_blank"><img src="../../assets/FBlogo100px.png" alt="Facebook Logo" width="25px;"></a>
-          </div>
+      </div>
+      <div style="float:left;">
+      <img src="../../assets/gLogo.jpg" type="button" data-toggle="modal" data-target="#myModal" style="height:30px; width:30px;">
+      </div>
     </footer>
+          <!-- Hidden admin login button, causes modal to pop up -->
+
+  <!-- Admin login form -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <p>Administrator Login</p>
+        </div>
+
+        <div class="modal-body">
+          <input type="email" [(ngModel)]="loginModel.email">
+          <p *ngIf="loginErrors.email" class="validation">{{loginErrors.email}}</p>
+          <br>
+          <input type="password" [(ngModel)]="loginModel.pass">
+          <p *ngIf="loginErrors.pass" class="validation">{{loginErrors.pass}}</p>
+          <br>
+        </div>
+
+        <div class="modal-footer">
+          <button id="login-btn" class="btn btn-primary" (click)="adminLogin()">Login</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
   </div>
 </div>

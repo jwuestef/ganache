@@ -28,7 +28,7 @@
           <input type="file" (change)="detectImage1($event)">
           <input type="text" placeholder="description" id="image1Description" [(ngModel)]="image1Description">
           <br>
-          <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
+          <p><em>*For proper appearance, image should have a 1:1 aspect ratio.</em></p>
           <br>
           <button (click)="uploadImage1()">Upload this image</button>
           <!-- Progress bar -->
@@ -39,6 +39,5 @@
         </div>
       </ng-template>
     </div>
-
   </div>
 </div>

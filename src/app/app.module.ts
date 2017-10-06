@@ -10,7 +10,6 @@ import * as $ from 'jquery';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
 
-
 // Components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
