@@ -45,3 +45,10 @@ div#fudgeSlider figure {
   95%  { left: -300%; }
   100% { left: -400%; }
 }
+
+h1 {
+  line-height: 7vh;
+  margin-top: 15vh;
+  margin-left: 3vw;
+  font-size: 120%;
+}

@@ -6,6 +6,7 @@ div#barksSlider {
   max-width: 55vw;
   height: 40vh;
   margin: 0 auto;
+  margin-top: 2.5em;
   margin-left: 5vw;
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
@@ -42,4 +43,11 @@ div#barksSlider figure {
   75%  { left: -300%; }
   95%  { left: -300%; }
   100% { left: -400%; }
+}
+
+h1 {
+  line-height: 7vh;
+  margin-top: 15vh;
+  margin-left: 3vw;
+  font-size: 120%;
 }
