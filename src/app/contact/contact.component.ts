@@ -26,12 +26,21 @@ export class ContactComponent {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     if (window.location.pathname === '/contact') {
-      console.log(window.location.pathname)
-      document.getElementById('chocoBtn').setAttribute('style', 'border: none;');
-      document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
-      document.getElementById('homeBtn').setAttribute('style', 'border: none;');
-      document.getElementById('shopBtn').setAttribute('style', 'border: none;');
-      document.getElementById('contactBtn').setAttribute('style', 'border: 5px solid black;');
+      if (this.isAdmin) {
+        // Set black border around selected view for admins
+        document.getElementById('chocoBtnAdmin').setAttribute('style', 'border: none;');
+        document.getElementById('aboutBtnAdmin').setAttribute('style', 'border: none;');
+        document.getElementById('homeBtnAdmin').setAttribute('style', 'border: none;');
+        document.getElementById('shopBtnAdmin').setAttribute('style', 'border: none;');
+        document.getElementById('contactBtnAdmin').setAttribute('style', 'border: 5px solid black;');
+      } else {
+        // Set black border around selected view for non-admins
+        document.getElementById('chocoBtn').setAttribute('style', 'border: none;');
+        document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
+        document.getElementById('homeBtn').setAttribute('style', 'border: none;');
+        document.getElementById('shopBtn').setAttribute('style', 'border: none;');
+        document.getElementById('contactBtn').setAttribute('style', 'border: 5px solid black;');
+      }
      }
   }
 
