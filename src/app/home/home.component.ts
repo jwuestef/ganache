@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NgModel } from '@angular/forms';
-import { FlashMessagesService } from 'angular2-flash-messages';
 
 import { AuthService } from '../services/auth.service';
 import { ContentService } from '../services/content.service';
@@ -45,7 +44,7 @@ export class HomeComponent {
 
 
   // The contructor function runs automatically on component load, each and every time it's called
-  constructor(public as: AuthService, public cs: ContentService, public fms: FlashMessagesService) {
+  constructor(public as: AuthService, public cs: ContentService) {
     // Check to see if this is the logged in administrator
     this.isAdmin = this.as.isAuthed();
     // Pull updated content from Firebase
