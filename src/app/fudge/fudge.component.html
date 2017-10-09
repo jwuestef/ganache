@@ -2,7 +2,7 @@
   <div class="row">
 
     <!-- Fudge paragraph, describes shop -->
-    <div class="col-sm-7">
+    <div class="col-md-6">
       <!-- If not admin, show paragraph -->
       <p *ngIf="!isAdmin else inputFudgeParagraph" id="fudgeParagraph"></p>
       <!-- If yes admin, show form to update content -->
@@ -16,6 +16,8 @@
       </ng-template>
     </div>
 
+    
+    <div class="col-md-6">
 
     <!-- Image slider -->
     <div id="fudgeSlider">
@@ -29,7 +31,7 @@
 
 
     <!-- Image1 upload -->
-    <div class="col-sm-5">
+    <div class="col-md-3">
       <!-- If yes admin, show form to update image -->
       <div *ngIf="isAdmin">
         <div style="border: 2px solid gray" *ngIf="image1Src">
@@ -53,7 +55,7 @@
 
 
     <!-- Image2 upload -->
-    <div class="col-sm-5">
+    <div class="col-md-3">
       <!-- If yes admin, show form to update image -->
       <div *ngIf="isAdmin">
         <div style="border: 2px solid gray" *ngIf="image2Src">
@@ -77,7 +79,7 @@
 
 
     <!-- Image3 upload -->
-    <div class="col-sm-5">
+    <div class="col-md-3">
       <!-- If yes admin, show form to update image -->
       <div *ngIf="isAdmin">
         <div style="border: 2px solid gray" *ngIf="image3Src">
@@ -101,7 +103,7 @@
 
 
     <!-- Image4 upload -->
-    <div class="col-sm-5">
+    <div class="col-md-3">
       <!-- If yes admin, show form to update image -->
       <div *ngIf="isAdmin">
         <div style="border: 2px solid gray" *ngIf="image4Src">
