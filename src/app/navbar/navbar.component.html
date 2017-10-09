@@ -5,20 +5,20 @@
       <div class="nav navbar-nav">
         <div class="container-fluid" id="selecty">
           <div class="droppydown">
-            <button class="dropbtn"><a href="/home">Home</a></button>
+            <button class="dropbtn"><a [routerLink] = "['/home']">Home</a></button>
           </div>
           <div class="droppydown">
-            <button class="dropbtn"><a href="/about">About</a></button>
+            <button class="dropbtn"><a [routerLink]="['/about']">About</a></button>
           </div>
           <div class="droppydown">
-            <button class="dropbtn"><a href="/chocolates">Our Chocolates</a></button>
+            <button class="dropbtn"><a [routerLink] ="['/chocolates']">Our Chocolates</a></button>
             <div class="dropdown-content">
-              <a href="/truffles">Truffles</a>
-              <a href="/barks">Barks</a>
-              <a href="/creams">Creams</a>
-              <a href="/fudge">Fudge</a>
-              <a href="/seasonal">Seasonal</a>
-              <a href="/morechoc">Other Chocolates</a>
+              <a [routerLink]="['/truffles']">Truffles</a>
+              <a [routerLink]="['/barks']">Barks</a>
+              <a [routerLink]="['/creams']">Creams</a>
+              <a [routerLink]="['/fudge']">Fudge</a>
+              <a [routerLink]="['/seasonal']">Seasonal</a>
+              <a [routerLink]="['/morechoc']">Other Chocolates</a>
             </div>
           </div>
           <div class="droppydown">

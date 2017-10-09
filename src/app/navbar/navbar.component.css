@@ -78,9 +78,11 @@ a{
   display: inline-block;
   margin-left: 2.5%;
   margin-right: 2.5%;
+  margin-bottom:1px;
   /* float: left; */
   /* transform: scale(.5); */
   /* border:5px solid black; */
+  padding-top:2px;
   padding-bottom: -1px;
 }
 .droppydown {
@@ -100,7 +102,7 @@ a{
   min-width: 160px;
   /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
   z-index: 1;
-  background-image: radial-gradient(#3b2314, #bcb1ac);
+  background-image: linear-gradient(to bottom,#3b2314, #bcb1ac);
   margin-top:6px;
 
 }
@@ -127,6 +129,6 @@ a{
 ul{
   border: none;
 }
-.dropbtn .active{
+.dropbtn :active{
   border: 3px solid black ;
 }
