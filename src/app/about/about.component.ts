@@ -52,7 +52,7 @@ export class AboutComponent implements OnInit {
         document.getElementById('shopBtn').setAttribute('style', 'border: none;');
         document.getElementById('aboutBtn').setAttribute('style', 'border: 5px solid black;');
       }
-     }
+    }
   }
 
 
