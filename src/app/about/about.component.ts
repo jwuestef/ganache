@@ -5,6 +5,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthService } from '../services/auth.service';
 import { ContentService } from '../services/content.service';
 import { Image } from '../services/image';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 
 @Component({
@@ -92,6 +93,17 @@ export class AboutComponent {
     });
   }
 
-
+ngOnInit() {
+  // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+  // Add 'implements OnInit' to the class.
+  if (window.location.pathname === '/about') {
+    console.log('ABOUTERARGHLBLARGHL')
+    document.getElementById('chocoBtn').setAttribute('style', 'border: none;');
+    document.getElementById('contactBtn').setAttribute('style', 'border: none;');
+    document.getElementById('homeBtn').setAttribute('style', 'border: none;');
+    document.getElementById('shopBtn').setAttribute('style', 'border: none;');
+    document.getElementById('aboutBtn').setAttribute('style', 'border: 5px solid black;');
+   }
+}
 
 }

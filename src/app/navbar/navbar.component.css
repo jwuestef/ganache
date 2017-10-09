@@ -1,6 +1,6 @@
 header[role="banner"] #logo-main {
   display: block;
-  margin: 30px auto;
+  margin: 10px auto;
 }
 #navbar-primary.navbar-default {
   background: transparent;
@@ -29,7 +29,7 @@ a{
   background-image: -moz-linear-gradient(top, white, black, white);
   background-image: linear-gradient(to left, #fff, #3b2314, #3b2314, #3b2314, #3b2314, #3b2314,#3b2314,#3b2314, #fff);
   /* justify-content: center; */
-  height: 80px;
+  height: 60px;
   color: #000;
   white-space: nowrap;
   position: flex;
@@ -60,7 +60,8 @@ nav{
 .dropbtn {
   background-color: transparent;
   color: white;
-  margin: 8px;
+  margin-left: 20px;
+  margin-right: 20px;
   font-size: 1em;
   border: none;
   cursor: pointer;
@@ -103,7 +104,7 @@ a{
   /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
   z-index: 1;
   background-image: linear-gradient(to bottom,#3b2314, #bcb1ac);
-  margin-top:6px;
+  /* margin-top:5px; */
 
 }
 
@@ -129,6 +130,6 @@ a{
 ul{
   border: none;
 }
-.dropbtn :active{
+/* .dropbtn :active{
   border: 3px solid black ;
-}
+} */

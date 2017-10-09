@@ -240,6 +240,17 @@ export class ChocolatesComponent {
     });
   }
 
-
+ngOnInit() {
+  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+  //Add 'implements OnInit' to the class.
+  if (window.location.pathname === '/chocolates') {
+    console.log('CHOCOERARGHLBLARGHL')
+    document.getElementById('chocoBtn').setAttribute('style', 'border: 5px solid black;');
+    document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
+    document.getElementById('contactBtn').setAttribute('style', 'border: none;');
+    document.getElementById('homeBtn').setAttribute('style', 'border: none;');
+    document.getElementById('shopBtn').setAttribute('style', 'border: none;');
+   }
+}
 
 }
