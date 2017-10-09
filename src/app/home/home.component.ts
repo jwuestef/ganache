@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
 
 import { AuthService } from '../services/auth.service';
@@ -11,7 +11,7 @@ import { Image } from '../services/image';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   isAdmin = false;
   homeParagraphUpdated = false;
   currentUpload: Image;
@@ -49,6 +49,30 @@ export class HomeComponent {
     this.isAdmin = this.as.isAuthed();
     // Pull updated content from Firebase
     this.getContent();
+  }
+
+
+
+  // Sets black border around selected view in navbar
+  ngOnInit() {
+    // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    if (window.location.pathname === '/') {
+      if (this.isAdmin) {
+        // Set black border around selected view for admins
+        document.getElementById('chocoBtnAdmin').setAttribute('style', 'border: none;');
+        document.getElementById('contactBtnAdmin').setAttribute('style', 'border: none;');
+        document.getElementById('aboutBtnAdmin').setAttribute('style', 'border: none;');
+        document.getElementById('shopBtnAdmin').setAttribute('style', 'border: none;');
+        document.getElementById('homeBtnAdmin').setAttribute('style', 'border: 5px solid black;');
+      } else {
+        // Set black border around selected view for non-admins
+        document.getElementById('chocoBtn').setAttribute('style', 'border: none;');
+        document.getElementById('contactBtn').setAttribute('style', 'border: none;');
+        document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
+        document.getElementById('shopBtn').setAttribute('style', 'border: none;');
+        document.getElementById('homeBtn').setAttribute('style', 'border: 5px solid black;');
+      }
+     }
   }
 
 
@@ -238,17 +262,6 @@ export class HomeComponent {
     });
   }
 
-ngOnInit() {
-  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-  //Add 'implements OnInit' to the class.
-  if (window.location.pathname === '/') {
-    console.log('ABOUTERARGHLBLARGHL')
-    document.getElementById('chocoBtn').setAttribute('style', 'border: none;');
-    document.getElementById('contactBtn').setAttribute('style', 'border: none;');
-    document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
-    document.getElementById('shopBtn').setAttribute('style', 'border: none;');
-    document.getElementById('homeBtn').setAttribute('style', 'border: 5px solid black;');
-   }
-}
+
 
 }
