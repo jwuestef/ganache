@@ -2,154 +2,217 @@
 
 
 
+  <!-- Home paragraph, describes shop -->
   <div class="row">
-    <!-- Home paragraph, describes shop -->
-    <!-- If not admin, show paragraph -->
-    <h1 *ngIf="!isAdmin else inputHomeParagraph" id="homeParagraph"></h1>
-    <!-- If yes admin, show form to update content -->
-    <ng-template #inputHomeParagraph>
-      <texteditor [elementId]="'homeParagraph'"></texteditor>
-      <button (click)="saveHomeParagraph()">Update</button>
-      <!-- After successful update, show confirmation -->
-      <span class="alert-success updated" *ngIf="homeParagraphUpdated">
+    <div class="col-md-12">
+      <!-- If not admin, show paragraph -->
+      <h1 *ngIf="!isAdmin else inputHomeParagraph" id="homeParagraph"></h1>
+      <!-- If yes admin, show form to update content -->
+      <ng-template #inputHomeParagraph>
+        <texteditor [elementId]="'homeParagraph'"></texteditor>
+        <button (click)="saveHomeParagraph()">Update</button>
+        <!-- After successful update, show confirmation -->
+        <span class="alert-success updated" *ngIf="homeParagraphUpdated">
           <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
         </span>
-    </ng-template>
+      </ng-template>
+    </div>
   </div>
+  <!-- End of row for home paragraph-->
 
 
 
   <!-- Image slider -->
-  <div id="homeSlider">
-    <figure>
-      <img *ngIf="image1Src" [src]="image1Src" [alt]="image1Description">
-      <img *ngIf="image2Src" [src]="image2Src" [alt]="image2Description">
-      <img *ngIf="image3Src" [src]="image3Src" [alt]="image3Description">
-      <img *ngIf="image4Src" [src]="image4Src" [alt]="image4Description">
-      <img *ngIf="image5Src" [src]="image5Src" [alt]="image5Description">
-    </figure>
+  <div class="row">
+    <div class="col-md-12" id="homeSlider">
+      <figure>
+        <img *ngIf="image1Src && (image1Link.toLowerCase() == 'na')" [src]="image1Src" [alt]="image1Description">
+        <a *ngIf="image1Src && (image1Link.toLowerCase() !== 'na')" [href]="image1Link"><img [src]="image1Src" [alt]="image1Description"></a>
+
+        <img *ngIf="image2Src && (image2Link.toLowerCase() == 'na')" [src]="image2Src" [alt]="image2Description">
+        <a *ngIf="image2Src && (image2Link.toLowerCase() !== 'na')" [href]="image2Link"><img [src]="image2Src" [alt]="image2Description"></a>
+
+        <img *ngIf="image3Src && (image3Link.toLowerCase() == 'na')" [src]="image3Src" [alt]="image3Description">
+        <a *ngIf="image3Src && (image3Link.toLowerCase() !== 'na')" [href]="image3Link"><img [src]="image3Src" [alt]="image3Description"></a>
+
+        <img *ngIf="image4Src && (image4Link.toLowerCase() == 'na')" [src]="image4Src" [alt]="image4Description">
+        <a *ngIf="image4Src && (image4Link.toLowerCase() !== 'na')" [href]="image4Link"><img [src]="image4Src" [alt]="image4Description"></a>
+
+        <img *ngIf="image5Src && (image5Link.toLowerCase() == 'na')" [src]="image5Src" [alt]="image5Description">
+        <a *ngIf="image5Src && (image5Link.toLowerCase() !== 'na')" [href]="image5Link"><img [src]="image5Src" [alt]="image5Description"></a>
+
+        <img *ngIf="image1Src && (image1Link.toLowerCase() == 'na')" [src]="image1Src" [alt]="image1Description">
+        <a *ngIf="image1Src && (image1Link.toLowerCase() !== 'na')" [href]="image1Link"><img [src]="image1Src" [alt]="image1Description"></a>
+      </figure>
+    </div>
   </div>
+  <!-- End of row for image slider -->
 
 
 
-  <!-- Image1 upload -->
-  <div class="col-sm-5">
-    <!-- If yes admin, show form to update image -->
-    <div *ngIf="isAdmin">
-      <div style="border: 2px solid gray" *ngIf="image1Src">
-        <img *ngIf="image1Src" style="width: 100px; height: auto" [src]="image1Src" [alt]="image1Description">
-        <hr>
+  <!-- If yes admin, show form to update image -->
+  <div *ngIf="isAdmin">
+
+    <!-- Image 1 and 2 update form -->
+    <div class="row">
+
+      <!-- Image1 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="image1Src">
+        <label for="image1Existing">Existing Image:</label>
+        <img *ngIf="image1Src" id="image1Existing" style="width: 100px; height: auto" [src]="image1Src" [alt]="image1Description">
+        <br>
+        <br>
+        <label for="image1FileInput">Image to upload: <em style="color: red;">*required</em></label>
         <input type="file" (change)="detectImage1($event)">
+        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
+        <br>
+        <label for="image1Description">Description of image: <em style="color: red;">*required</em></label>
         <input type="text" placeholder="description" id="image1Description" [(ngModel)]="image1Description">
         <br>
-        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
         <br>
-        <button (click)="uploadImage1()">Upload this image</button>
+        <label for="image1Link">Link: <em style="color: gray">*optional</em></label>
+        <input type="text" placeholder="Enter &#34;NA&#34; for no link" id="image1Link" [(ngModel)]="image1Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="uploadImage1()">Upload this image</button>
         <!-- Progress bar -->
         <div *ngIf="uploadingImage1">
+          <br>
           <p>Progress: {{currentUpload?.progress}}% Complete</p>
           <progress class="progress is-success" min=1 max=100 value="{{ currentUpload?.progress }}"></progress>
         </div>
       </div>
-    </div>
-  </div>
 
-
-
-  <!-- Image2 upload -->
-  <div class="col-sm-5">
-    <!-- If yes admin, show form to update image -->
-    <div *ngIf="isAdmin">
-      <div style="border: 2px solid gray" *ngIf="image2Src">
-        <img *ngIf="image2Src" style="width: 100px; height: auto" [src]="image2Src" [alt]="image2Description">
-        <hr>
+      <!-- Image2 upload -->
+      <div class="col-md-6 imageUploadingForm" *ngIf="image2Src">
+        <label for="image2Existing">Existing Image:</label>
+        <img *ngIf="image2Src" id="image2Existing" style="width: 100px; height: auto" [src]="image2Src" [alt]="image2Description">
+        <br>
+        <br>
+        <label for="image2FileInput">Image to upload: <em style="color: red;">*required</em></label>
         <input type="file" (change)="detectImage2($event)">
+        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
+        <br>
+        <label for="image2Description">Description of image: <em style="color: red;">*required</em></label>
         <input type="text" placeholder="description" id="image2Description" [(ngModel)]="image2Description">
         <br>
-        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
         <br>
-        <button (click)="uploadImage2()">Upload this image</button>
+        <label for="image2Link">Link: <em style="color: gray">*optional</em></label>
+        <input type="text" placeholder="Enter &#34;NA&#34; for no link" id="image2Link" [(ngModel)]="image2Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="uploadImage2()">Upload this image</button>
         <!-- Progress bar -->
         <div *ngIf="uploadingImage2">
+          <br>
           <p>Progress: {{currentUpload?.progress}}% Complete</p>
           <progress class="progress is-success" min=1 max=100 value="{{ currentUpload?.progress }}"></progress>
         </div>
       </div>
+
     </div>
-  </div>
+    <!-- End of row for updating images 1 and 2 -->
 
 
 
-  <!-- Image3 upload -->
-  <div class="col-sm-5">
-    <!-- If yes admin, show form to update image -->
-    <div *ngIf="isAdmin">
-      <div style="border: 2px solid gray" *ngIf="image3Src">
-        <img *ngIf="image3Src" style="width: 100px; height: auto" [src]="image3Src" [alt]="image3Description">
-        <hr>
+    <!-- Image 3 and 4 update form -->
+    <div class="row">
+
+      <!-- Image3 upload -->
+      <div class="col-md-6 imageUploadingForm" *ngIf="image3Src">
+        <label for="image3Existing">Existing Image:</label>
+        <img *ngIf="image3Src" id="image3Existing" style="width: 100px; height: auto" [src]="image3Src" [alt]="image3Description">
+        <br>
+        <br>
+        <label for="image3FileInput">Image to upload: <em style="color: red;">*required</em></label>
         <input type="file" (change)="detectImage3($event)">
+        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
+        <br>
+        <label for="image3Description">Description of image: <em style="color: red;">*required</em></label>
         <input type="text" placeholder="description" id="image3Description" [(ngModel)]="image3Description">
         <br>
-        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
         <br>
-        <button (click)="uploadImage3()">Upload this image</button>
+        <label for="image3Link">Link: <em style="color: gray">*optional</em></label>
+        <input type="text" placeholder="Enter &#34;NA&#34; for no link" id="image3Link" [(ngModel)]="image3Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="uploadImage3()">Upload this image</button>
         <!-- Progress bar -->
         <div *ngIf="uploadingImage3">
+          <br>
           <p>Progress: {{currentUpload?.progress}}% Complete</p>
           <progress class="progress is-success" min=1 max=100 value="{{ currentUpload?.progress }}"></progress>
         </div>
       </div>
-    </div>
-  </div>
 
-
-
-  <!-- Image4 upload -->
-  <div class="col-sm-5">
-    <!-- If yes admin, show form to update image -->
-    <div *ngIf="isAdmin">
-      <div style="border: 2px solid gray" *ngIf="image4Src">
-        <img *ngIf="image4Src" style="width: 100px; height: auto" [src]="image4Src" [alt]="image4Description">
-        <hr>
+      <!-- Image4 upload -->
+      <div class="col-md-6 imageUploadingForm" *ngIf="image4Src">
+        <label for="image4Existing">Existing Image:</label>
+        <img *ngIf="image4Src" id="image4Existing" style="width: 100px; height: auto" [src]="image4Src" [alt]="image4Description">
+        <br>
+        <br>
+        <label for="image4FileInput">Image to upload: <em style="color: red;">*required</em></label>
         <input type="file" (change)="detectImage4($event)">
+        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
+        <br>
+        <label for="image4Description">Description of image: <em style="color: red;">*required</em></label>
         <input type="text" placeholder="description" id="image4Description" [(ngModel)]="image4Description">
         <br>
-        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
         <br>
-        <button (click)="uploadImage4()">Upload this image</button>
+        <label for="image4Link">Link: <em style="color: gray">*optional</em></label>
+        <input type="text" placeholder="Enter &#34;NA&#34; for no link" id="image4Link" [(ngModel)]="image4Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="uploadImage4()">Upload this image</button>
         <!-- Progress bar -->
         <div *ngIf="uploadingImage4">
+          <br>
           <p>Progress: {{currentUpload?.progress}}% Complete</p>
           <progress class="progress is-success" min=1 max=100 value="{{ currentUpload?.progress }}"></progress>
         </div>
       </div>
+
     </div>
-  </div>
+    <!-- End of row for updating images 3 and 4 -->
 
 
 
-  <!-- Image5 upload -->
-  <div class="col-sm-5">
-    <!-- If yes admin, show form to update image -->
-    <div *ngIf="isAdmin">
-      <div style="border: 2px solid gray" *ngIf="image5Src">
-        <img *ngIf="image5Src" style="width: 100px; height: auto" [src]="image5Src" [alt]="image5Description">
-        <hr>
-        <input type="file" (change)="detectImage5($event)">
-        <input type="text" placeholder="description" id="image5Description" [(ngModel)]="image5Description">
+    <!-- Image 5 and (null) update form -->
+    <div class="row">
+
+      <!-- Image5 upload -->
+      <div class="col-md-6 imageUploadingForm" *ngIf="image5Src">
+        <label for="image5Existing">Existing Image:</label>
+        <img *ngIf="image5Src" id="image5Existing" style="width: 100px; height: auto" [src]="image5Src" [alt]="image5Description">
         <br>
+        <br>
+        <label for="image5FileInput">Image to upload: <em style="color: red;">*required</em></label>
+        <input type="file" (change)="detectImage5($event)">
         <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
         <br>
-        <button (click)="uploadImage5()">Upload this image</button>
+        <label for="image5Description">Description of image: <em style="color: red;">*required</em></label>
+        <input type="text" placeholder="description" id="image5Description" [(ngModel)]="image5Description">
+        <br>
+        <br>
+        <label for="image5Link">Link: <em style="color: gray">*optional</em></label>
+        <input type="text" placeholder="Enter &#34;NA&#34; for no link" id="image5Link" [(ngModel)]="image5Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="uploadImage5()">Upload this image</button>
         <!-- Progress bar -->
         <div *ngIf="uploadingImage5">
+          <br>
           <p>Progress: {{currentUpload?.progress}}% Complete</p>
           <progress class="progress is-success" min=1 max=100 value="{{ currentUpload?.progress }}"></progress>
         </div>
       </div>
+
     </div>
+    <!-- End of row for updating images 5 and (null) -->
+
+
   </div>
-
-
+  <!-- End of admin-only image -->
 
 </div>
+<!-- End of container-fluid -->
