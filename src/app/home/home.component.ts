@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
-import { FlashMessagesService } from 'angular2-flash-messages';
 
 import { AuthService } from '../services/auth.service';
 import { ContentService } from '../services/content.service';
@@ -12,11 +11,10 @@ import { Image } from '../services/image';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   isAdmin = false;
-  selectedFiles: FileList;
-  currentUpload: Image;
   homeParagraphUpdated = false;
+  currentUpload: Image;
   image1Src: string;
   image2Src: string;
   image3Src: string;
@@ -27,6 +25,16 @@ export class HomeComponent {
   image3Description: string;
   image4Description: string;
   image5Description: string;
+  image1Link: string;
+  image2Link: string;
+  image3Link: string;
+  image4Link: string;
+  image5Link: string;
+  selectedFile1: FileList;
+  selectedFile2: FileList;
+  selectedFile3: FileList;
+  selectedFile4: FileList;
+  selectedFile5: FileList;
   uploadingImage1 = false;
   uploadingImage2 = false;
   uploadingImage3 = false;
@@ -36,7 +44,7 @@ export class HomeComponent {
 
 
   // The contructor function runs automatically on component load, each and every time it's called
-  constructor(public as: AuthService, public cs: ContentService, public fms: FlashMessagesService) {
+  constructor(public as: AuthService, public cs: ContentService) {
     // Check to see if this is the logged in administrator
     this.isAdmin = this.as.isAuthed();
     // Pull updated content from Firebase
@@ -45,18 +53,37 @@ export class HomeComponent {
 
 
 
+  // Sets black border around selected view in navbar
+  ngOnInit() {
+    // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    if (window.location.pathname === '/') {
+      if (this.isAdmin) {
+        // Set black border around selected view for admins
+        document.getElementById('chocoBtnAdmin').setAttribute('style', 'border: none;');
+        document.getElementById('contactBtnAdmin').setAttribute('style', 'border: none;');
+        document.getElementById('aboutBtnAdmin').setAttribute('style', 'border: none;');
+        document.getElementById('shopBtnAdmin').setAttribute('style', 'border: none;');
+        document.getElementById('homeBtnAdmin').setAttribute('style', 'border: 5px solid black;');
+      } else {
+        // Set black border around selected view for non-admins
+        document.getElementById('chocoBtn').setAttribute('style', 'border: none;');
+        document.getElementById('contactBtn').setAttribute('style', 'border: none;');
+        document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
+        document.getElementById('shopBtn').setAttribute('style', 'border: none;');
+        document.getElementById('homeBtn').setAttribute('style', 'border: 5px solid black;');
+      }
+     }
+  }
+
+
+
   // Pulls page content from Firebase and assigns it to content based on admin status
-  public getContent() {
+  getContent() {
     const thisSaved = this;
     this.cs.getPageContent('homePage').then(function (pageContent) {
       if (thisSaved.isAdmin) {
-        // If they're an admin, set the content of the editors
+        // If they're an admin, set the content of paragraph editors
         tinymce.get('homeParagraph').setContent(pageContent.homeParagraph);
-        $('#image1Description').val(pageContent.image1.description);
-        $('#image2Description').val(pageContent.image2.description);
-        $('#image3Description').val(pageContent.image3.description);
-        $('#image4Description').val(pageContent.image4.description);
-        $('#image5Description').val(pageContent.image5.description);
       } else {
         // Otherwise, set the content of the regularly displayed fields
         $('#homeParagraph').html(pageContent.homeParagraph);
@@ -72,6 +99,11 @@ export class HomeComponent {
       thisSaved.image3Description = pageContent.image3.description;
       thisSaved.image4Description = pageContent.image4.description;
       thisSaved.image5Description = pageContent.image5.description;
+      thisSaved.image1Link = pageContent.image1.link;
+      thisSaved.image2Link = pageContent.image2.link;
+      thisSaved.image3Link = pageContent.image3.link;
+      thisSaved.image4Link = pageContent.image4.link;
+      thisSaved.image5Link = pageContent.image5.link;
     });
   }
 
@@ -90,26 +122,26 @@ export class HomeComponent {
 
   // Detects when a new image has been inserted and fills the appropriate variable
   detectImage1(event) {
-    this.selectedFiles = event.target.files;
+    this.selectedFile1 = event.target.files;
   }
   detectImage2(event) {
-    this.selectedFiles = event.target.files;
+    this.selectedFile2 = event.target.files;
   }
   detectImage3(event) {
-    this.selectedFiles = event.target.files;
+    this.selectedFile3 = event.target.files;
   }
   detectImage4(event) {
-    this.selectedFiles = event.target.files;
+    this.selectedFile4 = event.target.files;
   }
   detectImage5(event) {
-    this.selectedFiles = event.target.files;
+    this.selectedFile5 = event.target.files;
   }
 
 
 
   // Uploads a new image
   uploadImage1() {
-    if (!this.image1Description) {
+    if (!this.image1Description || !this.image1Link || !this.selectedFile1) {
       return;
     }
     // Display the upload progress bar for image 1 and no others
@@ -118,14 +150,12 @@ export class HomeComponent {
     this.uploadingImage3 = false;
     this.uploadingImage4 = false;
     this.uploadingImage5 = false;
-    // Set file-to-be-uploaded to the file taken from the input field
-    this.currentUpload = new Image(this.selectedFiles.item(0));
-    // Include the image description
+    // Set file-to-be-uploaded to the file taken from the input fields
+    this.currentUpload = new Image(this.selectedFile1.item(0));
     this.currentUpload.description = this.image1Description;
-    // Set the name
-    this.currentUpload.name = 'image1';
+    this.currentUpload.link = this.image1Link;
+    // Upload the file via ContentService function (pageName, whichElement, newImage)
     const thisSaved = this;
-    // Upload the file via UploadService (pageName, whichElement, newImage)
     this.cs.pushUpload('homePage', 'image1', this.currentUpload).then(function (newURL) {
       // Updates thumbnail image
       thisSaved.image1Src = newURL.toString();
@@ -136,7 +166,7 @@ export class HomeComponent {
 
   // Uploads a new image
   uploadImage2() {
-    if (!this.image2Description) {
+    if (!this.image2Description || !this.image2Link || !this.selectedFile2) {
       return;
     }
     // Display the upload progress bar for image 2 and no others
@@ -145,14 +175,12 @@ export class HomeComponent {
     this.uploadingImage3 = false;
     this.uploadingImage4 = false;
     this.uploadingImage5 = false;
-    // Set file-to-be-uploaded to the file taken from the input field
-    this.currentUpload = new Image(this.selectedFiles.item(0));
-    // Include the image description
+    // Set file-to-be-uploaded to the file taken from the input fields
+    this.currentUpload = new Image(this.selectedFile2.item(0));
     this.currentUpload.description = this.image2Description;
-    // Set the name
-    this.currentUpload.name = 'image2';
+    this.currentUpload.link = this.image2Link;
+    // Upload the file via ContentService function (pageName, whichElement, newImage)
     const thisSaved = this;
-    // Upload the file via UploadService (pageName, whichElement, newImage)
     this.cs.pushUpload('homePage', 'image2', this.currentUpload).then(function (newURL) {
       // Updates thumbnail image
       thisSaved.image2Src = newURL.toString();
@@ -163,7 +191,7 @@ export class HomeComponent {
 
   // Uploads a new image
   uploadImage3() {
-    if (!this.image3Description) {
+    if (!this.image3Description || !this.image3Link || !this.selectedFile3) {
       return;
     }
     // Display the upload progress bar for image 3 and no others
@@ -172,14 +200,12 @@ export class HomeComponent {
     this.uploadingImage3 = true;
     this.uploadingImage4 = false;
     this.uploadingImage5 = false;
-    // Set file-to-be-uploaded to the file taken from the input field
-    this.currentUpload = new Image(this.selectedFiles.item(0));
-    // Include the image description
+    // Set file-to-be-uploaded to the file taken from the input fields
+    this.currentUpload = new Image(this.selectedFile3.item(0));
     this.currentUpload.description = this.image3Description;
-    // Set the name
-    this.currentUpload.name = 'image3';
+    this.currentUpload.link = this.image3Link;
+    // Upload the file via ContentService function (pageName, whichElement, newImage)
     const thisSaved = this;
-    // Upload the file via UploadService (pageName, whichElement, newImage)
     this.cs.pushUpload('homePage', 'image3', this.currentUpload).then(function (newURL) {
       // Updates thumbnail image
       thisSaved.image3Src = newURL.toString();
@@ -190,7 +216,7 @@ export class HomeComponent {
 
   // Uploads a new image
   uploadImage4() {
-    if (!this.image4Description) {
+    if (!this.image4Description || !this.image4Link || !this.selectedFile4) {
       return;
     }
     // Display the upload progress bar for image 4 and no others
@@ -199,14 +225,12 @@ export class HomeComponent {
     this.uploadingImage3 = false;
     this.uploadingImage4 = true;
     this.uploadingImage5 = false;
-    // Set file-to-be-uploaded to the file taken from the input field
-    this.currentUpload = new Image(this.selectedFiles.item(0));
-    // Include the image description
+    // Set file-to-be-uploaded to the file taken from the input fields
+    this.currentUpload = new Image(this.selectedFile4.item(0));
     this.currentUpload.description = this.image4Description;
-    // Set the name
-    this.currentUpload.name = 'image4';
+    this.currentUpload.link = this.image4Link;
+    // Upload the file via ContentService function (pageName, whichElement, newImage)
     const thisSaved = this;
-    // Upload the file via UploadService (pageName, whichElement, newImage)
     this.cs.pushUpload('homePage', 'image4', this.currentUpload).then(function (newURL) {
       // Updates thumbnail image
       thisSaved.image4Src = newURL.toString();
@@ -217,7 +241,7 @@ export class HomeComponent {
 
   // Uploads a new image
   uploadImage5() {
-    if (!this.image5Description) {
+    if (!this.image5Description || !this.image5Link || !this.selectedFile5) {
       return;
     }
     // Display the upload progress bar for image 5 and no others
@@ -226,14 +250,12 @@ export class HomeComponent {
     this.uploadingImage3 = false;
     this.uploadingImage4 = false;
     this.uploadingImage5 = true;
-    // Set file-to-be-uploaded to the file taken from the input field
-    this.currentUpload = new Image(this.selectedFiles.item(0));
-    // Include the image description
+    // Set file-to-be-uploaded to the file taken from the input fields
+    this.currentUpload = new Image(this.selectedFile5.item(0));
     this.currentUpload.description = this.image5Description;
-    // Set the name
-    this.currentUpload.name = 'image5';
+    this.currentUpload.link = this.image5Link;
+    // Upload the file via ContentService function (pageName, whichElement, newImage)
     const thisSaved = this;
-    // Upload the file via UploadService (pageName, whichElement, newImage)
     this.cs.pushUpload('homePage', 'image5', this.currentUpload).then(function (newURL) {
       // Updates thumbnail image
       thisSaved.image5Src = newURL.toString();

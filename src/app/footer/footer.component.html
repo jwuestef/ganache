@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row col-md-12 col-xs-12 col-sm-12">
     <footer>
-      55 E Pine St. | Zionsville, Indiana 46077 | (317) 873-6948 <br> &copy;<small>Ganache Chocolatier</small>
+      55 E Pine St. | Zionsville, Indiana 46077 | (317) 873-6948
       <div style="float: right">
           <a href="https://www.instagram.com/ganachechoc/?hl=en" target="_blank"><img src="../../assets/instagram.png" alt="Instagram Logo" width="30px;"></a>
           <a href="https://www.facebook.com/GanacheZionsville/" target="_blank"><img src="../../assets/FBlogo100px.png" alt="Facebook Logo" width="30px;"></a>
@@ -23,10 +23,12 @@
         </div>
 
         <div class="modal-body">
-          <input type="email" [(ngModel)]="loginModel.email">
+          <label for="emailInput">Email:</label>
+          <input type="email" id="emailInput" [(ngModel)]="loginModel.email">
           <p *ngIf="loginErrors.email" class="validation">{{loginErrors.email}}</p>
           <br>
-          <input type="password" [(ngModel)]="loginModel.pass">
+          <label for="passwordInput">Password:</label>
+          <input type="password" id="passwordInput" [(ngModel)]="loginModel.pass">
           <p *ngIf="loginErrors.pass" class="validation">{{loginErrors.pass}}</p>
           <br>
         </div>

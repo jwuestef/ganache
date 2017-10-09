@@ -22,7 +22,18 @@ export class ContactComponent {
     this.loginErrors = { email: '', pass: '' };
   }
 
-
+  ngOnInit() {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    if (window.location.pathname === '/contact') {
+      console.log(window.location.pathname)
+      document.getElementById('chocoBtn').setAttribute('style', 'border: none;');
+      document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
+      document.getElementById('homeBtn').setAttribute('style', 'border: none;');
+      document.getElementById('shopBtn').setAttribute('style', 'border: none;');
+      document.getElementById('contactBtn').setAttribute('style', 'border: 5px solid black;');
+     }
+  }
 
   // If the login form isn't completely filled out, set error messages
   validateLogin() {
