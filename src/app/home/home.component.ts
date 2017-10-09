@@ -55,7 +55,7 @@ export class HomeComponent {
 
 
   // Pulls page content from Firebase and assigns it to content based on admin status
-  public getContent() {
+  getContent() {
     const thisSaved = this;
     this.cs.getPageContent('homePage').then(function (pageContent) {
       if (thisSaved.isAdmin) {

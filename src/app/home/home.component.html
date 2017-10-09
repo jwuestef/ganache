@@ -40,6 +40,9 @@
 
         <img *ngIf="image5Src && (image5Link.toLowerCase() == 'na')" [src]="image5Src" [alt]="image5Description">
         <a *ngIf="image5Src && (image5Link.toLowerCase() !== 'na')" [href]="image5Link"><img [src]="image5Src" [alt]="image5Description"></a>
+
+        <img *ngIf="image1Src && (image1Link.toLowerCase() == 'na')" [src]="image1Src" [alt]="image1Description">
+        <a *ngIf="image1Src && (image1Link.toLowerCase() !== 'na')" [href]="image1Link"><img [src]="image1Src" [alt]="image1Description"></a>
       </figure>
     </div>
   </div>
