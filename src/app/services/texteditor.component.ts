@@ -31,8 +31,12 @@ export class TexteditorComponent implements AfterViewInit, OnDestroy {
         'undo redo | cut copy paste | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | indent outdent',
         'fontselect fontsizeselect textcolor forecolor colorpicker | subscript superscript | bullist numlist table link image media preview'
       ],
+      content_css : 'https://fonts.googleapis.com/css?family=PT+Serif:400,https://fonts.googleapis.com/css?family=PT+Serif:400i,https://fonts.googleapis.com/css?family=PT+Serif:700,https://fonts.googleapis.com/css?family=PT+Serif:700i',
+      font_formats: 'PT Serif=PT Serif,serif;Andale Mono=andale mono,times;Arial=arial,helvetica,sans-serif;Arial Black=arial black,avant garde;Book Antiqua=book antiqua,palatino;Comic Sans MS=comic sans ms,sans-serif;Courier New=courier new,courier;Georgia=georgia,palatino;Helvetica=helvetica;Impact=impact,chicago;Symbol=symbol;Tahoma=tahoma,arial,helvetica,sans-serif;Terminal=terminal,monaco;Times New Roman=times new roman,times;Trebuchet MS=trebuchet ms,geneva;Verdana=verdana,geneva;Webdings=webdings;Wingdings=wingdings,zapf dingbats',
+      fontsize_formats: '6pt 8pt 10pt 12pt 14pt 16pt 18pt 20pt 22pt 24pt 26pt 28pt 30pt 32pt 34pt 36pt 38pt 40pt 42pt 44pt 46pt 48pt',
       plugins: ['link lists preview textcolor image media paste colorpicker table'],
       skin_url: 'assets/skins/lightgray',
+      style_formats_merge: true,
       theme: 'modern',
       textcolor_map: [
         '000000', 'Black',
@@ -89,3 +93,6 @@ export class TexteditorComponent implements AfterViewInit, OnDestroy {
     tinymce.remove(this.editor);
   }
 }
+
+
+

@@ -18,6 +18,11 @@ a:hover {
   color: #453c18;
 }
 
+/* Stops blue border from appearing around selected buttons */
+button:focus {
+  outline:0;
+}
+
 /* Used to warn admin when database save or upload failed */
 .alert-danger {
   max-width: 30rem;
@@ -50,11 +55,11 @@ a:hover {
   background-color: #453c18;
   color: #bcb1ac;
 }
-h1, h2, h3, h5, h6, p, footer{
+h1, h3, h4, h5, h6, p, footer{
   text-align: center;
   font-family: 'avenir';
-  line-height: 2rem;
+  line-height: 2.5rem;
 }
-a:active{
-  border:none;
+h2{
+  text-align: center;
 }
