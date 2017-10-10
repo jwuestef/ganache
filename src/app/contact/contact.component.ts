@@ -32,14 +32,14 @@ export class ContactComponent {
         document.getElementById('aboutBtnAdmin').setAttribute('style', 'border: none;');
         document.getElementById('homeBtnAdmin').setAttribute('style', 'border: none;');
         document.getElementById('shopBtnAdmin').setAttribute('style', 'border: none;');
-        document.getElementById('contactBtnAdmin').setAttribute('style', 'border: 5px solid black;');
+        document.getElementById('contactBtnAdmin').setAttribute('style', 'border: 3px solid black;');
       } else {
         // Set black border around selected view for non-admins
         document.getElementById('chocoBtn').setAttribute('style', 'border: none;');
         document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
         document.getElementById('homeBtn').setAttribute('style', 'border: none;');
         document.getElementById('shopBtn').setAttribute('style', 'border: none;');
-        document.getElementById('contactBtn').setAttribute('style', 'border: 5px solid black;');
+        document.getElementById('contactBtn').setAttribute('style', 'border: 3px solid black;');
       }
      }
   }

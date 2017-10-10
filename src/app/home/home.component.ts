@@ -63,16 +63,16 @@ export class HomeComponent implements OnInit {
         document.getElementById('contactBtnAdmin').setAttribute('style', 'border: none;');
         document.getElementById('aboutBtnAdmin').setAttribute('style', 'border: none;');
         document.getElementById('shopBtnAdmin').setAttribute('style', 'border: none;');
-        document.getElementById('homeBtnAdmin').setAttribute('style', 'border: 5px solid black;');
+        document.getElementById('homeBtnAdmin').setAttribute('style', 'border: 3px solid black;');
       } else {
         // Set black border around selected view for non-admins
         document.getElementById('chocoBtn').setAttribute('style', 'border: none;');
         document.getElementById('contactBtn').setAttribute('style', 'border: none;');
         document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
         document.getElementById('shopBtn').setAttribute('style', 'border: none;');
-        document.getElementById('homeBtn').setAttribute('style', 'border: 5px solid black;');
+        document.getElementById('homeBtn').setAttribute('style', 'border: 3px solid black;');
       }
-     }
+    }
   }
 
 
