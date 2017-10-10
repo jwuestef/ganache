@@ -1,52 +1,17 @@
 <div class="container-fluid">
-  <header role="banner" *ngIf="isAdmin" class="row">
-    <img id="logo-main" src="../../assets/genuineLogo.jpg" width="400" alt="Ganache Logo" style="align-content: center;">
-    <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
-      <div class="nav navbar-nav">
-        <div class="container-fluid" id="selecty">
-          <div class="droppydown" id="homeBtnAdmin">
-            <button class="dropbtn" [routerLink] = "['/home']"><a>Home</a></button>
-          </div>
-          <div class="droppydown" id="aboutBtnAdmin">
-            <button class="dropbtn" [routerLink]="['/about']"><a>About</a></button>
-          </div>
-          <div class="droppydown" id="chocoBtnAdmin">
-            <button class="dropbtn" [routerLink] ="['/chocolates']"><a>Our Chocolates</a></button>
-            <div class="dropdown-content">
-              <a [routerLink]="['/truffles']">Truffles</a>
-              <a [routerLink]="['/barks']">Barks</a>
-              <a [routerLink]="['/creams']">Creams</a>
-              <a [routerLink]="['/fudge']">Fudge</a>
-              <a [routerLink]="['/seasonal']">Seasonal</a>
-              <a [routerLink]="['/otherchoc']">Other Chocolates</a>
-            </div>
-          </div>
-          <div class="droppydown" id="shopBtnAdmin">
-            <button class="dropbtn" [routerLink]="['/shop']"><a>Shop</a></button>
-          </div>
-          <div class="droppydown" id="contactBtnAdmin">
-            <button class="dropbtn" [routerLink]="['/contact']"><a>Contact Us</a></button>
-          </div>
-          <div class="droppydown">
-            <button class="dropbtn" *ngIf="isAdmin" (click)="logout()"><a href="">Logout</a></button>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <header role="banner" *ngIf="!isAdmin">
+  <header role="banner">
       <img id="logo-main" src="../../assets/genuineLogo.jpg" width="400" alt="Ganache Logo" style="align-content: center;">
       <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
         <div class="nav navbar-nav">
           <div class="container-fluid" id="selecty">
             <div class="dropdown" id="homeBtn">
-              <button class="dropbtn" [routerLink]="['/home']"><a>Home</a></button>
+              <button class="dropbtn" [routerLink]="['/home']">Home</button>
             </div>
             <div class="dropdown" id="aboutBtn">
-              <button class="dropbtn" [routerLink]="['/about']"><a>About</a></button>
+              <button class="dropbtn" [routerLink]="['/about']">About</button>
             </div>
             <div class="dropdown" id="chocoBtn">
-              <button class="dropbtn" [routerLink]="['/chocolates']"><a>Our Chocolates</a></button>
+              <button class="dropbtn" [routerLink]="['/chocolates']">Our Chocolates</button>
               <div class="dropdown-content">
                 <a [routerLink]="['/truffles']">Truffles</a>
                 <a [routerLink]="['/barks']">Barks</a>
@@ -57,18 +22,13 @@
               </div>
             </div>
             <div class="dropdown" id="shopBtn">
-              <button class="dropbtn" [routerLink]="['/shop']"><a>Shop</a></button>
+              <button class="dropbtn" [routerLink]="['/shop']">Shop</button>
             </div>
             <div class="dropdown" id="contactBtn">
-              <button class="dropbtn" [routerLink]="['/contact']"><a>Contact Us</a></button>
+              <button class="dropbtn" [routerLink]="['/contact']">Contact Us</button>
             </div>
           </div>
         </div>
-        <!--</div> /.navbar-collapse -->
-        <!--</div> /.container-fluid -->
       </nav>
     </header>
-  <!-- header role="banner" -->
-
-
 </div>

@@ -18,11 +18,19 @@ export class FooterComponent implements OnInit {
   constructor(public as: AuthService) {
     this.loginModel = { email: '', pass: '' };
     this.loginErrors = { email: '', pass: '' };
+    this.isAdmin = this.as.isAuthed();
   }
 
 
 
   ngOnInit() {
+  }
+
+
+
+  logout() {
+    this.as.logout();
+    location.reload();
   }
 
 

@@ -1,45 +1,63 @@
 <div class="container-fluid">
-  <div class="row col-md-12 col-xs-12 col-sm-12">
+  <div class="row col-xs-12">
+
+
+
     <footer>
+
+      <!-- Hidden admin login button, causes modal to pop up -->
+      <div style="float:left;" *ngIf="!isAdmin">
+        <img src="../../assets/gLogo.jpg" data-toggle="modal" data-target="#myModal" style="height:30px; width:30px;">
+      </div>
+
+      <!-- Hidden admin logout button, logs the user out -->
+      <div style="float:left;" *ngIf="isAdmin">
+        <img src="../../assets/gLogo.jpg" (click)="logout()" style="height:30px; width:30px;">
+      </div>
+
       55 E Pine St. | Zionsville, Indiana 46077 | (317) 873-6948
+
       <div style="float: right">
-          <a href="https://www.instagram.com/ganachechoc/?hl=en" target="_blank"><img src="../../assets/instagram.png" alt="Instagram Logo" width="30px;"></a>
-          <a href="https://www.facebook.com/GanacheZionsville/" target="_blank"><img src="../../assets/FBlogo100px.png" alt="Facebook Logo" width="30px;"></a>
+        <a href="https://www.instagram.com/ganachechoc/?hl=en" target="_blank"><img src="../../assets/instagram.png" alt="Instagram Logo" width="30px;"></a>
+        <a href="https://www.facebook.com/GanacheZionsville/" target="_blank"><img src="../../assets/FBlogo100px.png" alt="Facebook Logo" width="25px;"></a>
       </div>
-      <div style="float:left;">
-      <img src="../../assets/gLogo.jpg" type="button" data-toggle="modal" data-target="#myModal" style="height:30px; width:30px;">
-      </div>
+
     </footer>
-          <!-- Hidden admin login button, causes modal to pop up -->
 
-  <!-- Admin login form -->
-  <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
 
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <p>Administrator Login</p>
+
+    <!-- Admin login form -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <p>Administrator Login</p>
+          </div>
+
+          <div class="modal-body">
+            <label for="emailInput">Email:</label>
+            <input type="email" id="emailInput" [(ngModel)]="loginModel.email">
+            <p *ngIf="loginErrors.email" class="validation">{{loginErrors.email}}</p>
+            <br>
+            <label for="passwordInput">Password:</label>
+            <input type="password" id="passwordInput" [(ngModel)]="loginModel.pass">
+            <p *ngIf="loginErrors.pass" class="validation">{{loginErrors.pass}}</p>
+            <br>
+          </div>
+
+          <div class="modal-footer">
+            <button id="login-btn" class="btn btn-primary" (click)="adminLogin()">Login</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </div>
+
         </div>
-
-        <div class="modal-body">
-          <label for="emailInput">Email:</label>
-          <input type="email" id="emailInput" [(ngModel)]="loginModel.email">
-          <p *ngIf="loginErrors.email" class="validation">{{loginErrors.email}}</p>
-          <br>
-          <label for="passwordInput">Password:</label>
-          <input type="password" id="passwordInput" [(ngModel)]="loginModel.pass">
-          <p *ngIf="loginErrors.pass" class="validation">{{loginErrors.pass}}</p>
-          <br>
-        </div>
-
-        <div class="modal-footer">
-          <button id="login-btn" class="btn btn-primary" (click)="adminLogin()">Login</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        </div>
-
       </div>
     </div>
-  </div>
+    <!-- End of admin login form -->
+
+
+
   </div>
 </div>

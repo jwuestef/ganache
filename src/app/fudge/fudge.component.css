@@ -6,6 +6,7 @@ div#fudgeSlider {
   max-width: 55vw;
   height: 55vh;
   margin: 0 auto;
+  margin-top: 2.5em;
   margin-left: 5vw;
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
@@ -50,4 +51,11 @@ div#fudgeSlider figure {
   95%  { left: -400%; }
 
   100% { left: -500%; }
+}
+
+h1 {
+  line-height: 7vh;
+  margin-top: 15vh;
+  margin-left: 3vw;
+  font-size: 120%;
 }

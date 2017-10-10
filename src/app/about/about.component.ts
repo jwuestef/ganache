@@ -33,27 +33,17 @@ export class AboutComponent implements OnInit {
 
 
 
-  // Sets black border around selected view in navbar
   ngOnInit() {
     // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    // Sets black border around selected view in navbar
     if (window.location.pathname === '/about') {
-      if (this.isAdmin) {
-        // Set black border around selected view for admins
-        document.getElementById('chocoBtnAdmin').setAttribute('style', 'border: none;');
-        document.getElementById('contactBtnAdmin').setAttribute('style', 'border: none;');
-        document.getElementById('homeBtnAdmin').setAttribute('style', 'border: none;');
-        document.getElementById('shopBtnAdmin').setAttribute('style', 'border: none;');
-        document.getElementById('aboutBtnAdmin').setAttribute('style', 'border: 5px solid black;');
-      } else {
-        // Set black border around selected view for non-admins
         document.getElementById('chocoBtn').setAttribute('style', 'border: none;');
         document.getElementById('contactBtn').setAttribute('style', 'border: none;');
         document.getElementById('homeBtn').setAttribute('style', 'border: none;');
         document.getElementById('shopBtn').setAttribute('style', 'border: none;');
-        document.getElementById('aboutBtn').setAttribute('style', 'border: 5px solid black;');
+        document.getElementById('aboutBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-4px;');
       }
     }
-  }
 
 
 

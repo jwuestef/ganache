@@ -10,6 +10,8 @@ header[role="banner"] #logo-main {
 #navbar-primary.navbar-default .navbar-nav {
   width: 100%;
   text-align: center;
+  font-size: 1.6em;
+  color:#000;
 }
 #navbar-primary.navbar-default .navbar-nav > li {
   display: inline-block;
@@ -19,17 +21,12 @@ header[role="banner"] #logo-main {
   padding-left: 0px;
   padding-right: 0px;
 }
-a{
-  font-size: 1.6em;
-  /* margin-left:50px; */
-  color:#000;
-}
 .navbar-nav{
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(black), to(white));
   background-image: -webkit-linear-gradient(top, white, black, white);
   background-image: -moz-linear-gradient(top, white, black, white);
-  background-image: linear-gradient(to left, #fff, #86746c, #7b6b63,#504540, #504540,#504540,#7b6b63, #86746c, #fff);
-  /* justify-content: center; */
+  /* background-image: linear-gradient(to left, #fff, #86746c, #7b6b63,#504540, #504540,#504540,#7b6b63, #86746c, #fff); */
+  background-image: linear-gradient(to left, #fff, #3b2314, #3b2314, #3b2314, #3b2314, #3b2314,#3b2314,#3b2314, #fff);
   height: 60px;
   color: #000;
   white-space: nowrap;
@@ -60,17 +57,13 @@ nav{
 /* Dropdown Button */
 .dropbtn {
   background-color: transparent;
-  color: white;
-  margin-left: 20px;
-  margin-right: 20px;
+  color: #000;
   font-size: 1em;
   border: none;
   cursor: pointer;
   text-decoration: none;
   padding-right: 3px;
-}
-a{
-  text-decoration: none;
+  margin:3px 20px;
 }
 
 
@@ -82,12 +75,12 @@ a{
   margin-right: 2.5%;
   margin-bottom:1px;
   /* float: left; */
-  /* transform: scale(.5); */
   /* border:5px solid black; */
-  padding-top:2px;
-  padding-bottom: -1px;
+  /* padding-top:3px; */
+  /* padding-bottom: -1px; */
 }
 .droppydown {
+
   position: relative;
   /* display: inline-block; */
   margin-left: 50px;
@@ -106,7 +99,8 @@ a{
   z-index: 1;
   background-image: linear-gradient(to bottom,#3b2314, #bcb1ac);
   /* margin-top:5px; */
-
+  margin-left:4px;
+  margin-top:1px;
 }
 
 /* Links inside the dropdown */
@@ -134,3 +128,8 @@ ul{
 /* .dropbtn :active{
   border: 3px solid black ;
 } */
+@media screen and (max-width: 500px) {
+  nav{
+    width: 400px;
+  }
+}

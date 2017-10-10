@@ -17,30 +17,7 @@ form label{
   margin-top:-12px;
   margin-bottom:-12px;
 }
-h1{
-  text-align: center;
-}
-h2{
-  text-align: center;
-}
-h3{
-  text-align: center;
-}
-h5{
-  text-align: center;
-  line-height: 2em;
-}
-h4{
-  text-align: center;
-  line-height: 2em;
-}
-p{
-  text-align: center;
-  line-height: 2em;
-}
-h5{
-  text-align: center;
-}
+
 iframe{
 display:block;
 margin:auto;
@@ -49,4 +26,7 @@ border: 10px solid #000000;
 #booton{
   background-color:#4E2E28;
   width:20%;
+}
+.divMargy{
+  margin: 1em 0em 1em 0em;
 }

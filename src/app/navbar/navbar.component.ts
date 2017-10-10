@@ -20,6 +20,13 @@ export class NavbarComponent {
     logout() {
       this.as.logout();
     }
+    ngOnInit() {
+      //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+      //Add 'implements OnInit' to the class.
+      if(window.innerWidth < 500){
+        console.log("kittykittykitty")
+      }
+    }
 
 
 }
