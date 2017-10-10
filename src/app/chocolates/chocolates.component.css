@@ -13,10 +13,11 @@ div#chocolatesSlider {
   position: relative;
   float: left;
   padding: 0;
-  max-width: 55vw;
-  height: 55vh;
+  max-width: 63vw;
+  height: 54vh;
   margin: 0 auto;
   margin-left: 5vw;
+  margin-right: -2vw;
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
   border: solid;

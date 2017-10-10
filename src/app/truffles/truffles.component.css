@@ -3,14 +3,16 @@
   margin: 5vh 3vw 5vh 2em;
   overflow: hidden;
 }
+
 img {
   width: 100%;
 }
-/* #trufflePara{
+
+#trufflePara{
   line-height: 7vh;
   margin-top: 15vh;
   margin-left: 3vw;
-} */
+}
 
 h1 {
   line-height: 7vh;
