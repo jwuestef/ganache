@@ -11,13 +11,22 @@ import { AuthService } from '../services/auth.service';
 export class NavbarComponent {
   isAdmin = false;
 
-    // The contructor function runs automatically on component load, each and every time it's called
-    constructor(public as: AuthService) {
-      this.isAdmin = this.as.isAuthed();
-    }
+  // The contructor function runs automatically on component load, each and every time it's called
+  constructor(public as: AuthService) {
+    this.isAdmin = this.as.isAuthed();
+
+  }
 
     logout() {
       this.as.logout();
     }
+    ngOnInit() {
+      //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+      //Add 'implements OnInit' to the class.
+      if(window.innerWidth < 500){
+        console.log("kittykittykitty")
+      }
+    }
+
 
 }

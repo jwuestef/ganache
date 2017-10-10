@@ -1,12 +1,14 @@
 /* this is where the rules for the footer are defined, :flex keeps the footer at the bottom */
-h3 {
+footer {
   text-align: center;
   font-size: 1.4em;
   color: black;
   position:flex;
+  margin-top: 10px;
   margin-bottom: -10px;
   width: 100%;
-  margin: 0;
+  /* margin: 0; */
   /* background-color: #000; */
   height: 40px;
+  color: #3b2314;
 }

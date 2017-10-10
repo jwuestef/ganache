@@ -1,6 +1,32 @@
+form{
+  text-align: center;
+}
 form input{
   border: 1px solid #000;
+  width:80%;
+  /* margin:-10px; */
 }
 form textarea{
   border: 1px solid #000;
+  width:80%
+}
+form label{
+  width:80%;
+  text-align: left;
+  font-size: 1.3em;
+  margin-top:-12px;
+  margin-bottom:-12px;
+}
+
+iframe{
+display:block;
+margin:auto;
+border: 10px solid #000000;
+}
+#booton{
+  background-color:#4E2E28;
+  width:20%;
+}
+.divMargy{
+  margin: 1em 0em 1em 0em;
 }

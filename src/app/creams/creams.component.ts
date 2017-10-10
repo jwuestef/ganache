@@ -25,6 +25,17 @@ export class CreamsComponent {
     // Pull updated content from Firebase
     this.getContent();
   }
+  ngOnInit() {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    // Sets black border around selected view in navbar
+    if (window.location.pathname === '/contact') {
+        document.getElementById('contactBtn').setAttribute('style', 'border: none;');
+        document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
+        document.getElementById('homeBtn').setAttribute('style', 'border: none;');
+        document.getElementById('shopBtn').setAttribute('style', 'border: none;');
+        document.getElementById('chocoBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-4px;');
+     }
+  }
 
   // Pulls page content from Firebase and assigns it to content based on admin status
 public getContent() {
@@ -32,25 +43,15 @@ public getContent() {
   this.cs.getPageContent('creamsPage').then(function (pageContent) {
     if (thisSaved.isAdmin) {
       // If they're an admin, set the content of the editors
-      tinymce.get('mainHeader').setContent(pageContent.mainHeader);
       tinymce.get('creamsParagraph').setContent(pageContent.creamsParagraph);
       $('#image1Description').val(pageContent.image1.description);
     } else {
       // Otherwise, set the content of the regularly displayed fields
-      $('#mainHeader').html(pageContent.mainHeader);
       $('#creamsParagraph').html(pageContent.creamsParagraph);
     }
     // The image gets displayed regardless of admin status
     thisSaved.image1Src = pageContent.image1.url;
     thisSaved.image1Description = pageContent.image1.description;
-    });
-  }
-
-   // As an admin, saves the content of the editor for the main header of the page
-  saveMainHeader() {
-    const thisSaved = this;
-    this.cs.savePageContent('creamsPage', 'mainHeader', tinymce.get('mainHeader').getContent()).then(function () {
-      thisSaved.fms.show('Main Header Updated', { cssClass: 'alert-success', timeout: 2000 });
     });
   }
 

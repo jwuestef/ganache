@@ -1,6 +1,4 @@
 <div class="container-fluid">
-  <p *ngIf="isAdmin">Is admin!!!</p>
-
   <!-- Hidden admin login button, causes modal to pop up -->
 
   <!-- Admin login form -->
@@ -30,52 +28,52 @@
       </div>
     </div>
   </div>
-
+  <!-- Content of the page begins here -->
   <div class="contactText">
-    <div class="row col-md-4 col-xs-11" style="margin: 1em 0em 1em 0em;">
+      <!-- The left most div -->
+    <div class="row col-md-4 col-xs-11 divMargy">
       <h2>Visit Ganache Chocolatier!</h2>
-      <p>The only way to truly see the detail in our chocolates is to visit us. Come to the shop and fill your nose with the
+      <h5>The only way to truly see the detail in our chocolates is to visit us. Come to the shop and fill your nose with the
         sweet smell of chocolate and let your taste buds indulge.
-      </p>
+      </h5>
       <br>
       <br>
-      <br>
-
-      <h3>Consultations</h3>
-      <p>In addition to providing business on a small scale, Ganache Chocolatier is able to cater your party, engagement, wedding,
-        or business meeting with delectable chocolates, truffles and more. Inquire toady for more information!
-      </p>
+      <h2>Consultations</h2>
+      <h5>In addition to providing business on a small scale, Ganache Chocolatier is able to cater your party, engagement, wedding,
+        or business meeting with delectable chocolates, truffles and more. Inquire today for more information!
+      </h5>
     </div>
-    <div class="row col-md-4 col-xs-11" style="margin: 1em 0em 1em 0em;">
+
+    <!-- The center div which contains the contact form -->
+    <div class="row col-md-4 col-xs-11 divMargy">
       <h2>Contact Ganache Chocolatier</h2>
-      <p>
+      <h5>
         If you want more information about Ganache Chocolatiers or have questions, please feel free to contact us. We value our customers
         and hope to help in any way possible.
-      </p>
-      <form method="post" action="https://formspree.io/INSERTGANACHEEMAILHERE.COM">
-        Name:<br>
-        <input type="text" name="Name"><br> Phone:
-        <br>
-        <input type="num" name="Phone"><br> Email:
-        <br>
-        <input type="email" name="Email"><br> Comment/Question:
-        <br>
-        <textarea type="text" name="Comments"></textarea><br>
-        <button type="submit" value="Continue" class="btn btn-primary" style="background-color:#3b2314;">Submit</button>
-
+      </h5>
+      <!-- This is the contact form which forwards through formspree via the action= tag, pointing towards the client's email address -->
+      <form action="https://formspree.io/GANACHE@EMAIL.COMGOESHERE">
+        <label for="name">Name</label><br>
+        <input type="text" name="Name" id="name"><br>
+        <label for="phone">Phone</label><br>
+        <input type="num" name="Phone" id="phone"><br>
+        <label for="email">Email</label><br>
+        <input type="email" name="Email"><br>
+        <label for="comments">Comment/Question</label><br>
+        <textarea id="comments" name="Comments"></textarea><br>
+        <input type="submit" value="Continue" class="btn btn-primary" id="booton">
       </form>
     </div>
-    <div class="row col-md-3 col-xs-11">
+    <!-- The right most div contains map -->
+    <div class="row col-md-4 col-xs-11 divMargy">
       <h2>Hours</h2>
-      <p>Monday-Friday: 10 AM to 5:30 PM</p><br>
-      <p>Saturday: 10 AM to 5 PM</p><br>
-      <p>Sunday: Closed</p><br>
-      <iframe width="100%" height="250" frameborder="0" style="border: 10px solid #000000;" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJCU4tcGNVE4gRE8YUUt6U21k&key=AIzaSyDNN1lmTogQWRQCgcVisoiv-MhLiqNqD5Q"
+      <h5>Monday-Friday 10 AM to 5:30 PM</h5>
+      <h5>Saturday 10 AM to 5 PM</h5>
+      <h5>Sunday Closed</h5>
+      <!-- This iframe contains the embedded map -->
+      <iframe width="65%" height="250" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJCU4tcGNVE4gRE8YUUt6U21k&key=AIzaSyDNN1lmTogQWRQCgcVisoiv-MhLiqNqD5Q"
         allowfullscreen>
       </iframe>
     </div>
   </div>
-
-
-  <button type="button" class="btn btn-primary btn-large" data-toggle="modal" data-target="#myModal">Super Secret Admin Login</button>
 </div>

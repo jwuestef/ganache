@@ -10,7 +10,6 @@ import * as $ from 'jquery';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
 
-
 // Components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -24,7 +23,7 @@ import { TrufflesComponent } from './truffles/truffles.component';
 import { CreamsComponent } from './creams/creams.component';
 import { BarksComponent } from './barks/barks.component';
 import { FudgeComponent } from './fudge/fudge.component';
-import { MorechocComponent } from './morechoc/morechoc.component';
+import { OtherchocComponent } from './otherchoc/otherchoc.component';
 import { SeasonalComponent } from './seasonal/seasonal.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -51,10 +50,10 @@ import { ContentService } from './services/content.service';
     CreamsComponent,
     BarksComponent,
     FudgeComponent,
-    MorechocComponent,
+    OtherchocComponent,
     SeasonalComponent,
     FooterComponent,
-    TexteditorComponent
+    TexteditorComponent,
   ],
   imports: [
     BrowserModule,
