@@ -56,7 +56,7 @@ export class ChocolatesComponent implements OnInit {
   // Sets black border around selected view in navbar
   ngOnInit() {
     // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    if (window.location.pathname === '/') {
+    if (window.location.pathname === '/chocolates') {
       if (this.isAdmin) {
         // Set black border around selected view for admins
         document.getElementById('homeBtnAdmin').setAttribute('style', 'border: none;');
