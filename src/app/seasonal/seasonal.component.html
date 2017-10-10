@@ -1,3 +1,214 @@
-<p>
-  seasonal works!
-</p>
+<div class="container-fluid">
+
+
+
+  <!-- Seasonal paragraph, describes seasonal treats -->
+  <div class="row">
+    <div class="col-md-7">
+      <!-- If not admin, show paragraph -->
+      <h1 *ngIf="!isAdmin else inputSeasonalParagraph" id="seasonalParagraph"></h1>
+      <!-- If yes admin, show form to update content -->
+      <ng-template #inputSeasonalParagraph>
+        <texteditor [elementId]="'seasonalParagraph'"></texteditor>
+        <button (click)="saveSeasonalParagraph()">Update</button>
+        <!-- After successful update, show confirmation -->
+        <span class="alert-success updated" *ngIf="seasonalParagraphUpdated">
+              <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+            </span>
+      </ng-template>
+    </div>
+    <!-- End of seasonal paragraph-->
+
+    <!-- Image slider -->
+    <div class="col-md-5" id="seasonalSlider">
+      <figure>
+        <img *ngIf="seasonalImage1Src && (seasonalImage1Link.toLowerCase() == 'na')" [src]="seasonalImage1Src" [alt]="seasonalImage1Description">
+        <a *ngIf="seasonalImage1Src && (seasonalImage1Link.toLowerCase() !== 'na')" [href]="seasonalImage1Link"><img [src]="seasonalImage1Src" [alt]="seasonalImage1Description"></a>
+
+        <img *ngIf="seasonalImage2Src && (seasonalImage2Link.toLowerCase() == 'na')" [src]="seasonalImage2Src" [alt]="seasonalImage2Description">
+        <a *ngIf="seasonalImage2Src && (seasonalImage2Link.toLowerCase() !== 'na')" [href]="seasonalImage2Link"><img [src]="seasonalImage2Src" [alt]="seasonalImage2Description"></a>
+
+        <img *ngIf="seasonalImage3Src && (seasonalImage3Link.toLowerCase() == 'na')" [src]="seasonalImage3Src" [alt]="seasonalImage3Description">
+        <a *ngIf="seasonalImage3Src && (seasonalImage3Link.toLowerCase() !== 'na')" [href]="seasonalImage3Link"><img [src]="seasonalImage3Src" [alt]="seasonalImage3Description"></a>
+
+        <img *ngIf="seasonalImage4Src && (seasonalImage4Link.toLowerCase() == 'na')" [src]="seasonalImage4Src" [alt]="seasonalImage4Description">
+        <a *ngIf="seasonalImage4Src && (seasonalImage4Link.toLowerCase() !== 'na')" [href]="seasonalImage4Link"><img [src]="seasonalImage4Src" [alt]="seasonalImage4Description"></a>
+
+        <img *ngIf="seasonalImage5Src && (seasonalImage5Link.toLowerCase() == 'na')" [src]="seasonalImage5Src" [alt]="seasonalImage5Description">
+        <a *ngIf="seasonalImage5Src && (seasonalImage5Link.toLowerCase() !== 'na')" [href]="seasonalImage5Link"><img [src]="seasonalImage5Src" [alt]="seasonalImage5Description"></a>
+
+        <img *ngIf="seasonalImage1Src && (seasonalImage1Link.toLowerCase() == 'na')" [src]="seasonalImage1Src" [alt]="seasonalImage1Description">
+        <a *ngIf="seasonalImage1Src && (seasonalImage1Link.toLowerCase() !== 'na')" [href]="seasonalImage1Link"><img [src]="seasonalImage1Src" [alt]="seasonalImage1Description"></a>
+      </figure>
+    </div>
+  </div>
+  <!-- End of row for image slider -->
+
+
+
+  <!-- If yes admin, show form to update image -->
+  <div *ngIf="isAdmin">
+
+    <!-- Image 1 and 2 update form -->
+    <div class="row">
+
+      <!-- Image1 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="seasonalImage1Src">
+        <label for="seasonalImage1Existing">Existing Image:</label>
+        <img *ngIf="seasonalImage1Src" id="seasonalImage1Existing" style="width: 100px; height: auto" [src]="seasonalImage1Src" [alt]="seasonalImage1Description">
+        <br>
+        <br>
+        <label for="seasonalImage1FileInput">Image to upload: <em style="color: red;">*required</em></label>
+        <input type="file" id="seasonalImage1FileInput" (change)="seasonalDetectImage1($event)">
+        <p><em>*For proper appearance, image should have a 1:1 aspect ratio.</em></p>
+        <br>
+        <label for="seasonalImage1Description">Description of image: <em style="color: red;">*required</em></label>
+        <input type="text" id="seasonalImage1Description" placeholder="description" [(ngModel)]="seasonalImage1Description">
+        <br>
+        <br>
+        <label for="seasonalImage1Link">Link: <em style="color: gray">*optional</em></label>
+        <input type="text" id="seasonalImage1Link" placeholder="Enter &#34;NA&#34; for no link" [(ngModel)]="seasonalImage1Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="seasonalUploadImage1()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="seasonalUploadingImage1">
+          <br>
+          <p>Progress: {{seasonalCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ seasonalCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+      <!-- Image2 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="seasonalImage2Src">
+        <label for="seasonalImage2Existing">Existing Image:</label>
+        <img *ngIf="seasonalImage2Src" id="seasonalImage2Existing" style="width: 100px; height: auto" [src]="seasonalImage2Src" [alt]="seasonalImage2Description">
+        <br>
+        <br>
+        <label for="seasonalImage2FileInput">Image to upload: <em style="color: red;">*required</em></label>
+        <input type="file" id="seasonalImage2FileInput" (change)="seasonalDetectImage2($event)">
+        <p><em>*For proper appearance, image should have a 1:1 aspect ratio.</em></p>
+        <br>
+        <label for="seasonalImage2Description">Description of image: <em style="color: red;">*required</em></label>
+        <input type="text" id="seasonalImage2Description" placeholder="description" [(ngModel)]="seasonalImage2Description">
+        <br>
+        <br>
+        <label for="seasonalImage2Link">Link: <em style="color: gray">*optional</em></label>
+        <input type="text" id="seasonalImage2Link" placeholder="Enter &#34;NA&#34; for no link" [(ngModel)]="seasonalImage2Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="seasonalUploadImage2()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="seasonalUploadingImage2">
+          <br>
+          <p>Progress: {{seasonalCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ seasonalCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row for updating images 1 and 2 -->
+
+
+
+    <!-- Image 3 and 4 update form -->
+    <div class="row">
+
+      <!-- Image3 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="seasonalImage3Src">
+        <label for="seasonalImage3Existing">Existing Image:</label>
+        <img *ngIf="seasonalImage3Src" id="seasonalImage3Existing" style="width: 100px; height: auto" [src]="seasonalImage3Src" [alt]="seasonalImage3Description">
+        <br>
+        <br>
+        <label for="seasonalImage3FileInput">Image to upload: <em style="color: red;">*required</em></label>
+        <input type="file" id="seasonalImage3FileInput" (change)="seasonalDetectImage3($event)">
+        <p><em>*For proper appearance, image should have a 1:1 aspect ratio.</em></p>
+        <br>
+        <label for="seasonalImage3Description">Description of image: <em style="color: red;">*required</em></label>
+        <input type="text" id="seasonalImage3Description" placeholder="description" [(ngModel)]="seasonalImage3Description">
+        <br>
+        <br>
+        <label for="seasonalImage3Link">Link: <em style="color: gray">*optional</em></label>
+        <input type="text" id="seasonalImage3Link" placeholder="Enter &#34;NA&#34; for no link" [(ngModel)]="seasonalImage3Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="seasonalUploadImage3()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="seasonalUploadingImage3">
+          <br>
+          <p>Progress: {{seasonalCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ seasonalCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+      <!-- Image4 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="seasonalImage4Src">
+        <label for="seasonalImage4Existing">Existing Image:</label>
+        <img *ngIf="seasonalImage4Src" id="seasonalImage4Existing" style="width: 100px; height: auto" [src]="seasonalImage4Src" [alt]="seasonalImage4Description">
+        <br>
+        <br>
+        <label for="seasonalImage4FileInput">Image to upload: <em style="color: red;">*required</em></label>
+        <input type="file" id="seasonalImage4FileInput" (change)="seasonalDetectImage4($event)">
+        <p><em>*For proper appearance, image should have a 1:1 aspect ratio.</em></p>
+        <br>
+        <label for="seasonalImage4Description">Description of image: <em style="color: red;">*required</em></label>
+        <input type="text" id="seasonalImage4Description" placeholder="description" [(ngModel)]="seasonalImage4Description">
+        <br>
+        <br>
+        <label for="seasonalImage4Link">Link: <em style="color: gray">*optional</em></label>
+        <input type="text" id="seasonalImage4Link" placeholder="Enter &#34;NA&#34; for no link" [(ngModel)]="seasonalImage4Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="seasonalUploadImage4()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="seasonalUploadingImage4">
+          <br>
+          <p>Progress: {{seasonalCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ seasonalCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row for updating images 3 and 4 -->
+
+
+
+    <!-- Image 5 and (null) update form -->
+    <div class="row">
+
+      <!-- Image5 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="seasonalImage5Src">
+        <label for="seasonalImage5Existing">Existing Image:</label>
+        <img *ngIf="seasonalImage5Src" id="seasonalImage5Existing" style="width: 100px; height: auto" [src]="seasonalImage5Src" [alt]="seasonalImage5Description">
+        <br>
+        <br>
+        <label for="seasonalImage5FileInput">Image to upload: <em style="color: red;">*required</em></label>
+        <input type="file" id="seasonalImage5FileInput" (change)="seasonalDetectImage5($event)">
+        <p><em>*For proper appearance, image should have a 1:1 aspect ratio.</em></p>
+        <br>
+        <label for="seasonalImage5Description">Description of image: <em style="color: red;">*required</em></label>
+        <input type="text" id="seasonalImage5Description" placeholder="description" [(ngModel)]="seasonalImage5Description">
+        <br>
+        <br>
+        <label for="seasonalImage5Link">Link: <em style="color: gray">*optional</em></label>
+        <input type="text" id="seasonalImage5Link" placeholder="Enter &#34;NA&#34; for no link" [(ngModel)]="seasonalImage5Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="seasonalUploadImage5()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="seasonalUploadingImage5">
+          <br>
+          <p>Progress: {{seasonalCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ seasonalCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row for updating images 5 and (null) -->
+
+
+  </div>
+  <!-- End of admin-only image -->
+
+</div>
+<!-- End of container-fluid -->

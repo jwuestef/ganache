@@ -6,8 +6,11 @@
           <a href="https://www.instagram.com/ganachechoc/?hl=en" target="_blank"><img src="../../assets/instagram.png" alt="Instagram Logo" width="30px;"></a>
           <a href="https://www.facebook.com/GanacheZionsville/" target="_blank"><img src="../../assets/FBlogo100px.png" alt="Facebook Logo" width="25px;"></a>
       </div>
-      <div style="float:left;">
+      <div style="float:left;" *ngIf="!isAdmin">
       <img src="../../assets/gLogo.jpg" type="button" data-toggle="modal" data-target="#myModal" style="height:30px; width:30px;">
+      </div>
+      <div style="float:left;" *ngIf="isAdmin">
+          <img src="../../assets/gLogo.jpg"  (click)="logout()" type="button" style="height:30px; width:30px;">
       </div>
     </footer>
           <!-- Hidden admin login button, causes modal to pop up -->

@@ -18,10 +18,12 @@ a:hover {
   color: #453c18;
 }
 
+
 /* Stops blue border from appearing around selected buttons */
 button:focus {
   outline:0;
 }
+
 
 /* Used to warn admin when database save or upload failed */
 .alert-danger {
@@ -29,6 +31,7 @@ button:focus {
   margin: auto;
   text-align: center;
 }
+
 
 /* Used to tell admin successful text content (paragraph) update */
 .alert-success.updated {
