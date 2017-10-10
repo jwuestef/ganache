@@ -264,5 +264,4 @@ export class SeasonalComponent implements OnInit {
 
 
 
-
 }
