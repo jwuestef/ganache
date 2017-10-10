@@ -45,10 +45,9 @@ div#barksSlider figure {
   100% { left: -400%; }
 }
 
-
 h1 {
-  line-height: 7vh;
-  margin-top: 15vh;
+  line-height: 4vh;
+  margin-top: 2.5em;
   margin-left: 3vw;
   font-size: 120%;
 }
