@@ -19,7 +19,7 @@ export class ShopComponent {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     if (window.location.pathname === '/shop') {
-      if(this.isAdmin){
+      if (this.isAdmin){
       document.getElementById('chocoBtnAdmin').setAttribute('style', 'border: none;');
       document.getElementById('aboutBtnAdmin').setAttribute('style', 'border: none;');
       document.getElementById('homeBtnAdmin').setAttribute('style', 'border: none;');

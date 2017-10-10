@@ -10,6 +10,9 @@ header[role="banner"] #logo-main {
 #navbar-primary.navbar-default .navbar-nav {
   width: 100%;
   text-align: center;
+  font-size: 1.6em;
+  /* margin-left:50px; */
+  color:#000;
 }
 #navbar-primary.navbar-default .navbar-nav > li {
   display: inline-block;
@@ -20,9 +23,6 @@ header[role="banner"] #logo-main {
   padding-right: 0px;
 }
 a{
-  font-size: 1.6em;
-  /* margin-left:50px; */
-  color:#000;
 }
 .navbar-nav{
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(black), to(white));
@@ -61,7 +61,7 @@ nav{
 /* Dropdown Button */
 .dropbtn {
   background-color: transparent;
-  color: white;
+  /* color: white; */
   margin-left: 20px;
   margin-right: 20px;
   font-size: 1em;
@@ -69,9 +69,6 @@ nav{
   cursor: pointer;
   text-decoration: none;
   padding-right: 3px;
-}
-a{
-  text-decoration: none;
 }
 
 
@@ -107,6 +104,7 @@ a{
   z-index: 1;
   background-image: linear-gradient(to bottom,#3b2314, #bcb1ac);
   /* margin-top:5px; */
+  margin-left:4px;
 
 }
 
