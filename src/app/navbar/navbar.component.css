@@ -2,8 +2,9 @@ header[role="banner"] #logo-main {
   display: block;
   margin: 10px auto;
 }
-#navbar-primary.navbar-default {
+#navbar-primary {
   background: transparent;
+  padding: 0 2% 0 2%;
   border: none;
 }
 #navbar-primary.navbar-default .navbar-nav {
@@ -27,7 +28,7 @@ a{
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(black), to(white));
   background-image: -webkit-linear-gradient(top, white, black, white);
   background-image: -moz-linear-gradient(top, white, black, white);
-  background-image: linear-gradient(to left, #fff, #3b2314, #3b2314, #3b2314, #3b2314, #3b2314,#3b2314,#3b2314, #fff);
+  background-image: linear-gradient(to left, #fff, #86746c, #7b6b63,#504540, #504540,#504540,#7b6b63, #86746c, #fff);
   /* justify-content: center; */
   height: 60px;
   color: #000;
@@ -66,7 +67,7 @@ nav{
   border: none;
   cursor: pointer;
   text-decoration: none;
-
+  padding-right: 3px;
 }
 a{
   text-decoration: none;
