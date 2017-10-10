@@ -1,34 +1,42 @@
-<div class="container-fluid">
+<div class="container-fluid" id="desktopNav">
   <header role="banner">
-      <img id="logo-main" src="../../assets/genuineLogo.jpg" width="400" alt="Ganache Logo" style="align-content: center;">
-      <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
-        <div class="nav navbar-nav">
-          <div class="container-fluid" id="selecty">
-            <div class="dropdown" id="homeBtn">
-              <button class="dropbtn" [routerLink]="['/home']">Home</button>
-            </div>
-            <div class="dropdown" id="aboutBtn">
-              <button class="dropbtn" [routerLink]="['/about']">About</button>
-            </div>
-            <div class="dropdown" id="chocoBtn">
-              <button class="dropbtn" [routerLink]="['/chocolates']">Our Chocolates</button>
-              <div class="dropdown-content">
-                <a [routerLink]="['/truffles']">Truffles</a>
-                <a [routerLink]="['/barks']">Barks</a>
-                <a [routerLink]="['/creams']">Creams</a>
-                <a [routerLink]="['/fudge']">Fudge</a>
-                <a [routerLink]="['/seasonal']">Seasonal</a>
-                <a [routerLink]="['/otherchoc']">Other Chocolates</a>
-              </div>
-            </div>
-            <div class="dropdown" id="shopBtn">
-              <button class="dropbtn" [routerLink]="['/shop']">Shop</button>
-            </div>
-            <div class="dropdown" id="contactBtn">
-              <button class="dropbtn" [routerLink]="['/contact']">Contact Us</button>
+    <img id="logo-main" src="../../assets/genuineLogo.jpg" width="400" alt="Ganache Logo" style="align-content: center;">
+    <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
+      <div class="nav navbar-nav">
+        <div class="container-fluid" id="selecty">
+          <div class="dropdown" id="homeBtn">
+            <button class="dropbtn" [routerLink]="['/home']">Home</button>
+          </div>
+          <div class="dropdown" id="aboutBtn">
+            <button class="dropbtn" [routerLink]="['/about']">About</button>
+          </div>
+          <div class="dropdown" id="chocoBtn">
+            <button class="dropbtn" [routerLink]="['/chocolates']">Our Chocolates</button>
+            <div class="dropdown-content">
+              <a [routerLink]="['/truffles']">Truffles</a>
+              <a [routerLink]="['/barks']">Barks</a>
+              <a [routerLink]="['/creams']">Creams</a>
+              <a [routerLink]="['/fudge']">Fudge</a>
+              <a [routerLink]="['/seasonal']">Seasonal</a>
+              <a [routerLink]="['/otherchoc']">Other Chocolates</a>
             </div>
           </div>
+          <div class="dropdown" id="shopBtn">
+            <button class="dropbtn" [routerLink]="['/shop']">Shop</button>
+          </div>
+          <div class="dropdown" id="contactBtn">
+            <button class="dropbtn" [routerLink]="['/contact']">Contact Us</button>
+          </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
+</div>
+<div id="mobileNav" class="mobiNav">
+  <ul class="nav nav-pills">
+    <li [routerLink]="['/home']">Home</li>
+    <li [routerLink]="['/about']">About</li>
+    <li><a href="#">Nope</a></li>
+    <li><a href="#">Nope</a></li>
+  </ul>
 </div>
