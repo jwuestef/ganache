@@ -1,11 +1,18 @@
+#barksPara {
+  float: right;
+  padding-top: 5vw;
+  padding-right: 3vw;
+}
+
 div#barksSlider {
   overflow: hidden;
   position: relative;
   float: left;
   padding: 0;
-  max-width: 55vw;
-  height: 55vh;
+  max-width: 40vw;
+  height: 35vw;
   margin: 0 auto;
+  margin-top: 3vw;
   margin-left: 5vw;
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
