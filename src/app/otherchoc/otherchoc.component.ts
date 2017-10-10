@@ -11,7 +11,7 @@ export class OtherchocComponent implements OnInit {
 
   ngOnInit() {
     // Sets black border around selected view in navbar
-    if (window.location.pathname === '/chocolates') {
+    if (window.location.pathname === '/otherchoc') {
       document.getElementById('homeBtn').setAttribute('style', 'border: none;');
       document.getElementById('contactBtn').setAttribute('style', 'border: none;');
       document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
