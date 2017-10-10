@@ -53,29 +53,18 @@ export class FudgeComponent implements OnInit {
 
 
 
-  // Sets black border around selected view in navbar
   ngOnInit() {
     // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    // Sets black border around selected view in navbar
     if (window.location.pathname === '/fudge') {
-      if (this.isAdmin) {
-        // Set black border around selected view for admins
-        document.getElementById('homeBtnAdmin').setAttribute('style', 'border: none;');
-        document.getElementById('contactBtnAdmin').setAttribute('style', 'border: none;');
-        document.getElementById('aboutBtnAdmin').setAttribute('style', 'border: none;');
-        document.getElementById('shopBtnAdmin').setAttribute('style', 'border: none;');
-        document.getElementById('chocoBtnAdmin').setAttribute('style', 'border: 5px solid black;');
-      } else {
-        // Set black border around selected view for non-admins
-        document.getElementById('homeBtn').setAttribute('style', 'border: none;');
-        document.getElementById('contactBtn').setAttribute('style', 'border: none;');
-        document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
-        document.getElementById('shopBtn').setAttribute('style', 'border: none;');
-        document.getElementById('chocoBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-1px;');
-      }
+      document.getElementById('homeBtn').setAttribute('style', 'border: none;');
+      document.getElementById('contactBtn').setAttribute('style', 'border: none;');
+      document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
+      document.getElementById('shopBtn').setAttribute('style', 'border: none;');
+      document.getElementById('chocoBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-4px;');
     }
+
   }
-
-
 
   // Pulls page content from Firebase and assigns it to content based on admin status
   getContent() {

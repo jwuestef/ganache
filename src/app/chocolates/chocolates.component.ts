@@ -53,27 +53,17 @@ export class ChocolatesComponent implements OnInit {
 
 
 
-  // Sets black border around selected view in navbar
   ngOnInit() {
     // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    // Sets black border around selected view in navbar
     if (window.location.pathname === '/chocolates') {
-      if (this.isAdmin) {
-        // Set black border around selected view for admins
-        document.getElementById('homeBtnAdmin').setAttribute('style', 'border: none;');
-        document.getElementById('contactBtnAdmin').setAttribute('style', 'border: none;');
-        document.getElementById('aboutBtnAdmin').setAttribute('style', 'border: none;');
-        document.getElementById('shopBtnAdmin').setAttribute('style', 'border: none;');
-        document.getElementById('chocoBtnAdmin').setAttribute('style', 'border: 3px solid black;');
-      } else {
-        // Set black border around selected view for non-admins
         document.getElementById('homeBtn').setAttribute('style', 'border: none;');
         document.getElementById('contactBtn').setAttribute('style', 'border: none;');
         document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
         document.getElementById('shopBtn').setAttribute('style', 'border: none;');
-        document.getElementById('chocoBtn').setAttribute('style', 'border: 3px solid black; z-index:2;');
+        document.getElementById('chocoBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-4px;');
       }
     }
-  }
 
 
 
