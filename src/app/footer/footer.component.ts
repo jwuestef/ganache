@@ -21,11 +21,16 @@ export class FooterComponent implements OnInit {
     this.isAdmin = this.as.isAuthed();
   }
 
-  logout() {
-    this.as.logout();
-  }
+
 
   ngOnInit() {
+  }
+
+
+
+  logout() {
+    this.as.logout();
+    location.reload();
   }
 
 
