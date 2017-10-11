@@ -4,7 +4,7 @@
 
   <div class="row">
     <!-- Image slider -->
-    <div class="col-xs-6" id="barksSlider">
+    <div class="col-sm-6" id="barksSlider">
       <figure>
         <img *ngIf="barksImage1Src && (barksImage1Link.toLowerCase() == 'na')" [src]="barksImage1Src" [alt]="barksImage1Description">
         <a *ngIf="barksImage1Src && (barksImage1Link.toLowerCase() !== 'na')" [href]="barksImage1Link"><img [src]="barksImage1Src" [alt]="barksImage1Description"></a>
@@ -27,7 +27,7 @@
     </div>
 
     <!-- Barks paragraph, describes barks and toffee-->
-    <div class="col-xs-6" id="barksPara">
+    <div class="col-sm-6" id="barksPara">
       <!-- If not admin, show paragraph -->
       <h1 *ngIf="!isAdmin else inputBarksParagraph" id="barksParagraph"></h1>
       <!-- If yes admin, show form to update content -->

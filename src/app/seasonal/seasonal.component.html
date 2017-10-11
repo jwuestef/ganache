@@ -4,7 +4,7 @@
 
   <!-- Seasonal paragraph, describes seasonal treats -->
   <div class="row" id="seasPara">
-    <div class="col-xs-6">
+    <div class="col-sm-6">
       <!-- If not admin, show paragraph -->
       <h1 *ngIf="!isAdmin else inputSeasonalParagraph" id="seasonalParagraph"></h1>
       <!-- If yes admin, show form to update content -->
@@ -20,7 +20,7 @@
     <!-- End of seasonal paragraph-->
 
     <!-- Image slider -->
-    <div class="col-xs-6" id="seasonalSlider">
+    <div class="col-sm-6" id="seasonalSlider">
       <figure>
         <img *ngIf="seasonalImage1Src && (seasonalImage1Link.toLowerCase() == 'na')" [src]="seasonalImage1Src" [alt]="seasonalImage1Description">
         <a *ngIf="seasonalImage1Src && (seasonalImage1Link.toLowerCase() !== 'na')" [href]="seasonalImage1Link"><img [src]="seasonalImage1Src" [alt]="seasonalImage1Description"></a>
