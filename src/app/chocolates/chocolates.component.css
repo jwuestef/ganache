@@ -1,42 +1,41 @@
-#chocSlider {
+
+/* Image slider */
+#chocolatesParagraph {
+  line-height: 2em;
+  margin: 2em 0 2em 0;
+  font-size: 130%;
+}
+
+
+/* Image slider */
+div#chocolatesSlider {
   overflow: hidden;
   position: relative;
   float: left;
   padding: 0;
-  width: 55vw;
-  max-height: 55vh;
+  max-width: 63vw;
+  height: 54vh;
   margin: 0 auto;
   margin-left: 5vw;
-  margin-bottom: 5vh;
+  margin-right: -2vw;
+  margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
   border: solid;
   border-width: 1em;
-  /* box-shadow: 1px 1px 15px 1px; */
+  box-shadow: 1px 1px 15px 1px;
   color: black;
 }
 
-/* #selection {
-  position: relative;
-  float: right;
-} */
-
-li {
-  list-style: none;
-  font-size: 150%;
-  margin: 4vh 0 4vh 0;
-  text-align: center;
-}
-
-div#chocSlider figure img {
-  width: 20%;
+div#chocolatesSlider figure img {
+  width: 16.666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666%;
   position: relative;
   float: left;
 }
 
-div#chocSlider figure {
+div#chocolatesSlider figure {
   position: relative;
-  width: 500%;
-  height: 100%;
+  width: 600%;
+  max-height: 55vh;
   margin: 0;
   left: 0;
   text-align: left;
@@ -46,22 +45,36 @@ div#chocSlider figure {
 
 @keyframes slidy {
   0%   { left: 0%; }
-  20%  { left: 0%; }
-  25%  { left: -100%; }
-  45%  { left: -100%; }
-  50%  { left: -200%; }
-  70%  { left: -200%; }
+  15%  { left: 0%; }
+
+  20%  { left: -100%; }
+  35%  { left: -100%; }
+
+  40%  { left: -200%; }
+  55%  { left: -200%; }
+
+  60%  { left: -300%; }
   75%  { left: -300%; }
-  95%  { left: -300%; }
-  100% { left: -400%; }
+
+  80%  { left: -400%; }
+  95%  { left: -400%; }
+
+  100% { left: -500%; }
 }
 
-#chocolatesParagraph {
-  line-height: 2em;
-  margin: 2em 0 2em 0;
-  font-size: 130%;
+
+
+/* Links to other pages */
+li {
+  list-style: none;
+  font-size: 150%;
+  margin: 4vh 0 4vh 0;
+  text-align: center;
 }
 
+
+
+/* Isn't this already a global style?????   -- PLEASE CHECK AND REMOVE IF NEEDED WHEN PAGE IS STYLED - Jeremy */
 a {
   text-decoration: none;
   color: black;

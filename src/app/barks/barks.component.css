@@ -4,7 +4,7 @@ div#barksSlider {
   float: left;
   padding: 0;
   max-width: 55vw;
-  height: 40vh;
+  height: 55vh;
   margin: 0 auto;
   margin-top: 2.5em;
   margin-left: 5vw;
@@ -17,15 +17,15 @@ div#barksSlider {
 }
 
 div#barksSlider figure img {
-  width: 20%;
+  width: 16.666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666%;
   position: relative;
   float: left;
 }
 
 div#barksSlider figure {
   position: relative;
-  width: 500%;
-  height: 200px;
+  width: 600%;
+  max-height: 55vh;
   margin: 0;
   left: 0;
   text-align: left;
@@ -33,16 +33,24 @@ div#barksSlider figure {
   animation: 30s slidy infinite;
 }
 
+
 @keyframes slidy {
   0%   { left: 0%; }
-  20%  { left: 0%; }
-  25%  { left: -100%; }
-  45%  { left: -100%; }
-  50%  { left: -200%; }
-  70%  { left: -200%; }
+  15%  { left: 0%; }
+
+  20%  { left: -100%; }
+  35%  { left: -100%; }
+
+  40%  { left: -200%; }
+  55%  { left: -200%; }
+
+  60%  { left: -300%; }
   75%  { left: -300%; }
-  95%  { left: -300%; }
-  100% { left: -400%; }
+
+  80%  { left: -400%; }
+  95%  { left: -400%; }
+
+  100% { left: -500%; }
 }
 
 h1 {

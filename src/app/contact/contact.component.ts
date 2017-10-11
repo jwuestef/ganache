@@ -22,7 +22,17 @@ export class ContactComponent {
     this.loginErrors = { email: '', pass: '' };
   }
 
-
+  ngOnInit() {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    // Sets black border around selected view in navbar
+    if (window.location.pathname === '/contact') {
+        document.getElementById('chocoBtn').setAttribute('style', 'border: none;');
+        document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
+        document.getElementById('homeBtn').setAttribute('style', 'border: none;');
+        document.getElementById('shopBtn').setAttribute('style', 'border: none;');
+        document.getElementById('contactBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-4px;');
+     }
+  }
 
   // If the login form isn't completely filled out, set error messages
   validateLogin() {

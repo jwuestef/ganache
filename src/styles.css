@@ -1,7 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face{
+  font-family: 'avenir';
+  src: url('./assets/Avenir-Black-webfont.woff') format('woff')
+}
 body {
   background-color: #bcb1ac;
   font-family: 'PT Serif', serif;
+  /* font-family: 'avenir' sans-serif; */
 }
 
 a {
@@ -13,12 +18,20 @@ a:hover {
   color: #453c18;
 }
 
+
+/* Stops blue border from appearing around selected buttons */
+button:focus {
+  outline:0;
+}
+
+
 /* Used to warn admin when database save or upload failed */
 .alert-danger {
   max-width: 30rem;
   margin: auto;
   text-align: center;
 }
+
 
 /* Used to tell admin successful text content (paragraph) update */
 .alert-success.updated {
@@ -44,4 +57,12 @@ a:hover {
 .uploadImageButton:hover {
   background-color: #453c18;
   color: #bcb1ac;
+}
+h1, h3, h4, h5, h6, p, footer{
+  text-align: center;
+  font-family: 'avenir';
+  line-height: 2.5rem;
+}
+h2{
+  text-align: center;
 }

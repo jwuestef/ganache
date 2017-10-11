@@ -1,75 +1,40 @@
 <div class="container-fluid">
-  <header role="banner" *ngIf="isAdmin" class="row">
+  <header role="banner">
     <img id="logo-main" src="../../assets/genuineLogo.jpg" width="400" alt="Ganache Logo" style="align-content: center;">
     <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
       <div class="nav navbar-nav">
         <div class="container-fluid" id="selecty">
-          <div class="droppydown">
-            <button class="dropbtn"><a href="/home">Home</a></button>
+
+          <div class="dropdown" id="homeBtn">
+            <button class="dropbtn" id="homeBtnLink" [routerLink]="['/home']">Home</button>
           </div>
-          <div class="droppydown">
-            <button class="dropbtn"><a href="/about">About</a></button>
+
+          <div class="dropdown" id="aboutBtn">
+            <button class="dropbtn" id="aboutBtnLink" [routerLink]="['/about']">About</button>
           </div>
-          <div class="droppydown">
-            <button class="dropbtn"><a href="/chocolates">Our Chocolates</a></button>
+
+          <div class="dropdown" id="chocoBtn">
+            <button class="dropbtn" id="chocoBtnLink" [routerLink]="['/chocolates']">Our Chocolates</button>
             <div class="dropdown-content">
-              <a href="/truffles">Truffles</a>
-              <a href="/barks">Barks</a>
-              <a href="/creams">Creams</a>
-              <a href="/fudge">Fudge</a>
-              <a href="/seasonal">Seasonal</a>
-              <a href="/otherchoc">Other Chocolates</a>
+              <a id="trufflesBtnLink" [routerLink]="['/truffles']">Truffles</a>
+              <a id="barksBtnLink" [routerLink]="['/barks']">Barks</a>
+              <a id="creamsBtnLink" [routerLink]="['/creams']">Creams</a>
+              <a id="fudgeBtnLink" [routerLink]="['/fudge']">Fudge</a>
+              <a id="seasonalBtnLink" [routerLink]="['/seasonal']">Seasonal</a>
+              <a id="otherchocBtnLink" [routerLink]="['/otherchoc']">Other Chocolates</a>
             </div>
           </div>
-          <div class="droppydown">
-            <button class="dropbtn"><a href="/shop">Shop</a></button>
+
+          <div class="dropdown" id="shopBtn">
+            <button class="dropbtn" id="shopBtnLink" [routerLink]="['/shop']">Shop</button>
           </div>
-          <div class="droppydown">
-            <button class="dropbtn"><a href="/contact">Contact Us</a></button>
+
+          <div class="dropdown" id="contactBtn">
+            <button class="dropbtn" id="contactBtnLink" [routerLink]="['/contact']">Contact Us</button>
           </div>
-          <div class="droppydown">
-            <button class="dropbtn" *ngIf="isAdmin" (click)="logout()"><a href="">Logout</a></button>
-          </div>
+
         </div>
       </div>
     </nav>
   </header>
-  <header role="banner" *ngIf="!isAdmin">
-      <img id="logo-main" src="../../assets/genuineLogo.jpg" width="400" alt="Logo Thing main logo" style="align-content: center;">
-      <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
-        <div class="nav navbar-nav">
-          <div class="container-fluid" id="selecty">
-            <div class="dropdown">
-              <button class="dropbtn"><a href="/home">Home</a></button>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn"><a href="/about">About</a></button>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn"><a href="/chocolates">Our Chocolates</a></button>
-              <div class="dropdown-content">
-                <a href="/truffles">Truffles</a>
-                <a href="/barks">Barks</a>
-                <a href="/creams">Creams</a>
-                <a href="/fudge">Fudge</a>
-                <a href="/seasonal">Seasonal</a>
-                <a href="/otherchoc">Other Chocolates</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn"><a href="/shop">Shop</a></button>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn"><a href="/contact">Contact Us</a></button>
-            </div>
-          </div>
-        </div>
-        <div *ngIf="isAdmin" (click)="logout()"><a href="" class="navvy">Logout</a></div>
-        <!--</div> /.navbar-collapse -->
-        <!--</div> /.container-fluid -->
-      </nav>
-    </header>
-  <!-- header role="banner" -->
-
-
 </div>

@@ -1,12 +1,17 @@
+#homeText {
+  color: black;
+  padding-bottom: 4vh;
+}
+
 div#homeSlider {
   overflow: hidden;
   position: relative;
   float: left;
   padding: 0;
-  max-width: 55vw;
-  height: 55vh;
+  max-width: 65vw;
+  height: 54vh;
   margin: 0 auto;
-  margin-left: 5vw;
+  margin-left: 18vw;
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
   border: solid;
