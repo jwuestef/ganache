@@ -100,7 +100,8 @@ nav{
   background-image: linear-gradient(to bottom,#3b2314, #bcb1ac);
   /* margin-top:5px; */
   margin-left:4px;
-  margin-top:1px;
+  margin-top:-1px;
+  border-top: 3px solid #000;
 }
 
 /* Links inside the dropdown */
@@ -130,8 +131,8 @@ ul{
 } */
 .pillz{
   color:#000;
-  margin: -2%;
-  float: none;
+  /* margin: -2%; */
+  float: left;
   /* background-color:transparent; */
 }
 .chillz{
