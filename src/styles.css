@@ -1,3 +1,6 @@
+#wrapper{
+  min-height: calc(100vh - 50px);
+}
 /* You can add global styles to this file, and also import other style files */
 @font-face{
   font-family: 'avenir';
@@ -63,7 +66,7 @@ button:focus {
   color: #bcb1ac;
 }
 h1, h3, h4, h5, h6, p, footer{
-  text-align: center;
+  /* text-align: center; */
   font-family: 'avenir';
   line-height: 2.5rem;
 }
