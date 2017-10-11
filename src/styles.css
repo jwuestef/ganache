@@ -27,7 +27,7 @@ a:hover {
 } */
 
 /* Stops blue border from appearing around selected buttons */
-button:focus {
+button:focus, li:focus {
   outline:0;
 }
 
