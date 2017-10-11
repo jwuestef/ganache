@@ -1,0 +1,62 @@
+div#barksSlider {
+  overflow: hidden;
+  position: relative;
+  float: left;
+  padding: 0;
+  max-width: 55vw;
+  height: 55vh;
+  margin: 0 auto;
+  margin-top: 2.5em;
+  margin-left: 5vw;
+  margin-bottom: 1.5em;
+  background-color: rgba(189,189,189, 0.5);
+  border: solid;
+  border-width: 1em;
+  box-shadow: 1px 1px 15px 1px;
+  color: black;
+}
+
+div#barksSlider figure img {
+  width: 16.666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666%;
+  position: relative;
+  float: left;
+}
+
+div#barksSlider figure {
+  position: relative;
+  width: 600%;
+  max-height: 55vh;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite;
+}
+
+
+@keyframes slidy {
+  0%   { left: 0%; }
+  15%  { left: 0%; }
+
+  20%  { left: -100%; }
+  35%  { left: -100%; }
+
+  40%  { left: -200%; }
+  55%  { left: -200%; }
+
+  60%  { left: -300%; }
+  75%  { left: -300%; }
+
+  80%  { left: -400%; }
+  95%  { left: -400%; }
+
+  100% { left: -500%; }
+}
+
+
+h1 {
+  line-height: 7vh;
+  margin-top: 15vh;
+  margin-left: 3vw;
+  font-size: 120%;
+}

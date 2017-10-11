@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
-import { FlashMessagesService } from 'angular2-flash-messages';
 
 import { AuthService } from '../services/auth.service';
 import { ContentService } from '../services/content.service';
@@ -12,19 +11,20 @@ import { Image } from '../services/image';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
   isAdmin = false;
-  selectedFiles: FileList;
-  currentUpload: Image;
   aboutParagraphUpdated = false;
-  image1Description: string;
-  image1Src: string;
-  uploadingImage1 = false;
+  aboutCurrentUpload: Image;
+  aboutImage1Src: string;
+  aboutImage1Description: string;
+  aboutImage1Link: string;
+  aboutSelectedFile1: FileList;
+  aboutUploadingImage1 = false;
 
 
 
   // The contructor function runs automatically on component load, each and every time it's called
-  constructor(public as: AuthService, public cs: ContentService, public fms: FlashMessagesService) {
+  constructor(public as: AuthService, public cs: ContentService) {
     // Check to see if this is the logged in administrator
     this.isAdmin = this.as.isAuthed();
     // Pull updated content from Firebase
@@ -33,21 +33,35 @@ export class AboutComponent {
 
 
 
+  ngOnInit() {
+    // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    // Sets black border around selected view in navbar
+    if (window.location.pathname === '/about') {
+        document.getElementById('chocoBtn').setAttribute('style', 'border: none;');
+        document.getElementById('contactBtn').setAttribute('style', 'border: none;');
+        document.getElementById('homeBtn').setAttribute('style', 'border: none;');
+        document.getElementById('shopBtn').setAttribute('style', 'border: none;');
+        document.getElementById('aboutBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-4px;');
+      }
+    }
+
+
+
   // Pulls page content from Firebase and assigns it to content based on admin status
-  public getContent() {
+  getContent() {
     const thisSaved = this;
     this.cs.getPageContent('aboutPage').then(function (pageContent) {
       if (thisSaved.isAdmin) {
-        // If they're an admin, set the content of the editors
+        // If they're an admin, set the content of paragraph editors
         tinymce.get('aboutParagraph').setContent(pageContent.aboutParagraph);
-        $('#image1Description').val(pageContent.image1.description);
       } else {
         // Otherwise, set the content of the regularly displayed fields
         $('#aboutParagraph').html(pageContent.aboutParagraph);
       }
       // The image gets displayed regardless of admin status
-      thisSaved.image1Src = pageContent.image1.url;
-      thisSaved.image1Description = pageContent.image1.description;
+      thisSaved.aboutImage1Src = pageContent.image1.url;
+      thisSaved.aboutImage1Description = pageContent.image1.description;
+      thisSaved.aboutImage1Link = pageContent.image1.link;
     });
   }
 
@@ -65,30 +79,28 @@ export class AboutComponent {
 
 
   // Detects when a new image has been inserted and fills the appropriate variable
-  detectImage1(event) {
-    this.selectedFiles = event.target.files;
+  aboutDetectImage1(event) {
+    this.aboutSelectedFile1 = event.target.files;
   }
 
 
 
   // Uploads a new image
-  uploadImage1() {
-    if (!this.image1Description) {
+  aboutUploadImage1() {
+    if (!this.aboutImage1Description || !this.aboutImage1Link || !this.aboutSelectedFile1) {
       return;
     }
     // Display the upload progress bar for image 1 and no others
-    this.uploadingImage1 = true;
-    // Set file-to-be-uploaded to the file taken from the input field
-    this.currentUpload = new Image(this.selectedFiles.item(0));
-    // Include the image description
-    this.currentUpload.description = this.image1Description;
-    // Set the name
-    this.currentUpload.name = 'image1';
+    this.aboutUploadingImage1 = true;
+    // Set file-to-be-uploaded to the file taken from the input fields
+    this.aboutCurrentUpload = new Image(this.aboutSelectedFile1.item(0));
+    this.aboutCurrentUpload.description = this.aboutImage1Description;
+    this.aboutCurrentUpload.link = this.aboutImage1Link;
+    // Upload the file via ContentService function (pageName, whichElement, newImage)
     const thisSaved = this;
-    // Upload the file via UploadService (pageName, whichElement, newImage)
-    this.cs.pushUpload('aboutPage', 'image1', this.currentUpload).then(function (newURL) {
+    this.cs.pushUpload('aboutPage', 'image1', this.aboutCurrentUpload).then(function (newURL) {
       // Updates thumbnail image
-      thisSaved.image1Src = newURL.toString();
+      thisSaved.aboutImage1Src = newURL.toString();
     });
   }
 

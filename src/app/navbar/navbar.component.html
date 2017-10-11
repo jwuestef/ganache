@@ -1,39 +1,40 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6 col-md-6-offset">
-      <div>
-        <img class="navImg" src="../../assets/ganachesign.png" alt="Vendor Sign" style="width:40%; height:40%;">
-      </div>
-    </div>
-  </div>
-</div>
-<nav class="navbar" style="margin:0;">
-  <div class="container-fluid col-md-6 col-md-offset-4">
-    <!-- <div class="navbar-header">
-    </div> -->
-    <ul class="nav navbar-nav">
-      <!-- <li class="navbar-brand" href="#">Ganache</li> -->
-      <li><a href="/home" class="navvy">Home</a></li>
-      <li><a href="/about" class="navvy">About</a></li>
-      <li class="nav-item dropdown">
-          <a class="dropdown-toggle" href="/chocolates" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Our Chocolates
-          </a>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <ul>
-            <li><a class="dropdown-item" href="/chocolates">All Chocolates</a></li>
-            <li><a class="dropdown-item" href="/truffles">Gourmet Truffles</a></li>
-            <li><a class="dropdown-item" href="/creams">Assorted Creams</a></li>
-            <li><a class="dropdown-item" href="/barks">Barks and Toffee</a></li>
-            <li><a class="dropdown-item" href="/fudge">Fudge</a></li>
-            <li><a class="dropdown-item" href="/otherchoc">Other Chocolates</a></li>
-            <li><a class="dropdown-item" href="/seasonal">Seasonal Treats</a></li>
-            </ul>
+  <header role="banner">
+    <img id="logo-main" src="../../assets/genuineLogo.jpg" width="400" alt="Ganache Logo" style="align-content: center;">
+    <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
+      <div class="nav navbar-nav">
+        <div class="container-fluid" id="selecty">
+
+          <div class="dropdown" id="homeBtn">
+            <button class="dropbtn" id="homeBtnLink" [routerLink]="['/home']">Home</button>
           </div>
-      </li>
-      <li><a href="/shop" class="navvy">Shop</a></li>
-      <li><a href="/contact" class="navvy">Contact Us</a></li>
-      <li *ngIf="isAdmin" (click)="logout()"><a href="" class="navvy">Logout</a></li>
-    </ul>
-  </div>
-</nav>
+
+          <div class="dropdown" id="aboutBtn">
+            <button class="dropbtn" id="aboutBtnLink" [routerLink]="['/about']">About</button>
+          </div>
+
+          <div class="dropdown" id="chocoBtn">
+            <button class="dropbtn" id="chocoBtnLink" [routerLink]="['/chocolates']">Our Chocolates</button>
+            <div class="dropdown-content">
+              <a id="trufflesBtnLink" [routerLink]="['/truffles']">Truffles</a>
+              <a id="barksBtnLink" [routerLink]="['/barks']">Barks</a>
+              <a id="creamsBtnLink" [routerLink]="['/creams']">Creams</a>
+              <a id="fudgeBtnLink" [routerLink]="['/fudge']">Fudge</a>
+              <a id="seasonalBtnLink" [routerLink]="['/seasonal']">Seasonal</a>
+              <a id="otherchocBtnLink" [routerLink]="['/otherchoc']">Other Chocolates</a>
+            </div>
+          </div>
+
+          <div class="dropdown" id="shopBtn">
+            <button class="dropbtn" id="shopBtnLink" [routerLink]="['/shop']">Shop</button>
+          </div>
+
+          <div class="dropdown" id="contactBtn">
+            <button class="dropbtn" id="contactBtnLink" [routerLink]="['/contact']">Contact Us</button>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>

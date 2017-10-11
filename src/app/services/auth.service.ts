@@ -21,7 +21,6 @@ export class AuthService {
     return this.afa.auth.signInWithEmailAndPassword(email, pass).then(() => {
       // If we succeed in logging in, direct them to the homepage and return null
       localStorage.setItem('currentUser', 'ganacheChocolatier');
-      this.router.navigateByUrl('/');
       return;
     }).catch((err) => {
       // If there is an error logging in, return that error to the calling function
