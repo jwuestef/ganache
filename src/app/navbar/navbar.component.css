@@ -130,6 +130,8 @@ ul{
 } */
 .pillz{
   color:#000;
+  margin: -2%;
+  /* float: left; */
   /* background-color:transparent; */
 }
 .chillz{
@@ -138,4 +140,7 @@ ul{
 }
 .nav-pills > .active > a, .nav-pills > .active > a:hover {
   background-color: transparent;
+}
+.dropdown-menu{
+  background-image: linear-gradient(to bottom, #3b2314, #fff);
 }

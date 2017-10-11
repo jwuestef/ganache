@@ -33,70 +33,53 @@
   </header>
 </div>
 
-<header role="banner" id="mobileNav">
-  <img id="logo-main" src="../../assets/genuineLogo.jpg" width="150" alt="Ganache Logo" style="justify-content:center;">
-  <div>
-    <ul class="nav nav-pills chillz">
-      <li class="pillz homePill" [routerLink]="['/home']">
-        <a data-toggle="tab">Home</a>
-      </li>
-      <li class="pillz aboutPill" [routerLink]="['/about']">
-        <a data-toggle="pill">About</a>
-      </li>
-      <!-- <li class="pillz chocoPill" [routerLink]="['/chocolates']">
-        <a data-toggle="pill">Chocolates</a> -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Our Chocolates
-            <!-- <span class="caret"></span> -->
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a href="#">All Chocolates</a>
-            </li>
-            <li>
-              <a href="#">Truffles</a>
-            </li>
-            <li>
-              <a href="#">Barks</a>
-            </li>
-            <li>
-              <a href="#">Creams</a>
-            </li>
-            <li>
-              <a href="#">Fudge</a>
-            </li>
-            <li>
-              <a href="#">Seasonal</a>
-            </li>
-            <li>
-              <a href="#">Other Chocolates</a>
-            </li>
-          </ul>
-        </li>
-        <li class="pillz shopPill" [routerLink]="['/shop']">
-          <a data-toggle="pill">Shop</a>
-        </li>
-        <li class="pillz contactPill" [routerLink]="['/contact']">
-          <a data-toggle="pill">Contact Us</a>
-        </li>
-    </ul>
-  </div>
-</header>
 <!-- <header role="banner" id="mobileNav">
+<img id="logo-main" src="../../assets/genuineLogo.jpg" width="150" alt="Ganache Logo" style="justify-content:center;">
+<div>
+  <ul class="nav nav-pills chillz">
+    <li class="pillz homePill"  [routerLink]="['/home']">
+      <a data-toggle="tab">Home</a>
+    </li>
+    <li class="pillz aboutPill" [routerLink]="['/about']">
+      <a data-toggle="pill">About</a>
+    </li>
+    <li class="pillz chocoPill" [routerLink]="['/chocolates']">
+      <a data-toggle="pill">Chocolates</a>
+    </li>
+    <li class="pillz shopPill" [routerLink]="['/shop']">
+      <a data-toggle="pill">Shop</a>
+    </li>
+    <li class="pillz contactPill" [routerLink]="['/contact']">
+      <a data-toggle="pill">Contact Us</a>
+    </li>
+  </ul>
+</div>
+</header> -->
+<div class="container-fluid"  id="mobileNav">
+  <div class="row">
+<header role="banner">
     <img id="logo-main" src="../../assets/genuineLogo.jpg" width="150" alt="Ganache Logo" style="justify-content:center;">
 
-  <ul class="nav nav-pills">
-      <li class="active"><a href="#">Home</a></li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
-        <span class="caret"></span></a>
+  <ul class="nav nav-pills chillz col-xs-12" >
+      <li class="pillz homePill" [routerLink]="['/home']" data-toggle="pill"><a>Home</a></li>
+      <li class="pillz aboutPill" [routerLink]="['/about']"><a data-toggle="pill">About</a></li>
+      <li class="dropdown pillz chocoPill">
+        <a class="dropdown-toggle" data-toggle="dropdown" >Chocolates
+        <span class="caret"></span>
+      </a>
         <ul class="dropdown-menu">
-          <li><a href="#">Submenu 1-1</a></li>
-          <li><a href="#">Submenu 1-2</a></li>
-          <li><a href="#">Submenu 1-3</a></li>
+          <li><a href="#">All Chocolates</a></li>
+          <li><a href="#">Truffles</a></li>
+          <li><a href="#">Barks</a></li>
+          <li><a href="#">Creams</a></li>
+          <li><a href="#">Fudge</a></li>
+          <li><a href="#">Seasonal</a></li>
+          <li><a href="#">Other Chocolates</a></li>
         </ul>
       </li>
-      <li><a href="#">Menu 2</a></li>
-      <li><a href="#">Menu 3</a></li>
+      <li class="pillz shopPill" [routerLink]="['/shop']"><a data-toggle="pill">Shop</a></li>
+      <li class="pillz contactPill" [routerLink]="['/contact']"><a data-toggle="pill">Contact Us</a></li>
     </ul>
-    </header> -->
+    </header>
+  </div>
+</div>
