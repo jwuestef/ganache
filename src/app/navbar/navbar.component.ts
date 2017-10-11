@@ -31,8 +31,8 @@ export class NavbarComponent implements OnInit {
 
     // For admin view, the first time a link to an editable view has been clicked, it kicks an error and doesn't load the new page.
     // Detect clicks to navigate away from the page, and immediately routes the request correctly.
-    // The original click will still kick the error out into the console and stop the new page from loading
-    // But we forcefully navigate to the route anyways
+    // The original click will still kick the error into the console and stop the new page from loading,
+    // So we forcefully navigate to the route anyways
     if (this.isAdmin) {
       const thisSaved = this;
 
