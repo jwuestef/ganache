@@ -61,17 +61,18 @@
   </ul>
 </div>
 </header> -->
-<div class="container-fluid"  id="mobileNav">
+<div class="container-fluid" id="mobileNav">
   <div class="row">
-<header role="banner">
+<header role="banner" class="col-xs-12">
     <img id="logo-main" src="../../assets/genuineLogo.jpg" width="150" alt="Ganache Logo" style="justify-content:center;">
 
-  <ul class="nav nav-pills chillz col-xs-12" >
+  <ul class="nav nav-pills chillz">
       <li class="pillz homePill" [routerLink]="['/home']" data-toggle="pill"><a>Home</a></li>
       <li class="pillz aboutPill" [routerLink]="['/about']"><a data-toggle="pill">About</a></li>
       <li class="dropdown pillz chocoPill">
         <a class="dropdown-toggle" data-toggle="dropdown" >Chocolates
-        <span class="caret"></span>
+        <!-- <span class="caret"></span> -->
+        <a class="caret"></a>
       </a>
         <ul class="dropdown-menu">
           <li><a href="#">All Chocolates</a></li>

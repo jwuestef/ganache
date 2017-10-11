@@ -131,7 +131,7 @@ ul{
 .pillz{
   color:#000;
   margin: -2%;
-  /* float: left; */
+  float: none;
   /* background-color:transparent; */
 }
 .chillz{
@@ -143,4 +143,7 @@ ul{
 }
 .dropdown-menu{
   background-image: linear-gradient(to bottom, #3b2314, #fff);
+}
+.container{
+  display:flex;
 }
