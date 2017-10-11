@@ -128,8 +128,19 @@ ul{
 /* .dropbtn :active{
   border: 3px solid black ;
 } */
-@media screen and (max-width: 500px) {
-  nav{
-    width: 400px;
-  }
+.pillz{
+  color:#000;
+  margin: -2%;
+  /* float: left; */
+  /* background-color:transparent; */
+}
+.chillz{
+  background-image: linear-gradient(to left, #fff, #3b2314, #3b2314, #3b2314, #3b2314, #3b2314,#3b2314,#3b2314, #fff);
+
+}
+.nav-pills > .active > a, .nav-pills > .active > a:hover {
+  background-color: transparent;
+}
+.dropdown-menu{
+  background-image: linear-gradient(to bottom, #3b2314, #fff);
 }
