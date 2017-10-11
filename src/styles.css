@@ -1,14 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+
+#wrapper {
+  min-height: calc(100vh - 50px);
+}
+
+
+
+/* Global styles for all pages */
 @font-face{
   font-family: 'avenir';
   src: url('./assets/Avenir-Black-webfont.woff') format('woff')
 }
+
 body {
   background-color: #bcb1ac;
   font-family: 'PT Serif', serif;
   /* font-family: 'avenir' sans-serif; */
 }
 
+h1, h3, h4, h5, h6, p, footer{
+  text-align: center;
+  font-family: 'avenir';
+  line-height: 2.5rem;
+}
+
+h2{
+  text-align: center;
+}
+
+
+
+/* Removing blue colors for links */
 a {
   text-decoration: none;
   color: black;
@@ -19,10 +44,12 @@ a:hover {
 }
 
 
+
 /* Stops blue border from appearing around selected buttons */
 button:focus {
   outline:0;
 }
+
 
 
 /* Used to warn admin when database save or upload failed */
@@ -33,11 +60,13 @@ button:focus {
 }
 
 
+
 /* Used to tell admin successful text content (paragraph) update */
 .alert-success.updated {
   padding: 3rem;
   font-size: 1.5rem;
 }
+
 
 
 /* Admin view, each image upload form */
@@ -58,11 +87,6 @@ button:focus {
   background-color: #453c18;
   color: #bcb1ac;
 }
-h1, h3, h4, h5, h6, p, footer{
-  text-align: center;
-  font-family: 'avenir';
-  line-height: 2.5rem;
-}
-h2{
-  text-align: center;
-}
+
+
+
