@@ -9,8 +9,8 @@ div#barksSlider {
   position: relative;
   float: left;
   padding: 0;
-  max-width: 40vw;
-  height: 35vw;
+  max-width: 42vw;
+  height: auto;
   margin: 0 auto;
   margin-top: 3vw;
   margin-left: 5vw;
@@ -57,12 +57,4 @@ div#barksSlider figure {
   95%  { left: -400%; }
 
   100% { left: -500%; }
-}
-
-
-h1 {
-  line-height: 7vh;
-  margin-top: 15vh;
-  margin-left: 3vw;
-  font-size: 120%;
 }

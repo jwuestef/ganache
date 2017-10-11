@@ -10,7 +10,7 @@ div#seasonalSlider {
   float: left;
   padding: 0;
   max-width: 41vw;
-  height: 36vw;
+  height: auto;
   margin: 0 auto;
   margin-left: 5vw;
   margin-bottom: 1.5em;

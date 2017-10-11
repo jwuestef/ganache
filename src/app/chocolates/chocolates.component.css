@@ -14,7 +14,7 @@ div#chocolatesSlider {
   float: left;
   padding: 0;
   max-width: 63vw;
-  height: 54vh;
+  height: auto;
   margin: 0 auto;
   margin-left: 5vw;
   margin-right: -2vw;

@@ -4,7 +4,7 @@
 
   <!-- Fudge paragraph, describes fudge -->
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-sm-6">
       <!-- If not admin, show paragraph -->
       <h1 *ngIf="!isAdmin else inputFudgeParagraph" id="fudgeParagraph"></h1>
       <!-- If yes admin, show form to update content -->
@@ -20,7 +20,7 @@
     <!-- End of fudge paragraph-->
 
     <!-- Image slider -->
-    <div class="col-md-5" id="fudgeSlider">
+    <div class="col-sm-6" id="fudgeSlider">
       <figure>
         <img *ngIf="fudgeImage1Src && (fudgeImage1Link.toLowerCase() == 'na')" [src]="fudgeImage1Src" [alt]="fudgeImage1Description">
         <a *ngIf="fudgeImage1Src && (fudgeImage1Link.toLowerCase() !== 'na')" [href]="fudgeImage1Link"><img [src]="fudgeImage1Src" [alt]="fudgeImage1Description"></a>
