@@ -21,6 +21,9 @@ export class AppComponent implements OnInit{
     //Add 'implements OnInit' to the class.
     if (window.screen.width < 1100) {
       document.getElementById('desktopNav').setAttribute('style', 'display:none;');
+      document.getElementById('adminLogin').setAttribute('style', 'display:none;');
+      document.getElementById('adminLogout').setAttribute('style', 'display:none;');
+
     }
     if (window.screen.width >= 1100) {
       document.getElementById('mobileNav').setAttribute('style', 'display:none;');
