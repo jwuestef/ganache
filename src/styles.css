@@ -21,10 +21,10 @@ a:hover {
   color: #453c18;
 }
 
-h1 {
+/* h1 {
   line-height: 6vh;
   font-size: 120%;
-}
+} */
 
 /* Stops blue border from appearing around selected buttons */
 button:focus {
@@ -68,8 +68,10 @@ button:focus {
 h1, h3, h4, h5, h6, p, footer{
   /* text-align: center; */
   font-family: 'avenir';
-  line-height: 2.5rem;
+  line-height: 4rem;
 }
 h2{
+  font-family: 'avenir';
   text-align: center;
+  line-height: 4rem;
 }
