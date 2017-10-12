@@ -1,10 +1,16 @@
+#seasPara {
+  float: left;
+  margin-top: 3vw;
+  /* margin-left: 1vw; */
+}
+
 div#seasonalSlider {
   overflow: hidden;
   position: relative;
   float: left;
   padding: 0;
-  max-width: 55vw;
-  height: 55vh;
+  max-width: 41vw;
+  height: auto;
   margin: 0 auto;
   margin-left: 5vw;
   margin-bottom: 1.5em;
@@ -50,4 +56,11 @@ div#seasonalSlider figure {
   95%  { left: -400%; }
 
   100% { left: -500%; }
+}
+
+h1 {
+  line-height: 7vh;
+  margin-top: 13vh;
+  margin-left: 2vw;
+  font-size: 120%;
 }

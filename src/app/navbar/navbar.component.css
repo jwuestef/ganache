@@ -16,29 +16,31 @@ header[role="banner"] #logo-main {
   color: #000;
 }
 
-#navbar-primary.navbar-default .navbar-nav>li {
+#navbar-primary.navbar-default .navbar-nav > li {
   display: inline-block;
   float: none;
 }
 
-#navbar-primary.navbar-default .navbar-nav>li>a {
+#navbar-primary.navbar-default .navbar-nav > li > a {
   padding-left: 0px;
   padding-right: 0px;
 }
 
-.navbar-nav {
+.navbar-nav{
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(black), to(white));
   background-image: -webkit-linear-gradient(top, white, black, white);
   background-image: -moz-linear-gradient(top, white, black, white);
   /* background-image: linear-gradient(to left, #fff, #86746c, #7b6b63,#504540, #504540,#504540,#7b6b63, #86746c, #fff); */
   background-image: linear-gradient(to left, #fff, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #fff);
   height: 60px;
+  /* background-image: linear-gradient(to left, #fff, #3b2314, #3b2314, #3b2314, #3b2314, #3b2314,#3b2314,#3b2314, #fff);
+  height: 61px; */
   color: #000;
   white-space: nowrap;
   position: flex;
 }
 
-.dropdown:focus {
+.dropdown:focus{
   border: 20px solid #000;
 }
 

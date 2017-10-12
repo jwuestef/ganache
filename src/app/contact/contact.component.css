@@ -30,3 +30,7 @@ border: 10px solid #000000;
 .divMargy{
   margin: 1em 0em 1em 0em;
 }
+
+h5 {
+  text-align: center;
+}
