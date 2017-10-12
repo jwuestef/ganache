@@ -10,7 +10,8 @@
       <!-- If yes admin, show form to update content -->
       <ng-template #inputHomeParagraph>
         <texteditor [elementId]="'homeParagraph'"></texteditor>
-        <button (click)="saveHomeParagraph()">Update</button>
+        <br>
+        <button class="btn btn-md updateTextButton" (click)="saveHomeParagraph()">Update</button>
         <!-- After successful update, show confirmation -->
         <span class="alert-success updated" *ngIf="homeParagraphUpdated">
           <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>

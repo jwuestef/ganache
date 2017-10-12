@@ -14,6 +14,7 @@ import { Image } from '../services/image';
 export class FudgeComponent implements OnInit {
   isAdmin = false;
   fudgeParagraphUpdated = false;
+  fudgeChartUpdated = false;
   fudgeCurrentUpload: Image;
   fudgeImage1Src: string;
   fudgeImage2Src: string;
@@ -73,9 +74,11 @@ export class FudgeComponent implements OnInit {
       if (thisSaved.isAdmin) {
         // If they're an admin, set the content of paragraph editors
         tinymce.get('fudgeParagraph').setContent(pageContent.fudgeParagraph);
+        tinymce.get('fudgeChart').setContent(pageContent.fudgeChart);
       } else {
         // Otherwise, set the content of the regularly displayed fields
         $('#fudgeParagraph').html(pageContent.fudgeParagraph);
+        $('#fudgeChart').html(pageContent.fudgeChart);
       }
       // The image gets displayed regardless of admin status
       thisSaved.fudgeImage1Src = pageContent.image1.url;
@@ -104,6 +107,17 @@ export class FudgeComponent implements OnInit {
     const thisSaved = this;
     this.cs.savePageContent('fudgePage', 'fudgeParagraph', tinymce.get('fudgeParagraph').getContent()).then(function () {
       thisSaved.fudgeParagraphUpdated = true;
+    });
+  }
+
+
+
+  // As an admin, saves the content of the editor for the fudge paragraph, and then shows a success message
+  saveFudgeChart() {
+    this.fudgeChartUpdated = false;
+    const thisSaved = this;
+    this.cs.savePageContent('fudgePage', 'fudgeChart', tinymce.get('fudgeChart').getContent()).then(function () {
+      thisSaved.fudgeChartUpdated = true;
     });
   }
 
