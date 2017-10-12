@@ -74,7 +74,7 @@ export class NavbarComponent implements OnInit {
       $('#assortedBtnLink').on('click', function () {
         if (!thisSaved.linkClicked) {
           thisSaved.linkClicked = true;
-          thisSaved.router.navigate(['/creams']);
+          thisSaved.router.navigate(['/assorted']);
         }
       });
 
