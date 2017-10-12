@@ -1,3 +1,6 @@
+#wrapper{
+  min-height: calc(100vh - 50px);
+}
 /* You can add global styles to this file, and also import other style files */
 @font-face{
   font-family: 'avenir';
@@ -18,6 +21,10 @@ a:hover {
   color: #453c18;
 }
 
+/* h1 {
+  line-height: 6vh;
+  font-size: 120%;
+} */
 
 /* Stops blue border from appearing around selected buttons */
 button:focus, li:focus {
@@ -59,10 +66,12 @@ button:focus, li:focus {
   color: #bcb1ac;
 }
 h1, h3, h4, h5, h6, p, footer{
-  text-align: center;
+  /* text-align: center; */
   font-family: 'avenir';
-  line-height: 2.5rem;
+  line-height: 4.5rem;
 }
 h2{
+  font-family: 'avenir';
   text-align: center;
+  line-height: 4.5rem;
 }
