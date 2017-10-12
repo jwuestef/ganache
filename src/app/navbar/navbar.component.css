@@ -27,7 +27,7 @@ header[role="banner"] #logo-main {
   background-image: -moz-linear-gradient(top, white, black, white);
   /* background-image: linear-gradient(to left, #fff, #86746c, #7b6b63,#504540, #504540,#504540,#7b6b63, #86746c, #fff); */
   background-image: linear-gradient(to left, #fff, #3b2314, #3b2314, #3b2314, #3b2314, #3b2314,#3b2314,#3b2314, #fff);
-  height: 60px;
+  height: 65px;
   color: #000;
   white-space: nowrap;
   position: flex;
@@ -100,8 +100,8 @@ nav{
   background-image: linear-gradient(to bottom,#3b2314, #bcb1ac);
   /* margin-top:5px; */
   margin-left:4px;
-  margin-top:-1px;
-  border-top: 3px solid #000;
+  margin-top: 2px;
+  /* border-top: 3px solid #000; */
 }
 
 /* Links inside the dropdown */
