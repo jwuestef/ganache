@@ -173,7 +173,7 @@ ul {
 }
 
 .dropdown-menu {
-  background-image: linear-gradient(to bottom, #3b2314, #fff);
+  background-image: linear-gradient(to bottom, #5B361F,#5B361F,#5B361F, #fff);
 }
 
 #mobileNav {
@@ -184,11 +184,20 @@ ul {
   .pillz {
     margin-left: -2%;
   }
+  .pillz a{
+
+    color:#000;
+  }
 }
 
 @media screen and (max-width:340px) {
-  .pillz {
+  .pillz  {
     margin-left: -3%;
     margin-right:-3%;
+    color:#000;
+  }
+  .pillz a{
+
+    color:#000;
   }
 }
