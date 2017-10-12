@@ -76,11 +76,11 @@ li {
 
 /* Isn't this already a global style?????   -- PLEASE CHECK AND REMOVE IF NEEDED WHEN PAGE IS STYLED - Jeremy */
 a {
-  text-decoration: none;
+  /* text-decoration: underline; */
   color: black;
 }
 
 a:hover {
-  text-decoration:none;
+  text-decoration: underline;
   color: #453c18;
 }

@@ -1,6 +1,8 @@
+<!-- The desktop navbar is indicated within this div -->
 <div class="container-fluid" id="desktopNav">
   <header role="banner">
-    <img id="logo-main" src="../../assets/genuineLogo.png" width="400" alt="Ganache Logo" style="align-content: center;">
+    <img id="logo-main" src="../../assets/genuineLogo.png"  width="400" alt="Ganache Logo">
+    <!-- This begins the interactive part of the navbar -->
     <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
       <div class="nav navbar-nav">
         <div class="container-fluid" id="selecty">
@@ -12,13 +14,13 @@
           <div class="dropdown" id="aboutBtn">
             <button class="dropbtn" id="aboutBtnLink" [routerLink]="['/about']">About</button>
           </div>
-
           <div class="dropdown" id="chocoBtn">
             <button class="dropbtn" id="chocoBtnLink" [routerLink]="['/chocolates']">Our Chocolates</button>
+            <!-- This is a dropdown panel that is triggered by hovering -->
             <div class="dropdown-content">
               <a id="trufflesBtnLink" [routerLink]="['/truffles']">Truffles</a>
               <a id="barksBtnLink" [routerLink]="['/barks']">Barks</a>
-              <a id="creamsBtnLink" [routerLink]="['/creams']">Creams</a>
+              <a id="creamsBtnLink" [routerLink]="['/creams']">Assorted Chocolates</a>
               <a id="fudgeBtnLink" [routerLink]="['/fudge']">Fudge</a>
               <a id="seasonalBtnLink" [routerLink]="['/seasonal']">Seasonal</a>
               <a id="otherchocBtnLink" [routerLink]="['/otherchoc']">Other Chocolates</a>
@@ -38,42 +40,21 @@
     </nav>
   </header>
 </div>
-
-<!-- <header role="banner" id="mobileNav">
-<img id="logo-main" src="../../assets/genuineLogo.jpg" width="150" alt="Ganache Logo" style="justify-content:center;">
-<div>
-  <ul class="nav nav-pills chillz">
-    <li class="pillz homePill"  [routerLink]="['/home']">
-      <a data-toggle="tab">Home</a>
-    </li>
-    <li class="pillz aboutPill" [routerLink]="['/about']">
-      <a data-toggle="pill">About</a>
-    </li>
-    <li class="pillz chocoPill" [routerLink]="['/chocolates']">
-      <a data-toggle="pill">Chocolates</a>
-    </li>
-    <li class="pillz shopPill" [routerLink]="['/shop']">
-      <a data-toggle="pill">Shop</a>
-    </li>
-    <li class="pillz contactPill" [routerLink]="['/contact']">
-      <a data-toggle="pill">Contact Us</a>
-    </li>
-  </ul>
-</div>
-</header> -->
+<!-- The mobile navbar is indicated within this div -->
 <div class="container" id="mobileNav">
   <div class="row">
 <header role="banner">
     <img id="logo-main" src="../../assets/genuineLogo.png" width="150" alt="Ganache Logo" style="justify-content:center;">
-
-  <ul class="nav nav-pills chillz" style="margin-left:2%;">
+<!-- The list of links begins here -->
+  <ul class="nav nav-pills chillz">
       <li class="pillz homePill" [routerLink]="['/home']" data-toggle="pill"><a>Home</a></li>
       <li class="pillz aboutPill" [routerLink]="['/about']"><a data-toggle="pill">About</a></li>
       <li class="dropdown pillz chocoPill" data-toggle="pill">
         <a class="dropdown-toggle" data-toggle="dropdown" >Chocolates
-        <!-- <span class="caret"></span> -->
+        <!-- The caret is simply an indicator of the dropdown capability, it does not affect functionality -->
         <a class="caret"></a>
       </a>
+      <!-- This dropdown requires clicking, as hover is disabled on mobile devices -->
         <ul class="dropdown-menu">
           <li [routerLink]="['/chocolates']" ><a>All Chocolates</a></li>
           <li [routerLink]="['/truffles']" ><a>Truffles</a></li>
