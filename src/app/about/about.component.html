@@ -12,7 +12,8 @@
       <!-- If yes admin, show form to update content -->
       <ng-template #inputAboutParagraph>
         <texteditor [elementId]="'aboutParagraph'"></texteditor>
-        <button (click)="saveAboutParagraph()">Update</button>
+        <br>
+        <button class="btn btn-md updateTextButton" (click)="saveAboutParagraph()">Update</button>
         <!-- After successful update, show confirmation -->
         <span class="alert-success updated" *ngIf="aboutParagraphUpdated">
           <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>

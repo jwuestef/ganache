@@ -1,17 +1,38 @@
-#wrapper{
-  min-height: calc(100vh - 50px);
-}
 /* You can add global styles to this file, and also import other style files */
 @font-face{
   font-family: 'avenir';
   src: url('./assets/Avenir-Black-webfont.woff') format('woff')
 }
+
 body {
   background-color: #bcb1ac;
   font-family: 'PT Serif', serif;
   /* font-family: 'avenir' sans-serif; */
 }
 
+h1, h3, h4, h5, h6, p, footer{
+  /* text-align: center; */
+  font-family: 'avenir';
+  line-height: 4.5rem;
+}
+h2{
+  font-family: 'avenir';
+  text-align: center;
+  line-height: 4.5rem;
+}
+/* h1 {
+  line-height: 6vh;
+  font-size: 120%;
+} */
+
+
+/* Sets page height, so footer is always at the bottom of the page or content */
+#wrapper{
+  min-height: calc(100vh - 50px);
+}
+
+
+/* Colors links and removes their underlines */
 a {
   text-decoration: none;
   color: black;
@@ -21,12 +42,8 @@ a:hover {
   color: #453c18;
 }
 
-/* h1 {
-  line-height: 6vh;
-  font-size: 120%;
-} */
 
-/* Stops blue border from appearing around selected buttons */
+/* Stops blue border from appearing around selected buttons (important for navbar)*/
 button:focus, li:focus {
   outline:0;
 }
@@ -40,10 +57,27 @@ button:focus, li:focus {
 }
 
 
+/* Admins click this button to update text content */
+.updateTextButton {
+  margin: 1rem;
+  margin-bottom: 3rem;
+  background-color: #785c44;
+  color: #bcb1ac;
+}
+.updateTextButton:hover {
+  background-color: #4E2E28;
+  color: #bcb1ac;
+}
+
+
 /* Used to tell admin successful text content (paragraph) update */
 .alert-success.updated {
-  padding: 3rem;
+  margin: 1rem;
+  margin-top: -1rem;
+  padding: 1rem 2rem;
   font-size: 1.5rem;
+  border: 2px solid darkgreen;
+  border-radius: 0.5rem;
 }
 
 
@@ -62,16 +96,6 @@ button:focus, li:focus {
   color: #bcb1ac;
 }
 .uploadImageButton:hover {
-  background-color: #453c18;
+  background-color: #4E2E28;
   color: #bcb1ac;
-}
-h1, h3, h4, h5, h6, p, footer{
-  /* text-align: center; */
-  font-family: 'avenir';
-  line-height: 4.5rem;
-}
-h2{
-  font-family: 'avenir';
-  text-align: center;
-  line-height: 4.5rem;
 }
