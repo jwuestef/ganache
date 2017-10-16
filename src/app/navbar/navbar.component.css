@@ -164,6 +164,7 @@ ul {
 
 .chillz {
   background-image: linear-gradient(to left, #fff, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #fff);
+  margin-left:2%;
 }
 
 .nav-pills>.active>a,
