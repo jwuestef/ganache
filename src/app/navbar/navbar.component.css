@@ -180,20 +180,20 @@ ul {
   display: inline-block;
 }
 
-@media screen and (max-width:380px) {
-  .pillz {
-    margin-left: -2%;
-  }
-  .pillz a {
-    color: #000;
-  }
-}
 
 @media screen and (max-width:340px) {
   .pillz {
     margin-left: -3%;
     margin-right: -3%;
     color: #000;
+  }
+  .pillz a {
+    color: #000;
+  }
+}
+@media screen and (max-width:380px) {
+  .pillz {
+    margin-left: -2%;
   }
   .pillz a {
     color: #000;
