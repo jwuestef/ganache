@@ -11,7 +11,6 @@ import { AuthService } from '../services/auth.service';
 })
 export class NavbarComponent implements OnInit {
   isAdmin = false;
-  linkClicked = false;
 
 
   // The contructor function runs automatically on component load, each and every time it's called
@@ -22,100 +21,81 @@ export class NavbarComponent implements OnInit {
 
 
   ngOnInit() {
-    // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    // Add 'implements OnInit' to the class.
-    if (window.innerWidth < 500) {
-      console.log('kittykittykitty');
-    }
 
+    // For admin view, if there are TinyMCE editors on the page when it's navigated away from, it will kick errors
+    // So before the navigate command is sent, we first destroy all editors.
+    // All links in the nevbar are dead, routing happens here
+    const thisSaved = this;
 
-    // For admin view, the first time a link to an editable view has been clicked, it kicks an error and doesn't load the new page.
-    // Detect clicks to navigate away from the page, and immediately routes the request correctly.
-    // The original click will still kick the error into the console and stop the new page from loading,
-    // So we forcefully navigate to the route anyways
-    if (this.isAdmin) {
-      const thisSaved = this;
+    $('#homeBtnLink').on('click', function () {
+      thisSaved.destroyAllEditors();
+      thisSaved.router.navigate(['/']);
+    });
 
-      $('#homeBtnLink').on('click', function () {
-        if (!thisSaved.linkClicked) {
-          thisSaved.linkClicked = true;
-          thisSaved.router.navigate(['/']);
-        }
-      });
+    $('#aboutBtnLink').on('click', function () {
+      thisSaved.destroyAllEditors();
+      thisSaved.router.navigate(['/about']);
+    });
 
-      $('#aboutBtnLink').on('click', function () {
-        if (!thisSaved.linkClicked) {
-          thisSaved.linkClicked = true;
-          thisSaved.router.navigate(['/about']);
-        }
-      });
+    $('#chocoBtnLink').on('click', function () {
+      thisSaved.destroyAllEditors();
+      thisSaved.router.navigate(['/chocolates']);
+    });
 
-      $('#chocoBtnLink').on('click', function () {
-        if (!thisSaved.linkClicked) {
-          thisSaved.linkClicked = true;
-          thisSaved.router.navigate(['/chocolates']);
-        }
-      });
+    $('#trufflesBtnLink').on('click', function () {
+      thisSaved.destroyAllEditors();
+      thisSaved.router.navigate(['/truffles']);
+    });
 
-      $('#trufflesBtnLink').on('click', function () {
-        if (!thisSaved.linkClicked) {
-          thisSaved.linkClicked = true;
-          thisSaved.router.navigate(['/truffles']);
-        }
-      });
+    $('#barksBtnLink').on('click', function () {
+      thisSaved.destroyAllEditors();
+      thisSaved.router.navigate(['/barks']);
+    });
 
-      $('#barksBtnLink').on('click', function () {
-        if (!thisSaved.linkClicked) {
-          thisSaved.linkClicked = true;
-          thisSaved.router.navigate(['/barks']);
-        }
-      });
+    $('#assortedBtnLink').on('click', function () {
+      thisSaved.destroyAllEditors();
+      thisSaved.router.navigate(['/assorted']);
+    });
 
-      $('#assortedBtnLink').on('click', function () {
-        if (!thisSaved.linkClicked) {
-          thisSaved.linkClicked = true;
-          thisSaved.router.navigate(['/assorted']);
-        }
-      });
+    $('#fudgeBtnLink').on('click', function () {
+      thisSaved.destroyAllEditors();
+      thisSaved.router.navigate(['/fudge']);
+    });
 
-      $('#fudgeBtnLink').on('click', function () {
-        if (!thisSaved.linkClicked) {
-          thisSaved.linkClicked = true;
-          thisSaved.router.navigate(['/fudge']);
-        }
-      });
+    $('#seasonalBtnLink').on('click', function () {
+      thisSaved.destroyAllEditors();
+      thisSaved.router.navigate(['/seasonal']);
+    });
 
-      $('#seasonalBtnLink').on('click', function () {
-        if (!thisSaved.linkClicked) {
-          thisSaved.linkClicked = true;
-          thisSaved.router.navigate(['/seasonal']);
-        }
-      });
+    $('#otherchocBtnLink').on('click', function () {
+      thisSaved.destroyAllEditors();
+      thisSaved.router.navigate(['/otherchoc']);
+    });
 
-      $('#otherchocBtnLink').on('click', function () {
-        if (!thisSaved.linkClicked) {
-          thisSaved.linkClicked = true;
-          thisSaved.router.navigate(['/otherchoc']);
-        }
-      });
+    $('#shopBtnLink').on('click', function () {
+      thisSaved.destroyAllEditors();
+      thisSaved.router.navigate(['/shop']);
+    });
 
-      $('#shopBtnLink').on('click', function () {
-        if (!thisSaved.linkClicked) {
-          thisSaved.linkClicked = true;
-          thisSaved.router.navigate(['/shop']);
-        }
-      });
+    $('#contactBtnLink').on('click', function () {
+      thisSaved.destroyAllEditors();
+      thisSaved.router.navigate(['/contact']);
+    });
 
-      $('#contactBtnLink').on('click', function () {
-        if (!thisSaved.linkClicked) {
-          thisSaved.linkClicked = true;
-          thisSaved.router.navigate(['/contact']);
-        }
-      });
-
-    } // End of if(this.isAdmin) for avoiding errors when clicking navbar links
 
   } // End of ngOnInit()
+
+
+
+  // If logged in as an admin, when navigating away from an editable view, destroy all TinyMCE editors first to avoid errors
+  destroyAllEditors() {
+    if (this.isAdmin) {
+      for (let i = tinymce.editors.length - 1; i > -1; i--) {
+        const ed_id = tinymce.editors[i].id;
+        tinymce.execCommand('mceRemoveEditor', true, ed_id);
+      }
+    }
+  }
 
 
 

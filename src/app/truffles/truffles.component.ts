@@ -18,6 +18,8 @@ export class TrufflesComponent implements OnInit {
   image1Description: string;
   image1Src: string;
 
+
+
   // The contructor function runs automatically on component load, each and every time it's called
   constructor(public as: AuthService, public cs: ContentService, public fms: FlashMessagesService) {
     // Check to see if this is the logged in administrator
@@ -25,15 +27,21 @@ export class TrufflesComponent implements OnInit {
     // Pull updated content from Firebase
     this.getContent();
   }
+
+
+
   ngOnInit() {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     // Sets black border around selected view in navbar
-      document.getElementById('homeBtn').setAttribute('style', 'border: none;');
-      document.getElementById('contactBtn').setAttribute('style', 'border: none;');
-      document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
-      document.getElementById('shopBtn').setAttribute('style', 'border: none;');
-      document.getElementById('chocoBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-4px;');
+    document.getElementById('homeBtn').setAttribute('style', 'border: none;');
+    document.getElementById('contactBtn').setAttribute('style', 'border: none;');
+    document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
+    document.getElementById('shopBtn').setAttribute('style', 'border: none;');
+    document.getElementById('chocoBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-4px;');
   }
+
+
+
   // Pulls page content from Firebase and assigns it to content based on admin status
   public getContent() {
     const thisSaved = this;
@@ -52,6 +60,9 @@ export class TrufflesComponent implements OnInit {
     });
   }
 
+
+
+
   // As an admin, saves the content of the editor for the truffles paragraph
   saveTrufflesParagraph() {
     const thisSaved = this;
@@ -60,10 +71,16 @@ export class TrufflesComponent implements OnInit {
     });
   }
 
+
+
+
   // Detects when a new image has been inserted and fills the appropriate variable
   detectImage1(event) {
     this.selectedFiles = event.target.files;
   }
+
+
+
 
   // Uploads a new image
   uploadImage1() {
