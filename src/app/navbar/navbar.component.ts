@@ -71,10 +71,10 @@ export class NavbarComponent implements OnInit {
         }
       });
 
-      $('#creamsBtnLink').on('click', function () {
+      $('#assortedBtnLink').on('click', function () {
         if (!thisSaved.linkClicked) {
           thisSaved.linkClicked = true;
-          thisSaved.router.navigate(['/creams']);
+          thisSaved.router.navigate(['/assorted']);
         }
       });
 

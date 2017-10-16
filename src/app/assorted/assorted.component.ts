@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { FlashMessagesService } from 'angular2-flash-messages';
 
@@ -6,12 +6,13 @@ import { AuthService } from '../services/auth.service';
 import { ContentService } from '../services/content.service';
 import { Image } from '../services/image';
 
+
 @Component({
-  selector: 'app-creams',
-  templateUrl: './creams.component.html',
-  styleUrls: ['./creams.component.css']
+  selector: 'app-assorted',
+  templateUrl: './assorted.component.html',
+  styleUrls: ['./assorted.component.css']
 })
-export class CreamsComponent {
+export class AssortedComponent implements OnInit {
   isAdmin = false;
   selectedFiles: FileList;
   currentUpload: Image;
@@ -26,15 +27,13 @@ export class CreamsComponent {
     this.getContent();
   }
   ngOnInit() {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     // Sets black border around selected view in navbar
-    if (window.location.pathname === '/creams') {
         document.getElementById('contactBtn').setAttribute('style', 'border: none;');
         document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
         document.getElementById('homeBtn').setAttribute('style', 'border: none;');
         document.getElementById('shopBtn').setAttribute('style', 'border: none;');
         document.getElementById('chocoBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-4px;');
-     }
   }
 
   // Pulls page content from Firebase and assigns it to content based on admin status

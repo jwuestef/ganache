@@ -7,7 +7,8 @@
       <!-- If yes admin, show form to update content -->
       <ng-template #inputChocolatesParagraph>
         <texteditor [elementId]="'chocolatesParagraph'"></texteditor>
-        <button (click)="saveChocolatesParagraph()">Update</button>
+        <br>
+        <button class="btn btn-md updateTextButton" (click)="saveChocolatesParagraph()">Update</button>
         <!-- After successful update, show confirmation -->
         <span class="alert-success updated" *ngIf="chocolatesParagraphUpdated">
           <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
@@ -47,7 +48,7 @@
     <div class="col-md-4" id="selection">
       <ul>
         <li><a [routerLink]="['/truffles']">Gourmet Truffles</a></li>
-        <li><a [routerLink]="['/creams']">Assorted Creams</a></li>
+        <li><a [routerLink]="['/assorted']">Assorted Chocolates</a></li>
         <li><a [routerLink]="['/barks']">Barks and Toffee</a></li>
         <li><a [routerLink]="['/fudge']">Fudge</a></li>
         <li><a [routerLink]="['/otherchoc']">Other Chocolates</a></li>

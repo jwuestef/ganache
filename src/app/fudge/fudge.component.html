@@ -2,7 +2,7 @@
 
 
 
-  <!-- Fudge paragraph, describes fudge -->
+  <!-- Fudge paragraph and chart, describes fudge -->
   <div class="row">
     <div class="col-md-6">
       <!-- If not admin, show paragraph -->
@@ -10,14 +10,30 @@
       <!-- If yes admin, show form to update content -->
       <ng-template #inputFudgeParagraph>
         <texteditor [elementId]="'fudgeParagraph'"></texteditor>
-        <button (click)="saveFudgeParagraph()">Update</button>
+        <br>
+        <button class="btn btn-md updateTextButton" (click)="saveFudgeParagraph()">Update</button>
         <!-- After successful update, show confirmation -->
         <span class="alert-success updated" *ngIf="fudgeParagraphUpdated">
-            <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
-          </span>
+          <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+        </span>
+      </ng-template>
+
+      <!-- If not admin, show chart -->
+      <h1 *ngIf="!isAdmin else inputFudgeChart" id="fudgeChart"></h1>
+      <!-- If yes admin, show form to update content -->
+      <ng-template #inputFudgeChart>
+        <texteditor [elementId]="'fudgeChart'"></texteditor>
+        <br>
+        <button class="btn btn-md updateTextButton" (click)="saveFudgeChart()">Update</button>
+        <!-- After successful update, show confirmation -->
+        <span class="alert-success updated" *ngIf="fudgeChartUpdated">
+          <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+        </span>
       </ng-template>
     </div>
-    <!-- End of fudge paragraph-->
+    <!-- End of column containing fudge paragraph and chart-->
+
+
 
     <!-- Image slider -->
     <div class="col-md-6" id="fudgeSlider">
