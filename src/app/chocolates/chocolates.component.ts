@@ -56,14 +56,12 @@ export class ChocolatesComponent implements OnInit {
   ngOnInit() {
     // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     // Sets black border around selected view in navbar
-    if (window.location.pathname === '/chocolates') {
-        document.getElementById('homeBtn').setAttribute('style', 'border: none;');
-        document.getElementById('contactBtn').setAttribute('style', 'border: none;');
-        document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
-        document.getElementById('shopBtn').setAttribute('style', 'border: none;');
-        document.getElementById('chocoBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-4px;');
-      }
-    }
+    document.getElementById('homeBtn').setAttribute('style', 'border: none;');
+    document.getElementById('contactBtn').setAttribute('style', 'border: none;');
+    document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
+    document.getElementById('shopBtn').setAttribute('style', 'border: none;');
+    document.getElementById('chocoBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-4px;');
+  }
 
 
 

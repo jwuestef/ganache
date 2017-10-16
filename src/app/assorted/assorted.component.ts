@@ -19,6 +19,8 @@ export class AssortedComponent implements OnInit {
   image1Description: string;
   image1Src: string;
 
+
+
   // The contructor function runs automatically on component load, each and every time it's called
   constructor(public as: AuthService, public cs: ContentService, public fms: FlashMessagesService) {
     // Check to see if this is the logged in administrator
@@ -26,35 +28,40 @@ export class AssortedComponent implements OnInit {
     // Pull updated content from Firebase
     this.getContent();
   }
+
+
+
   ngOnInit() {
     // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     // Sets black border around selected view in navbar
-    if (window.location.pathname === '/assorted') {
-        document.getElementById('contactBtn').setAttribute('style', 'border: none;');
-        document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
-        document.getElementById('homeBtn').setAttribute('style', 'border: none;');
-        document.getElementById('shopBtn').setAttribute('style', 'border: none;');
-        document.getElementById('chocoBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-4px;');
-     }
+    document.getElementById('contactBtn').setAttribute('style', 'border: none;');
+    document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
+    document.getElementById('homeBtn').setAttribute('style', 'border: none;');
+    document.getElementById('shopBtn').setAttribute('style', 'border: none;');
+    document.getElementById('chocoBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-4px;');
   }
 
+
+
   // Pulls page content from Firebase and assigns it to content based on admin status
-public getContent() {
-  const thisSaved = this;
-  this.cs.getPageContent('creamsPage').then(function (pageContent) {
-    if (thisSaved.isAdmin) {
-      // If they're an admin, set the content of the editors
-      tinymce.get('creamsParagraph').setContent(pageContent.creamsParagraph);
-      $('#image1Description').val(pageContent.image1.description);
-    } else {
-      // Otherwise, set the content of the regularly displayed fields
-      $('#creamsParagraph').html(pageContent.creamsParagraph);
-    }
-    // The image gets displayed regardless of admin status
-    thisSaved.image1Src = pageContent.image1.url;
-    thisSaved.image1Description = pageContent.image1.description;
+  public getContent() {
+    const thisSaved = this;
+    this.cs.getPageContent('creamsPage').then(function (pageContent) {
+      if (thisSaved.isAdmin) {
+        // If they're an admin, set the content of the editors
+        tinymce.get('creamsParagraph').setContent(pageContent.creamsParagraph);
+        $('#image1Description').val(pageContent.image1.description);
+      } else {
+        // Otherwise, set the content of the regularly displayed fields
+        $('#creamsParagraph').html(pageContent.creamsParagraph);
+      }
+      // The image gets displayed regardless of admin status
+      thisSaved.image1Src = pageContent.image1.url;
+      thisSaved.image1Description = pageContent.image1.description;
     });
   }
+
+
 
   // As an admin, saves the content of the editor for the creams paragraph
   saveCreamsParagraph() {
@@ -64,12 +71,16 @@ public getContent() {
     });
   }
 
+
+
   // Detects when a new image has been inserted and fills the appropriate variable
   detectImage1(event) {
     this.selectedFiles = event.target.files;
   }
 
-    // Uploads a new image
+
+
+  // Uploads a new image
   uploadImage1() {
     // Set file-to-be-uploaded to the file taken from the input field
     this.currentUpload = new Image(this.selectedFiles.item(0));
@@ -79,9 +90,12 @@ public getContent() {
     this.currentUpload.name = 'image1';
     const thisSaved = this;
     // Upload the file via UploadService (pageName, whichElement, newImage)
-    this.cs.pushUpload('creamsPage', 'image1', this.currentUpload).then(function(newURL) {
+    this.cs.pushUpload('creamsPage', 'image1', this.currentUpload).then(function (newURL) {
       // Updates thumbnail image
       thisSaved.image1Src = newURL.toString();
     });
   }
+
+
+
 }
