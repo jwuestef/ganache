@@ -1,36 +1,6 @@
-<div class="container-fluid">
-  <!-- Hidden admin login button, causes modal to pop up -->
-
-  <!-- Admin login form -->
-  <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <p>Administrator Login</p>
-        </div>
-
-        <div class="modal-body">
-          <input type="email" [(ngModel)]="loginModel.email">
-          <p *ngIf="loginErrors.email" class="validation">{{loginErrors.email}}</p>
-          <br>
-          <input type="password" [(ngModel)]="loginModel.pass">
-          <p *ngIf="loginErrors.pass" class="validation">{{loginErrors.pass}}</p>
-          <br>
-        </div>
-
-        <div class="modal-footer">
-          <button id="login-btn" class="btn btn-primary" (click)="adminLogin()">Login</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- Content of the page begins here -->
+<!-- <div class="container-fluid">
   <div class="contactText">
-      <!-- The left most div -->
+
     <div class="row col-md-4 col-xs-11 divMargy">
       <h2>Visit Ganache Chocolatier!</h2>
       <h5>The only way to truly see the detail in our chocolates is to visit us. Come to the shop and fill your nose with the
@@ -44,36 +14,148 @@
       </h5>
     </div>
 
-    <!-- The center div which contains the contact form -->
     <div class="row col-md-4 col-xs-11 divMargy">
       <h2>Contact Ganache Chocolatier</h2>
       <h5>
         If you want more information about Ganache Chocolatiers or have questions, please feel free to contact us. We value our customers
         and hope to help in any way possible.
       </h5>
-      <!-- This is the contact form which forwards through formspree via the action= tag, pointing towards the client's email address -->
-      <form action="https://formspree.io/GANACHE@EMAIL.COMGOESHERE">
-        <label for="name">Name</label><br>
-        <input type="text" name="Name" id="name"><br>
-        <label for="phone">Phone</label><br>
-        <input type="num" name="Phone" id="phone"><br>
-        <label for="email">Email</label><br>
-        <input type="email" name="Email"><br>
-        <label for="comments">Comment/Question</label><br>
-        <textarea id="comments" name="Comments"></textarea><br>
-        <input type="submit" value="Continue" class="btn btn-primary" id="booton">
-      </form>
+
     </div>
-    <!-- The right most div contains map -->
+
     <div class="row col-md-4 col-xs-11 divMargy">
       <h2>Hours</h2>
       <h5>Monday-Friday 10 AM to 5:30 PM</h5>
       <h5>Saturday 10 AM to 5 PM</h5>
       <h5>Sunday Closed</h5>
-      <!-- This iframe contains the embedded map -->
+
       <iframe width="65%" height="250" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJCU4tcGNVE4gRE8YUUt6U21k&key=AIzaSyDNN1lmTogQWRQCgcVisoiv-MhLiqNqD5Q"
         allowfullscreen>
       </iframe>
     </div>
+
   </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+  <div class="row">
+
+
+
+    <!-- Contact1 paragraph, contains Visit and Consultations content -->
+    <div class="col-md-4">
+
+      <!-- If not admin, show paragraph -->
+      <h1 *ngIf="!isAdmin else inputContact1Paragraph" id="contact1Paragraph"></h1>
+
+      <!-- If yes admin, show form to update content -->
+      <ng-template #inputContact1Paragraph>
+        <texteditor [elementId]="'contact1Paragraph'"></texteditor>
+        <br>
+        <button class="btn btn-md updateTextButton" (click)="saveContact1Paragraph()">Update</button>
+        <!-- After successful update, show confirmation -->
+        <span class="alert-success updated" *ngIf="contact1ParagraphUpdated">
+          <strong>Updated</strong>
+          <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+        </span>
+      </ng-template>
+
+    </div>
+    <!-- End of contact1 paragraph -->
+
+
+
+    <!-- Contact2 paragraph, contains submittable form -->
+    <div class="col-md-4">
+
+      <!-- If not admin, show paragraph -->
+      <h1 *ngIf="!isAdmin else inputContact2Paragraph" id="contact2Paragraph"></h1>
+      <!-- If yes admin, show form to update content -->
+      <ng-template #inputContact2Paragraph>
+        <texteditor [elementId]="'contact2Paragraph'"></texteditor>
+        <br>
+        <button class="btn btn-md updateTextButton" (click)="saveContact2Paragraph()">Update</button>
+        <!-- After successful update, show confirmation -->
+        <span class="alert-success updated" *ngIf="contact2ParagraphUpdated">
+          <strong>Updated</strong>
+          <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+        </span>
+      </ng-template>
+
+      <!-- This is the contact form which forwards through formspree via the action= tag, pointing towards the client's email address -->
+      <form action="https://formspree.io/GANACHE@EMAIL.COMGOESHERE">
+        <label for="name">Name</label>
+        <br>
+        <input type="text" name="Name" id="name">
+        <br>
+        <label for="phone">Phone</label>
+        <br>
+        <input type="num" name="Phone" id="phone">
+        <br>
+        <label for="email">Email</label>
+        <br>
+        <input type="email" name="Email">
+        <br>
+        <label for="comments">Comment/Question</label>
+        <br>
+        <textarea id="comments" name="Comments"></textarea>
+        <br>
+        <input type="submit" value="Continue" class="btn btn-primary" id="booton">
+      </form>
+
+    </div>
+    <!-- End of contact1 paragraph -->
+
+
+
+    <!-- Contact3 paragraph, contains Hours content and Map (iframe) -->
+    <div class="col-md-4">
+
+      <!-- If not admin, show paragraph -->
+      <h1 *ngIf="!isAdmin else inputContact3Paragraph" id="contact3Paragraph"></h1>
+      <!-- If yes admin, show form to update content -->
+      <ng-template #inputContact3Paragraph>
+        <texteditor [elementId]="'contact3Paragraph'"></texteditor>
+        <br>
+        <button class="btn btn-md updateTextButton" (click)="saveContact3Paragraph()">Update</button>
+        <!-- After successful update, show confirmation -->
+        <span class="alert-success updated" *ngIf="contact3ParagraphUpdated">
+          <strong>Updated</strong>
+          <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+        </span>
+      </ng-template>
+
+      <!-- Displays map (iframe) of shop -->
+      <iframe width="65%" height="250" frameborder="0" [src]="contactIframeSrc" allowfullscreen></iframe>
+      <div *ngIf="isAdmin">
+        <br>
+        <label for="contactIframeInput">Source URL of iframe (map):</label>
+        <input type="text" id="contactIframeInput" placeholder="description" [(ngModel)]="contactIframeSrcDisplayed">
+        <br>
+        <button class="btn btn-md updateTextButton" (click)="saveContactIframe()">Update</button>
+        <!-- After successful update, show confirmation -->
+        <span class="alert-success updated" *ngIf="contactIframeUpdated">
+          <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+        </span>
+      </div>
+
+    </div>
+    <!-- End of column containing Hours and Map (iframe) -->
+
+
+
+
+  </div>
+  <!-- End of row -->
 </div>
+<!-- End of container-fluid -->

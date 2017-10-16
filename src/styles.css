@@ -65,7 +65,7 @@ button:focus, li:focus {
   color: #bcb1ac;
 }
 .updateTextButton:hover {
-  background-color: #453c18;
+  background-color: #4E2E28;
   color: #bcb1ac;
 }
 
@@ -96,6 +96,6 @@ button:focus, li:focus {
   color: #bcb1ac;
 }
 .uploadImageButton:hover {
-  background-color: #453c18;
+  background-color: #4E2E28;
   color: #bcb1ac;
 }
