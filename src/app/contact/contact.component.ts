@@ -23,7 +23,6 @@ export class ContactComponent implements OnInit {
 
 
 
-
   // The contructor function runs automatically on component load, each and every time it's called
   constructor(public as: AuthService, public cs: ContentService, public sanitizer: DomSanitizer) {
     // Check to see if this is the logged in administrator
