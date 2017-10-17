@@ -8,7 +8,7 @@ import { GridImage } from '../services/gridImage';
 
 @Component({
   selector: 'app-truffles',
-  templateUrl: './truffles.component.html',
+  templateUrl: './trufflesUpload.component.html',
   styleUrls: ['./truffles.component.css']
 })
 export class TrufflesComponent implements OnInit {
