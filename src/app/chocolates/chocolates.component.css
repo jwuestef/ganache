@@ -2,8 +2,8 @@
 /* Image slider */
 #chocolatesParagraph {
   line-height: 2em;
-  margin: 2em 0 2em 0;
-  font-size: 130%;
+  margin: 2em 2em 2em 2em;
+  font-size: 120%;
 }
 
 
@@ -35,7 +35,7 @@ div#chocolatesSlider figure img {
 div#chocolatesSlider figure {
   position: relative;
   width: 600%;
-  max-height: 55vh;
+  max-height: auto;
   margin: 0;
   left: 0;
   text-align: left;
@@ -66,21 +66,10 @@ div#chocolatesSlider figure {
 
 /* Links to other pages */
 li {
+  font-family: 'avenir';
   list-style: none;
   font-size: 150%;
-  margin: 4vh 0 4vh 0;
+  margin: 4vh 1em 4vh 0;
   text-align: center;
 }
 
-
-
-/* Isn't this already a global style?????   -- PLEASE CHECK AND REMOVE IF NEEDED WHEN PAGE IS STYLED - Jeremy */
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  text-decoration:none;
-  color: #453c18;
-}
