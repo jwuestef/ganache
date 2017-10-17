@@ -1,4 +1,4 @@
-header[role="banner"] #logo-main {
+nav[role="banner"] #logo-main {
   display: block;
   margin: 10px auto;
 }
@@ -53,8 +53,10 @@ header[role="banner"] #logo-main {
 nav {
   font-size: 1.6em;
   display: block;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  /* margin-left: auto !important;
+  margin-right: auto !important; */
+  margin: auto;
+  width: 100%;
 }
 
 #navImg {
@@ -117,7 +119,7 @@ nav {
   z-index: 1;
   background-image: linear-gradient(to bottom, #5B361F, #bcb1ac);
   /* margin-top:5px; */
-  margin-left: 4px;
+  margin-left: -4px;
   margin-top: 2px;
   /* border-top: 3px solid #000; */
 }
@@ -181,7 +183,7 @@ ul {
 }
 
 
-@media screen and (max-width:340px) {
+/* @media screen and (max-width:340px) {
   .pillz {
     margin-left: -3%;
     margin-right: -3%;
@@ -208,4 +210,4 @@ ul {
   .pillz a {
     color: #000;
   }
-}
+} */
