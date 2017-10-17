@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
-import { FlashMessagesService } from 'angular2-flash-messages';
 
 import { AuthService } from '../services/auth.service';
 import { ContentService } from '../services/content.service';
 import { GridImage } from '../services/gridImage';
 
+
 @Component({
   selector: 'app-truffles',
-  templateUrl: './trufflesUpload.component.html',
+  templateUrl: './truffles.component.html',
   styleUrls: ['./truffles.component.css']
 })
 export class TrufflesComponent implements OnInit {
