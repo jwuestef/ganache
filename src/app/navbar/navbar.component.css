@@ -159,11 +159,12 @@ ul {
 .pillz {
   color: #000;
   margin: 0 -1.5% 0 0;
-  float: left;
+
+  /* float: left; */
 }
 
 .chillz {
-  background-image: linear-gradient(to left, #fff, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #fff);
+  background-image: linear-gradient(to right, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #fff);
   margin-left:2%;
 }
 
@@ -193,7 +194,7 @@ ul {
 }
 @media screen and (max-width:380px) {
   .pillz {
-    margin-left: -2%;
+    /* margin-left: -2%; */
   }
   .pillz a {
     color: #000;
@@ -202,7 +203,7 @@ ul {
 @media screen and (max-width:420px) {
   .pillz {
     margin-left: -3%;
-    margin-right: -3%;
+    /* margin-right: -3%; */
     color: #000;
   }
   .pillz a {
