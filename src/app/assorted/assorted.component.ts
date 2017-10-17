@@ -87,7 +87,7 @@ export class AssortedComponent implements OnInit {
     // Include the image description
     this.currentUpload.description = this.image1Description;
     // Set the name
-    this.currentUpload.name = 'image1';
+    // this.currentUpload.name = 'image1';
     const thisSaved = this;
     // Upload the file via UploadService (pageName, whichElement, newImage)
     this.cs.pushUpload('creamsPage', 'image1', this.currentUpload).then(function (newURL) {
