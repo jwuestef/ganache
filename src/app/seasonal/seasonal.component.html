@@ -3,14 +3,15 @@
 
 
   <!-- Seasonal paragraph, describes seasonal treats -->
-  <div class="row">
-    <div class="col-md-7">
+  <div class="row" id="seasPara">
+    <div class="col-sm-6">
       <!-- If not admin, show paragraph -->
       <h1 *ngIf="!isAdmin else inputSeasonalParagraph" id="seasonalParagraph"></h1>
       <!-- If yes admin, show form to update content -->
       <ng-template #inputSeasonalParagraph>
         <texteditor [elementId]="'seasonalParagraph'"></texteditor>
-        <button (click)="saveSeasonalParagraph()">Update</button>
+        <br>
+        <button class="btn btn-md updateTextButton" (click)="saveSeasonalParagraph()">Update</button>
         <!-- After successful update, show confirmation -->
         <span class="alert-success updated" *ngIf="seasonalParagraphUpdated">
               <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
@@ -20,7 +21,7 @@
     <!-- End of seasonal paragraph-->
 
     <!-- Image slider -->
-    <div class="col-md-5" id="seasonalSlider">
+    <div class="col-sm-6" id="seasonalSlider">
       <figure>
         <img *ngIf="seasonalImage1Src && (seasonalImage1Link.toLowerCase() == 'na')" [src]="seasonalImage1Src" [alt]="seasonalImage1Description">
         <a *ngIf="seasonalImage1Src && (seasonalImage1Link.toLowerCase() !== 'na')" [href]="seasonalImage1Link"><img [src]="seasonalImage1Src" [alt]="seasonalImage1Description"></a>
