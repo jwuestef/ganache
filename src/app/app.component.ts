@@ -17,8 +17,8 @@ export class AppComponent implements OnInit{
     ];
   }
   ngOnInit() {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
+    // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    // Add 'implements OnInit' to the class.
     if (window.screen.width < 1100) {
       document.getElementById('desktopNav').setAttribute('style', 'display:none;');
       document.getElementById('adminLogin').setAttribute('style', 'display:none;');

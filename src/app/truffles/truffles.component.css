@@ -1,6 +1,8 @@
 #truffleImgs {
   border: 1em solid black;
   margin: 5vh 3vw 5vh 2em;
+  max-width: 42vw;
+  height: auto;
   overflow: hidden;
 }
 
@@ -8,15 +10,15 @@ img {
   width: 100%;
 }
 
-#trufflePara{
-  line-height: 7vh;
-  margin-top: 15vh;
-  margin-left: 3vw;
+#trufflesPara {
+  float: right;
+  padding-top: 2vw;
+  padding-right: 4vw;
+  font-family: 'avenir';
 }
 
 h1 {
+  font-size: 120%;
   line-height: 7vh;
   margin-top: 15vh;
-  margin-left: 3vw;
-  font-size: 120%;
 }

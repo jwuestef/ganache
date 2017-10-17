@@ -10,27 +10,16 @@ body {
   /* font-family: 'avenir' sans-serif; */
 }
 
-h1, h3, h4, h5, h6, p, footer{
+h1, h2, h3, h4, h5, h6, p, footer {
   /* text-align: center; */
   font-family: 'avenir';
   line-height: 4.5rem;
 }
-h2{
-  font-family: 'avenir';
-  text-align: center;
-  line-height: 4.5rem;
-}
-/* h1 {
-  line-height: 6vh;
-  font-size: 120%;
-} */
-
 
 /* Sets page height, so footer is always at the bottom of the page or content */
 #wrapper{
   min-height: calc(100vh - 50px);
 }
-
 
 /* Colors links and removes their underlines */
 a {
