@@ -40,12 +40,12 @@ border: 10px solid #000000;
   text-align: center;
 } */
 
-#contact1Paragraph {
+#contacts1Paragraph {
   font-family: 'avenir';
   font-size: 120%;
 }
 
-#contact2Paragraph {
+#contacts2Paragraph {
   font-family: 'avenir';
   font-size: 120%;
 }
@@ -57,4 +57,9 @@ border: 10px solid #000000;
 
 #contactForm label{
   margin-top: .5em;
+}
+
+h1 {
+  font-size: 120%;
+  font-family: 'avenir';
 }

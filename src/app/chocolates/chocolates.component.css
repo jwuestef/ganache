@@ -35,7 +35,7 @@ div#chocolatesSlider figure img {
 div#chocolatesSlider figure {
   position: relative;
   width: 600%;
-  max-height: 55vh;
+  max-height: auto;
   margin: 0;
   left: 0;
   text-align: left;
@@ -69,7 +69,7 @@ li {
   font-family: 'avenir';
   list-style: none;
   font-size: 150%;
-  margin: 6vh 1em 5vh 0;
+  margin: 4vh 1em 4vh 0;
   text-align: center;
 }
 
