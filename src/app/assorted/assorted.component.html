@@ -18,18 +18,18 @@
         </ng-template>
       </div>
     </div>
-    <!-- Creams paragraph, describes creams -->
+    <!-- Assorted paragraph, describes assorted -->
     <div class="col-xs-12 col-md-6 col-md-pull-6" id="para">
-      <div id="creamsPara">
+      <div id="assortedPara">
         <!-- If not admin, show paragraph -->
-        <h1 *ngIf="!isAdmin else inputCreamsParagraph" id="creamsParagraph"></h1>
+        <h1 *ngIf="!isAdmin else inputAssortedParagraph" id="assortedParagraph"></h1>
         <!-- If yes admin, show form to update content -->
-        <ng-template #inputCreamsParagraph>
-          <texteditor [elementId]="'creamsParagraph'"></texteditor>
+        <ng-template #inputAssortedParagraph>
+          <texteditor [elementId]="'assortedParagraph'"></texteditor>
           <br>
-          <button class="btn btn-md updateTextButton" (click)="saveCreamsParagraph()">Update</button>
+          <button class="btn btn-md updateTextButton" (click)="saveAssortedParagraph()">Update</button>
           <!-- After successful update, show confirmation -->
-          <!-- <span class="alert-success updated" *ngIf="creamsParagraphUpdated">
+          <!-- <span class="alert-success updated" *ngIf="assortedParagraphUpdated">
             <strong>Updated</strong>
             <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
           </span> -->

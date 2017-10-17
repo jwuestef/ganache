@@ -46,14 +46,14 @@ export class AssortedComponent implements OnInit {
   // Pulls page content from Firebase and assigns it to content based on admin status
   public getContent() {
     const thisSaved = this;
-    this.cs.getPageContent('creamsPage').then(function (pageContent) {
+    this.cs.getPageContent('assortedPage').then(function (pageContent) {
       if (thisSaved.isAdmin) {
         // If they're an admin, set the content of the editors
-        tinymce.get('creamsParagraph').setContent(pageContent.creamsParagraph);
+        tinymce.get('assortedParagraph').setContent(pageContent.assortedParagraph);
         $('#image1Description').val(pageContent.image1.description);
       } else {
         // Otherwise, set the content of the regularly displayed fields
-        $('#creamsParagraph').html(pageContent.creamsParagraph);
+        $('#assortedParagraph').html(pageContent.assortedParagraph);
       }
       // The image gets displayed regardless of admin status
       thisSaved.image1Src = pageContent.image1.url;
@@ -64,10 +64,10 @@ export class AssortedComponent implements OnInit {
 
 
   // As an admin, saves the content of the editor for the creams paragraph
-  saveCreamsParagraph() {
+  saveAssortedParagraph() {
     const thisSaved = this;
-    this.cs.savePageContent('creamsPage', 'creamsParagraph', tinymce.get('creamsParagraph').getContent()).then(function () {
-      thisSaved.fms.show('Creams Paragraph Updated', { cssClass: 'alert-success', timeout: 2000 });
+    this.cs.savePageContent('assortedPage', 'assortedParagraph', tinymce.get('assortedParagraph').getContent()).then(function () {
+      thisSaved.fms.show('Assorted Paragraph Updated', { cssClass: 'alert-success', timeout: 2000 });
     });
   }
 
@@ -90,7 +90,7 @@ export class AssortedComponent implements OnInit {
     this.currentUpload.name = 'image1';
     const thisSaved = this;
     // Upload the file via UploadService (pageName, whichElement, newImage)
-    this.cs.pushUpload('creamsPage', 'image1', this.currentUpload).then(function (newURL) {
+    this.cs.pushUpload('assortedPage', 'image1', this.currentUpload).then(function (newURL) {
       // Updates thumbnail image
       thisSaved.image1Src = newURL.toString();
     });
