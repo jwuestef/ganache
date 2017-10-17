@@ -1,13 +1,14 @@
 #aboutImage1 {
-  border: 1em solid black;
-  box-shadow: 1px 1px 15px 1px;
+  /* border: 1em solid black; */
+  /* box-shadow: 1px 1px 15px 1px; */
   width: 100%;
+  height: auto;
   margin: 9vh 0 5vh -5vw;
 }
 
 h1 {
-  line-height: 6vh;
-  margin-top: 1vh;
+  /* line-height: 6vh; */
+  margin-top: 5vh;
   margin-left: 2vw;
   font-size: 120%;
 }

@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <!-- Image of shop -->
-    <div class="col-sm-6">
+    <div class="col-md-6 col-xs-12">
       <div id="truffleImgs">
         <!-- If not admin, show image -->
         <img *ngIf="(!isAdmin && image1Src) else inputImage1" [src]="image1Src" [alt]="image1Description">
@@ -20,7 +20,7 @@
     </div>
 
     <!-- Truffles paragraph, describes truffles -->
-    <div class="col-sm-6">
+    <div class="col-md-6 col-xs-12">
       <div id="trufflePara">
         <!-- If not admin, show paragraph -->
         <h1 *ngIf="!isAdmin else inputTrufflesParagraph" id="trufflesParagraph"></h1>
