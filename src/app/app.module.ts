@@ -20,7 +20,7 @@ import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './contact/contact.component';
 import { TexteditorComponent } from './services/texteditor.component';
 import { TrufflesComponent } from './truffles/truffles.component';
-import { CreamsComponent } from './creams/creams.component';
+import { AssortedComponent } from './assorted/assorted.component';
 import { BarksComponent } from './barks/barks.component';
 import { FudgeComponent } from './fudge/fudge.component';
 import { OtherchocComponent } from './otherchoc/otherchoc.component';
@@ -47,7 +47,7 @@ import { ContentService } from './services/content.service';
     ContactComponent,
     TexteditorComponent,
     TrufflesComponent,
-    CreamsComponent,
+    AssortedComponent,
     BarksComponent,
     FudgeComponent,
     OtherchocComponent,

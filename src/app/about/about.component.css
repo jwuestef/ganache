@@ -1,15 +1,32 @@
 #aboutImage1 {
-  border: 1em solid black;
-  /* border-width: 1em; */
-  box-shadow: 1px 1px 15px 1px;
-  /* color: black; */
+  /* border: 1em solid black; */
+  /* box-shadow: 1px 1px 15px 1px; */
   width: 100%;
+  height: auto;
   margin: 9vh 0 5vh -5vw;
 }
 
 h1 {
-  line-height: 6vh;
-  margin-top: 1vh;
+  /* line-height: 6vh; */
+  margin-top: 5vh;
   margin-left: 2vw;
-  font-size: 120%;
+  font-size: 100%;
+}
+a img {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  -moz-transition: -moz-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+a:hover img {
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }

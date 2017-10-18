@@ -1,19 +1,31 @@
+#barksPara {
+  float: right;
+  padding-top: 2vw;
+  padding-right: 4vw;
+}
+
+h1 {
+  font-size: 100%;
+  line-height: 7vh;
+  margin-top: 15vh;
+}
+
 div#barksSlider {
   overflow: hidden;
   position: relative;
   float: left;
   padding: 0;
-  max-width: 55vw;
-  height: 55vh;
+  max-width: 42vw;
+  height: auto;
   margin: 0 auto;
-  margin-top: 2.5em;
+  margin-top: 3vw;
   margin-left: 5vw;
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
-  border: solid;
-  border-width: 1em;
-  box-shadow: 1px 1px 15px 1px;
-  color: black;
+  /* border: solid; */
+  /* border-width: 1em; */
+  /* box-shadow: 1px 1px 15px 1px; */
+  /* color: black; */
 }
 
 div#barksSlider figure img {
@@ -51,12 +63,4 @@ div#barksSlider figure {
   95%  { left: -400%; }
 
   100% { left: -500%; }
-}
-
-
-h1 {
-  line-height: 7vh;
-  margin-top: 15vh;
-  margin-left: 3vw;
-  font-size: 120%;
 }

@@ -6,31 +6,31 @@
         <div class="container-fluid" id="selecty">
 
           <div class="dropdown" id="homeBtn">
-            <button class="dropbtn" id="homeBtnLink" [routerLink]="['/home']">Home</button>
+            <button class="dropbtn" id="homeBtnLink">Home</button>
           </div>
 
           <div class="dropdown" id="aboutBtn">
-            <button class="dropbtn" id="aboutBtnLink" [routerLink]="['/about']">About</button>
+            <button class="dropbtn" id="aboutBtnLink">About</button>
           </div>
 
           <div class="dropdown" id="chocoBtn">
-            <button class="dropbtn" id="chocoBtnLink" [routerLink]="['/chocolates']">Our Chocolates</button>
+            <button class="dropbtn" id="chocoBtnLink">Our Chocolates</button>
             <div class="dropdown-content">
-              <a id="trufflesBtnLink" [routerLink]="['/truffles']">Truffles</a>
-              <a id="barksBtnLink" [routerLink]="['/barks']">Barks</a>
-              <a id="creamsBtnLink" [routerLink]="['/creams']">Creams</a>
-              <a id="fudgeBtnLink" [routerLink]="['/fudge']">Fudge</a>
-              <a id="seasonalBtnLink" [routerLink]="['/seasonal']">Seasonal</a>
-              <a id="otherchocBtnLink" [routerLink]="['/otherchoc']">Other Chocolates</a>
+              <a id="trufflesBtnLink">Truffles</a>
+              <a id="barksBtnLink">Barks</a>
+              <a id="assortedBtnLink">Assorted Chocolates</a>
+              <a id="fudgeBtnLink">Fudge</a>
+              <a id="seasonalBtnLink">Seasonal</a>
+              <a id="otherchocBtnLink">Other Chocolates</a>
             </div>
           </div>
 
           <div class="dropdown" id="shopBtn">
-            <button class="dropbtn" id="shopBtnLink" [routerLink]="['/shop']">Shop</button>
+            <button class="dropbtn" id="shopBtnLink">Shop</button>
           </div>
 
           <div class="dropdown" id="contactBtn">
-            <button class="dropbtn" id="contactBtnLink" [routerLink]="['/contact']">Contact Us</button>
+            <button class="dropbtn" id="contactBtnLink">Contact Us</button>
           </div>
 
         </div>
@@ -40,7 +40,7 @@
 </div>
 
 <!-- <header role="banner" id="mobileNav">
-<img id="logo-main" src="../../assets/genuineLogo.jpg" width="150" alt="Ganache Logo" style="justify-content:center;">
+<img id="logo-main" src="../../assets/genuineLogo.png" width="150" alt="Ganache Logo" style="justify-content:center;">
 <div>
   <ul class="nav nav-pills chillz">
     <li class="pillz homePill"  [routerLink]="['/home']">
@@ -61,31 +61,31 @@
   </ul>
 </div>
 </header> -->
-<div class="container-fluid"  id="mobileNav">
+<div class="container" id="mobileNav">
   <div class="row">
-<header role="banner">
-    <img id="logo-main" src="../../assets/genuineLogo.jpg" width="150" alt="Ganache Logo" style="justify-content:center;">
+    <header role="banner">
+      <img id="logo-main" src="../../assets/genuineLogo.png" width="150" alt="Ganache Logo" style="justify-content:center;">
 
-  <ul class="nav nav-pills chillz col-xs-12" >
-      <li class="pillz homePill" [routerLink]="['/home']" data-toggle="pill"><a>Home</a></li>
-      <li class="pillz aboutPill" [routerLink]="['/about']"><a data-toggle="pill">About</a></li>
-      <li class="dropdown pillz chocoPill">
-        <a class="dropdown-toggle" data-toggle="dropdown" >Chocolates
-        <span class="caret"></span>
-      </a>
-        <ul class="dropdown-menu">
-          <li><a href="#">All Chocolates</a></li>
-          <li><a href="#">Truffles</a></li>
-          <li><a href="#">Barks</a></li>
-          <li><a href="#">Creams</a></li>
-          <li><a href="#">Fudge</a></li>
-          <li><a href="#">Seasonal</a></li>
-          <li><a href="#">Other Chocolates</a></li>
-        </ul>
-      </li>
-      <li class="pillz shopPill" [routerLink]="['/shop']"><a data-toggle="pill">Shop</a></li>
-      <li class="pillz contactPill" [routerLink]="['/contact']"><a data-toggle="pill">Contact Us</a></li>
-    </ul>
+      <ul class="nav nav-pills chillz">
+        <li class="pillz homePill" href="#" data-toggle="pill"><a>Home</a></li>
+        <li class="pillz aboutPill" href="#"><a data-toggle="pill">About</a></li>
+        <li class="dropdown pillz chocoPill">
+          <a class="dropdown-toggle" data-toggle="dropdown" >Chocolates
+            <a class="caret"></a>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">All Chocolates</a></li>
+            <li><a href="#">Truffles</a></li>
+            <li><a href="#">Barks</a></li>
+            <li><a href="#">Assorted Chocolates</a></li>
+            <li><a href="#">Fudge</a></li>
+            <li><a href="#">Seasonal</a></li>
+            <li><a href="#">Other Chocolates</a></li>
+          </ul>
+        </li>
+        <li class="pillz shopPill" href="#"><a data-toggle="pill">Shop</a></li>
+        <li class="pillz contactPill" href="#"><a data-toggle="pill">Contact Us</a></li>
+      </ul>
     </header>
   </div>
 </div>

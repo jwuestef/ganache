@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Creams images -->
+    <div class="col-xs-12 col-md-6 col-md-push-6" id="img">
+      <div id="assortedImg">
+        <!-- If not admin, show image -->
+        <img *ngIf="(!isAdmin && image1Src) else inputImage1" [src]="image1Src" [alt]="image1Description">
+        <!-- If yes admin, show form to update image -->
+        <ng-template #inputImage1>
+          <div style="border: 2px solid gray" *ngIf="image1Src">
+            <img *ngIf="image1Src" style="width: 100px; height: auto" [src]="image1Src" [alt]="image1Description">
+            <hr>
+            <input type="file" (change)="detectImage1($event)">
+            <input type="text" placeholder="description" id="image1Description" [(ngModel)]="image1Description">
+            <br>
+            <button (click)="uploadImage1()">Upload this image</button>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <!-- Assorted paragraph, describes assorted -->
+    <div class="col-xs-12 col-md-6 col-md-pull-6" id="para">
+      <div id="assortedPara">
+        <!-- If not admin, show paragraph -->
+        <h1 *ngIf="!isAdmin else inputAssortedParagraph" id="assortedParagraph"></h1>
+        <!-- If yes admin, show form to update content -->
+        <ng-template #inputAssortedParagraph>
+          <texteditor [elementId]="'assortedParagraph'"></texteditor>
+          <br>
+          <button class="btn btn-md updateTextButton" (click)="saveAssortedParagraph()">Update</button>
+          <!-- After successful update, show confirmation -->
+          <!-- <span class="alert-success updated" *ngIf="assortedParagraphUpdated">
+            <strong>Updated</strong>
+            <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+          </span> -->
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <!-- End of container-fluid -->
+</div>
