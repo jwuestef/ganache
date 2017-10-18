@@ -1,18 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
 /* You can add global styles to this file, and also import other style files */
-@font-face{
-  font-family: 'avenir';
-  src: url('./assets/Avenir-Black-webfont.woff') format('woff')
-}
 
 body {
   background-color: #bcb1ac;
-  font-family: 'PT Serif', serif;
+  font-family: 'Lato', sans-serif;
   /* font-family: 'avenir' sans-serif; */
 }
 
 h1, h2, h3, h4, h5, h6, p, footer {
   /* text-align: center; */
-  font-family: 'avenir';
+  font-family: 'Lato', sans-serif;
   line-height: 4.5rem;
 }
 

@@ -1,5 +1,5 @@
-#creamsImg {
-  border: 1em solid black;
+#assortedImg {
+  /* border: 1em solid black; */
   margin: 5vh 3vw 5vh 2em;
   overflow: hidden;
 }
@@ -8,14 +8,14 @@ img {
   width: 100%;
 }
 
-/* #creamsPara{
+#assortedPara{
   line-height: 7vh;
   margin-top: 20vh;
   margin-right: 3vw;
-} */
+}
 
 h1 {
   line-height: 7vh;
   margin: 15vh 2em 5vh 3vw;
-  font-size: 120%;
+  font-size: 100%;
 }

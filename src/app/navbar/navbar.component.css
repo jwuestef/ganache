@@ -12,38 +12,39 @@ header[role="banner"] #logo-main {
 #navbar-primary.navbar-default .navbar-nav {
   width: 100%;
   text-align: center;
-  font-size: 1.6em;
+  font-size: 1.3em;
+  font-family: 'PT Serif', serif;
   color:#000;
 }
 
-#navbar-primary.navbar-default .navbar-nav > li {
+#navbar-primary.navbar-default .navbar-nav>li {
   display: inline-block;
   float: none;
 }
 
-#navbar-primary.navbar-default .navbar-nav > li > a {
+#navbar-primary.navbar-default .navbar-nav>li>a {
   padding-left: 0px;
   padding-right: 0px;
 }
 
-.navbar-nav{
+.navbar-nav {
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(black), to(white));
   background-image: -webkit-linear-gradient(top, white, black, white);
   background-image: -moz-linear-gradient(top, white, black, white);
   /* background-image: linear-gradient(to left, #fff, #86746c, #7b6b63,#504540, #504540,#504540,#7b6b63, #86746c, #fff); */
-  background-image: linear-gradient(to left, #fff, #3b2314, #3b2314, #3b2314, #3b2314, #3b2314,#3b2314,#3b2314, #fff);
+  background-image: linear-gradient(to left, #fff, #7b6b63, #574232, #4f3727, #4f3727, #4f3727,#574232,#7b6b63, #fff);
   height: 61px;
   color: #000;
   white-space: nowrap;
   position: flex;
 }
 
-.dropdown:focus{
+.dropdown:focus {
   border: 20px solid #000;
 }
 
-.navvy{
-  color:black;
+.navvy {
+  color: black;
   margin: 0 5px 0 5px;
   text-align: center;
 }
@@ -63,7 +64,10 @@ nav{
   color: #000;
   margin-top:10px;
 } */
+
+
 /* Dropdown Button */
+
 .dropbtn {
   background-color: transparent;
   color: #000;
@@ -71,17 +75,18 @@ nav{
   border: none;
   cursor: pointer;
   text-decoration: none;
-  padding-right: 3px;
-  margin:3px 20px;
+  margin: 6px 12px;
 }
 
 /* The container <div> - needed to position the dropdown content */
+
 .dropdown {
   position: relative;
   display: inline-block;
   margin-left: 2.5%;
   margin-right: 2.5%;
   margin-bottom:1px;
+  margin-top: 2px;
   /* float: left; */
   /* border:5px solid black; */
   /* padding-top:3px; */
@@ -97,7 +102,9 @@ nav{
   padding-bottom: -1px;
 }
 
+
 /* Dropdown Content (Hidden by Default) */
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -105,19 +112,23 @@ nav{
   min-width: 160px;
   /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
   z-index: 1;
-  background-image: linear-gradient(to bottom,#3b2314, #bcb1ac);
+  background-image: linear-gradient(to bottom,#4f3727, #bcb1ac);
   /* margin-top:5px; */
-  margin-left:4px;
-  margin-top: -1px;
+  margin-left: -4px;
+  margin-top: 2px;
   /* border-top: 3px solid #000; */
 }
 
+
 /* Links inside the dropdown */
+
 .dropdown-content a {
   color: black;
   padding: 0 5px 0 5px;
   display: block;
+  font-size: .9em;
 }
+
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
@@ -126,42 +137,73 @@ nav{
 }
 
 /* Show the dropdown menu on hover */
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
+
 /* Change the background color of the dropdown button when the dropdown content is shown */
+
 .dropdown:hover .dropbtn {
   background-color: transparent;
 }
 
-ul{
+ul {
   border: none;
 }
 
-/* .dropbtn :active{
-  border: 3px solid black ;
-} */
+.pillz {
+  color: #000;
+  margin: 0 -1.5% 0 0;
 
-.pillz{
-  color:#000;
-  /* margin: -2%; */
-  float: left;
-  /* background-color:transparent; */
+  /* float: left; */
 }
 
-.chillz{
-  background-image: linear-gradient(to left, #fff, #3b2314, #3b2314, #3b2314, #3b2314, #3b2314,#3b2314,#3b2314, #fff);
+.chillz {
+  background-image: linear-gradient(to right, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #fff);
+  margin-left:2%;
 }
 
-.nav-pills > .active > a, .nav-pills > .active > a:hover {
+.nav-pills>.active>a,
+.nav-pills>.active>a:hover {
   background-color: transparent;
 }
 
 .dropdown-menu{
-  background-image: linear-gradient(to bottom, #3b2314, #fff);
+  background-image: linear-gradient(to bottom, #4f3727, #fff);
 }
 
-.container{
-  display:flex;
+#mobileNav {
+  display: inline-block;
+}
+
+
+@media screen and (max-width:340px) {
+  .pillz {
+    margin-left: -3%;
+    margin-right: -3%;
+    color: #000;
+  }
+  .pillz a {
+    color: #000;
+  }
+}
+@media screen and (max-width:380px) {
+  .pillz {
+    /* margin-left: -2%; */
+  }
+  .pillz a {
+    color: #000;
+  }
+}
+@media screen and (max-width:420px) {
+  .pillz {
+    margin-left: -3%;
+    /* margin-right: -3%; */
+    color: #000;
+  }
+  .pillz a {
+    color: #000;
+  }
 }

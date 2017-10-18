@@ -41,18 +41,15 @@ border: 10px solid #000000;
 } */
 
 #contacts1Paragraph {
-  font-family: 'avenir';
-  font-size: 120%;
+  font-size: 100%;
 }
 
 #contacts2Paragraph {
-  font-family: 'avenir';
-  font-size: 120%;
+  font-size: 100%;
 }
 
 #contact3Paragraph {
-  font-family: 'avenir';
-  font-size: 120%;
+  font-size: 100%;
 }
 
 #contactForm label{
@@ -60,6 +57,5 @@ border: 10px solid #000000;
 }
 
 h1 {
-  font-size: 120%;
-  font-family: 'avenir';
+  font-size: 100%;
 }
