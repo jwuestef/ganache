@@ -1,5 +1,5 @@
 #truffleImgs {
-  border: 1em solid black;
+  /* border: 1em solid black; */
   margin: 5vh 3vw 5vh 2em;
   max-width: 42vw;
   height: auto;
@@ -14,11 +14,10 @@ img {
   float: right;
   padding-top: 2vw;
   padding-right: 4vw;
-  font-family: 'avenir';
 }
 
 h1 {
-  font-size: 120%;
+  font-size: 110%;
   line-height: 7vh;
   margin-top: 15vh;
 }
