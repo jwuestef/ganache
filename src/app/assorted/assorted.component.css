@@ -1,5 +1,5 @@
 #assortedImg {
-  border: 1em solid black;
+  /* border: 1em solid black; */
   margin: 5vh 3vw 5vh 2em;
   overflow: hidden;
 }
@@ -17,5 +17,5 @@ img {
 h1 {
   line-height: 7vh;
   margin: 15vh 2em 5vh 3vw;
-  font-size: 120%;
+  font-size: 100%;
 }

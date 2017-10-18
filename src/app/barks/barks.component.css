@@ -2,14 +2,12 @@
   float: right;
   padding-top: 2vw;
   padding-right: 4vw;
-  font-family: 'avenir';
 }
 
 h1 {
-  font-size: 120%;
+  font-size: 100%;
   line-height: 7vh;
   margin-top: 15vh;
-  font-family: 'avenir';
 }
 
 div#barksSlider {
@@ -24,10 +22,10 @@ div#barksSlider {
   margin-left: 5vw;
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
-  border: solid;
-  border-width: 1em;
-  box-shadow: 1px 1px 15px 1px;
-  color: black;
+  /* border: solid; */
+  /* border-width: 1em; */
+  /* box-shadow: 1px 1px 15px 1px; */
+  /* color: black; */
 }
 
 div#barksSlider figure img {
