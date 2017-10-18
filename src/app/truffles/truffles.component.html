@@ -1,39 +1,299 @@
-<div class="container-fluid">
-  <div class="row">
-    <!-- Image of shop -->
-    <div class="col-md-6 col-xs-12">
-      <div id="truffleImgs">
-        <!-- If not admin, show image -->
-        <img *ngIf="(!isAdmin && image1Src) else inputImage1" [src]="image1Src" [alt]="image1Description">
-        <!-- If yes admin, show form to update image -->
-        <ng-template #inputImage1>
-          <div style="border: 2px solid gray" *ngIf="image1Src">
-            <img *ngIf="image1Src" style="width: 100px; height: auto" [src]="image1Src" [alt]="image1Description">
-            <hr>
-            <input type="file" (change)="detectImage1($event)">
-            <input type="text" placeholder="description" id="image1Description" [(ngModel)]="image1Description">
-            <br>
-            <button (click)="uploadImage1()">Upload this image</button>
-          </div>
-        </ng-template>
-      </div>
-    </div>
+<div class="container clip-wrap">
+  <div class="row col-xs-12 col-md-9 offset-md-3 clip-each border-style-thin">
+    <h1>Ganache Chocolatier Truffle Card</h1>
+    <div class="flex">
 
-    <!-- Truffles paragraph, describes truffles -->
-    <div class="col-md-6 col-xs-12">
-      <div id="trufflePara">
-        <!-- If not admin, show paragraph -->
-        <h1 *ngIf="!isAdmin else inputTrufflesParagraph" id="trufflesParagraph"></h1>
-        <!-- If yes admin, show form to update content -->
-        <ng-template #inputTrufflesParagraph>
-          <texteditor [elementId]="'trufflesParagraph'"></texteditor>
-          <br>
-          <button class="btn btn-md updateTextButton" (click)="saveTrufflesParagraph()">Update</button>
-        </ng-template>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
       </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
+        <div class="cropper showhim">
+          <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
+          <p [innerText]="trufflesImage1Title"></p>
+          <div class="showme">
+            <p [innerText]="trufflesImage1Description"></p>
+            <a [href]="trufflesImage1Link">
+              Click to Buy
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
     </div>
   </div>
-
-
-  <!-- End of container-fluid -->
 </div>

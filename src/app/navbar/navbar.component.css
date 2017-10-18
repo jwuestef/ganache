@@ -50,29 +50,17 @@ header[role="banner"] #logo-main {
   text-align: center;
 }
 
-<<<<<<< HEAD
-nav {
-=======
 nav{
->>>>>>> 8d00d64042a4d00383d1c1054c159560707cee32
   font-size: 1.6em;
   display: block;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
-<<<<<<< HEAD
-#navImg {
-  align-content: center;
-}
-
-
-=======
 #navImg{
   align-content: center;
 }
 
->>>>>>> 8d00d64042a4d00383d1c1054c159560707cee32
 /* .navbar-default .navbar-nav>li>a {
   color: #000;
   margin-top:10px;
