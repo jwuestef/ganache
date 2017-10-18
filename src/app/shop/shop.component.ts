@@ -29,6 +29,8 @@ export class ShopComponent implements OnInit {
     document.getElementById('homeBtn').setAttribute('style', 'border: none;');
     document.getElementById('contactBtn').setAttribute('style', 'border: none;');
     document.getElementById('shopBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-4px;');
+    (<any>$('.notchedDiv')).corner('notch 10px').parent().css('padding', '12px').corner('notch 10px');
+    (<any>$('.transparentDiv')).corner('notch 10px').parent().css('padding', '12px').corner('notch 10px');
   }
 
 
