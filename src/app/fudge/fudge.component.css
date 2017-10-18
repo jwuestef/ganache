@@ -10,10 +10,10 @@ div#fudgeSlider {
   margin-left: 5vw;
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
-  border: solid;
+  /* border: solid;
   border-width: 1em;
   box-shadow: 1px 1px 15px 1px;
-  color: black;
+  color: black; */
 }
 
 div#fudgeSlider figure img {
