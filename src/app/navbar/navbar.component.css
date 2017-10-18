@@ -12,8 +12,9 @@ header[role="banner"] #logo-main {
 #navbar-primary.navbar-default .navbar-nav {
   width: 100%;
   text-align: center;
-  font-size: 1.6em;
-  color: #000;
+  font-size: 1.3em;
+  font-family: 'PT Serif', serif;
+  color:#000;
 }
 
 #navbar-primary.navbar-default .navbar-nav>li {
@@ -31,10 +32,8 @@ header[role="banner"] #logo-main {
   background-image: -webkit-linear-gradient(top, white, black, white);
   background-image: -moz-linear-gradient(top, white, black, white);
   /* background-image: linear-gradient(to left, #fff, #86746c, #7b6b63,#504540, #504540,#504540,#7b6b63, #86746c, #fff); */
-  background-image: linear-gradient(to left, #fff, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #fff);
-  height: 60px;
-  /* background-image: linear-gradient(to left, #fff, #3b2314, #3b2314, #3b2314, #3b2314, #3b2314,#3b2314,#3b2314, #fff);
-  height: 61px; */
+  background-image: linear-gradient(to left, #fff, #7b6b63, #574232, #4f3727, #4f3727, #4f3727,#574232,#7b6b63, #fff);
+  height: 61px;
   color: #000;
   white-space: nowrap;
   position: flex;
@@ -76,8 +75,7 @@ nav{
   border: none;
   cursor: pointer;
   text-decoration: none;
-  padding-right: 3px;
-  margin: 3px 20px;
+  margin: 6px 12px;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -87,7 +85,8 @@ nav{
   display: inline-block;
   margin-left: 2.5%;
   margin-right: 2.5%;
-  margin-bottom: 1px;
+  margin-bottom:1px;
+  margin-top: 2px;
   /* float: left; */
   /* border:5px solid black; */
   /* padding-top:3px; */
@@ -113,7 +112,7 @@ nav{
   min-width: 160px;
   /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
   z-index: 1;
-  background-image: linear-gradient(to bottom, #5B361F, #bcb1ac);
+  background-image: linear-gradient(to bottom,#4f3727, #bcb1ac);
   /* margin-top:5px; */
   margin-left: -4px;
   margin-top: 2px;
@@ -171,8 +170,8 @@ ul {
   background-color: transparent;
 }
 
-.dropdown-menu {
-  background-image: linear-gradient(to bottom, #5B361F, #5B361F, #5B361F, #fff);
+.dropdown-menu{
+  background-image: linear-gradient(to bottom, #4f3727, #fff);
 }
 
 #mobileNav {
