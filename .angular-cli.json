@@ -26,6 +26,7 @@
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
+        "assets/jquery.corner.js",
         "../node_modules/bootstrap/dist/js/bootstrap.js",
         "../node_modules/tinymce/tinymce.js",
         "../node_modules/tinymce/themes/modern/theme.js",
