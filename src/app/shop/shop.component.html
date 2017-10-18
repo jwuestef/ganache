@@ -22,31 +22,26 @@
 
 <p *ngIf="isAdmin">Is admin!!!</p>
 </div> -->
-<div class="container">
-  <div class="row col-xs-12 col-md-9 offset-md-3">
+<div class="container clip-wrap">
+  <div class="row col-xs-12 col-md-9 offset-md-3 clip-each border-style-thin">
     <h1>Ganache Chocolatier Truffle Card</h1>
     <div class="flex">
       <div class="noBorder">
         <div class="cropper showhim">
           <img src="../../assets/caramelTruffle.jpg" />
           <p>Caramel</p>
-          <!-- <img *ngIf="homeImage1Src && (homeImage1Link.toLowerCase() == 'na')" [src]="../../assets/caramelTruffle.jpg" [alt]="truffleImage1Description"> -->
+          <img *ngIf="truffleImage1Src && (truffleImage1Link.toLowerCase() == 'na')" src="../../assets/caramelTruffle.jpg" [alt]="truffleImage1Description">
           <div class="showme">Extended Description Of This Truffle
-            <a type="button" href="/home" class="showme"> Click to Buy </a>
+            <a *ngIf="truffleImage1Src && (truffleImage1Link.toLowerCase() !== 'na')" [href]="truffleImage1Link">
+              Click to Buy
+            </a>
           </div>
         </div>
       </div>
       <div class="noBorder">
         <div class="cropper showhim">
-          <img src="../../assets/chiliTruffle.jpg" /> Chili
-          <div class="showme">Extended Description Of This Truffle
-          </div>
-          <button type="button" class="showme"> Click to Buy </button>
-        </div>
-      </div>
-      <div class="noBorder">
-        <div class="cropper showhim">
-          <img src="../../assets/coconutTruffle.jpg" /> Coconut
+          <img src="../../assets/chiliTruffle.jpg" />
+          <p>Chili</p>
           <div class="showme">Extended Description Of This Truffle
           </div>
           <button type="button" class="showme"> Click to Buy </button>
@@ -54,7 +49,8 @@
       </div>
       <div class="noBorder">
         <div class="cropper showhim">
-          <img src="../../assets/darkTruffle.jpg" /> Dark
+          <img src="../../assets/coconutTruffle.jpg" />
+          <p>Coconut</p>
           <div class="showme">Extended Description Of This Truffle
           </div>
           <button type="button" class="showme"> Click to Buy </button>
@@ -62,7 +58,8 @@
       </div>
       <div class="noBorder">
         <div class="cropper showhim">
-          <img src="../../assets/hazelnutTruffle.jpg" /> Hazelnut
+          <img src="../../assets/darkTruffle.jpg" />
+          <p>Dark</p>
           <div class="showme">Extended Description Of This Truffle
           </div>
           <button type="button" class="showme"> Click to Buy </button>
@@ -70,7 +67,8 @@
       </div>
       <div class="noBorder">
         <div class="cropper showhim">
-          <img src="../../assets/keyLimeTruffle.jpg" /> Key Lime
+          <img src="../../assets/hazelnutTruffle.jpg" />
+          <p>Hazelnut</p>
           <div class="showme">Extended Description Of This Truffle
           </div>
           <button type="button" class="showme"> Click to Buy </button>
@@ -78,7 +76,8 @@
       </div>
       <div class="noBorder">
         <div class="cropper showhim">
-          <img src="../../assets/milkTruffle.jpg" /> Milk
+          <img src="../../assets/keyLimeTruffle.jpg" />
+          <p>Key Lime</p>
           <div class="showme">Extended Description Of This Truffle
           </div>
           <button type="button" class="showme"> Click to Buy </button>
@@ -86,7 +85,8 @@
       </div>
       <div class="noBorder">
         <div class="cropper showhim">
-          <img src="../../assets/mintTruffle.jpg" /> Mint
+          <img src="../../assets/milkTruffle.jpg" />
+          <p>Milk</p>
           <div class="showme">Extended Description Of This Truffle
           </div>
           <button type="button" class="showme"> Click to Buy </button>
@@ -94,7 +94,8 @@
       </div>
       <div class="noBorder">
         <div class="cropper showhim">
-          <img src="../../assets/mochaTruffle.jpg" />Mocha
+          <img src="../../assets/mintTruffle.jpg" />
+          <p>Mint</p>
           <div class="showme">Extended Description Of This Truffle
           </div>
           <button type="button" class="showme"> Click to Buy </button>
@@ -102,7 +103,8 @@
       </div>
       <div class="noBorder">
         <div class="cropper showhim">
-          <img src="../../assets/orangeTruffle.jpg" /> Orange
+          <img src="../../assets/mochaTruffle.jpg" />
+          <p>Mocha</p>
           <div class="showme">Extended Description Of This Truffle
           </div>
           <button type="button" class="showme"> Click to Buy </button>
@@ -110,7 +112,8 @@
       </div>
       <div class="noBorder">
         <div class="cropper showhim">
-          <img src="../../assets/peanutButterTruffle.jpg" /> Peanut Butter
+          <img src="../../assets/orangeTruffle.jpg" />
+          <p>Orange</p>
           <div class="showme">Extended Description Of This Truffle
           </div>
           <button type="button" class="showme"> Click to Buy </button>
@@ -118,7 +121,17 @@
       </div>
       <div class="noBorder">
         <div class="cropper showhim">
-          <img src="../../assets/raspberryTruffle.jpg" /> Raspberry
+          <img src="../../assets/peanutButterTruffle.jpg" />
+          <p>Peanut Butter</p>
+          <div class="showme">Extended Description Of This Truffle
+          </div>
+          <button type="button" class="showme"> Click to Buy </button>
+        </div>
+      </div>
+      <div class="noBorder">
+        <div class="cropper showhim">
+          <img src="../../assets/raspberryTruffle.jpg" />
+          <p>Raspberry</p>
           <div class="showme">Extended Description Of This Truffle
           </div>
           <button type="button" class="showme"> Click to Buy </button>
@@ -129,3 +142,25 @@
     </div>
   </div>
 </div>
+<div class="center-text">
+    <div class="clip-wrap">
+        <div class="clip-each border-style-thin">
+        </div>
+    </div>
+    <div class="clip-wrap">
+        <div class="clip-each border-style-gradient">
+        </div>
+    </div>
+    <div class="clip-wrap">
+        <div class="clip-each box-shadow-inset">
+        </div>
+    </div>
+</div>
+
+<svg class="clip-svg">
+  <defs>
+    <clipPath id="octagon-clip" clipPathUnits="objectBoundingBox">
+      <polygon points="0.3 0, 0.7 0, 1 0.3, 1 0.7, 0.7 1, 0.3 1, 0 0.7, 0 0.3" />
+    </clipPath>
+  </defs>
+</svg>

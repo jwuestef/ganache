@@ -29,6 +29,7 @@ background-position: bottom left, bottom right, top right, top left;
 background-size: 51% 51%;
 background-repeat: no-repeat; */
 }
+
 .flex{
   display: -webkit-box;
   display: -moz-box;
@@ -40,7 +41,6 @@ background-repeat: no-repeat; */
   flex-flow: row wrap;
   align-items: stretch;
   align-content: stretch;
-  /* padding: 15px 50px; */
   margin: auto;
 }
 .noBorder{
