@@ -1,25 +1,7 @@
 <div class="container-fluid">
   <div class="row">
-    <!-- Creams paragraph, describes creams -->
-    <div class="col-sm-6" id="para">
-      <div id="creamsPara">
-        <!-- If not admin, show paragraph -->
-        <h1 *ngIf="!isAdmin else inputCreamsParagraph" id="creamsParagraph"></h1>
-        <!-- If yes admin, show form to update content -->
-        <ng-template #inputCreamsParagraph>
-          <texteditor [elementId]="'creamsParagraph'"></texteditor>
-          <br>
-          <button class="btn btn-md updateTextButton" (click)="saveCreamsParagraph()">Update</button>
-          <!-- After successful update, show confirmation -->
-          <!-- <span class="alert-success updated" *ngIf="creamsParagraphUpdated">
-            <strong>Updated</strong>
-            <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
-          </span> -->
-        </ng-template>
-      </div>
-    </div>
     <!-- Creams images -->
-    <div class="col-sm-6" id="img">
+    <div class="col-xs-12 col-md-6 col-md-push-6" id="img">
       <div id="creamsImg">
         <!-- If not admin, show image -->
         <img *ngIf="(!isAdmin && image1Src) else inputImage1" [src]="image1Src" [alt]="image1Description">
@@ -33,6 +15,24 @@
             <br>
             <button (click)="uploadImage1()">Upload this image</button>
           </div>
+        </ng-template>
+      </div>
+    </div>
+    <!-- Creams paragraph, describes creams -->
+    <div class="col-xs-12 col-md-6 col-md-pull-6" id="para">
+      <div id="creamsPara">
+        <!-- If not admin, show paragraph -->
+        <h1 *ngIf="!isAdmin else inputCreamsParagraph" id="creamsParagraph"></h1>
+        <!-- If yes admin, show form to update content -->
+        <ng-template #inputCreamsParagraph>
+          <texteditor [elementId]="'creamsParagraph'"></texteditor>
+          <br>
+          <button class="btn btn-md updateTextButton" (click)="saveCreamsParagraph()">Update</button>
+          <!-- After successful update, show confirmation -->
+          <!-- <span class="alert-success updated" *ngIf="creamsParagraphUpdated">
+            <strong>Updated</strong>
+            <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+          </span> -->
         </ng-template>
       </div>
     </div>

@@ -22,7 +22,7 @@
 
   <!-- Image slider -->
   <div class="row">
-    <div class="col-md-8" id="chocolatesSlider">
+    <div class="col-xs-12 col-md-8" id="chocolatesSlider">
       <figure>
         <img *ngIf="chocolatesImage1Src && (chocolatesImage1Link.toLowerCase() == 'na')" [src]="chocolatesImage1Src" [alt]="chocolatesImage1Description">
         <a *ngIf="chocolatesImage1Src && (chocolatesImage1Link.toLowerCase() !== 'na')" [href]="chocolatesImage1Link"><img [src]="chocolatesImage1Src" [alt]="chocolatesImage1Description"></a>
@@ -45,7 +45,7 @@
     </div>
 
     <!-- Links to pages -->
-    <div class="col-md-4" id="selection">
+    <div class="col-xs-12 col-md-4" id="selection">
       <ul>
         <li><a [routerLink]="['/truffles']">Gourmet Truffles</a></li>
         <li><a [routerLink]="['/assorted']">Assorted Chocolates</a></li>

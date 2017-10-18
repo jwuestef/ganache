@@ -28,9 +28,8 @@
     <div class="flex">
       <div class="noBorder">
         <div class="cropper showhim">
-          <img src="../../assets/caramelTruffle.jpg" />
+          <img *ngIf="truffleImage1Src && (truffleImage1Link.toLowerCase() == 'na')" src="../../assets/caramelTruffle.jpg" [alt]="truffleImage1Title">
           <p>Caramel</p>
-          <img *ngIf="truffleImage1Src && (truffleImage1Link.toLowerCase() == 'na')" src="../../assets/caramelTruffle.jpg" [alt]="truffleImage1Description">
           <div class="showme">Extended Description Of This Truffle
             <a *ngIf="truffleImage1Src && (truffleImage1Link.toLowerCase() !== 'na')" [href]="truffleImage1Link">
               Click to Buy
