@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'Ganache Chocolatier';
   items: Array<any> = [];
 
@@ -18,13 +18,16 @@ export class AppComponent implements OnInit{
   }
   ngOnInit() {
     // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    // Add 'implements OnInit' to the class.
+
+    //if statement determines if screen width is less than 1100 pixels wide. If it is, the desktop navbar
+    //is displayed and the admin button is hidden
     if (window.screen.width < 1100) {
       document.getElementById('desktopNav').setAttribute('style', 'display:none;');
       document.getElementById('adminLogin').setAttribute('style', 'display:none;');
       document.getElementById('adminLogout').setAttribute('style', 'display:none;');
 
     }
+    //if statement hides mobile navbar if device is more than 1100 pixels wide
     if (window.screen.width >= 1100) {
       document.getElementById('mobileNav').setAttribute('style', 'display:none;');
     }
