@@ -1,6 +1,7 @@
 <div class="container-fluid" id="desktopNav">
   <header role="banner">
-    <img id="logo-main" src="../../assets/genuineLogo.png" width="400" alt="Ganache Logo" style="align-content: center;">
+    <!-- <img id="logo-main" src="../../assets/genuineLogo.png" width="400" alt="Ganache Logo" > -->
+    <img id="logo-main" *ngIf="(!isAdmin && navbarImage1Src)" width="400" [src]="navbarImage1Src" [alt]="navbarImage1Description">
     <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
       <div class="nav navbar-nav">
         <div class="container-fluid" id="selecty">
@@ -39,39 +40,19 @@
   </header>
 </div>
 
-<!-- <header role="banner" id="mobileNav">
-<img id="logo-main" src="../../assets/genuineLogo.png" width="150" alt="Ganache Logo" style="justify-content:center;">
-<div>
-  <ul class="nav nav-pills chillz">
-    <li class="pillz homePill"  [routerLink]="['/home']">
-      <a data-toggle="tab">Home</a>
-    </li>
-    <li class="pillz aboutPill" [routerLink]="['/about']">
-      <a data-toggle="pill">About</a>
-    </li>
-    <li class="pillz chocoPill" [routerLink]="['/chocolates']">
-      <a data-toggle="pill">Chocolates</a>
-    </li>
-    <li class="pillz shopPill" [routerLink]="['/shop']">
-      <a data-toggle="pill">Shop</a>
-    </li>
-    <li class="pillz contactPill" [routerLink]="['/contact']">
-      <a data-toggle="pill">Contact Us</a>
-    </li>
-  </ul>
-</div>
-</header> -->
-<div class="container-fluid" id="mobileNav">
+
+
+<div class="container" id="mobileNav">
   <div class="row">
     <header role="banner">
-      <img id="logo-main" src="../../assets/genuineLogo.png" width="150" alt="Ganache Logo" style="justify-content:center;">
+      <!-- <img id="logo-main" src="../../assets/genuineLogo.png" width="150" alt="Ganache Logo"> -->
+      <img id="logo-main" *ngIf="(!isAdmin && navbarImage1Src)" width="150" [src]="navbarImage1Src" [alt]="navbarImage1Description">
 
       <ul class="nav nav-pills chillz">
         <li class="pillz homePill" href="#" data-toggle="pill"><a>Home</a></li>
         <li class="pillz aboutPill" href="#"><a data-toggle="pill">About</a></li>
         <li class="dropdown pillz chocoPill">
           <a class="dropdown-toggle" data-toggle="dropdown" >Chocolates
-            <!-- <span class="caret"></span> -->
             <a class="caret"></a>
           </a>
           <ul class="dropdown-menu">
@@ -88,5 +69,37 @@
         <li class="pillz contactPill" href="#"><a data-toggle="pill">Contact Us</a></li>
       </ul>
     </header>
+  </div>
+</div>
+
+
+
+<!-- If yes admin, show form to update image -->
+<!-- Image1 upload -->
+<div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="(isAdmin && navbarImage1Src)">
+  <label for="navbarImage1Existing">Existing Image:</label>
+  <img *ngIf="navbarImage1Src" id="navbarImage1Existing" style="width: 100px; height: auto" [src]="navbarImage1Src" [alt]="navbarImage1Description">
+  <br>
+  <br>
+  <label for="navbarImage1FileInput">Image to upload:
+    <em style="color: red;">*required</em>
+  </label>
+  <input type="file" id="navbarImage1FileInput" (change)="navbarDetectImage1($event)">
+  <p>
+    <em>*For proper appearance, image should have a 3:1 aspect ratio.</em>
+  </p>
+  <br>
+  <label for="navbarImage1Description">Description of image:
+    <em style="color: red;">*required</em>
+  </label>
+  <input type="text" id="navbarImage1Description" placeholder="description" [(ngModel)]="navbarImage1Description">
+  <br>
+  <br>
+  <button class="btn btn-md uploadImageButton" (click)="navbarUploadImage1()">Upload this image</button>
+  <!-- Progress bar -->
+  <div *ngIf="navbarUploadingImage1">
+    <br>
+    <p>Progress: {{navbarCurrentUpload?.progress}}% Complete</p>
+    <progress class="progress is-success" min=1 max=100 value="{{ navbarCurrentUpload?.progress }}"></progress>
   </div>
 </div>

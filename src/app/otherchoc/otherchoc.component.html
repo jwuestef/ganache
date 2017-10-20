@@ -1,4 +1,4 @@
-<p *ngIf="isAdmin">
+<!-- <p *ngIf="isAdmin">
   Is admin!!!</p>
 
 <div class="container-fluid">
@@ -9,7 +9,11 @@
 
 
     <div class="col-md-6">
-      <h1><strong><p class="text-center">Other Chocolates</p></strong></h1>
+      <h1>
+        <strong>
+          <p class="text-center">Other Chocolates</p>
+        </strong>
+      </h1>
 
       <div>
         <ul *ngIf="!this.admin else otherTmpl">
@@ -53,3 +57,230 @@
               </ng-template>
             </div>
           </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+<div class="container-fluid">
+
+
+
+    <div class="row">
+      <!-- Image slider -->
+      <div class="col-sm-6" id="otherchocSlider">
+        <figure>
+          <img *ngIf="otherchocImage1Src && (otherchocImage1Link.toLowerCase() == 'na')" [src]="otherchocImage1Src" [alt]="otherchocImage1Description">
+          <a *ngIf="otherchocImage1Src && (otherchocImage1Link.toLowerCase() !== 'na')" [href]="otherchocImage1Link"><img [src]="otherchocImage1Src" [alt]="otherchocImage1Description"></a>
+
+          <img *ngIf="otherchocImage2Src && (otherchocImage2Link.toLowerCase() == 'na')" [src]="otherchocImage2Src" [alt]="otherchocImage2Description">
+          <a *ngIf="otherchocImage2Src && (otherchocImage2Link.toLowerCase() !== 'na')" [href]="otherchocImage2Link"><img [src]="otherchocImage2Src" [alt]="otherchocImage2Description"></a>
+
+          <img *ngIf="otherchocImage3Src && (otherchocImage3Link.toLowerCase() == 'na')" [src]="otherchocImage3Src" [alt]="otherchocImage3Description">
+          <a *ngIf="otherchocImage3Src && (otherchocImage3Link.toLowerCase() !== 'na')" [href]="otherchocImage3Link"><img [src]="otherchocImage3Src" [alt]="otherchocImage3Description"></a>
+
+          <img *ngIf="otherchocImage4Src && (otherchocImage4Link.toLowerCase() == 'na')" [src]="otherchocImage4Src" [alt]="otherchocImage4Description">
+          <a *ngIf="otherchocImage4Src && (otherchocImage4Link.toLowerCase() !== 'na')" [href]="otherchocImage4Link"><img [src]="otherchocImage4Src" [alt]="otherchocImage4Description"></a>
+
+          <img *ngIf="otherchocImage5Src && (otherchocImage5Link.toLowerCase() == 'na')" [src]="otherchocImage5Src" [alt]="otherchocImage5Description">
+          <a *ngIf="otherchocImage5Src && (otherchocImage5Link.toLowerCase() !== 'na')" [href]="otherchocImage5Link"><img [src]="otherchocImage5Src" [alt]="otherchocImage5Description"></a>
+
+          <img *ngIf="otherchocImage1Src && (otherchocImage1Link.toLowerCase() == 'na')" [src]="otherchocImage1Src" [alt]="otherchocImage1Description">
+          <a *ngIf="otherchocImage1Src && (otherchocImage1Link.toLowerCase() !== 'na')" [href]="otherchocImage1Link"><img [src]="otherchocImage1Src" [alt]="otherchocImage1Description"></a>
+        </figure>
+      </div>
+
+      <!-- Otherchoc paragraph, describes other chocolates available-->
+      <div class="col-sm-6" id="otherchocPara">
+        <!-- If not admin, show paragraph -->
+        <h1 *ngIf="!isAdmin else inputOtherchocParagraph" id="otherchocParagraph"></h1>
+        <!-- If yes admin, show form to update content -->
+        <ng-template #inputOtherchocParagraph>
+          <texteditor [elementId]="'otherchocParagraph'"></texteditor>
+          <br>
+          <button class="btn btn-md updateTextButton" (click)="saveOtherchocParagraph()">Update</button>
+          <!-- After successful update, show confirmation -->
+          <span class="alert-success updated" *ngIf="otherchocParagraphUpdated">
+            <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+          </span>
+        </ng-template>
+      </div>
+      <!-- End of otherchoc paragraph-->
+
+    </div>
+    <!-- End of row for image slider and otherchoc paragraph-->
+
+
+
+    <!-- If yes admin, show form to update image -->
+    <div *ngIf="isAdmin">
+
+      <!-- Image 1 and 2 update form -->
+      <div class="row">
+
+        <!-- Image1 upload -->
+        <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="otherchocImage1Src">
+          <label for="otherchocImage1Existing">Existing Image:</label>
+          <img *ngIf="otherchocImage1Src" id="otherchocImage1Existing" style="width: 100px; height: auto" [src]="otherchocImage1Src" [alt]="otherchocImage1Description">
+          <br>
+          <br>
+          <label for="otherchocImage1FileInput">Image to upload: <em style="color: red;">*required</em></label>
+          <input type="file" id="otherchocImage1FileInput" (change)="otherchocDetectImage1($event)">
+          <p><em>*For proper appearance, image should have a 1:1 aspect ratio.</em></p>
+          <br>
+          <label for="otherchocImage1Description">Description of image: <em style="color: red;">*required</em></label>
+          <input type="text" id="otherchocImage1Description" placeholder="description" [(ngModel)]="otherchocImage1Description">
+          <br>
+          <br>
+          <label for="otherchocImage1Link">Link: <em style="color: gray">*optional</em></label>
+          <input type="text" id="otherchocImage1Link" placeholder="Enter &#34;NA&#34; for no link" [(ngModel)]="otherchocImage1Link">
+          <br>
+          <br>
+          <button class="btn btn-md uploadImageButton" (click)="otherchocUploadImage1()">Upload this image</button>
+          <!-- Progress bar -->
+          <div *ngIf="otherchocUploadingImage1">
+            <br>
+            <p>Progress: {{otherchocCurrentUpload?.progress}}% Complete</p>
+            <progress class="progress is-success" min=1 max=100 value="{{ otherchocCurrentUpload?.progress }}"></progress>
+          </div>
+        </div>
+
+        <!-- Image2 upload -->
+        <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="otherchocImage2Src">
+          <label for="otherchocImage2Existing">Existing Image:</label>
+          <img *ngIf="otherchocImage2Src" id="otherchocImage2Existing" style="width: 100px; height: auto" [src]="otherchocImage2Src" [alt]="otherchocImage2Description">
+          <br>
+          <br>
+          <label for="otherchocImage2FileInput">Image to upload: <em style="color: red;">*required</em></label>
+          <input type="file" id="otherchocImage2FileInput" (change)="otherchocDetectImage2($event)">
+          <p><em>*For proper appearance, image should have a 1:1 aspect ratio.</em></p>
+          <br>
+          <label for="otherchocImage2Description">Description of image: <em style="color: red;">*required</em></label>
+          <input type="text" id="otherchocImage2Description" placeholder="description" [(ngModel)]="otherchocImage2Description">
+          <br>
+          <br>
+          <label for="otherchocImage2Link">Link: <em style="color: gray">*optional</em></label>
+          <input type="text" id="otherchocImage2Link" placeholder="Enter &#34;NA&#34; for no link" [(ngModel)]="otherchocImage2Link">
+          <br>
+          <br>
+          <button class="btn btn-md uploadImageButton" (click)="otherchocUploadImage2()">Upload this image</button>
+          <!-- Progress bar -->
+          <div *ngIf="otherchocUploadingImage2">
+            <br>
+            <p>Progress: {{otherchocCurrentUpload?.progress}}% Complete</p>
+            <progress class="progress is-success" min=1 max=100 value="{{ otherchocCurrentUpload?.progress }}"></progress>
+          </div>
+        </div>
+
+      </div>
+      <!-- End of row for updating images 1 and 2 -->
+
+
+
+      <!-- Image 3 and 4 update form -->
+      <div class="row">
+
+        <!-- Image3 upload -->
+        <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="otherchocImage3Src">
+          <label for="otherchocImage3Existing">Existing Image:</label>
+          <img *ngIf="otherchocImage3Src" id="otherchocImage3Existing" style="width: 100px; height: auto" [src]="otherchocImage3Src" [alt]="otherchocImage3Description">
+          <br>
+          <br>
+          <label for="otherchocImage3FileInput">Image to upload: <em style="color: red;">*required</em></label>
+          <input type="file" id="otherchocImage3FileInput" (change)="otherchocDetectImage3($event)">
+          <p><em>*For proper appearance, image should have a 1:1 aspect ratio.</em></p>
+          <br>
+          <label for="otherchocImage3Description">Description of image: <em style="color: red;">*required</em></label>
+          <input type="text" id="otherchocImage3Description" placeholder="description" [(ngModel)]="otherchocImage3Description">
+          <br>
+          <br>
+          <label for="otherchocImage3Link">Link: <em style="color: gray">*optional</em></label>
+          <input type="text" id="otherchocImage3Link" placeholder="Enter &#34;NA&#34; for no link" [(ngModel)]="otherchocImage3Link">
+          <br>
+          <br>
+          <button class="btn btn-md uploadImageButton" (click)="otherchocUploadImage3()">Upload this image</button>
+          <!-- Progress bar -->
+          <div *ngIf="otherchocUploadingImage3">
+            <br>
+            <p>Progress: {{otherchocCurrentUpload?.progress}}% Complete</p>
+            <progress class="progress is-success" min=1 max=100 value="{{ otherchocCurrentUpload?.progress }}"></progress>
+          </div>
+        </div>
+
+        <!-- Image4 upload -->
+        <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="otherchocImage4Src">
+          <label for="otherchocImage4Existing">Existing Image:</label>
+          <img *ngIf="otherchocImage4Src" id="otherchocImage4Existing" style="width: 100px; height: auto" [src]="otherchocImage4Src" [alt]="otherchocImage4Description">
+          <br>
+          <br>
+          <label for="otherchocImage4FileInput">Image to upload: <em style="color: red;">*required</em></label>
+          <input type="file" id="otherchocImage4FileInput" (change)="otherchocDetectImage4($event)">
+          <p><em>*For proper appearance, image should have a 1:1 aspect ratio.</em></p>
+          <br>
+          <label for="otherchocImage4Description">Description of image: <em style="color: red;">*required</em></label>
+          <input type="text" id="otherchocImage4Description" placeholder="description" [(ngModel)]="otherchocImage4Description">
+          <br>
+          <br>
+          <label for="otherchocImage4Link">Link: <em style="color: gray">*optional</em></label>
+          <input type="text" id="otherchocImage4Link" placeholder="Enter &#34;NA&#34; for no link" [(ngModel)]="otherchocImage4Link">
+          <br>
+          <br>
+          <button class="btn btn-md uploadImageButton" (click)="otherchocUploadImage4()">Upload this image</button>
+          <!-- Progress bar -->
+          <div *ngIf="otherchocUploadingImage4">
+            <br>
+            <p>Progress: {{otherchocCurrentUpload?.progress}}% Complete</p>
+            <progress class="progress is-success" min=1 max=100 value="{{ otherchocCurrentUpload?.progress }}"></progress>
+          </div>
+        </div>
+
+      </div>
+      <!-- End of row for updating images 3 and 4 -->
+
+
+
+      <!-- Image 5 and (null) update form -->
+      <div class="row">
+
+        <!-- Image5 upload -->
+        <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="otherchocImage5Src">
+          <label for="otherchocImage5Existing">Existing Image:</label>
+          <img *ngIf="otherchocImage5Src" id="otherchocImage5Existing" style="width: 100px; height: auto" [src]="otherchocImage5Src" [alt]="otherchocImage5Description">
+          <br>
+          <br>
+          <label for="otherchocImage5FileInput">Image to upload: <em style="color: red;">*required</em></label>
+          <input type="file" id="otherchocImage5FileInput" (change)="otherchocDetectImage5($event)">
+          <p><em>*For proper appearance, image should have a 1:1 aspect ratio.</em></p>
+          <br>
+          <label for="otherchocImage5Description">Description of image: <em style="color: red;">*required</em></label>
+          <input type="text" id="otherchocImage5Description" placeholder="description" [(ngModel)]="otherchocImage5Description">
+          <br>
+          <br>
+          <label for="otherchocImage5Link">Link: <em style="color: gray">*optional</em></label>
+          <input type="text" id="otherchocImage5Link" placeholder="Enter &#34;NA&#34; for no link" [(ngModel)]="otherchocImage5Link">
+          <br>
+          <br>
+          <button class="btn btn-md uploadImageButton" (click)="otherchocUploadImage5()">Upload this image</button>
+          <!-- Progress bar -->
+          <div *ngIf="otherchocUploadingImage5">
+            <br>
+            <p>Progress: {{otherchocCurrentUpload?.progress}}% Complete</p>
+            <progress class="progress is-success" min=1 max=100 value="{{ otherchocCurrentUpload?.progress }}"></progress>
+          </div>
+        </div>
+
+      </div>
+      <!-- End of row for updating images 5 and (null) -->
+
+
+    </div>
+    <!-- End of admin-only image -->
+
+  </div>
+  <!-- End of container-fluid -->
+

@@ -1,14 +1,17 @@
+/* The rules for the desktop navbar begin here */
+/* The logo is centered and a margin assigned */
 header[role="banner"] #logo-main {
   display: block;
   margin: 10px auto;
+  align-content: center;
 }
-
+/* The background leaves rounded corners if not transparent, padding sharpens it */
 #navbar-primary {
   background: transparent;
   padding: 0 2% 0 2%;
   border: none;
 }
-
+/* The font family is defined to override global styles */
 #navbar-primary.navbar-default .navbar-nav {
   width: 100%;
   text-align: center;
@@ -17,20 +20,20 @@ header[role="banner"] #logo-main {
   color:#000;
 }
 
-#navbar-primary.navbar-default .navbar-nav > li {
+#navbar-primary.navbar-default .navbar-nav>li {
   display: inline-block;
   float: none;
 }
 
-#navbar-primary.navbar-default .navbar-nav > li > a {
+#navbar-primary.navbar-default .navbar-nav>li>a {
   padding-left: 0px;
   padding-right: 0px;
 }
-
-.navbar-nav{
-  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(black), to(white));
-  background-image: -webkit-linear-gradient(top, white, black, white);
-  background-image: -moz-linear-gradient(top, white, black, white);
+/* gradient defined for a variety of web browsers */
+.navbar-nav {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#4f3727), to(white));
+  background-image: -webkit-linear-gradient(top, #fff, #7b6b63, #574232, #4f3727, #4f3727, #4f3727,#574232,#7b6b63, #fff);
+  background-image: -moz-linear-gradient(top, #fff, #7b6b63, #574232, #4f3727, #4f3727, #4f3727,#574232,#7b6b63, #fff);
   /* background-image: linear-gradient(to left, #fff, #86746c, #7b6b63,#504540, #504540,#504540,#7b6b63, #86746c, #fff); */
   background-image: linear-gradient(to left, #fff, #7b6b63, #574232, #4f3727, #4f3727, #4f3727,#574232,#7b6b63, #fff);
   height: 61px;
@@ -39,12 +42,12 @@ header[role="banner"] #logo-main {
   position: flex;
 }
 
-.dropdown:focus{
+.dropdown:focus {
   border: 20px solid #000;
 }
 
-.navvy{
-  color:black;
+.navvy {
+  color: black;
   margin: 0 5px 0 5px;
   text-align: center;
 }
@@ -60,11 +63,8 @@ nav{
   align-content: center;
 }
 
-/* .navbar-default .navbar-nav>li>a {
-  color: #000;
-  margin-top:10px;
-} */
 /* Dropdown Button */
+
 .dropbtn {
   background-color: transparent;
   color: #000;
@@ -76,6 +76,7 @@ nav{
 }
 
 /* The container <div> - needed to position the dropdown content */
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -83,42 +84,30 @@ nav{
   margin-right: 2.5%;
   margin-bottom:1px;
   margin-top: 2px;
-  /* float: left; */
-  /* border:5px solid black; */
-  /* padding-top:3px; */
-  /* padding-bottom: -1px; */
-}
 
-.droppydown {
-  position: relative;
-  /* display: inline-block; */
-  margin-left: 50px;
-  float: left;
-  /* border:3px solid black; */
-  padding-bottom: -1px;
 }
 
 /* Dropdown Content (Hidden by Default) */
+
 .dropdown-content {
   display: none;
   position: absolute;
-  /* background-color: #3b2314; */
   min-width: 160px;
-  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
   z-index: 1;
   background-image: linear-gradient(to bottom,#4f3727, #bcb1ac);
-  /* margin-top:5px; */
-  margin-left:4px;
-  margin-top: -1px;
-  /* border-top: 3px solid #000; */
+  margin-left: -4px;
+  margin-top: 2px;
 }
 
 /* Links inside the dropdown */
+
 .dropdown-content a {
   color: black;
   padding: 0 5px 0 5px;
   display: block;
+  font-size: .9em;
 }
+
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
@@ -127,42 +116,76 @@ nav{
 }
 
 /* Show the dropdown menu on hover */
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
+
 /* Change the background color of the dropdown button when the dropdown content is shown */
+
 .dropdown:hover .dropbtn {
   background-color: transparent;
 }
 
-ul{
+ul {
   border: none;
 }
-
-/* .dropbtn :active{
-  border: 3px solid black ;
-} */
-
-.pillz{
-  color:#000;
-  /* margin: -2%; */
-  float: left;
-  /* background-color:transparent; */
+/* Rules for mobile navbar begin here */
+/* Bootstrap pill strategy used */
+.pillz {
+  color: #000;
+  margin: 0 -1.5% 0 0;
+}
+/* Gradient is different when compared to desktop */
+.chillz {
+  background-image: linear-gradient(to right, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #5B361F, #fff);
+  margin-left:2%;
 }
 
-.chillz{
-  background-image: linear-gradient(to left, #fff, #7b6b63, #574232, #4f3727, #4f3727, #4f3727,#574232,#7b6b63, #fff);
-}
-
-.nav-pills > .active > a, .nav-pills > .active > a:hover {
+.nav-pills>.active>a,
+.nav-pills>.active>a:hover {
   background-color: transparent;
 }
-
+/* Mobile dropdown requires clicking, as hover is disabled */
 .dropdown-menu{
   background-image: linear-gradient(to bottom, #4f3727, #fff);
 }
 
-.container{
-  display:flex;
+#mobileNav {
+  display: inline-block;
+}
+
+/* Varying screen widths cause problems, media queries can resolve them */
+/* Negative margin values pull pills together to better fit screens without adding a new row */
+/* max-width 340 catches extremely small widths, like iPhone5 */
+@media screen and (max-width:340px) {
+  .pillz {
+    margin-left: -3%;
+    margin-right: -3%;
+    color: #000;
+  }
+  .pillz a {
+    color: #000;
+  }
+}
+/* Many devices fit this category */
+@media screen and (max-width:380px) {
+  .pillz {
+    /* margin-left: -2%; */
+  }
+  .pillz a {
+    color: #000;
+  }
+}
+/* 420 pixel width catches many more mobile devices */
+@media screen and (max-width:420px) {
+  .pillz {
+    margin-left: -3%;
+    /* margin-right: -3%; */
+    color: #000;
+  }
+  .pillz a {
+    color: #000;
+  }
 }
