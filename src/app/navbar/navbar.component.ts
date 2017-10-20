@@ -16,7 +16,6 @@ export class NavbarComponent implements OnInit {
   navbarCurrentUpload: Image;
   navbarImage1Src: string;
   navbarImage1Description: string;
-  navbarImage1Link: string;
   navbarSelectedFile1: FileList;
   navbarUploadingImage1 = false;
 
@@ -116,7 +115,6 @@ export class NavbarComponent implements OnInit {
     this.cs.getPageContent('navbarPage').then(function (pageContent) {
       thisSaved.navbarImage1Src = pageContent.image1.url;
       thisSaved.navbarImage1Description = pageContent.image1.description;
-      thisSaved.navbarImage1Link = pageContent.image1.link;
     });
   }
 
@@ -131,7 +129,7 @@ export class NavbarComponent implements OnInit {
 
   // Uploads a new image
   navbarUploadImage1() {
-    if (!this.navbarImage1Description || !this.navbarImage1Link || !this.navbarSelectedFile1) {
+    if (!this.navbarImage1Description || !this.navbarSelectedFile1) {
       return;
     }
     // Display the upload progress bar for image 1 and no others
@@ -139,7 +137,7 @@ export class NavbarComponent implements OnInit {
     // Set file-to-be-uploaded to the file taken from the input fields
     this.navbarCurrentUpload = new Image(this.navbarSelectedFile1.item(0));
     this.navbarCurrentUpload.description = this.navbarImage1Description;
-    this.navbarCurrentUpload.link = this.navbarImage1Link;
+    this.navbarCurrentUpload.link = 'NA';
     // Upload the file via ContentService function (pageName, whichElement, newImage)
     const thisSaved = this;
     this.cs.pushUpload('navbarPage', 'image1', this.navbarCurrentUpload).then(function (newURL) {
