@@ -1,19 +1,20 @@
-#truffleImgs {
-  /* border: 1em solid black; */
+/* #truffleImgs {
   margin: 5vh 3vw 5vh 2em;
   max-width: 42vw;
   height: auto;
   overflow: hidden;
-}
+} */
 
-img {
+/* img {
   width: 100%;
-}
+} */
 
 #trufflesPara {
-  float: right;
+  position: flex;
+  text-align: center;
   padding-top: 2vw;
-  padding-right: 4vw;
+  /* padding-left: 15px; */
+  /* padding-right: 15px; */
 }
 
 h1 {
@@ -34,6 +35,7 @@ body {
 
 .whiteRow {
   border: white solid 2px;
+  margin-right: 1vw;
 }
 
 .flex {
