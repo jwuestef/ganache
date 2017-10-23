@@ -19,8 +19,8 @@
 
 h1 {
   font-size: 110%;
-  line-height: 7vh;
-  margin-top: 15vh;
+  /* line-height: 7vh; */
+  margin-top: 7vh;
 }
 
 body {
@@ -95,4 +95,8 @@ div p {
 .showhim:hover {
   border: black solid 1px;
   background-color: white;
+}
+
+.littleText {
+  line-height: 0px !important;
 }

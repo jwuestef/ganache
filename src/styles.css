@@ -75,7 +75,7 @@ button:focus, li:focus {
   margin: -2px;
 }
 .imageUploadingForm:first-of-type {
-  margin-left: 2px;
+  /* margin-left: 2px; */
 }
 .uploadImageButton {
   background-color: #785c44;

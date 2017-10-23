@@ -73,7 +73,7 @@
 
     <div class="row">
       <!-- Image slider -->
-      <div class="col-sm-6" id="otherchocSlider">
+      <div class="col-sm-7" id="otherchocSlider">
         <figure>
           <img *ngIf="otherchocImage1Src && (otherchocImage1Link.toLowerCase() == 'na')" [src]="otherchocImage1Src" [alt]="otherchocImage1Description">
           <a *ngIf="otherchocImage1Src && (otherchocImage1Link.toLowerCase() !== 'na')" [href]="otherchocImage1Link"><img [src]="otherchocImage1Src" [alt]="otherchocImage1Description"></a>
@@ -96,7 +96,7 @@
       </div>
 
       <!-- Otherchoc paragraph, describes other chocolates available-->
-      <div class="col-sm-6" id="otherchocPara">
+      <div class="col-sm-5" id="otherchocPara">
         <!-- If not admin, show paragraph -->
         <h1 *ngIf="!isAdmin else inputOtherchocParagraph" id="otherchocParagraph"></h1>
         <!-- If yes admin, show form to update content -->

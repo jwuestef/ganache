@@ -1,27 +1,7 @@
 <div class="container-fluid">
 
-
-
-  <!-- Seasonal paragraph, describes seasonal treats -->
-  <div class="row" id="seasPara">
-    <div class="col-sm-6">
-      <!-- If not admin, show paragraph -->
-      <h1 *ngIf="!isAdmin else inputSeasonalParagraph" id="seasonalParagraph"></h1>
-      <!-- If yes admin, show form to update content -->
-      <ng-template #inputSeasonalParagraph>
-        <texteditor [elementId]="'seasonalParagraph'"></texteditor>
-        <br>
-        <button class="btn btn-md updateTextButton" (click)="saveSeasonalParagraph()">Update</button>
-        <!-- After successful update, show confirmation -->
-        <span class="alert-success updated" *ngIf="seasonalParagraphUpdated">
-              <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
-            </span>
-      </ng-template>
-    </div>
-    <!-- End of seasonal paragraph-->
-
     <!-- Image slider -->
-    <div class="col-sm-6" id="seasonalSlider">
+    <div class="col-xs-12 col-md-6" id="seasonalSlider">
       <figure>
         <img *ngIf="seasonalImage1Src && (seasonalImage1Link.toLowerCase() == 'na')" [src]="seasonalImage1Src" [alt]="seasonalImage1Description">
         <a *ngIf="seasonalImage1Src && (seasonalImage1Link.toLowerCase() !== 'na')" [href]="seasonalImage1Link"><img [src]="seasonalImage1Src" [alt]="seasonalImage1Description"></a>
@@ -42,16 +22,34 @@
         <a *ngIf="seasonalImage1Src && (seasonalImage1Link.toLowerCase() !== 'na')" [href]="seasonalImage1Link"><img [src]="seasonalImage1Src" [alt]="seasonalImage1Description"></a>
       </figure>
     </div>
-  </div>
+
   <!-- End of row for image slider -->
 
+  <!-- Seasonal paragraph, describes seasonal treats -->
+  <div id="seasPara">
+      <div class="col-xs-12 col-md-6">
+        <!-- If not admin, show paragraph -->
+        <h1 *ngIf="!isAdmin else inputSeasonalParagraph" id="seasonalParagraph"></h1>
+        <!-- If yes admin, show form to update content -->
+        <ng-template #inputSeasonalParagraph>
+          <texteditor [elementId]="'seasonalParagraph'"></texteditor>
+          <br>
+          <button class="btn btn-md updateTextButton" (click)="saveSeasonalParagraph()">Update</button>
+          <!-- After successful update, show confirmation -->
+          <span class="alert-success updated" *ngIf="seasonalParagraphUpdated">
+                <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+              </span>
+        </ng-template>
+      </div>
+      <!-- End of seasonal paragraph-->
+    </div>
 
 
   <!-- If yes admin, show form to update image -->
   <div *ngIf="isAdmin">
 
     <!-- Image 1 and 2 update form -->
-    <div class="row">
+    <div>
 
       <!-- Image1 upload -->
       <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="seasonalImage1Src">
@@ -113,10 +111,10 @@
 
 
     <!-- Image 3 and 4 update form -->
-    <div class="row">
+    <div>
 
       <!-- Image3 upload -->
-      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="seasonalImage3Src">
+      <div class="col-md-6  imageUploadingForm imageUploadingForm" *ngIf="seasonalImage3Src">
         <label for="seasonalImage3Existing">Existing Image:</label>
         <img *ngIf="seasonalImage3Src" id="seasonalImage3Existing" style="width: 100px; height: auto" [src]="seasonalImage3Src" [alt]="seasonalImage3Description">
         <br>
@@ -175,7 +173,7 @@
 
 
     <!-- Image 5 and (null) update form -->
-    <div class="row">
+    <div>
 
       <!-- Image5 upload -->
       <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="seasonalImage5Src">

@@ -1,13 +1,13 @@
-#seasPara {
-  float: left;
-  margin-top: 3vw;
+/* #seasPara {
+  /* float: left; */
+  /* margin-top: 8vh; */
   /* margin-left: 1vw; */
-}
+/* } */
 
 div#seasonalSlider {
   overflow: hidden;
   position: relative;
-  float: left;
+  float: right;
   padding: 0;
   max-width: 41vw;
   height: auto;
@@ -56,7 +56,7 @@ div#seasonalSlider figure {
 
 h1 {
   line-height: 7vh;
-  margin-top: 13vh;
+  margin-top: 10vh;
   margin-left: 2vw;
   font-size: 110%;
 }
