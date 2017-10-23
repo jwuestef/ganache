@@ -38,11 +38,12 @@ body {
 
 @media screen and (max-width: 800px){
   .container-fluid{
-    margin: auto;
+    margin: 0;
   }
   .whiteRow {
     border:white solid 1px;
-    margin: 5vh 3vw 1vh 0;
+    padding: 0 3vw 0 3vw;
+    margin: 5vh 0 1vh 0;
   }
 }
 
@@ -62,6 +63,7 @@ body {
 
 div p {
   line-height: .9em;
+  overflow: hidden;
 }
 
 .noBorder {
