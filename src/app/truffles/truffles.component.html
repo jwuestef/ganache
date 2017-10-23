@@ -2,8 +2,8 @@
 
 
 
-  <div class="container">
-    <div class="row col-xs-6 col-md-7 whiteRow">
+  <div class="row">
+    <div class="col-xs-12 col-md-7 whiteRow">
       <h3 style="text-align: center; font-family:PT Serif;">Ganache Chocolatier Truffle Card</h3>
       <div class="flex">
 
@@ -324,8 +324,8 @@
       </div>
     </div>
       <!-- Truffles paragraph, describes shop -->
-  <div class="row" id="trufflePara">
-      <div class="col-xs-6 col-md-5">
+  <div id="trufflePara">
+      <div class="col-xs-12 col-md-4">
         <!-- If not admin, show paragraph -->
         <h1 *ngIf="!isAdmin else inputTrufflesParagraph" id="trufflesParagraph"></h1>
         <!-- If yes admin, show form to update content -->

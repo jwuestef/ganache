@@ -6,6 +6,12 @@
   margin: 10vh 0 5vh -5vw;
 }
 
+@media screen and (max-width: 800px){
+  #aboutImage1{
+    margin: auto;
+  }
+}
+
 h1 {
   /* line-height: 6vh; */
   margin-top: 12vh;

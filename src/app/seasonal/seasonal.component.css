@@ -1,20 +1,36 @@
 /* #seasPara {
-  /* float: left; */
-  /* margin-top: 8vh; */
-  /* margin-left: 1vw; */
-/* } */
+  float: left;
+  margin-top: 8vh;
+  margin-left: 1vw;
+} */
 
 div#seasonalSlider {
   overflow: hidden;
   position: relative;
-  float: right;
+  /* float: right; */
   padding: 0;
   max-width: 41vw;
   height: auto;
   margin: 0 auto;
-  margin-left: 5vw;
+  margin-left: 3vw;
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
+}
+
+@media screen and (max-width: 800px){
+  div#seasonalSlider {
+    overflow: hidden;
+    position: relative;
+    /* float: right; */
+    padding: 0;
+    max-width: 98%;
+    height: auto;
+    margin: auto;
+    margin-left: 1vw;
+    margin-right: 15vw;
+    margin-bottom: 1.5em;
+    background-color: rgba(189,189,189, 0.5);
+  }
 }
 
 div#seasonalSlider figure img {
@@ -57,6 +73,6 @@ div#seasonalSlider figure {
 h1 {
   line-height: 7vh;
   margin-top: 10vh;
-  margin-left: 2vw;
+  margin-left: 12vw;
   font-size: 110%;
 }

@@ -13,8 +13,6 @@
   position: flex;
   text-align: center;
   padding-top: 2vw;
-  /* padding-left: 15px; */
-  /* padding-right: 15px; */
 }
 
 h1 {
@@ -29,13 +27,23 @@ body {
   margin: 0;
 }
 
-.container {
+.container-fluid {
   margin: 30px;
 }
 
 .whiteRow {
   border: white solid 2px;
   margin-right: 1vw;
+}
+
+@media screen and (max-width: 800px){
+  .container-fluid{
+    margin: auto;
+  }
+  .whiteRow {
+    border:white solid 1px;
+    margin: 5vh 3vw 1vh 0;
+  }
 }
 
 .flex {
@@ -97,6 +105,6 @@ div p {
   background-color: white;
 }
 
-.littleText {
+/* .littleText {
   line-height: 0px !important;
-}
+} */
