@@ -1,7 +1,6 @@
 import { HomeComponent } from '../home/home.component';
 import { AboutComponent } from '../about/about.component';
 import { ChocolatesComponent } from '../chocolates/chocolates.component';
-import { ShopComponent } from '../shop/shop.component';
 import { ContactComponent } from '../contact/contact.component';
 import { BarksComponent } from '../barks/barks.component';
 import { FudgeComponent } from '../fudge/fudge.component';
@@ -34,10 +33,6 @@ export const routes = [
   {
     path: 'otherchoc',
     component: OtherchocComponent
-  },
-  {
-    path: 'shop',
-    component: ShopComponent
   },
   {
     path: 'contact',
