@@ -10,3 +10,44 @@ footer {
   height: 40px;
   color: #3b2314;
 }
+
+#adminLogout img {
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+
+#adminLogin img {
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+
+#socialIcons {
+  float: right;
+}
+
+#socialIcons img {
+  width: 30px;
+  height: auto;
+}
+
+
+#footy {
+  width: 100%
+}
+
+@media screen and (max-width:700px) {
+  footer {
+    text-align: center;
+    font-size: .7em;
+    position: inline;
+  }
+  #socialIcons {
+    position: relative;
+    float:none;
+  }
+  #socialIcons img {
+    width: 15px;
+  }
+}
