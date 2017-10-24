@@ -12,15 +12,18 @@ footer {
 }
 
 #adminLogout img {
+  margin-top:3px;
   float: left;
   width: 30px;
   height: 30px;
 }
 
 #adminLogin img {
+  padding-top: 9px;
+
   float: left;
   width: 30px;
-  height: 30px;
+  height: auto;
 }
 
 #socialIcons {
