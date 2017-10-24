@@ -1,26 +1,24 @@
-#truffleImgs {
-  border: 1em solid black;
+/* #truffleImgs {
   margin: 5vh 3vw 5vh 2em;
   max-width: 42vw;
   height: auto;
   overflow: hidden;
-}
+} */
 
-img {
+/* img {
   width: 100%;
-}
+} */
 
 #trufflesPara {
-  float: right;
+  position: flex;
+  text-align: center;
   padding-top: 2vw;
-  padding-right: 4vw;
-  font-family: 'avenir';
 }
 
 h1 {
-  font-size: 120%;
-  line-height: 7vh;
-  margin-top: 15vh;
+  font-size: 110%;
+  /* line-height: 7vh; */
+  margin-top: 7vh;
 }
 
 body {
@@ -29,12 +27,24 @@ body {
   margin: 0;
 }
 
-.container {
+.container-fluid {
   margin: 30px;
 }
 
 .whiteRow {
   border: white solid 2px;
+  margin-right: 1vw;
+}
+
+@media screen and (max-width: 800px){
+  .container-fluid{
+    margin: 0;
+  }
+  .whiteRow {
+    border:white solid 1px;
+    padding: 0 3vw 0 3vw;
+    margin: 5vh 0 1vh 0;
+  }
 }
 
 .flex {
@@ -53,6 +63,7 @@ body {
 
 div p {
   line-height: .9em;
+  overflow: hidden;
 }
 
 .noBorder {
@@ -95,3 +106,7 @@ div p {
   border: black solid 1px;
   background-color: white;
 }
+
+/* .littleText {
+  line-height: 0px !important;
+} */

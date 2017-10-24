@@ -3,14 +3,20 @@
   /* box-shadow: 1px 1px 15px 1px; */
   width: 100%;
   height: auto;
-  margin: 9vh 0 5vh -5vw;
+  margin: 10vh 0 5vh -5vw;
+}
+
+@media screen and (max-width: 800px){
+  #aboutImage1{
+    margin: auto;
+  }
 }
 
 h1 {
   /* line-height: 6vh; */
-  margin-top: 5vh;
+  margin-top: 12vh;
   margin-left: 2vw;
-  font-size: 100%;
+  font-size: 110%;
 }
 a img {
   -webkit-transition: -webkit-transform 0.3s ease;

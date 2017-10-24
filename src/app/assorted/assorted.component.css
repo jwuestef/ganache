@@ -10,13 +10,12 @@ img {
 
 #assortedPara{
   line-height: 7vh;
-  margin-top: 20vh;
   margin-right: 3vw;
 }
 
 h1 {
   line-height: 7vh;
-  margin: 15vh 2em 5vh 3vw;
+  margin: 4vh 2em 5vh 3vw;
   font-size: 100%;
 }
 
@@ -32,6 +31,9 @@ body {
 
 .whiteRow {
   border: white solid 2px;
+  float: right;
+  margin-right: 1vw;
+  margin-top: 4vh;
 }
 
 .flex {

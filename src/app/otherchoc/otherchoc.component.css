@@ -22,10 +22,6 @@ div#otherchocSlider {
   margin-left: 5vw;
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
-  /* border: solid; */
-  /* border-width: 1em; */
-  /* box-shadow: 1px 1px 15px 1px; */
-  /* color: black; */
 }
 
 div#otherchocSlider figure img {
@@ -65,3 +61,15 @@ div#otherchocSlider figure {
   100% { left: -500%; }
 }
 
+@media screen and (max-width: 800px){
+  div#otherchocSlider {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    padding: 0;
+    max-width: 93%;
+    height: auto;
+    margin: 3vh 0 0 3.5vw;
+    background-color: rgba(189,189,189, 0.5);
+  }
+}

@@ -2,8 +2,8 @@
 /* Image slider */
 #chocolatesParagraph {
   line-height: 2em;
-  margin: 2em 2em 2em 2em;
-  font-size: 100%;
+  margin: 2em 3em 2em 3em;
+  font-size: 115%;
 }
 
 
@@ -11,12 +11,12 @@
 div#chocolatesSlider {
   overflow: hidden;
   position: relative;
-  float: left;
+  /* float: left; */
   padding: 0;
-  max-width: 63vw;
+  max-width: 60vw;
   height: auto;
   margin: 0 auto;
-  margin-left: 5vw;
+  margin-left: 4vw;
   margin-right: -2vw;
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
@@ -30,6 +30,37 @@ div#chocolatesSlider figure img {
   width: 16.666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666%;
   position: relative;
   float: left;
+}
+
+/* Links to other pages */
+li {
+  list-style: none;
+  font-size: 150%;
+  margin: 4vh 0 4vh 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px){
+  div#chocolatesSlider {
+    overflow: hidden;
+    position: relative;
+    /* float: left; */
+    padding: 0;
+    max-width: 60vw;
+    height: auto;
+    margin: 0 0 0 21vw;
+    background-color: rgba(189,189,189, 0.5);
+    /* border: solid; */
+    /* border-width: 1em; */
+    /* box-shadow: 1px 1px 15px 1px; */
+    /* color: black; */
+  }
+
+  li {
+    list-style: none;
+    font-size: 150%;
+    margin: 4vh 5vw 4vh 0;
+  }
 }
 
 div#chocolatesSlider figure {
@@ -64,11 +95,5 @@ div#chocolatesSlider figure {
 
 
 
-/* Links to other pages */
-li {
-  list-style: none;
-  font-size: 150%;
-  margin: 4vh 1em 4vh 0;
-  text-align: center;
-}
+
 
