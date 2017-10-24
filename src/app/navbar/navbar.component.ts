@@ -85,7 +85,8 @@ export class NavbarComponent implements OnInit {
 
     $('#shopBtnLink').on('click', function () {
       thisSaved.destroyAllEditors();
-      thisSaved.router.navigate(['/shop']);
+      // thisSaved.router.navigate(['https://shop.ganachechocolatier.org/']);
+      window.location.href = 'https://shop.ganachechocolatier.org/';
     });
 
     $('#contactBtnLink').on('click', function () {
