@@ -31,9 +31,7 @@ body {
 
 .whiteRow {
   border: white solid 2px;
-  float: right;
-  margin-right: 1vw;
-  margin-top: 4vh;
+  margin-left: 1vw;
 }
 
 .flex {
@@ -52,6 +50,7 @@ body {
 
 div p {
   line-height: .9em;
+  overflow: hidden;
 }
 
 .noBorder {
