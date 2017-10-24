@@ -49,24 +49,24 @@
       <img id="logo-main" *ngIf="(!isAdmin && navbarImage1Src)" width="150" [src]="navbarImage1Src" [alt]="navbarImage1Description">
 
       <ul class="nav nav-pills chillz">
-        <li class="pillz homePill" href="#" data-toggle="pill"><a>Home</a></li>
-        <li class="pillz aboutPill" href="#"><a data-toggle="pill">About</a></li>
+        <li class="pillz homePill"><a href="/home">Home</a></li>
+        <li class="pillz aboutPill"><a href="/about">About</a></li>
         <li class="dropdown pillz chocoPill">
           <a class="dropdown-toggle" data-toggle="dropdown" >Chocolates
             <a class="caret"></a>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="#">All Chocolates</a></li>
-            <li><a href="#">Truffles</a></li>
-            <li><a href="#">Barks</a></li>
-            <li><a href="#">Assorted Chocolates</a></li>
-            <li><a href="#">Fudge</a></li>
-            <li><a href="#">Seasonal</a></li>
-            <li><a href="#">Other Chocolates</a></li>
+            <li><a href="/chocolates">All Chocolates</a></li>
+            <li><a href="/truffles">Truffles</a></li>
+            <li><a href="/barks">Barks</a></li>
+            <li><a href="/assorted">Assorted Chocolates</a></li>
+            <li><a href="/fudge">Fudge</a></li>
+            <li><a href="/seasonal">Seasonal</a></li>
+            <li><a href="/otherchoc">Other Chocolates</a></li>
           </ul>
         </li>
-        <li class="pillz shopPill" href="#"><a data-toggle="pill">Shop</a></li>
-        <li class="pillz contactPill" href="#"><a data-toggle="pill">Contact Us</a></li>
+        <li class="pillz shopPill"><a href="https://shop.ganachechocolatier.org/">Shop</a></li>
+        <li class="pillz contactPill"><a href="/contact">Contact Us</a></li>
       </ul>
     </header>
   </div>
