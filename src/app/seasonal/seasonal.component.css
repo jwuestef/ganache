@@ -1,13 +1,13 @@
-/* #seasPara {
-  float: left;
-  margin-top: 8vh;
-  margin-left: 1vw;
-} */
+h1 {
+  line-height: 7vh;
+  margin-top: 10vh;
+  margin-left: 12vw;
+  font-size: 110%;
+}
 
 div#seasonalSlider {
   overflow: hidden;
   position: relative;
-  /* float: right; */
   padding: 0;
   max-width: 41vw;
   height: auto;
@@ -21,15 +21,17 @@ div#seasonalSlider {
   div#seasonalSlider {
     overflow: hidden;
     position: relative;
-    /* float: right; */
     padding: 0;
-    max-width: 98%;
+    max-width: 93%;
     height: auto;
-    margin: auto;
-    margin-left: 1vw;
-    margin-right: 15vw;
-    margin-bottom: 1.5em;
+    margin: 3vh 0 0 3.5vw;
     background-color: rgba(189,189,189, 0.5);
+  }
+
+  h1 {
+    line-height: 7vh;
+    margin: 3vh 0 0 3.5vw;
+    font-size: 110%;
   }
 }
 
@@ -70,9 +72,3 @@ div#seasonalSlider figure {
   100% { left: -500%; }
 }
 
-h1 {
-  line-height: 7vh;
-  margin-top: 10vh;
-  margin-left: 12vw;
-  font-size: 110%;
-}
