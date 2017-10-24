@@ -30,6 +30,9 @@ export class NavbarComponent implements OnInit {
   }
 
 
+  mobileNav(path) {
+    this.router.navigate([path]);
+  }
 
   ngOnInit() {
 
@@ -37,7 +40,6 @@ export class NavbarComponent implements OnInit {
     // So before the navigate command is sent, we first destroy all editors.
     // All links in the nevbar are dead, routing happens here
     const thisSaved = this;
-
     $('#homeBtnLink').on('click', function () {
       thisSaved.destroyAllEditors();
       thisSaved.router.navigate(['/']);
