@@ -1,26 +1,65 @@
 <div class="container-fluid">
   <div class="row col-xs-12">
     <footer>
-
       <!-- Hidden admin login button, causes modal to pop up -->
       <div id="adminLogin">
-      <div style="float:left;" *ngIf="!isAdmin">
-        <img src="../../assets/gLogo.png" data-toggle="modal" data-target="#myModal" style="height:30px; width:30px;">
+        <div *ngIf="!isAdmin">
+        <img src="../../assets/gLogo.png" data-toggle="modal" data-target="#myModal">
       </div>
     </div>
       <!-- Hidden admin logout button, logs the user out -->
-      <div id="adminLogout">
-      <div style="float:left;" *ngIf="isAdmin">
-        <img src="../../assets/gLogo.png" (click)="logout()" style="height:30px; width:30px;">
+      <div  id="adminLogout">
+        <div *ngIf="isAdmin">
+        <img src="../../assets/gLogo.png" (click)="logout()">
       </div>
     </div>
-    <div style="width:100%">
-      55 E Pine St. | Zionsville, Indiana 46077 | (317) 873-6948
-    </div>
-      <div style="float: right">
-        <a href="https://www.instagram.com/ganachechoc/?hl=en" target="_blank"><img src="../../assets/instagram.png" alt="Instagram Logo" width="30px;"></a>
-        <a href="https://www.facebook.com/GanacheZionsville/" target="_blank"><img src="../../assets/FBlogo100px.png" alt="Facebook Logo" width="25px;"></a>
+
+<!-- social media image icons -->
+      <div id="socialIcons">
+        <a [href]="footerSocialMedia.instagram" target="_blank">
+          <img src="../../assets/instagram.png" alt="Instagram Logo">
+        </a>
+        <a [href]="footerSocialMedia.facebook" target="_blank">
+          <img src="../../assets/FBlogo100px.png" alt="Facebook Logo">
+        </a>
       </div>
+
+      <!-- Text in middle of footer -->
+      <div id="footy">
+        <!-- If not admin, display text in paragraph format -->
+        <p *ngIf="!isAdmin" [innerText]="footerParagraph"></p>
+        <!-- If admin, display input field to update footer text content -->
+        <div *ngIf="isAdmin">
+          <br>
+          <label for="footerParagraphInput">Text content of footer:</label>
+          <input type="text" id="footerParagraphInput" placeholder="footer" [(ngModel)]="footerParagraph">
+          <br>
+          <button class="btn btn-md updateTextButton" (click)="saveFooterParagraph()">Update</button>
+          <!-- After successful update, show confirmation -->
+          <span class="alert-success updated" *ngIf="footerParagraphUpdated">
+            <strong>Updated</strong>
+            <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+          </span>
+        </div>
+      </div>
+
+      <!-- If admin, display input field to update social media links -->
+      <div *ngIf="isAdmin">
+        <br>
+        <label for="footerInstagramInput">Instagram Link:</label>
+        <input type="text" id="footerInstagramInput" placeholder="footer" [(ngModel)]="footerSocialMedia.instagram">
+        <br>
+        <label for="footerFacebookInput">Facebook Link:</label>
+        <input type="text" id="footerFacebookInput" placeholder="footer" [(ngModel)]="footerSocialMedia.facebook">
+        <br>
+        <button class="btn btn-md updateTextButton" (click)="saveFooterSocialMedia()">Update</button>
+        <!-- After successful update, show confirmation -->
+        <span class="alert-success updated" *ngIf="footerSocialMediaUpdated">
+          <strong>Updated</strong>
+          <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+        </span>
+      </div>
+
     </footer>
 
     <!-- Admin login form -->
@@ -53,5 +92,8 @@
       </div>
     </div>
     <!-- End of admin login form -->
+
+
+
   </div>
 </div>

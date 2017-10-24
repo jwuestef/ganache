@@ -1,41 +1,1484 @@
+
+
 <div class="container-fluid">
   <div class="row">
-    <!-- Creams images -->
-    <div class="col-xs-12 col-md-6 col-md-push-6" id="img">
-      <div id="assortedImg">
-        <!-- If not admin, show image -->
-        <img *ngIf="(!isAdmin && image1Src) else inputImage1" [src]="image1Src" [alt]="image1Description">
-        <!-- If yes admin, show form to update image -->
-        <ng-template #inputImage1>
-          <div style="border: 2px solid gray" *ngIf="image1Src">
-            <img *ngIf="image1Src" style="width: 100px; height: auto" [src]="image1Src" [alt]="image1Description">
-            <hr>
-            <input type="file" (change)="detectImage1($event)">
-            <input type="text" placeholder="description" id="image1Description" [(ngModel)]="image1Description">
-            <br>
-            <button (click)="uploadImage1()">Upload this image</button>
+    <!-- Assorted paragraph, describes shop -->
+    <div class="col-xs-12 col-md-7 col-md-push-4 whiteRow">
+
+
+
+      <h6 style="text-align: center;">Ganache Chocolatier Card</h6>
+      <div class="flex">
+        <div class="noBorder" *ngIf="assortedImage1Src && (assortedImage1Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage1Src" [alt]="assortedImage1Title">
+            <p [innerText]="assortedImage1Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage1Description"></p>
+              <a [href]="assortedImage1Link">
+                Click to Buy
+              </a>
+            </div>
           </div>
-        </ng-template>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage2Src && (assortedImage2Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage2Src" [alt]="assortedImage2Title">
+            <p [innerText]="assortedImage2Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage2Description"></p>
+              <a [href]="assortedImage6Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage3Src && (assortedImage3Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage3Src" [alt]="assortedImage3Title">
+            <p [innerText]="assortedImage3Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage3Description"></p>
+              <a [href]="assortedImage3Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage4Src && (assortedImage4Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage4Src" [alt]="assortedImage4Title">
+            <p [innerText]="assortedImage4Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage4Description"></p>
+              <a [href]="assortedImage4Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage5Src && (assortedImage5Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage5Src" [alt]="assortedImage5Title">
+            <p [innerText]="assortedImage5Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage5Description"></p>
+              <a [href]="assortedImage5Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage6Src && (assortedImage6Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage6Src" [alt]="assortedImage6Title">
+            <p [innerText]="assortedImage6Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage6Description"></p>
+              <a [href]="assortedImage6Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage7Src && (assortedImage7Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage7Src" [alt]="assortedImage7Title">
+            <p [innerText]="assortedImage7Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage7Description"></p>
+              <a [href]="assortedImage7Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage8Src && (assortedImage8Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage8Src" [alt]="assortedImage8Title">
+            <p [innerText]="assortedImage8Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage8Description"></p>
+              <a [href]="assortedImage8Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage9Src && (assortedImage9Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage9Src" [alt]="assortedImage9Title">
+            <p [innerText]="assortedImage9Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage9Description"></p>
+              <a [href]="assortedImage9Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage10Src && (assortedImage10Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage10Src" [alt]="assortedImage10Title">
+            <p [innerText]="assortedImage10Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage10Description"></p>
+              <a [href]="assortedImage10Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage11Src && (assortedImage11Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage11Src" [alt]="assortedImage11Title">
+            <p [innerText]="assortedImage11Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage11Description"></p>
+              <a [href]="assortedImage11Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage12Src && (assortedImage12Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage12Src" [alt]="assortedImage12Title">
+            <p [innerText]="assortedImage12Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage12Description"></p>
+              <a [href]="assortedImage12Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage13Src && (assortedImage13Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage13Src" [alt]="assortedImage13Title">
+            <p [innerText]="assortedImage13Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage13Description"></p>
+              <a [href]="assortedImage13Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage14Src && (assortedImage14Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage14Src" [alt]="assortedImage14Title">
+            <p [innerText]="assortedImage14Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage14Description"></p>
+              <a [href]="assortedImage14Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage15Src && (assortedImage15Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage15Src" [alt]="assortedImage15Title">
+            <p [innerText]="assortedImage15Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage15Description"></p>
+              <a [href]="assortedImage15Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage16Src && (assortedImage16Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage16Src" [alt]="assortedImage16Title">
+            <p [innerText]="assortedImage16Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage16Description"></p>
+              <a [href]="assortedImage16Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage17Src && (assortedImage17Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage17Src" [alt]="assortedImage17Title">
+            <p [innerText]="assortedImage17Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage17Description"></p>
+              <a [href]="assortedImage17Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage18Src && (assortedImage18Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage18Src" [alt]="assortedImage18Title">
+            <p [innerText]="assortedImage18Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage18Description"></p>
+              <a [href]="assortedImage18Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage19Src && (assortedImage19Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage19Src" [alt]="assortedImage19Title">
+            <p [innerText]="assortedImage19Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage19Description"></p>
+              <a [href]="assortedImage19Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage20Src && (assortedImage20Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage20Src" [alt]="assortedImage20Title">
+            <p [innerText]="assortedImage20Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage20Description"></p>
+              <a [href]="assortedImage20Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage21Src && (assortedImage21Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage21Src" [alt]="assortedImage21Title">
+            <p [innerText]="assortedImage21Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage21Description"></p>
+              <a [href]="assortedImage21Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage22Src && (assortedImage22Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage22Src" [alt]="assortedImage22Title">
+            <p [innerText]="assortedImage22Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage22Description"></p>
+              <a [href]="assortedImage22Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage23Src && (assortedImage23Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage23Src" [alt]="assortedImage23Title">
+            <p [innerText]="assortedImage23Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage23Description"></p>
+              <a [href]="assortedImage23Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="noBorder" *ngIf="assortedImage24Src && (assortedImage24Title.toLowerCase() !== 'na')">
+          <div class="cropper showhim">
+            <img [src]="assortedImage24Src" [alt]="assortedImage24Title">
+            <p [innerText]="assortedImage24Title"></p>
+            <div class="showme">
+              <p [innerText]="assortedImage24Description"></p>
+              <a [href]="assortedImage24Link">
+                Click to Buy
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Assorted paragraph, describes assorted -->
-    <div class="col-xs-12 col-md-6 col-md-pull-6" id="para">
-      <div id="assortedPara">
-        <!-- If not admin, show paragraph -->
-        <h1 *ngIf="!isAdmin else inputAssortedParagraph" id="assortedParagraph"></h1>
-        <!-- If yes admin, show form to update content -->
-        <ng-template #inputAssortedParagraph>
-          <texteditor [elementId]="'assortedParagraph'"></texteditor>
-          <br>
-          <button class="btn btn-md updateTextButton" (click)="saveAssortedParagraph()">Update</button>
-          <!-- After successful update, show confirmation -->
-          <!-- <span class="alert-success updated" *ngIf="assortedParagraphUpdated">
-            <strong>Updated</strong>
-            <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
-          </span> -->
-        </ng-template>
-      </div>
-    </div>
+    <!-- Put the para beneath this line -->
+              <div id="assortedPara" style="margin-top:0;">
+                <div class="col-xs-12 col-md-4 col-md-pull-7">
+                  <!-- If not admin, show paragraph -->
+                  <h1 *ngIf="!isAdmin else inputAssortedParagraph" id="assortedParagraph"></h1>
+                  <!-- If yes admin, show form to update content -->
+                  <ng-template #inputAssortedParagraph>
+                    <texteditor [elementId]="'assortedParagraph'"></texteditor>
+                    <br>
+                    <button class="btn btn-md updateTextButton" (click)="saveAssortedParagraph()">Update</button>
+                    <!-- After successful update, show confirmation -->
+                    <span class="alert-success updated" *ngIf="assortedParagraphUpdated">
+                      <strong>Updated</strong>
+                      <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+                    </span>
+                  </ng-template>
+                </div>
+              </div>
   </div>
-  <!-- End of container-fluid -->
+
+
+
+
+
+
+
+
+  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
+  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
+  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
+  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
+  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
+
+  <!-- For the assorted paragraph, I copied it from another page that had a full-width 12 column wide paragraph -->
+  <!-- Right now the paragraph below has it's own row, and is col-md-12 -->
+  <!-- THIS WILL HAVE TO CHANGE per Aaron's styling for page layout -->
+
+  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
+  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
+  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
+  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
+  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
+
+
+
+
+
+
+
+
+
+
+  <!-- If yes admin, show form to update image -->
+  <div *ngIf="isAdmin">
+
+
+
+    <!-- Image 1 and 2 update form -->
+    <div class="row">
+
+      <!-- Image1 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage1Src">
+        <label for="assortedImage1Existing">Existing Image:</label>
+        <img *ngIf="assortedImage1Src" id="assortedImage1Existing" style="width: 100px; height: auto" [src]="assortedImage1Src" [alt]="assortedImage1Description">
+        <br>
+        <br>
+        <label for="assortedImage1FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage1FileInput" (change)="assortedDetectImage1($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage1Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage1Title" placeholder="title" [(ngModel)]="assortedImage1Title">
+        <br>
+        <br>
+        <label for="assortedImage1Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage1Description" placeholder="description" [(ngModel)]="assortedImage1Description">
+        <br>
+        <br>
+        <label for="assortedImage1Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage1Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage1Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage1()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage1">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+      <!-- Image2 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage2Src">
+        <label for="assortedImage2Existing">Existing Image:</label>
+        <img *ngIf="assortedImage2Src" id="assortedImage2Existing" style="width: 100px; height: auto" [src]="assortedImage2Src" [alt]="assortedImage2Description">
+        <br>
+        <br>
+        <label for="assortedImage2FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage2FileInput" (change)="assortedDetectImage2($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage2Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage2Title" placeholder="title" [(ngModel)]="assortedImage2Title">
+        <br>
+        <br>
+        <label for="assortedImage2Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage2Description" placeholder="description" [(ngModel)]="assortedImage2Description">
+        <br>
+        <br>
+        <label for="assortedImage2Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage2Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage2Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage2()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage2">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row for updating images 1 and 2 -->
+
+
+
+    <!-- Image 3 and 4 update form -->
+    <div class="row">
+
+      <!-- Image3 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage3Src">
+        <label for="assortedImage3Existing">Existing Image:</label>
+        <img *ngIf="assortedImage3Src" id="assortedImage3Existing" style="width: 100px; height: auto" [src]="assortedImage3Src" [alt]="assortedImage3Description">
+        <br>
+        <br>
+        <label for="assortedImage3FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage3FileInput" (change)="assortedDetectImage3($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage3Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage3Title" placeholder="title" [(ngModel)]="assortedImage3Title">
+        <br>
+        <br>
+        <label for="assortedImage3Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage3Description" placeholder="description" [(ngModel)]="assortedImage3Description">
+        <br>
+        <br>
+        <label for="assortedImage3Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage3Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage3Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage3()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage3">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+      <!-- Image4 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage4Src">
+        <label for="assortedImage4Existing">Existing Image:</label>
+        <img *ngIf="assortedImage4Src" id="assortedImage4Existing" style="width: 100px; height: auto" [src]="assortedImage4Src" [alt]="assortedImage4Description">
+        <br>
+        <br>
+        <label for="assortedImage4FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage4FileInput" (change)="assortedDetectImage4($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage4Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage4Title" placeholder="title" [(ngModel)]="assortedImage4Title">
+        <br>
+        <br>
+        <label for="assortedImage4Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage4Description" placeholder="description" [(ngModel)]="assortedImage4Description">
+        <br>
+        <br>
+        <label for="assortedImage4Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage4Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage4Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage4()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage4">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row for updating images 3 and 4 -->
+
+
+
+    <!-- Image 5 and 6 update form -->
+    <div class="row">
+
+      <!-- Image5 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage5Src">
+        <label for="assortedImage5Existing">Existing Image:</label>
+        <img *ngIf="assortedImage5Src" id="assortedImage5Existing" style="width: 100px; height: auto" [src]="assortedImage5Src" [alt]="assortedImage5Description">
+        <br>
+        <br>
+        <label for="assortedImage5FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage5FileInput" (change)="assortedDetectImage5($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage5Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage5Title" placeholder="title" [(ngModel)]="assortedImage5Title">
+        <br>
+        <br>
+        <label for="assortedImage5Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage5Description" placeholder="description" [(ngModel)]="assortedImage5Description">
+        <br>
+        <br>
+        <label for="assortedImage5Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage5Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage5Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage5()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage5">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+      <!-- Image6 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage6Src">
+        <label for="assortedImage6Existing">Existing Image:</label>
+        <img *ngIf="assortedImage6Src" id="assortedImage6Existing" style="width: 100px; height: auto" [src]="assortedImage6Src" [alt]="assortedImage6Description">
+        <br>
+        <br>
+        <label for="assortedImage6FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage6FileInput" (change)="assortedDetectImage6($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage6Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage6Title" placeholder="title" [(ngModel)]="assortedImage6Title">
+        <br>
+        <br>
+        <label for="assortedImage6Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage6Description" placeholder="description" [(ngModel)]="assortedImage6Description">
+        <br>
+        <br>
+        <label for="assortedImage6Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage6Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage6Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage6()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage6">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row for updating images 5 and 6 -->
+
+
+
+    <!-- Image 7 and 8 update form -->
+    <div class="row">
+
+      <!-- Image7 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage7Src">
+        <label for="assortedImage7Existing">Existing Image:</label>
+        <img *ngIf="assortedImage7Src" id="assortedImage7Existing" style="width: 100px; height: auto" [src]="assortedImage7Src" [alt]="assortedImage7Description">
+        <br>
+        <br>
+        <label for="assortedImage7FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage7FileInput" (change)="assortedDetectImage7($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage7Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage7Title" placeholder="title" [(ngModel)]="assortedImage7Title">
+        <br>
+        <br>
+        <label for="assortedImage7Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage7Description" placeholder="description" [(ngModel)]="assortedImage7Description">
+        <br>
+        <br>
+        <label for="assortedImage7Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage7Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage7Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage7()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage7">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+      <!-- Image8 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage8Src">
+        <label for="assortedImage8Existing">Existing Image:</label>
+        <img *ngIf="assortedImage8Src" id="assortedImage8Existing" style="width: 100px; height: auto" [src]="assortedImage8Src" [alt]="assortedImage8Description">
+        <br>
+        <br>
+        <label for="assortedImage8FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage8FileInput" (change)="assortedDetectImage8($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage8Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage8Title" placeholder="title" [(ngModel)]="assortedImage8Title">
+        <br>
+        <br>
+        <label for="assortedImage8Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage8Description" placeholder="description" [(ngModel)]="assortedImage8Description">
+        <br>
+        <br>
+        <label for="assortedImage8Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage8Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage8Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage8()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage8">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row for updating images 7 and 8 -->
+
+
+
+    <!-- Image 9 and 10 update form -->
+    <div class="row">
+
+      <!-- Image9 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage9Src">
+        <label for="assortedImage9Existing">Existing Image:</label>
+        <img *ngIf="assortedImage9Src" id="assortedImage9Existing" style="width: 100px; height: auto" [src]="assortedImage9Src" [alt]="assortedImage9Description">
+        <br>
+        <br>
+        <label for="assortedImage9FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage9FileInput" (change)="assortedDetectImage9($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage9Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage9Title" placeholder="title" [(ngModel)]="assortedImage9Title">
+        <br>
+        <br>
+        <label for="assortedImage9Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage9Description" placeholder="description" [(ngModel)]="assortedImage9Description">
+        <br>
+        <br>
+        <label for="assortedImage9Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage9Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage9Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage9()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage9">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+      <!-- Image10 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage10Src">
+        <label for="assortedImage10Existing">Existing Image:</label>
+        <img *ngIf="assortedImage10Src" id="assortedImage10Existing" style="width: 100px; height: auto" [src]="assortedImage10Src"
+          [alt]="assortedImage10Description">
+        <br>
+        <br>
+        <label for="assortedImage10FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage10FileInput" (change)="assortedDetectImage10($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage10Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage10Title" placeholder="title" [(ngModel)]="assortedImage10Title">
+        <br>
+        <br>
+        <label for="assortedImage10Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage10Description" placeholder="description" [(ngModel)]="assortedImage10Description">
+        <br>
+        <br>
+        <label for="assortedImage10Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage10Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage10Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage10()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage10">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row for updating images 9 and 10 -->
+
+
+
+    <!-- Image 11 and 12 update form -->
+    <div class="row">
+
+      <!-- Image11 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage11Src">
+        <label for="assortedImage11Existing">Existing Image:</label>
+        <img *ngIf="assortedImage11Src" id="assortedImage11Existing" style="width: 100px; height: auto" [src]="assortedImage11Src"
+          [alt]="assortedImage11Description">
+        <br>
+        <br>
+        <label for="assortedImage11FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage11FileInput" (change)="assortedDetectImage11($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage11Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage11Title" placeholder="title" [(ngModel)]="assortedImage11Title">
+        <br>
+        <br>
+        <label for="assortedImage11Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage11Description" placeholder="description" [(ngModel)]="assortedImage11Description">
+        <br>
+        <br>
+        <label for="assortedImage11Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage11Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage11Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage11()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage11">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+      <!-- Image12 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage12Src">
+        <label for="assortedImage12Existing">Existing Image:</label>
+        <img *ngIf="assortedImage12Src" id="assortedImage12Existing" style="width: 100px; height: auto" [src]="assortedImage12Src"
+          [alt]="assortedImage12Description">
+        <br>
+        <br>
+        <label for="assortedImage12FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage12FileInput" (change)="assortedDetectImage12($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage12Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage12Title" placeholder="title" [(ngModel)]="assortedImage12Title">
+        <br>
+        <br>
+        <label for="assortedImage12Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage12Description" placeholder="description" [(ngModel)]="assortedImage12Description">
+        <br>
+        <br>
+        <label for="assortedImage12Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage12Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage12Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage12()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage12">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row for updating images 11 and 12 -->
+
+
+
+    <!-- Image 13 and 14 update form -->
+    <div class="row">
+
+      <!-- Image13 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage13Src">
+        <label for="assortedImage13Existing">Existing Image:</label>
+        <img *ngIf="assortedImage13Src" id="assortedImage13Existing" style="width: 100px; height: auto" [src]="assortedImage13Src"
+          [alt]="assortedImage13Description">
+        <br>
+        <br>
+        <label for="assortedImage13FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage13FileInput" (change)="assortedDetectImage13($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage13Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage13Title" placeholder="title" [(ngModel)]="assortedImage13Title">
+        <br>
+        <br>
+        <label for="assortedImage13Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage13Description" placeholder="description" [(ngModel)]="assortedImage13Description">
+        <br>
+        <br>
+        <label for="assortedImage13Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage13Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage13Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage13()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage13">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+      <!-- Image14 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage14Src">
+        <label for="assortedImage14Existing">Existing Image:</label>
+        <img *ngIf="assortedImage14Src" id="assortedImage14Existing" style="width: 100px; height: auto" [src]="assortedImage14Src"
+          [alt]="assortedImage14Description">
+        <br>
+        <br>
+        <label for="assortedImage14FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage14FileInput" (change)="assortedDetectImage14($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage14Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage14Title" placeholder="title" [(ngModel)]="assortedImage14Title">
+        <br>
+        <br>
+        <label for="assortedImage14Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage14Description" placeholder="description" [(ngModel)]="assortedImage14Description">
+        <br>
+        <br>
+        <label for="assortedImage14Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage14Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage14Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage14()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage14">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row for updating images 13 and 14 -->
+
+
+
+    <!-- Image 15 and 16 update form -->
+    <div class="row">
+
+      <!-- Image15 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage15Src">
+        <label for="assortedImage15Existing">Existing Image:</label>
+        <img *ngIf="assortedImage15Src" id="assortedImage15Existing" style="width: 100px; height: auto" [src]="assortedImage15Src"
+          [alt]="assortedImage15Description">
+        <br>
+        <br>
+        <label for="assortedImage15FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage15FileInput" (change)="assortedDetectImage15($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage15Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage15Title" placeholder="title" [(ngModel)]="assortedImage15Title">
+        <br>
+        <br>
+        <label for="assortedImage15Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage15Description" placeholder="description" [(ngModel)]="assortedImage15Description">
+        <br>
+        <br>
+        <label for="assortedImage15Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage15Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage15Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage15()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage15">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+      <!-- Image16 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage16Src">
+        <label for="assortedImage16Existing">Existing Image:</label>
+        <img *ngIf="assortedImage16Src" id="assortedImage16Existing" style="width: 100px; height: auto" [src]="assortedImage16Src"
+          [alt]="assortedImage16Description">
+        <br>
+        <br>
+        <label for="assortedImage16FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage16FileInput" (change)="assortedDetectImage16($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage16Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage16Title" placeholder="title" [(ngModel)]="assortedImage16Title">
+        <br>
+        <br>
+        <label for="assortedImage16Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage16Description" placeholder="description" [(ngModel)]="assortedImage16Description">
+        <br>
+        <br>
+        <label for="assortedImage16Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage16Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage16Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage16()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage16">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row for updating images 15 and 16 -->
+
+
+
+    <!-- Image 17 and 18 update form -->
+    <div class="row">
+
+      <!-- Image17 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage17Src">
+        <label for="assortedImage17Existing">Existing Image:</label>
+        <img *ngIf="assortedImage17Src" id="assortedImage17Existing" style="width: 100px; height: auto" [src]="assortedImage17Src"
+          [alt]="assortedImage17Description">
+        <br>
+        <br>
+        <label for="assortedImage17FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage17FileInput" (change)="assortedDetectImage17($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage17Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage17Title" placeholder="title" [(ngModel)]="assortedImage17Title">
+        <br>
+        <br>
+        <label for="assortedImage17Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage17Description" placeholder="description" [(ngModel)]="assortedImage17Description">
+        <br>
+        <br>
+        <label for="assortedImage17Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage17Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage17Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage17()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage17">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+      <!-- Image18 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage18Src">
+        <label for="assortedImage18Existing">Existing Image:</label>
+        <img *ngIf="assortedImage18Src" id="assortedImage18Existing" style="width: 100px; height: auto" [src]="assortedImage18Src"
+          [alt]="assortedImage18Description">
+        <br>
+        <br>
+        <label for="assortedImage18FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage18FileInput" (change)="assortedDetectImage18($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage18Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage18Title" placeholder="title" [(ngModel)]="assortedImage18Title">
+        <br>
+        <br>
+        <label for="assortedImage18Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage18Description" placeholder="description" [(ngModel)]="assortedImage18Description">
+        <br>
+        <br>
+        <label for="assortedImage18Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage18Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage18Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage18()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage18">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row for updating images 17 and 18 -->
+
+
+
+    <!-- Image 19 and 20 update form -->
+    <div class="row">
+
+      <!-- Image19 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage19Src">
+        <label for="assortedImage19Existing">Existing Image:</label>
+        <img *ngIf="assortedImage19Src" id="assortedImage19Existing" style="width: 100px; height: auto" [src]="assortedImage19Src"
+          [alt]="assortedImage19Description">
+        <br>
+        <br>
+        <label for="assortedImage19FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage19FileInput" (change)="assortedDetectImage19($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage19Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage19Title" placeholder="title" [(ngModel)]="assortedImage19Title">
+        <br>
+        <br>
+        <label for="assortedImage19Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage19Description" placeholder="description" [(ngModel)]="assortedImage19Description">
+        <br>
+        <br>
+        <label for="assortedImage19Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage19Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage19Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage19()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage19">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+      <!-- Image20 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage20Src">
+        <label for="assortedImage20Existing">Existing Image:</label>
+        <img *ngIf="assortedImage20Src" id="assortedImage20Existing" style="width: 100px; height: auto" [src]="assortedImage20Src"
+          [alt]="assortedImage20Description">
+        <br>
+        <br>
+        <label for="assortedImage20FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage20FileInput" (change)="assortedDetectImage20($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage20Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage20Title" placeholder="title" [(ngModel)]="assortedImage20Title">
+        <br>
+        <br>
+        <label for="assortedImage20Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage20Description" placeholder="description" [(ngModel)]="assortedImage20Description">
+        <br>
+        <br>
+        <label for="assortedImage20Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage20Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage20Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage20()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage20">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row for updating images 19 and 20 -->
+
+
+
+    <!-- Image 21 and 22 update form -->
+    <div class="row">
+
+      <!-- Image21 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage21Src">
+        <label for="assortedImage21Existing">Existing Image:</label>
+        <img *ngIf="assortedImage21Src" id="assortedImage21Existing" style="width: 100px; height: auto" [src]="assortedImage21Src"
+          [alt]="assortedImage21Description">
+        <br>
+        <br>
+        <label for="assortedImage21FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage21FileInput" (change)="assortedDetectImage21($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage21Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage21Title" placeholder="title" [(ngModel)]="assortedImage21Title">
+        <br>
+        <br>
+        <label for="assortedImage21Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage21Description" placeholder="description" [(ngModel)]="assortedImage21Description">
+        <br>
+        <br>
+        <label for="assortedImage21Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage21Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage21Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage21()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage21">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+      <!-- Image22 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage22Src">
+        <label for="assortedImage22Existing">Existing Image:</label>
+        <img *ngIf="assortedImage22Src" id="assortedImage22Existing" style="width: 100px; height: auto" [src]="assortedImage22Src"
+          [alt]="assortedImage22Description">
+        <br>
+        <br>
+        <label for="assortedImage22FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage22FileInput" (change)="assortedDetectImage22($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage22Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage22Title" placeholder="title" [(ngModel)]="assortedImage22Title">
+        <br>
+        <br>
+        <label for="assortedImage22Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage22Description" placeholder="description" [(ngModel)]="assortedImage22Description">
+        <br>
+        <br>
+        <label for="assortedImage22Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage22Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage22Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage22()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage22">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row for updating images 21 and 22 -->
+
+
+
+    <!-- Image 23 and 24 update form -->
+    <div class="row">
+
+      <!-- Image23 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage23Src">
+        <label for="assortedImage23Existing">Existing Image:</label>
+        <img *ngIf="assortedImage23Src" id="assortedImage23Existing" style="width: 100px; height: auto" [src]="assortedImage23Src"
+          [alt]="assortedImage23Description">
+        <br>
+        <br>
+        <label for="assortedImage23FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage23FileInput" (change)="assortedDetectImage23($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage23Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage23Title" placeholder="title" [(ngModel)]="assortedImage23Title">
+        <br>
+        <br>
+        <label for="assortedImage23Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage23Description" placeholder="description" [(ngModel)]="assortedImage23Description">
+        <br>
+        <br>
+        <label for="assortedImage23Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage23Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage23Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage23()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage23">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+      <!-- Image24 upload -->
+      <div class="col-md-6 imageUploadingForm imageUploadingForm" *ngIf="assortedImage24Src">
+        <label for="assortedImage24Existing">Existing Image:</label>
+        <img *ngIf="assortedImage24Src" id="assortedImage24Existing" style="width: 100px; height: auto" [src]="assortedImage24Src"
+          [alt]="assortedImage24Description">
+        <br>
+        <br>
+        <label for="assortedImage24FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="file" id="assortedImage24FileInput" (change)="assortedDetectImage24($event)">
+        <p>
+          <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+        </p>
+        <br>
+        <label for="assortedImage24Title">Title of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage24Title" placeholder="title" [(ngModel)]="assortedImage24Title">
+        <br>
+        <br>
+        <label for="assortedImage24Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage24Description" placeholder="description" [(ngModel)]="assortedImage24Description">
+        <br>
+        <br>
+        <label for="assortedImage24Link">Link to item in shop:
+          <em style="color: red;">*required</em>
+        </label>
+        <input type="text" id="assortedImage24Link" placeholder="Enter URL for item in shop" [(ngModel)]="assortedImage24Link">
+        <br>
+        <br>
+        <button class="btn btn-md uploadImageButton" (click)="assortedUploadImage24()">Upload this image</button>
+        <!-- Progress bar -->
+        <div *ngIf="assortedUploadingImage24">
+          <br>
+          <p>Progress: {{assortedCurrentUpload?.progress}}% Complete</p>
+          <progress class="progress is-success" min=1 max=100 value="{{ assortedCurrentUpload?.progress }}"></progress>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of row for updating images 23 and 24 -->
+
+
+
+  </div>
+  <!-- End of admin-only image upload section -->
+
+
+
+
+
 </div>
