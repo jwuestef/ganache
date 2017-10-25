@@ -110,3 +110,8 @@ div p {
 /* .littleText {
   line-height: 0px !important;
 } */
+
+
+.addItalics {
+  font-style: italic;
+}
