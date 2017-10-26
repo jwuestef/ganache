@@ -46,11 +46,11 @@ header[role="banner"] #logo-main {
   border: 20px solid #000;
 }
 
-.navvy {
+/* .navvy {
   color: black;
   margin: 0 5px 0 5px;
   text-align: center;
-}
+} */
 
 nav{
   font-size: 1.6em;
