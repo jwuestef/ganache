@@ -56,10 +56,6 @@ h1 {
   font-size: 100%;
 }
 
-h1 td{
-  max-width: 40%;
-}
-
 @media screen and (max-width: 800px) {
   div#fudgeSlider {
     overflow: hidden;
@@ -73,7 +69,12 @@ h1 td{
   }
 
   #fudgeChart {
-    overflow: scroll;
+    overflow: hidden;
     text-align: center;
   }
+
+}
+
+:host ::ng-deep td {
+  background-color: blue;
 }
