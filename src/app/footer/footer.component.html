@@ -1,20 +1,25 @@
 <div class="container-fluid">
   <div class="row col-xs-12">
+
+
+
     <footer>
+
       <!-- Hidden admin login button, causes modal to pop up -->
       <div id="adminLogin">
         <div *ngIf="!isAdmin">
-        <img src="../../assets/gLogo.png" data-toggle="modal" data-target="#myModal">
+          <img src="../../assets/gLogo.png" data-toggle="modal" data-target="#myModal">
+        </div>
       </div>
-    </div>
-      <!-- Hidden admin logout button, logs the user out -->
-      <div  id="adminLogout">
-        <div *ngIf="isAdmin">
-        <img src="../../assets/gLogo.png" (click)="logout()">
-      </div>
-    </div>
 
-<!-- social media image icons -->
+      <!-- Hidden admin logout button, logs the user out -->
+      <div id="adminLogout">
+        <div *ngIf="isAdmin">
+          <img src="../../assets/gLogo.png" (click)="logout()">
+        </div>
+      </div>
+
+      <!-- social media image icons -->
       <div id="socialIcons">
         <a [href]="footerSocialMedia.instagram" target="_blank">
           <img src="../../assets/instagram.png" alt="Instagram Logo">
@@ -62,6 +67,8 @@
 
     </footer>
 
+
+
     <!-- Admin login form -->
     <div id="myModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
@@ -73,18 +80,22 @@
           </div>
 
           <div class="modal-body">
-            <label for="emailInput">Email:</label>
+            <br>
+            <label for="emailInput">Email:&nbsp;&nbsp;&nbsp;</label>
             <input type="email" id="emailInput" [(ngModel)]="loginModel.email">
             <p *ngIf="loginErrors.email" class="validation">{{loginErrors.email}}</p>
             <br>
-            <label for="passwordInput">Password:</label>
+            <br>
+            <br>
+            <label for="passwordInput">Password:&nbsp;&nbsp;&nbsp;</label>
             <input type="password" id="passwordInput" [(ngModel)]="loginModel.pass">
             <p *ngIf="loginErrors.pass" class="validation">{{loginErrors.pass}}</p>
+            <br>
             <br>
           </div>
 
           <div class="modal-footer">
-            <button id="login-btn" class="btn btn-primary" (click)="adminLogin()">Login</button>
+            <button id="login-btn" class="btn btn-primary uploadImageButton" (click)="adminLogin()">Login</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           </div>
 
