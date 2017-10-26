@@ -59,9 +59,9 @@ h1 {
 h1 td{
   max-width: 40%;
 }
-/* #fudgeChart{
-  position:inline-block;
-} */
+#fudgeChart{
+  overflow: scroll;
+}
 
 @media screen and (max-width: 800px) {
   div#fudgeSlider {
