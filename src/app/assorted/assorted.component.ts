@@ -63,6 +63,30 @@ export class AssortedComponent implements OnInit {
   assortedImage22Title: string;
   assortedImage23Title: string;
   assortedImage24Title: string;
+  assortedImage1TitleItalic = false;
+  assortedImage2TitleItalic = false;
+  assortedImage3TitleItalic = false;
+  assortedImage4TitleItalic = false;
+  assortedImage5TitleItalic = false;
+  assortedImage6TitleItalic = false;
+  assortedImage7TitleItalic = false;
+  assortedImage8TitleItalic = false;
+  assortedImage9TitleItalic = false;
+  assortedImage10TitleItalic = false;
+  assortedImage11TitleItalic = false;
+  assortedImage12TitleItalic = false;
+  assortedImage13TitleItalic = false;
+  assortedImage14TitleItalic = false;
+  assortedImage15TitleItalic = false;
+  assortedImage16TitleItalic = false;
+  assortedImage17TitleItalic = false;
+  assortedImage18TitleItalic = false;
+  assortedImage19TitleItalic = false;
+  assortedImage20TitleItalic = false;
+  assortedImage21TitleItalic = false;
+  assortedImage22TitleItalic = false;
+  assortedImage23TitleItalic = false;
+  assortedImage24TitleItalic = false;
   assortedImage1Description: string;
   assortedImage2Description: string;
   assortedImage3Description: string;
@@ -292,6 +316,109 @@ export class AssortedComponent implements OnInit {
       thisSaved.assortedImage22Link = pageContent.image22.link;
       thisSaved.assortedImage23Link = pageContent.image23.link;
       thisSaved.assortedImage24Link = pageContent.image24.link;
+
+      // After image titles are populated, check to see if each title contains a + sign
+      // If so, then the title needs to be italicized, and the + sign removed
+      if (!thisSaved.isAdmin) {
+        if (thisSaved.assortedImage1Title.indexOf('+') > -1) {
+          thisSaved.assortedImage1TitleItalic = true;
+          thisSaved.assortedImage1Title = thisSaved.assortedImage1Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage2Title.indexOf('+') > -1) {
+          thisSaved.assortedImage2TitleItalic = true;
+          thisSaved.assortedImage2Title = thisSaved.assortedImage2Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage3Title.indexOf('+') > -1) {
+          thisSaved.assortedImage3TitleItalic = true;
+          thisSaved.assortedImage3Title = thisSaved.assortedImage3Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage4Title.indexOf('+') > -1) {
+          thisSaved.assortedImage4TitleItalic = true;
+          thisSaved.assortedImage4Title = thisSaved.assortedImage4Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage5Title.indexOf('+') > -1) {
+          thisSaved.assortedImage5TitleItalic = true;
+          thisSaved.assortedImage5Title = thisSaved.assortedImage5Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage6Title.indexOf('+') > -1) {
+          thisSaved.assortedImage6TitleItalic = true;
+          thisSaved.assortedImage6Title = thisSaved.assortedImage6Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage7Title.indexOf('+') > -1) {
+          thisSaved.assortedImage7TitleItalic = true;
+          thisSaved.assortedImage7Title = thisSaved.assortedImage7Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage8Title.indexOf('+') > -1) {
+          thisSaved.assortedImage8TitleItalic = true;
+          thisSaved.assortedImage8Title = thisSaved.assortedImage8Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage9Title.indexOf('+') > -1) {
+          thisSaved.assortedImage9TitleItalic = true;
+          thisSaved.assortedImage9Title = thisSaved.assortedImage9Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage10Title.indexOf('+') > -1) {
+          thisSaved.assortedImage10TitleItalic = true;
+          thisSaved.assortedImage10Title = thisSaved.assortedImage10Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage11Title.indexOf('+') > -1) {
+          thisSaved.assortedImage11TitleItalic = true;
+          thisSaved.assortedImage11Title = thisSaved.assortedImage11Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage12Title.indexOf('+') > -1) {
+          thisSaved.assortedImage12TitleItalic = true;
+          thisSaved.assortedImage12Title = thisSaved.assortedImage12Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage13Title.indexOf('+') > -1) {
+          thisSaved.assortedImage13TitleItalic = true;
+          thisSaved.assortedImage13Title = thisSaved.assortedImage13Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage14Title.indexOf('+') > -1) {
+          thisSaved.assortedImage14TitleItalic = true;
+          thisSaved.assortedImage14Title = thisSaved.assortedImage14Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage15Title.indexOf('+') > -1) {
+          thisSaved.assortedImage15TitleItalic = true;
+          thisSaved.assortedImage15Title = thisSaved.assortedImage15Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage16Title.indexOf('+') > -1) {
+          thisSaved.assortedImage16TitleItalic = true;
+          thisSaved.assortedImage16Title = thisSaved.assortedImage16Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage17Title.indexOf('+') > -1) {
+          thisSaved.assortedImage17TitleItalic = true;
+          thisSaved.assortedImage17Title = thisSaved.assortedImage17Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage18Title.indexOf('+') > -1) {
+          thisSaved.assortedImage18TitleItalic = true;
+          thisSaved.assortedImage18Title = thisSaved.assortedImage18Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage19Title.indexOf('+') > -1) {
+          thisSaved.assortedImage19TitleItalic = true;
+          thisSaved.assortedImage19Title = thisSaved.assortedImage19Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage20Title.indexOf('+') > -1) {
+          thisSaved.assortedImage20TitleItalic = true;
+          thisSaved.assortedImage20Title = thisSaved.assortedImage20Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage21Title.indexOf('+') > -1) {
+          thisSaved.assortedImage21TitleItalic = true;
+          thisSaved.assortedImage21Title = thisSaved.assortedImage21Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage22Title.indexOf('+') > -1) {
+          thisSaved.assortedImage22TitleItalic = true;
+          thisSaved.assortedImage22Title = thisSaved.assortedImage22Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage23Title.indexOf('+') > -1) {
+          thisSaved.assortedImage23TitleItalic = true;
+          thisSaved.assortedImage23Title = thisSaved.assortedImage23Title.replace(/\+/g, '');
+        }
+        if (thisSaved.assortedImage24Title.indexOf('+') > -1) {
+          thisSaved.assortedImage24TitleItalic = true;
+          thisSaved.assortedImage24Title = thisSaved.assortedImage24Title.replace(/\+/g, '');
+        }
+      }
+      // End of if (!isAdmin)
+
     });
   }
 

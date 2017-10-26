@@ -10,7 +10,7 @@
         <div class="noBorder" *ngIf="trufflesImage1Src && (trufflesImage1Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage1Src" [alt]="trufflesImage1Title">
-            <p [innerText]="trufflesImage1Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage1TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage1Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage1Description"></p>
               <a [href]="trufflesImage1Link">
@@ -23,7 +23,7 @@
         <div class="noBorder" *ngIf="trufflesImage2Src && (trufflesImage2Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage2Src" [alt]="trufflesImage2Title">
-            <p [innerText]="trufflesImage2Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage2TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage2Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage2Description"></p>
               <a [href]="trufflesImage6Link">
@@ -36,7 +36,7 @@
         <div class="noBorder" *ngIf="trufflesImage3Src && (trufflesImage3Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage3Src" [alt]="trufflesImage3Title">
-            <p [innerText]="trufflesImage3Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage3TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage3Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage3Description"></p>
               <a [href]="trufflesImage3Link">
@@ -49,7 +49,7 @@
         <div class="noBorder" *ngIf="trufflesImage4Src && (trufflesImage4Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage4Src" [alt]="trufflesImage4Title">
-            <p [innerText]="trufflesImage4Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage4TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage4Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage4Description"></p>
               <a [href]="trufflesImage4Link">
@@ -62,7 +62,7 @@
         <div class="noBorder" *ngIf="trufflesImage5Src && (trufflesImage5Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage5Src" [alt]="trufflesImage5Title">
-            <p [innerText]="trufflesImage5Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage5TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage5Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage5Description"></p>
               <a [href]="trufflesImage5Link">
@@ -75,7 +75,7 @@
         <div class="noBorder" *ngIf="trufflesImage6Src && (trufflesImage6Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage6Src" [alt]="trufflesImage6Title">
-            <p [innerText]="trufflesImage6Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage6TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage6Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage6Description"></p>
               <a [href]="trufflesImage6Link">
@@ -88,7 +88,7 @@
         <div class="noBorder" *ngIf="trufflesImage7Src && (trufflesImage7Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage7Src" [alt]="trufflesImage7Title">
-            <p [innerText]="trufflesImage7Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage7TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage7Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage7Description"></p>
               <a [href]="trufflesImage7Link">
@@ -101,7 +101,7 @@
         <div class="noBorder" *ngIf="trufflesImage8Src && (trufflesImage8Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage8Src" [alt]="trufflesImage8Title">
-            <p [innerText]="trufflesImage8Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage8TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage8Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage8Description"></p>
               <a [href]="trufflesImage8Link">
@@ -114,7 +114,7 @@
         <div class="noBorder" *ngIf="trufflesImage9Src && (trufflesImage9Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage9Src" [alt]="trufflesImage9Title">
-            <p [innerText]="trufflesImage9Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage9TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage9Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage9Description"></p>
               <a [href]="trufflesImage9Link">
@@ -127,7 +127,7 @@
         <div class="noBorder" *ngIf="trufflesImage10Src && (trufflesImage10Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage10Src" [alt]="trufflesImage10Title">
-            <p [innerText]="trufflesImage10Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage10TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage10Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage10Description"></p>
               <a [href]="trufflesImage10Link">
@@ -140,7 +140,7 @@
         <div class="noBorder" *ngIf="trufflesImage11Src && (trufflesImage11Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage11Src" [alt]="trufflesImage11Title">
-            <p [innerText]="trufflesImage11Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage11TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage11Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage11Description"></p>
               <a [href]="trufflesImage11Link">
@@ -153,7 +153,7 @@
         <div class="noBorder" *ngIf="trufflesImage12Src && (trufflesImage12Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage12Src" [alt]="trufflesImage12Title">
-            <p [innerText]="trufflesImage12Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage12TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage12Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage12Description"></p>
               <a [href]="trufflesImage12Link">
@@ -166,7 +166,7 @@
         <div class="noBorder" *ngIf="trufflesImage13Src && (trufflesImage13Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage13Src" [alt]="trufflesImage13Title">
-            <p [innerText]="trufflesImage13Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage13TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage13Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage13Description"></p>
               <a [href]="trufflesImage13Link">
@@ -179,7 +179,7 @@
         <div class="noBorder" *ngIf="trufflesImage14Src && (trufflesImage14Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage14Src" [alt]="trufflesImage14Title">
-            <p [innerText]="trufflesImage14Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage14TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage14Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage14Description"></p>
               <a [href]="trufflesImage14Link">
@@ -192,7 +192,7 @@
         <div class="noBorder" *ngIf="trufflesImage15Src && (trufflesImage15Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage15Src" [alt]="trufflesImage15Title">
-            <p [innerText]="trufflesImage15Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage15TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage15Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage15Description"></p>
               <a [href]="trufflesImage15Link">
@@ -205,7 +205,7 @@
         <div class="noBorder" *ngIf="trufflesImage16Src && (trufflesImage16Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage16Src" [alt]="trufflesImage16Title">
-            <p [innerText]="trufflesImage16Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage16TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage16Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage16Description"></p>
               <a [href]="trufflesImage16Link">
@@ -218,7 +218,7 @@
         <div class="noBorder" *ngIf="trufflesImage17Src && (trufflesImage17Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage17Src" [alt]="trufflesImage17Title">
-            <p [innerText]="trufflesImage17Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage17TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage17Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage17Description"></p>
               <a [href]="trufflesImage17Link">
@@ -231,7 +231,7 @@
         <div class="noBorder" *ngIf="trufflesImage18Src && (trufflesImage18Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage18Src" [alt]="trufflesImage18Title">
-            <p [innerText]="trufflesImage18Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage18TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage18Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage18Description"></p>
               <a [href]="trufflesImage18Link">
@@ -244,7 +244,7 @@
         <div class="noBorder" *ngIf="trufflesImage19Src && (trufflesImage19Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage19Src" [alt]="trufflesImage19Title">
-            <p [innerText]="trufflesImage19Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage19TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage19Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage19Description"></p>
               <a [href]="trufflesImage19Link">
@@ -257,7 +257,7 @@
         <div class="noBorder" *ngIf="trufflesImage20Src && (trufflesImage20Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage20Src" [alt]="trufflesImage20Title">
-            <p [innerText]="trufflesImage20Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage20TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage20Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage20Description"></p>
               <a [href]="trufflesImage20Link">
@@ -270,7 +270,7 @@
         <div class="noBorder" *ngIf="trufflesImage21Src && (trufflesImage21Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage21Src" [alt]="trufflesImage21Title">
-            <p [innerText]="trufflesImage21Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage21TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage21Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage21Description"></p>
               <a [href]="trufflesImage21Link">
@@ -283,7 +283,7 @@
         <div class="noBorder" *ngIf="trufflesImage22Src && (trufflesImage22Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage22Src" [alt]="trufflesImage22Title">
-            <p [innerText]="trufflesImage22Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage22TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage22Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage22Description"></p>
               <a [href]="trufflesImage22Link">
@@ -296,7 +296,7 @@
         <div class="noBorder" *ngIf="trufflesImage23Src && (trufflesImage23Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage23Src" [alt]="trufflesImage23Title">
-            <p [innerText]="trufflesImage23Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage23TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage23Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage23Description"></p>
               <a [href]="trufflesImage23Link">
@@ -309,7 +309,7 @@
         <div class="noBorder" *ngIf="trufflesImage24Src && (trufflesImage24Title.toLowerCase() !== 'na')">
           <div class="cropper showhim">
             <img [src]="trufflesImage24Src" [alt]="trufflesImage24Title">
-            <p [innerText]="trufflesImage24Title"></p>
+            <p [ngStyle]="{'font-style':trufflesImage24TitleItalic ? 'italic' : 'none'}" [innerText]="trufflesImage24Title"></p>
             <div class="showme">
               <p [innerText]="trufflesImage24Description"></p>
               <a [href]="trufflesImage24Link">
@@ -397,6 +397,8 @@
         <input type="file" id="trufflesImage1FileInput" (change)="trufflesDetectImage1($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage1Title">Title of image:
@@ -438,6 +440,8 @@
         <input type="file" id="trufflesImage2FileInput" (change)="trufflesDetectImage2($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage2Title">Title of image:
@@ -487,6 +491,8 @@
         <input type="file" id="trufflesImage3FileInput" (change)="trufflesDetectImage3($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage3Title">Title of image:
@@ -528,6 +534,8 @@
         <input type="file" id="trufflesImage4FileInput" (change)="trufflesDetectImage4($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage4Title">Title of image:
@@ -577,6 +585,8 @@
         <input type="file" id="trufflesImage5FileInput" (change)="trufflesDetectImage5($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage5Title">Title of image:
@@ -618,6 +628,8 @@
         <input type="file" id="trufflesImage6FileInput" (change)="trufflesDetectImage6($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage6Title">Title of image:
@@ -667,6 +679,8 @@
         <input type="file" id="trufflesImage7FileInput" (change)="trufflesDetectImage7($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage7Title">Title of image:
@@ -708,6 +722,8 @@
         <input type="file" id="trufflesImage8FileInput" (change)="trufflesDetectImage8($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage8Title">Title of image:
@@ -757,6 +773,8 @@
         <input type="file" id="trufflesImage9FileInput" (change)="trufflesDetectImage9($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage9Title">Title of image:
@@ -799,6 +817,8 @@
         <input type="file" id="trufflesImage10FileInput" (change)="trufflesDetectImage10($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage10Title">Title of image:
@@ -849,6 +869,8 @@
         <input type="file" id="trufflesImage11FileInput" (change)="trufflesDetectImage11($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage11Title">Title of image:
@@ -891,6 +913,8 @@
         <input type="file" id="trufflesImage12FileInput" (change)="trufflesDetectImage12($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage12Title">Title of image:
@@ -941,6 +965,8 @@
         <input type="file" id="trufflesImage13FileInput" (change)="trufflesDetectImage13($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage13Title">Title of image:
@@ -983,6 +1009,8 @@
         <input type="file" id="trufflesImage14FileInput" (change)="trufflesDetectImage14($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage14Title">Title of image:
@@ -1033,6 +1061,8 @@
         <input type="file" id="trufflesImage15FileInput" (change)="trufflesDetectImage15($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage15Title">Title of image:
@@ -1075,6 +1105,8 @@
         <input type="file" id="trufflesImage16FileInput" (change)="trufflesDetectImage16($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage16Title">Title of image:
@@ -1125,6 +1157,8 @@
         <input type="file" id="trufflesImage17FileInput" (change)="trufflesDetectImage17($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage17Title">Title of image:
@@ -1167,6 +1201,8 @@
         <input type="file" id="trufflesImage18FileInput" (change)="trufflesDetectImage18($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage18Title">Title of image:
@@ -1217,6 +1253,8 @@
         <input type="file" id="trufflesImage19FileInput" (change)="trufflesDetectImage19($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage19Title">Title of image:
@@ -1259,6 +1297,8 @@
         <input type="file" id="trufflesImage20FileInput" (change)="trufflesDetectImage20($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage20Title">Title of image:
@@ -1309,6 +1349,8 @@
         <input type="file" id="trufflesImage21FileInput" (change)="trufflesDetectImage21($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage21Title">Title of image:
@@ -1351,6 +1393,8 @@
         <input type="file" id="trufflesImage22FileInput" (change)="trufflesDetectImage22($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage22Title">Title of image:
@@ -1401,6 +1445,8 @@
         <input type="file" id="trufflesImage23FileInput" (change)="trufflesDetectImage23($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage23Title">Title of image:
@@ -1443,6 +1489,8 @@
         <input type="file" id="trufflesImage24FileInput" (change)="trufflesDetectImage24($event)">
         <p>
           <em>*For proper appearance, image should have a 1:1 aspect ratio.</em>
+          <br><em>*To italicize the title, add + to the end of the title. Ex: Milk+</em>
+          <br><em>*To hide this upload, enter NA as the title</em>
         </p>
         <br>
         <label for="trufflesImage24Title">Title of image:

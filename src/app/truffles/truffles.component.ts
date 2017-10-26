@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer } from '@angular/core';
 import { NgModel } from '@angular/forms';
 
 import { AuthService } from '../services/auth.service';
@@ -63,6 +63,30 @@ export class TrufflesComponent implements OnInit {
   trufflesImage22Title: string;
   trufflesImage23Title: string;
   trufflesImage24Title: string;
+  trufflesImage1TitleItalic = false;
+  trufflesImage2TitleItalic = false;
+  trufflesImage3TitleItalic = false;
+  trufflesImage4TitleItalic = false;
+  trufflesImage5TitleItalic = false;
+  trufflesImage6TitleItalic = false;
+  trufflesImage7TitleItalic = false;
+  trufflesImage8TitleItalic = false;
+  trufflesImage9TitleItalic = false;
+  trufflesImage10TitleItalic = false;
+  trufflesImage11TitleItalic = false;
+  trufflesImage12TitleItalic = false;
+  trufflesImage13TitleItalic = false;
+  trufflesImage14TitleItalic = false;
+  trufflesImage15TitleItalic = false;
+  trufflesImage16TitleItalic = false;
+  trufflesImage17TitleItalic = false;
+  trufflesImage18TitleItalic = false;
+  trufflesImage19TitleItalic = false;
+  trufflesImage20TitleItalic = false;
+  trufflesImage21TitleItalic = false;
+  trufflesImage22TitleItalic = false;
+  trufflesImage23TitleItalic = false;
+  trufflesImage24TitleItalic = false;
   trufflesImage1Description: string;
   trufflesImage2Description: string;
   trufflesImage3Description: string;
@@ -163,7 +187,7 @@ export class TrufflesComponent implements OnInit {
 
 
   // The contructor function runs automatically on component load, each and every time it's called
-  constructor(public as: AuthService, public cs: ContentService) {
+  constructor(public as: AuthService, public cs: ContentService, public renderer: Renderer) {
     // Check to see if this is the logged in administrator
     this.isAdmin = this.as.isAuthed();
     // Pull updated content from Firebase
@@ -192,7 +216,7 @@ export class TrufflesComponent implements OnInit {
         // If they're an admin, set the content of paragraph editors
         tinymce.get('trufflesParagraph').setContent(pageContent.trufflesParagraph);
       } else {
-        // Otherwise, set the content of the regularly displayed fields
+        // Otherwise, not an admin, set the content of the regularly displayed fields
         $('#trufflesParagraph').html(pageContent.trufflesParagraph);
       }
       // The images gets displayed regardless of admin status
@@ -292,6 +316,109 @@ export class TrufflesComponent implements OnInit {
       thisSaved.trufflesImage22Link = pageContent.image22.link;
       thisSaved.trufflesImage23Link = pageContent.image23.link;
       thisSaved.trufflesImage24Link = pageContent.image24.link;
+
+      // After image titles are populated, check to see if each title contains a + sign
+      // If so, then the title needs to be italicized, and the + sign removed
+      if (!thisSaved.isAdmin) {
+        if (thisSaved.trufflesImage1Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage1TitleItalic = true;
+          thisSaved.trufflesImage1Title = thisSaved.trufflesImage1Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage2Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage2TitleItalic = true;
+          thisSaved.trufflesImage2Title = thisSaved.trufflesImage2Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage3Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage3TitleItalic = true;
+          thisSaved.trufflesImage3Title = thisSaved.trufflesImage3Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage4Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage4TitleItalic = true;
+          thisSaved.trufflesImage4Title = thisSaved.trufflesImage4Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage5Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage5TitleItalic = true;
+          thisSaved.trufflesImage5Title = thisSaved.trufflesImage5Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage6Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage6TitleItalic = true;
+          thisSaved.trufflesImage6Title = thisSaved.trufflesImage6Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage7Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage7TitleItalic = true;
+          thisSaved.trufflesImage7Title = thisSaved.trufflesImage7Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage8Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage8TitleItalic = true;
+          thisSaved.trufflesImage8Title = thisSaved.trufflesImage8Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage9Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage9TitleItalic = true;
+          thisSaved.trufflesImage9Title = thisSaved.trufflesImage9Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage10Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage10TitleItalic = true;
+          thisSaved.trufflesImage10Title = thisSaved.trufflesImage10Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage11Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage11TitleItalic = true;
+          thisSaved.trufflesImage11Title = thisSaved.trufflesImage11Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage12Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage12TitleItalic = true;
+          thisSaved.trufflesImage12Title = thisSaved.trufflesImage12Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage13Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage13TitleItalic = true;
+          thisSaved.trufflesImage13Title = thisSaved.trufflesImage13Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage14Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage14TitleItalic = true;
+          thisSaved.trufflesImage14Title = thisSaved.trufflesImage14Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage15Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage15TitleItalic = true;
+          thisSaved.trufflesImage15Title = thisSaved.trufflesImage15Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage16Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage16TitleItalic = true;
+          thisSaved.trufflesImage16Title = thisSaved.trufflesImage16Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage17Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage17TitleItalic = true;
+          thisSaved.trufflesImage17Title = thisSaved.trufflesImage17Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage18Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage18TitleItalic = true;
+          thisSaved.trufflesImage18Title = thisSaved.trufflesImage18Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage19Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage19TitleItalic = true;
+          thisSaved.trufflesImage19Title = thisSaved.trufflesImage19Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage20Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage20TitleItalic = true;
+          thisSaved.trufflesImage20Title = thisSaved.trufflesImage20Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage21Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage21TitleItalic = true;
+          thisSaved.trufflesImage21Title = thisSaved.trufflesImage21Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage22Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage22TitleItalic = true;
+          thisSaved.trufflesImage22Title = thisSaved.trufflesImage22Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage23Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage23TitleItalic = true;
+          thisSaved.trufflesImage23Title = thisSaved.trufflesImage23Title.replace(/\+/g, '');
+        }
+        if (thisSaved.trufflesImage24Title.indexOf('+') > -1) {
+          thisSaved.trufflesImage24TitleItalic = true;
+          thisSaved.trufflesImage24Title = thisSaved.trufflesImage24Title.replace(/\+/g, '');
+        }
+      }
+      // End of if (!isAdmin)
+
     });
   }
 
