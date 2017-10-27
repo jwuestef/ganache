@@ -56,7 +56,6 @@ h1 {
   font-size: 100%;
 }
 
-<<<<<<< HEAD
 h1 td{
   max-width: 40%;
 }
@@ -64,8 +63,6 @@ h1 td{
   overflow: scroll;
 }
 
-=======
->>>>>>> ad918eaeb4edbff2bbf028d449884d8eaadc1aef
 @media screen and (max-width: 800px) {
   div#fudgeSlider {
     overflow: hidden;
@@ -78,11 +75,7 @@ h1 td{
   }
 
   #fudgeChart {
-<<<<<<< HEAD
-    overflow: wrap;
-=======
     overflow: hidden;
->>>>>>> ad918eaeb4edbff2bbf028d449884d8eaadc1aef
     text-align: center;
   }
 
