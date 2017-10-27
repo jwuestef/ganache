@@ -59,9 +59,9 @@ h1 {
 h1 td{
   max-width: 40%;
 }
-#fudgeChart{
+/* #fudgeChart{
   overflow: scroll;
-}
+} */
 
 @media screen and (max-width: 800px) {
   div#fudgeSlider {
@@ -80,7 +80,7 @@ h1 td{
   }
 
 }
-
+/*
 :host ::ng-deep td {
   background-color: blue;
-}
+} */
