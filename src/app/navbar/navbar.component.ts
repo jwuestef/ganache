@@ -30,14 +30,18 @@ export class NavbarComponent implements OnInit {
   }
 
 
-
+  mobileNav(path) {
+    this.router.navigate([path]);
+  }
+  shopNav(){
+    window.location.href = 'https://shop.ganachechocolatier.org/';
+  }
   ngOnInit() {
 
     // For admin view, if there are TinyMCE editors on the page when it's navigated away from, it will kick errors
     // So before the navigate command is sent, we first destroy all editors.
     // All links in the nevbar are dead, routing happens here
     const thisSaved = this;
-
     $('#homeBtnLink').on('click', function () {
       thisSaved.destroyAllEditors();
       thisSaved.router.navigate(['/']);

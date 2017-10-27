@@ -80,8 +80,9 @@ button:focus, li:focus {
 .uploadImageButton {
   background-color: #785c44;
   color: #bcb1ac;
+  outline:0;
 }
-.uploadImageButton:hover {
-  background-color: #4E2E28;
-  color: #bcb1ac;
+.uploadImageButton:hover, .uploadImageButton:active, .uploadImageButton:focus {
+  background-color: #4E2E28 !important;
+  color: #bcb1ac !important;
 }
