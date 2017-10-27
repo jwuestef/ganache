@@ -56,11 +56,17 @@ h1 {
   font-size: 100%;
 }
 
+h1 td{
+  max-width: 40%;
+}
+/* #fudgeChart{
+  overflow: scroll;
+} */
+
 @media screen and (max-width: 800px) {
   div#fudgeSlider {
     overflow: hidden;
     position: relative;
-    /* float: left; */
     padding: 0;
     max-width: 93%;
     height: auto;
@@ -74,7 +80,22 @@ h1 {
   }
 
 }
-
-:host ::ng-deep td {
+/* tr{
+  margin-left:20%;
+} */
+/* :host ::ng-deep td {
   background-color: blue;
+  margin:20px;
+  padding-right:-20%;
+} */
+:host ::ng-deep tr {
+  /* background-color: blue; */
+  /* margin-right:-20px; */
+  /* float: right; */
+  text-align: right;
+  align-content: right;
+  justify-content: right;
+}
+div table tbody tr tr td{
+  margin-left:20%;
 }
