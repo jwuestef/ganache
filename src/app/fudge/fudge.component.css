@@ -73,6 +73,7 @@ h1 {
   }
 
 }
+<<<<<<< HEAD
 
 /* When page gets too wide, display the table contents as a single column */
 @media screen and (max-width: 1100px) {
@@ -80,3 +81,9 @@ h1 {
     padding-left:30vw;
   }
 }
+=======
+/*
+:host ::ng-deep td {
+  background-color: blue;
+} */
+>>>>>>> 848387d6694973372dadd8b3cc9c5c7afa43ebf9
