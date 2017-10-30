@@ -40,6 +40,7 @@ export class ChocolatesComponent implements OnInit {
   chocolatesUploadingImage3 = false;
   chocolatesUploadingImage4 = false;
   chocolatesUploadingImage5 = false;
+  mobiBool: boolean;
 
 
 
@@ -61,6 +62,10 @@ export class ChocolatesComponent implements OnInit {
     document.getElementById('aboutBtn').setAttribute('style', 'border: none;');
     document.getElementById('shopBtn').setAttribute('style', 'border: none;');
     document.getElementById('chocoBtn').setAttribute('style', 'outline: 4px solid black; outline-offset:-4px;');
+    if (window.screen.width < 1080) {
+      this.mobiBool = true;
+    }
+
   }
 
 

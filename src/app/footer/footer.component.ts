@@ -13,7 +13,7 @@ export class FooterComponent implements OnInit {
   isAdmin = false;
   loginModel = { email: '', pass: '' };
   loginErrors = { email: '', pass: '' };
-  footerParagraph;
+  footerParagraph = '';
   footerSocialMedia = { instagram: '', facebook: '' };
   footerParagraphUpdated = false;
   footerSocialMediaUpdated = false;
