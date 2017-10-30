@@ -40,7 +40,7 @@ export class ChocolatesComponent implements OnInit {
   chocolatesUploadingImage3 = false;
   chocolatesUploadingImage4 = false;
   chocolatesUploadingImage5 = false;
-  mobiBool: boolean;
+  mobiBool = false;
 
 
 
