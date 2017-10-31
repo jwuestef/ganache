@@ -1,6 +1,7 @@
 /* Contact Form */
 form {
   text-align: center;
+  margin: 3vh 0 2vh 2vw;
 }
 form input {
   border: 1px solid #000;
@@ -33,4 +34,6 @@ iframe {
 /* 3 paragraph columns contents */
 #contacts1Paragraph, #contacts2Paragraph, #contact3Paragraph, h1 {
   font-size: 100%;
+  margin-left: 3vw;
 }
+
