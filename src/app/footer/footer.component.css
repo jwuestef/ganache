@@ -11,21 +11,7 @@ footer {
   color: #3b2314;
 }
 
-#adminLogout img {
-  margin-top:3px;
-  float: left;
-  width: 30px;
-  height: 30px;
-}
-
-#adminLogin img {
-  padding-top: 9px;
-
-  float: left;
-  width: 30px;
-  height: auto;
-}
-
+/* Facebook and Instagram logos and links */
 #socialIcons {
   float: right;
 }
@@ -35,11 +21,41 @@ footer {
   height: auto;
 }
 
-
+/* Text in the middle of the screen */
 #footy {
   width: 100%
 }
 
+/* Logo that is clicked for admin login */
+#adminLogin img {
+  padding-top: 9px;
+  float: left;
+  width: 30px;
+  height: auto;
+}
+
+/* Logo that is clicked for admin logout */
+#adminLogout img {
+  margin-top:3px;
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+
+/* Admin login modal */
+.modal-header {
+  background-color: #bcb1ac;
+  text-align: center;
+  font-size: 3rem;
+}
+.modal-body {
+  background-color: #d0c8c4;
+}
+.modal-footer {
+  background-color: #bcb1ac;
+}
+
+/* Settings for smaller screens */
 @media screen and (max-width:700px) {
   footer {
     text-align: center;
@@ -53,18 +69,4 @@ footer {
   #socialIcons img {
     width: 15px;
   }
-}
-
-
-/* admin login modal */
-.modal-header {
-  background-color: #bcb1ac;
-  text-align: center;
-  font-size: 3rem;
-}
-.modal-body {
-  background-color: #d0c8c4;
-}
-.modal-footer {
-  background-color: #bcb1ac;
 }
