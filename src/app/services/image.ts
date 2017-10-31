@@ -8,5 +8,4 @@ export class Image {
   constructor(file: File) {
     this.file = file;
   }
-
 }

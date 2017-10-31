@@ -9,5 +9,4 @@ export class GridImage {
   constructor(file: File) {
     this.file = file;
   }
-
 }

@@ -1,17 +1,14 @@
-
-/* Image slider */
+/* Descriptive paragraph */
 #chocolatesParagraph {
   line-height: 2em;
   margin: 2em 3em 2em 3em;
   font-size: 115%;
 }
 
-
 /* Image slider */
 div#chocolatesSlider {
   overflow: hidden;
   position: relative;
-  /* float: left; */
   padding: 0;
   max-width: 60vw;
   height: auto;
@@ -20,49 +17,12 @@ div#chocolatesSlider {
   margin-right: -2vw;
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
-  /* border: solid; */
-  /* border-width: 1em; */
-  /* box-shadow: 1px 1px 15px 1px; */
-  /* color: black; */
 }
-
 div#chocolatesSlider figure img {
   width: 16.666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666%;
   position: relative;
   float: left;
 }
-
-/* Links to other pages */
-li {
-  list-style: none;
-  font-size: 150%;
-  margin: 4vh 0 4vh 0;
-  text-align: center;
-}
-
-@media screen and (max-width: 800px){
-  div#chocolatesSlider {
-    overflow: hidden;
-    position: relative;
-    /* float: left; */
-    padding: 0;
-    max-width: 60vw;
-    height: auto;
-    margin: 0 0 0 21vw;
-    background-color: rgba(189,189,189, 0.5);
-    /* border: solid; */
-    /* border-width: 1em; */
-    /* box-shadow: 1px 1px 15px 1px; */
-    /* color: black; */
-  }
-
-  li {
-    list-style: none;
-    font-size: 150%;
-    margin: 4vh 5vw 4vh 0;
-  }
-}
-
 div#chocolatesSlider figure {
   position: relative;
   width: 600%;
@@ -73,7 +33,6 @@ div#chocolatesSlider figure {
   font-size: 0;
   animation: 30s slidy infinite;
 }
-
 @keyframes slidy {
   0%   { left: 0%; }
   15%  { left: 0%; }
@@ -93,7 +52,29 @@ div#chocolatesSlider figure {
   100% { left: -500%; }
 }
 
+/* Links to other pages */
+li {
+  list-style: none;
+  font-size: 150%;
+  margin: 4vh 0 4vh 0;
+  text-align: center;
+}
 
+/* Resize image slider on small screens, and layout of links */
+@media screen and (max-width: 800px){
+  div#chocolatesSlider {
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    max-width: 60vw;
+    height: auto;
+    margin: 0 0 0 21vw;
+    background-color: rgba(189,189,189, 0.5);
+  }
 
-
-
+  li {
+    list-style: none;
+    font-size: 150%;
+    margin: 4vh 5vw 4vh 0;
+  }
+}

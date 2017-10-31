@@ -1,15 +1,15 @@
-#barksPara {
+/* Descriptive paragraph */
+h1 {
   float: right;
   padding-top: 2vw;
   padding-right: 4vw;
-}
-
-h1 {
+  padding-left: 2vw;
   font-size: 100%;
   line-height: 7vh;
   margin-top: 15vh;
 }
 
+/* Image slider */
 div#barksSlider {
   overflow: hidden;
   position: relative;
@@ -23,27 +23,11 @@ div#barksSlider {
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
 }
-
-@media screen and (max-width: 800px){
-  div#barksSlider {
-    overflow: hidden;
-    position: relative;
-    float: left;
-    padding: 0;
-    max-width: 93%;
-    height: auto;
-    padding: 0;
-    margin: 3vh 0 0 3.5vw;
-    background-color: rgba(189,189,189, 0.5);
-  }
-}
-
 div#barksSlider figure img {
   width: 16.666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666%;
   position: relative;
   float: left;
 }
-
 div#barksSlider figure {
   position: relative;
   width: 600%;
@@ -54,8 +38,6 @@ div#barksSlider figure {
   font-size: 0;
   animation: 30s slidy infinite;
 }
-
-
 @keyframes slidy {
   0%   { left: 0%; }
   15%  { left: 0%; }
@@ -73,4 +55,19 @@ div#barksSlider figure {
   95%  { left: -400%; }
 
   100% { left: -500%; }
+}
+
+/* Resize image slider on smaller screens */
+@media screen and (max-width: 800px){
+  div#barksSlider {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    padding: 0;
+    max-width: 93%;
+    height: auto;
+    padding: 0;
+    margin: 3vh 0 0 3.5vw;
+    background-color: rgba(189,189,189, 0.5);
+  }
 }

@@ -1,10 +1,14 @@
 <div class="container-fluid">
   <div class="row">
+
+
+
     <!-- Image of shop -->
     <div [ngClass]="{'col-md-push-7': !isAdmin}" class="col-xs-12 col-md-4 col-md-offset-1">
 
       <!-- If not admin, show image -->
-      <img id="aboutImage1" *ngIf="(!isAdmin && aboutImage1Src) else aboutInputImage1" [src]="aboutImage1Src" [alt]="aboutImage1Description">
+      <img *ngIf="aboutImage1Src && (aboutImage1Link.toLowerCase() == 'na')" id="aboutImage1" [src]="aboutImage1Src" [alt]="aboutImage1Description">
+      <a *ngIf="aboutImage1Src && (aboutImage1Link.toLowerCase() !== 'na')" [href]="aboutImage1Link"><img id="aboutImage1" [src]="aboutImage1Src" [alt]="aboutImage1Description"></a>
 
       <!-- If yes admin, show form to update image -->
       <ng-template #aboutInputImage1>
@@ -45,6 +49,9 @@
       </ng-template>
 
     </div>
+
+
+
     <!-- About paragraph, describes shop -->
     <div [ngClass]="{'col-md-pull-5': !isAdmin}" class="col-xs-12 col-md-7">
 
@@ -65,7 +72,7 @@
 
     </div>
     <!-- End of about paragraph -->
-    <!-- End of column containing image -->
+
 
 
   </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { AuthService } from '../services/auth.service';
 import { ContentService } from '../services/content.service';
@@ -9,7 +9,7 @@ import { ContentService } from '../services/content.service';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
   isAdmin = false;
   loginModel = { email: '', pass: '' };
   loginErrors = { email: '', pass: '' };
@@ -17,6 +17,7 @@ export class FooterComponent implements OnInit {
   footerSocialMedia = { instagram: '', facebook: '' };
   footerParagraphUpdated = false;
   footerSocialMediaUpdated = false;
+
 
 
   constructor(public as: AuthService, public cs: ContentService) {
@@ -29,10 +30,6 @@ export class FooterComponent implements OnInit {
     this.getContent();
   }
 
-
-
-  ngOnInit() {
-  }
 
 
   // Pulls page content from Firebase and assigns it to content based on admin status
@@ -57,6 +54,7 @@ export class FooterComponent implements OnInit {
 
 
 
+  // As an admin, saves the content of the input fields for the social media links, and then shows a success message
   saveFooterSocialMedia() {
     this.footerSocialMediaUpdated = false;
     const thisSaved = this;
@@ -67,6 +65,7 @@ export class FooterComponent implements OnInit {
 
 
 
+  // Logs the admin out through the AuthService function and then reloads the page
   logout() {
     this.as.logout();
     location.reload();

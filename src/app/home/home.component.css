@@ -1,8 +1,10 @@
+/* Div containing home paragraph */
 #homeText {
   color: black;
   padding-bottom: 4vh;
 }
 
+/* Image slider */
 div#homeSlider {
   overflow: hidden;
   position: relative;
@@ -15,13 +17,11 @@ div#homeSlider {
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
 }
-
 div#homeSlider figure img {
   width: 16.666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666%;
   position: relative;
   float: left;
 }
-
 div#homeSlider figure {
   position: relative;
   width: 600%;
@@ -32,8 +32,6 @@ div#homeSlider figure {
   font-size: 0;
   animation: 30s slidy infinite;
 }
-
-
 @keyframes slidy {
   0%   { left: 0%; }
   15%  { left: 0%; }

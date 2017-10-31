@@ -1,12 +1,13 @@
 <div class="container-fluid">
-  <!-- Chocolates paragraph, provides overview of products -->
+
+
+
   <div class="row">
 
-    <!-- End of row for chocolates paragraph-->
 
-    <!-- Image slider -->
+
+    <!-- If not small screen and not admin, show paragraph here, above the image slider -->
     <div *ngIf="!mobiBool" class="col-xs-12">
-      <!-- If not admin, show paragraph -->
       <h1 *ngIf="!isAdmin else inputChocolatesParagraph" id="chocolatesParagraph"></h1>
       <!-- If yes admin, show form to update content -->
       <ng-template #inputChocolatesParagraph>
@@ -21,6 +22,7 @@
       </ng-template>
     </div>
 
+    <!-- Image slider -->
     <div class="col-xs-12 col-md-8" id="chocolatesSlider">
       <figure>
         <img *ngIf="chocolatesImage1Src && (chocolatesImage1Link.toLowerCase() == 'na')" [src]="chocolatesImage1Src" [alt]="chocolatesImage1Description">
@@ -55,37 +57,29 @@
       </figure>
     </div>
 
+    <!-- If small screen and not admin, show paragraph here, below the image slider -->
     <div class="col-xs-12" *ngIf="mobiBool">
-      <!-- If not admin, show paragraph -->
       <h1 *ngIf="!isAdmin" id="chocolatesParagraph"></h1>
-      <!-- If yes admin, show form to update content -->
     </div>
+
     <!-- Links to pages -->
     <div class="col-xs-12 col-md-4" id="selection">
       <ul>
-        <li>
-          <a [routerLink]="['/truffles']">Gourmet Truffles</a>
-        </li>
-        <li>
-          <a [routerLink]="['/barks']">Barks and Toffee</a>
-        </li>
-        <li>
-          <a [routerLink]="['/assorted']">Assorted Chocolates</a>
-        </li>
-        <li>
-          <a [routerLink]="['/fudge']">Fudge</a>
-        </li>
-        <li>
-          <a [routerLink]="['/otherchoc']">Other Chocolates</a>
-        </li>
-        <li>
-          <a [routerLink]="['/seasonal']">Seasonal Treats</a>
-        </li>
+        <li><a [routerLink]="['/truffles']">Gourmet Truffles</a></li>
+        <li><a [routerLink]="['/barks']">Barks and Toffee</a></li>
+        <li><a [routerLink]="['/assorted']">Assorted Chocolates</a></li>
+        <li><a [routerLink]="['/fudge']">Fudge</a></li>
+        <li><a [routerLink]="['/otherchoc']">Other Chocolates</a></li>
+        <li><a [routerLink]="['/seasonal']">Seasonal Treats</a></li>
       </ul>
     </div>
 
+
+
   </div>
   <!-- End of row for image slider and links-->
+
+
 
 
 
@@ -297,6 +291,8 @@
 
   </div>
   <!-- End of admin-only image -->
+
+
 
 </div>
 <!-- End of container-fluid -->

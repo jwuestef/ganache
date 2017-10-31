@@ -2,8 +2,10 @@
 
 
 
+  <!-- Truffle Image Cards -->
   <div class="row">
     <div class="col-xs-12 col-md-7 whiteRow">
+
       <h3 style="text-align: center; font-family:PT Serif;">Ganache Chocolatier Truffle Card</h3>
       <div class="flex">
 
@@ -318,55 +320,36 @@
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+  <!-- End of Truffles Card -->
 
-
+>>>>>>> 36b6ee5ca8f1651b05b68bb68dc9bacd7aad772a
 
       </div>
     </div>
-      <!-- Truffles paragraph, describes shop -->
-  <div id="trufflePara">
-      <div class="col-xs-12 col-md-4">
-        <!-- If not admin, show paragraph -->
-        <h1 *ngIf="!isAdmin else inputTrufflesParagraph" id="trufflesParagraph"></h1>
-        <!-- If yes admin, show form to update content -->
-        <ng-template #inputTrufflesParagraph>
-          <texteditor [elementId]="'trufflesParagraph'"></texteditor>
-          <br>
-          <button class="btn btn-md updateTextButton" (click)="saveTrufflesParagraph()">Update</button>
-          <!-- After successful update, show confirmation -->
-          <span class="alert-success updated" *ngIf="trufflesParagraphUpdated">
-            <strong>Updated</strong>
-            <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
-          </span>
-        </ng-template>
+
+    <!-- Truffles paragraph, describes available truffles -->
+    <div id="trufflePara">
+        <div class="col-xs-12 col-md-4">
+          <!-- If not admin, show paragraph -->
+          <h1 *ngIf="!isAdmin else inputTrufflesParagraph" id="trufflesParagraph"></h1>
+          <!-- If yes admin, show form to update content -->
+          <ng-template #inputTrufflesParagraph>
+            <texteditor [elementId]="'trufflesParagraph'"></texteditor>
+            <br>
+            <button class="btn btn-md updateTextButton" (click)="saveTrufflesParagraph()">Update</button>
+            <!-- After successful update, show confirmation -->
+            <span class="alert-success updated" *ngIf="trufflesParagraphUpdated">
+              <strong>Updated</strong>
+              <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+            </span>
+          </ng-template>
+        </div>
       </div>
+
+      <!-- End of row -->
     </div>
-    <!-- End of row for truffles paragraph-->
-  </div>
-
-
-
-
-
-
-
-
-  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
-  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
-  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
-  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
-  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
-
-  <!-- For the truffles paragraph, I copied it from another page that had a full-width 12 column wide paragraph -->
-  <!-- Right now the paragraph below has it's own row, and is col-md-12 -->
-  <!-- THIS WILL HAVE TO CHANGE per Aaron's styling for page layout -->
-
-  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
-  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
-  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
-  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
-  <!-- ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION *** ATTENTION -->
-
 
 
 

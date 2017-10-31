@@ -1,3 +1,4 @@
+/* Descriptive paragraph */
 h1 {
   line-height: 7vh;
   margin-top: 10vh;
@@ -5,6 +6,7 @@ h1 {
   font-size: 110%;
 }
 
+/* Image slider */
 div#seasonalSlider {
   overflow: hidden;
   position: relative;
@@ -16,31 +18,11 @@ div#seasonalSlider {
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
 }
-
-@media screen and (max-width: 800px){
-  div#seasonalSlider {
-    overflow: hidden;
-    position: relative;
-    padding: 0;
-    max-width: 93%;
-    height: auto;
-    margin: 3vh 0 0 3.5vw;
-    background-color: rgba(189,189,189, 0.5);
-  }
-
-  h1 {
-    line-height: 7vh;
-    margin: 3vh 0 0 3.5vw;
-    font-size: 110%;
-  }
-}
-
 div#seasonalSlider figure img {
   width: 16.666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666%;
   position: relative;
   float: left;
 }
-
 div#seasonalSlider figure {
   position: relative;
   width: 600%;
@@ -51,8 +33,6 @@ div#seasonalSlider figure {
   font-size: 0;
   animation: 30s slidy infinite;
 }
-
-
 @keyframes slidy {
   0%   { left: 0%; }
   15%  { left: 0%; }
@@ -72,3 +52,21 @@ div#seasonalSlider figure {
   100% { left: -500%; }
 }
 
+/* Resize image slider on smaller screens */
+@media screen and (max-width: 800px){
+  div#seasonalSlider {
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    max-width: 93%;
+    height: auto;
+    margin: 3vh 0 0 3.5vw;
+    background-color: rgba(189,189,189, 0.5);
+  }
+
+  h1 {
+    line-height: 7vh;
+    margin: 3vh 0 0 3.5vw;
+    font-size: 110%;
+  }
+}
