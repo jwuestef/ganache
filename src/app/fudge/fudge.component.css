@@ -1,3 +1,12 @@
+/* Descriptive paragraph */
+h1 {
+  line-height: 7vh;
+  margin-top: 10vh;
+  margin-left: 5vw;
+  font-size: 100%;
+}
+
+/* Image slider */
 div#fudgeSlider {
   overflow: hidden;
   position: relative;
@@ -11,13 +20,11 @@ div#fudgeSlider {
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
 }
-
 div#fudgeSlider figure img {
   width: 16.666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666%;
   position: relative;
   float: left;
 }
-
 div#fudgeSlider figure {
   position: relative;
   width: 600%;
@@ -28,8 +35,6 @@ div#fudgeSlider figure {
   font-size: 0;
   animation: 30s slidy infinite;
 }
-
-
 @keyframes slidy {
   0%   { left: 0%; }
   15%  { left: 0%; }
@@ -49,13 +54,7 @@ div#fudgeSlider figure {
   100% { left: -500%; }
 }
 
-h1 {
-  line-height: 7vh;
-  margin-top: 10vh;
-  margin-left: 3vw;
-  font-size: 100%;
-}
-
+/* Adjust image slider and chart on smaller screens */
 @media screen and (max-width: 800px) {
   div#fudgeSlider {
     overflow: hidden;
@@ -72,9 +71,6 @@ h1 {
     text-align: center;
   }
 
-}
-#fudgeParagraph{
-  margin-left: 5vw;
 }
 
 /* When page gets too wide, display the table contents as a single column */

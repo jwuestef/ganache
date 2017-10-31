@@ -1,120 +1,4 @@
-/* #trufflesPara {
-  position: flex;
-  text-align: center;
-  padding-top: 2vw;
-}
-
-h1 {
-  font-size: 110%;
-  margin-top: 7vh;
-}
-
-body {
-  font-size: .5rem;
-  background: #0b0c0a;
-  margin: 0;
-}
-
-.container-fluid {
-  margin: 30px;
-}
-
-.whiteRow {
-  border: white solid 2px;
-}
-
-@media screen and (max-width: 800px){
-  .container-fluid{
-    margin: 0;
-  }
-  .whiteRow {
-    border:white solid 1px;
-    padding: 0 3vw 0 3vw;
-    margin: 5vh 0 1vh 0;
-  }
-}
-
-.flex {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  justify-content: space-between;
-  flex-flow: row wrap;
-  align-items: stretch;
-  align-content: stretch;
-  margin: auto;
-}
-
-div p {
-  line-height: .9em;
-  overflow: hidden;
-}
-
-.noBorder {
-  width: 16%;
-  height: auto;
-  margin-bottom: 5px;
-  text-align: center;
-  font-size: .8em;
-}
-
-.cropper {
-  width: 100%;
-  height: 100%;
-}
-
-.cropper img {
-  width: 100%;
-  transition: transform .6s ease .1s;
-  -webkit-transition: -webkit-transform .6s ease .1s;
-}
-
-.cropper:hover {
-  transform: scale(1.5);
-  -webkit-transform: scale(1.5);
-  transition: transform .4s ease;
-}
-
-.showme {
-  display: none;
-  background-color: #fff;
-}
-
-.showhim:hover .showme {
-  display: inline-block;
-}
-
-.showhim:hover {
-  border: black solid 1px;
-  background-color: white;
-}
-.addItalics {
-  font-style: italic;
-} */
-#trufflesImg {
-  /* border: 1em solid black; */
-  margin: 5vh 3vw 5vh 2em;
-  overflow: hidden;
-}
-
-img {
-  width: 100%;
-}
-
-#trufflesPara{
-  line-height: 7vh;
-  margin-right: 3vw;
-}
-
-h1 {
-  line-height: 7vh;
-  margin: 4vh 2em 5vh 3vw;
-  font-size: 100%;
-}
-
+/* Overall page settings */
 body {
   font-size: .5rem;
   background: #0b0c0a;
@@ -125,11 +9,25 @@ body {
   margin: 30px;
 }
 
+/* Small images in ID card */
+img {
+  width: 100%;
+}
+
+/* Descriptive paragraph */
+h1 {
+  line-height: 7vh;
+  margin: 4vh 2em 5vh 3vw;
+  font-size: 100%;
+}
+
+/* Row containing image grid */
 .whiteRow {
   border: white solid 2px;
   /* margin-left: 1vw;   */
 }
 
+/* Div containing image grid */
 .flex {
   display: -webkit-box;
   display: -moz-box;
@@ -144,57 +42,66 @@ body {
   margin: auto;
 }
 
+/* Text inside image grid */
 div p {
   line-height: .9em;
   overflow: hidden;
 }
 
+/* Div containing individual grid images */
 .noBorder {
   width: 16%;
   height: auto;
   margin-bottom: 5px;
-  /* border:1px solid #effffe; */
   text-align: center;
   font-size: .8em;
 }
 
+/* Div containing individual grid images */
 .cropper {
   width: 100%;
   height: 100%;
-  /* border:1px solid #effffe; */
 }
 
+/* Grid image */
 .cropper img {
   width: 100%;
   transition: transform .6s ease .1s;
   -webkit-transition: -webkit-transform .6s ease .1s;
 }
 
+/* Hover on grid image */
 .cropper:hover {
   transform: scale(1.5);
   -webkit-transform: scale(1.5);
   transition: transform .4s ease;
 }
 
+/* Popup of grid images */
 .showme {
   display: none;
   background-color: #fff;
 }
 
+/* Popup of grid images */
 .showhim:hover .showme {
   display: inline-block;
 }
 
+/* Popup for grid images */
 .showhim:hover {
   border: black solid 1px;
   background-color: white;
 }
 
+/* Conditional class to italicize titles */
 .addItalics {
   font-style: italic;
 }
-@media screen and (min-width:1000px){
+
+/* Adds margin to image grid on large screens */
+@media screen and (min-width: 1000px) {
   .whiteRow {
-    margin-left:5vw;
+    margin-left: 5vw;
   }
 }

@@ -1,6 +1,6 @@
+<!-- Desktop navbar -->
 <div class="container-fluid" id="desktopNav">
   <header role="banner">
-    <!-- <img id="logo-main" src="../../assets/genuineLogo.png" width="400" alt="Ganache Logo" > -->
     <img id="logo-main" *ngIf="(!isAdmin && navbarImage1Src)" width="400" [src]="navbarImage1Src" [alt]="navbarImage1Description">
     <nav id="navbar-primary" class="navbar navbar-default" role="navigation">
       <div class="nav navbar-nav deskyNav">
@@ -42,6 +42,7 @@
 
 
 
+<!-- Mobile navbar -->
 <nav id="mobileNav" class="navbar navbar-inverse navbar-static-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -68,7 +69,6 @@
         <li (click)="mobileNav('/seasonal')"><a>&nbsp;&nbsp;&nbsp;&nbsp;Seasonal</a></li>
         <li (click)="shopNav()"><a>Shop</a></li>
         <li (click)="mobileNav('/contact')"><a>Contact Us</a></li>
-
       </ul>
     </div>
 </div>
