@@ -56,17 +56,6 @@ h1 {
   font-size: 100%;
 }
 
-<<<<<<< HEAD
-h1 td{
-  max-width: 40%;
-}
-
-#fudgeChart{
-  position: inline;
-}
-
-=======
->>>>>>> 1a9310bfd1bdcdcb4e9ee9f18801f65eaf17694c
 @media screen and (max-width: 800px) {
   div#fudgeSlider {
     overflow: hidden;
