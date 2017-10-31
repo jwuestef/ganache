@@ -60,6 +60,10 @@ h1 td{
   max-width: 40%;
 }
 
+#fudgeChart{
+  position: inline;
+}
+
 @media screen and (max-width: 800px) {
   div#fudgeSlider {
     overflow: hidden;
