@@ -56,6 +56,7 @@ h1 {
   font-size: 100%;
 }
 
+<<<<<<< HEAD
 h1 td{
   max-width: 40%;
 }
@@ -64,11 +65,12 @@ h1 td{
   position: inline;
 }
 
+=======
+>>>>>>> 1a9310bfd1bdcdcb4e9ee9f18801f65eaf17694c
 @media screen and (max-width: 800px) {
   div#fudgeSlider {
     overflow: hidden;
     position: relative;
-    /* float: left; */
     padding: 0;
     max-width: 93%;
     height: auto;
@@ -77,7 +79,15 @@ h1 td{
   }
 
   #fudgeChart {
-    overflow: scroll;
+    overflow: hidden;
     text-align: center;
+  }
+
+}
+
+/* When page gets too wide, display the table contents as a single column */
+@media screen and (max-width: 1100px) {
+  :host ::ng-deep td {
+    padding-left:30vw;
   }
 }

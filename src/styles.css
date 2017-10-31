@@ -1,21 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
 /* You can add global styles to this file, and also import other style files */
 
+
+/* Basic site-wide settings */
 body {
   background-color: #bcb1ac;
   font-family: 'Lato', sans-serif;
-  /* font-family: 'avenir' sans-serif; */
 }
 
 h1, h2, h3, h4, h5, h6, p, footer {
-  /* text-align: center; */
   font-family: 'Lato', sans-serif;
   line-height: 4.5rem;
-}
-
-/* Sets page height, so footer is always at the bottom of the page or content */
-#wrapper{
-  min-height: calc(100vh - 50px);
 }
 
 /* Colors links and removes their underlines */
@@ -28,12 +22,16 @@ a:hover {
   color: #453c18;
 }
 
-
 /* Stops blue border from appearing around selected buttons (important for navbar)*/
 button:focus, li:focus {
   outline:0;
 }
 
+
+/* Sets page height, so footer is always at the bottom of the page or content */
+#wrapper {
+  min-height: calc(100vh - 50px);
+}
 
 /* Used to warn admin when database save or upload failed */
 .alert-danger {
@@ -75,13 +73,14 @@ button:focus, li:focus {
   margin: -2px;
 }
 .imageUploadingForm:first-of-type {
-  /* margin-left: 2px; */
+  margin-left: 2px;
 }
 .uploadImageButton {
   background-color: #785c44;
   color: #bcb1ac;
+  outline:0;
 }
-.uploadImageButton:hover {
-  background-color: #4E2E28;
-  color: #bcb1ac;
+.uploadImageButton:hover, .uploadImageButton:active, .uploadImageButton:focus {
+  background-color: #4E2E28 !important;
+  color: #bcb1ac !important;
 }

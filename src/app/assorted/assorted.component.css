@@ -31,7 +31,7 @@ body {
 
 .whiteRow {
   border: white solid 2px;
-  margin-left: 1vw;
+  /* margin-left: 1vw;   */
 }
 
 .flex {

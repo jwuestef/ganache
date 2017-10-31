@@ -1,7 +1,11 @@
 <div class="container-fluid">
   <!-- Chocolates paragraph, provides overview of products -->
   <div class="row">
-    <div class="col-md-12">
+
+    <!-- End of row for chocolates paragraph-->
+
+    <!-- Image slider -->
+    <div *ngIf="!mobiBool" class="col-xs-12">
       <!-- If not admin, show paragraph -->
       <h1 *ngIf="!isAdmin else inputChocolatesParagraph" id="chocolatesParagraph"></h1>
       <!-- If yes admin, show form to update content -->
@@ -11,48 +15,72 @@
         <button class="btn btn-md updateTextButton" (click)="saveChocolatesParagraph()">Update</button>
         <!-- After successful update, show confirmation -->
         <span class="alert-success updated" *ngIf="chocolatesParagraphUpdated">
-          <strong>Updated</strong> <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
+          <strong>Updated</strong>
+          <i class="fa fa-check-circle fa-1x" aria-hidden="true"> </i>
         </span>
       </ng-template>
     </div>
-  </div>
-  <!-- End of row for chocolates paragraph-->
 
-
-
-  <!-- Image slider -->
-  <div class="row">
     <div class="col-xs-12 col-md-8" id="chocolatesSlider">
       <figure>
         <img *ngIf="chocolatesImage1Src && (chocolatesImage1Link.toLowerCase() == 'na')" [src]="chocolatesImage1Src" [alt]="chocolatesImage1Description">
-        <a *ngIf="chocolatesImage1Src && (chocolatesImage1Link.toLowerCase() !== 'na')" [href]="chocolatesImage1Link"><img [src]="chocolatesImage1Src" [alt]="chocolatesImage1Description"></a>
+        <a *ngIf="chocolatesImage1Src && (chocolatesImage1Link.toLowerCase() !== 'na')" [href]="chocolatesImage1Link">
+          <img [src]="chocolatesImage1Src" [alt]="chocolatesImage1Description">
+        </a>
 
         <img *ngIf="chocolatesImage2Src && (chocolatesImage2Link.toLowerCase() == 'na')" [src]="chocolatesImage2Src" [alt]="chocolatesImage2Description">
-        <a *ngIf="chocolatesImage2Src && (chocolatesImage2Link.toLowerCase() !== 'na')" [href]="chocolatesImage2Link"><img [src]="chocolatesImage2Src" [alt]="chocolatesImage2Description"></a>
+        <a *ngIf="chocolatesImage2Src && (chocolatesImage2Link.toLowerCase() !== 'na')" [href]="chocolatesImage2Link">
+          <img [src]="chocolatesImage2Src" [alt]="chocolatesImage2Description">
+        </a>
 
         <img *ngIf="chocolatesImage3Src && (chocolatesImage3Link.toLowerCase() == 'na')" [src]="chocolatesImage3Src" [alt]="chocolatesImage3Description">
-        <a *ngIf="chocolatesImage3Src && (chocolatesImage3Link.toLowerCase() !== 'na')" [href]="chocolatesImage3Link"><img [src]="chocolatesImage3Src" [alt]="chocolatesImage3Description"></a>
+        <a *ngIf="chocolatesImage3Src && (chocolatesImage3Link.toLowerCase() !== 'na')" [href]="chocolatesImage3Link">
+          <img [src]="chocolatesImage3Src" [alt]="chocolatesImage3Description">
+        </a>
 
         <img *ngIf="chocolatesImage4Src && (chocolatesImage4Link.toLowerCase() == 'na')" [src]="chocolatesImage4Src" [alt]="chocolatesImage4Description">
-        <a *ngIf="chocolatesImage4Src && (chocolatesImage4Link.toLowerCase() !== 'na')" [href]="chocolatesImage4Link"><img [src]="chocolatesImage4Src" [alt]="chocolatesImage4Description"></a>
+        <a *ngIf="chocolatesImage4Src && (chocolatesImage4Link.toLowerCase() !== 'na')" [href]="chocolatesImage4Link">
+          <img [src]="chocolatesImage4Src" [alt]="chocolatesImage4Description">
+        </a>
 
         <img *ngIf="chocolatesImage5Src && (chocolatesImage5Link.toLowerCase() == 'na')" [src]="chocolatesImage5Src" [alt]="chocolatesImage5Description">
-        <a *ngIf="chocolatesImage5Src && (chocolatesImage5Link.toLowerCase() !== 'na')" [href]="chocolatesImage5Link"><img [src]="chocolatesImage5Src" [alt]="chocolatesImage5Description"></a>
+        <a *ngIf="chocolatesImage5Src && (chocolatesImage5Link.toLowerCase() !== 'na')" [href]="chocolatesImage5Link">
+          <img [src]="chocolatesImage5Src" [alt]="chocolatesImage5Description">
+        </a>
 
         <img *ngIf="chocolatesImage1Src && (chocolatesImage1Link.toLowerCase() == 'na')" [src]="chocolatesImage1Src" [alt]="chocolatesImage1Description">
-        <a *ngIf="chocolatesImage1Src && (chocolatesImage1Link.toLowerCase() !== 'na')" [href]="chocolatesImage1Link"><img [src]="chocolatesImage1Src" [alt]="chocolatesImage1Description"></a>
+        <a *ngIf="chocolatesImage1Src && (chocolatesImage1Link.toLowerCase() !== 'na')" [href]="chocolatesImage1Link">
+          <img [src]="chocolatesImage1Src" [alt]="chocolatesImage1Description">
+        </a>
       </figure>
     </div>
 
+    <div class="col-xs-12" *ngIf="mobiBool">
+      <!-- If not admin, show paragraph -->
+      <h1 *ngIf="!isAdmin" id="chocolatesParagraph"></h1>
+      <!-- If yes admin, show form to update content -->
+    </div>
     <!-- Links to pages -->
     <div class="col-xs-12 col-md-4" id="selection">
       <ul>
-        <li><a [routerLink]="['/truffles']">Gourmet Truffles</a></li>
-        <li><a [routerLink]="['/barks']">Barks and Toffee</a></li>
-        <li><a [routerLink]="['/assorted']">Assorted Chocolates</a></li>
-        <li><a [routerLink]="['/fudge']">Fudge</a></li>
-        <li><a [routerLink]="['/otherchoc']">Other Chocolates</a></li>
-        <li><a [routerLink]="['/seasonal']">Seasonal Treats</a></li>
+        <li>
+          <a [routerLink]="['/truffles']">Gourmet Truffles</a>
+        </li>
+        <li>
+          <a [routerLink]="['/barks']">Barks and Toffee</a>
+        </li>
+        <li>
+          <a [routerLink]="['/assorted']">Assorted Chocolates</a>
+        </li>
+        <li>
+          <a [routerLink]="['/fudge']">Fudge</a>
+        </li>
+        <li>
+          <a [routerLink]="['/otherchoc']">Other Chocolates</a>
+        </li>
+        <li>
+          <a [routerLink]="['/seasonal']">Seasonal Treats</a>
+        </li>
       </ul>
     </div>
 
@@ -74,15 +102,23 @@
           [alt]="chocolatesImage1Description">
         <br>
         <br>
-        <label for="chocolatesImage1FileInput">Image to upload: <em style="color: red;">*required</em></label>
+        <label for="chocolatesImage1FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
         <input type="file" id="chocolatesImage1FileInput" (change)="chocolatesDetectImage1($event)">
-        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
+        <p>
+          <em>*For proper appearance, image should have a 2:1 aspect ratio.</em>
+        </p>
         <br>
-        <label for="chocolatesImage1Description">Description of image: <em style="color: red;">*required</em></label>
+        <label for="chocolatesImage1Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
         <input type="text" id="chocolatesImage1Description" placeholder="description" [(ngModel)]="chocolatesImage1Description">
         <br>
         <br>
-        <label for="chocolatesImage1Link">Link: <em style="color: gray">*optional</em></label>
+        <label for="chocolatesImage1Link">Link:
+          <em style="color: gray">*optional</em>
+        </label>
         <input type="text" id="chocolatesImage1Link" placeholder="Enter &#34;NA&#34; for no link" [(ngModel)]="chocolatesImage1Link">
         <br>
         <br>
@@ -102,15 +138,23 @@
           [alt]="chocolatesImage2Description">
         <br>
         <br>
-        <label for="chocolatesImage2FileInput">Image to upload: <em style="color: red;">*required</em></label>
+        <label for="chocolatesImage2FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
         <input type="file" id="chocolatesImage2FileInput" (change)="chocolatesDetectImage2($event)">
-        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
+        <p>
+          <em>*For proper appearance, image should have a 2:1 aspect ratio.</em>
+        </p>
         <br>
-        <label for="chocolatesImage2Description">Description of image: <em style="color: red;">*required</em></label>
+        <label for="chocolatesImage2Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
         <input type="text" id="chocolatesImage2Description" placeholder="description" [(ngModel)]="chocolatesImage2Description">
         <br>
         <br>
-        <label for="chocolatesImage2Link">Link: <em style="color: gray">*optional</em></label>
+        <label for="chocolatesImage2Link">Link:
+          <em style="color: gray">*optional</em>
+        </label>
         <input type="text" id="chocolatesImage2Link" placeholder="Enter &#34;NA&#34; for no link" [(ngModel)]="chocolatesImage2Link">
         <br>
         <br>
@@ -138,15 +182,23 @@
           [alt]="chocolatesImage3Description">
         <br>
         <br>
-        <label for="chocolatesImage3FileInput">Image to upload: <em style="color: red;">*required</em></label>
+        <label for="chocolatesImage3FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
         <input type="file" id="chocolatesImage3FileInput" (change)="chocolatesDetectImage3($event)">
-        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
+        <p>
+          <em>*For proper appearance, image should have a 2:1 aspect ratio.</em>
+        </p>
         <br>
-        <label for="chocolatesImage3Description">Description of image: <em style="color: red;">*required</em></label>
+        <label for="chocolatesImage3Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
         <input type="text" id="chocolatesImage3Description" placeholder="description" [(ngModel)]="chocolatesImage3Description">
         <br>
         <br>
-        <label for="chocolatesImage3Link">Link: <em style="color: gray">*optional</em></label>
+        <label for="chocolatesImage3Link">Link:
+          <em style="color: gray">*optional</em>
+        </label>
         <input type="text" id="chocolatesImage3Link" placeholder="Enter &#34;NA&#34; for no link" [(ngModel)]="chocolatesImage3Link">
         <br>
         <br>
@@ -166,15 +218,23 @@
           [alt]="chocolatesImage4Description">
         <br>
         <br>
-        <label for="chocolatesImage4FileInput">Image to upload: <em style="color: red;">*required</em></label>
+        <label for="chocolatesImage4FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
         <input type="file" id="chocolatesImage4FileInput" (change)="chocolatesDetectImage4($event)">
-        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
+        <p>
+          <em>*For proper appearance, image should have a 2:1 aspect ratio.</em>
+        </p>
         <br>
-        <label for="chocolatesImage4Description">Description of image: <em style="color: red;">*required</em></label>
+        <label for="chocolatesImage4Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
         <input type="text" id="chocolatesImage4Description" placeholder="description" [(ngModel)]="chocolatesImage4Description">
         <br>
         <br>
-        <label for="chocolatesImage4Link">Link: <em style="color: gray">*optional</em></label>
+        <label for="chocolatesImage4Link">Link:
+          <em style="color: gray">*optional</em>
+        </label>
         <input type="text" id="chocolatesImage4Link" placeholder="Enter &#34;NA&#34; for no link" [(ngModel)]="chocolatesImage4Link">
         <br>
         <br>
@@ -202,15 +262,23 @@
           [alt]="chocolatesImage5Description">
         <br>
         <br>
-        <label for="chocolatesImage5FileInput">Image to upload: <em style="color: red;">*required</em></label>
+        <label for="chocolatesImage5FileInput">Image to upload:
+          <em style="color: red;">*required</em>
+        </label>
         <input type="file" id="chocolatesImage5FileInput" (change)="chocolatesDetectImage5($event)">
-        <p><em>*For proper appearance, image should have a 2:1 aspect ratio.</em></p>
+        <p>
+          <em>*For proper appearance, image should have a 2:1 aspect ratio.</em>
+        </p>
         <br>
-        <label for="chocolatesImage5Description">Description of image: <em style="color: red;">*required</em></label>
+        <label for="chocolatesImage5Description">Description of image:
+          <em style="color: red;">*required</em>
+        </label>
         <input type="text" id="chocolatesImage5Description" placeholder="description" [(ngModel)]="chocolatesImage5Description">
         <br>
         <br>
-        <label for="chocolatesImage5Link">Link: <em style="color: gray">*optional</em></label>
+        <label for="chocolatesImage5Link">Link:
+          <em style="color: gray">*optional</em>
+        </label>
         <input type="text" id="chocolatesImage5Link" placeholder="Enter &#34;NA&#34; for no link" [(ngModel)]="chocolatesImage5Link">
         <br>
         <br>

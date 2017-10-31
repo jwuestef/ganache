@@ -78,6 +78,15 @@ export class FudgeComponent implements OnInit {
         // Otherwise, set the content of the regularly displayed fields
         $('#fudgeParagraph').html(pageContent.fudgeParagraph);
         $('#fudgeChart').html(pageContent.fudgeChart);
+        // If it's a small screen, put each item in the table on it's own row
+        if (window.screen.width < 1100) {
+          $.each($('td'), function(index, element) {
+            const wrapper = document.createElement('tr');
+            const myDiv = element;
+            wrapper.appendChild(myDiv.cloneNode(true));
+            myDiv.parentNode.replaceChild(wrapper, myDiv);
+          });
+        }
       }
       // The image gets displayed regardless of admin status
       thisSaved.fudgeImage1Src = pageContent.image1.url;
