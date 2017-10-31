@@ -7,6 +7,7 @@ import {
   Output
 } from '@angular/core';
 
+
 @Component({
   selector: 'texteditor',
   template: `<textarea id="{{elementId}}"></textarea>`
@@ -16,6 +17,8 @@ export class TexteditorComponent implements AfterViewInit, OnDestroy {
   @Output() onEditorKeyup = new EventEmitter<any>();
 
   editor;
+
+
 
   ngAfterViewInit() {
     tinymce.init({
@@ -91,10 +94,12 @@ export class TexteditorComponent implements AfterViewInit, OnDestroy {
     });
   }
 
+
+
   ngOnDestroy() {
     tinymce.remove(this.editor);
   }
+
+
+
 }
-
-
-

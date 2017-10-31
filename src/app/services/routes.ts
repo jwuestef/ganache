@@ -9,6 +9,7 @@ import { AssortedComponent } from '../assorted/assorted.component';
 import { SeasonalComponent } from '../seasonal/seasonal.component';
 import { TrufflesComponent } from '../truffles/truffles.component';
 
+
 export const routes = [
   {
     path: '',
