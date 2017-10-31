@@ -127,7 +127,6 @@ body {
 
 .whiteRow {
   border: white solid 2px;
-  margin-left:5vw;
   /* margin-left: 1vw;   */
 }
 
@@ -193,4 +192,9 @@ div p {
 
 .addItalics {
   font-style: italic;
+}
+@media screen and (min-width:1000px){
+  .whiteRow {
+    margin-left:5vw;
+  }
 }
