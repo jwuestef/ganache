@@ -94,7 +94,7 @@ div p {
 .addItalics {
   font-style: italic;
 } */
-#assortedImg {
+#trufflesImg {
   /* border: 1em solid black; */
   margin: 5vh 3vw 5vh 2em;
   overflow: hidden;
@@ -104,7 +104,7 @@ img {
   width: 100%;
 }
 
-#assortedPara{
+#trufflesPara{
   line-height: 7vh;
   margin-right: 3vw;
 }
@@ -127,6 +127,7 @@ body {
 
 .whiteRow {
   border: white solid 2px;
+  margin-left:5vw;
   /* margin-left: 1vw;   */
 }
 
