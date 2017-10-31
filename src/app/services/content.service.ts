@@ -2,9 +2,10 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import * as firebase from 'firebase';
+import { Router } from '@angular/router';
+
 import { Image } from './image';
 import { GridImage } from './gridImage';
-import { Router } from '@angular/router';
 
 
 @Injectable()
@@ -13,13 +14,9 @@ export class ContentService {
 
 
   // The contructor function runs automatically on service load, each and every time it's called
-  constructor(public afd: AngularFireDatabase, public fms: FlashMessagesService, public router:Router) {
+  constructor(public afd: AngularFireDatabase, public fms: FlashMessagesService, public router: Router) { }
 
-  }
 
-  aboutNav() {
-    this.router.navigate(['/about']);
-  }
 
   // Retrieves and returns content for a particular page from Firebase
   getPageContent(pageName) {

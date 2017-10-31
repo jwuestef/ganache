@@ -33,7 +33,7 @@ export class NavbarComponent implements OnInit {
   mobileNav(path) {
     this.router.navigate([path]);
   }
-  shopNav(){
+  shopNav() {
     window.location.href = 'https://shop.ganachechocolatier.org/';
   }
   ngOnInit() {
