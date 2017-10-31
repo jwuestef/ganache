@@ -73,6 +73,9 @@ h1 {
   }
 
 }
+#fudgeParagraph{
+  margin-left: 5vw;
+}
 
 /* When page gets too wide, display the table contents as a single column */
 @media screen and (max-width: 1100px) {
