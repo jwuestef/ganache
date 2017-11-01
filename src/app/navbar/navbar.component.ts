@@ -37,6 +37,11 @@ export class NavbarComponent implements OnInit {
     window.location.href = 'https://shop.ganachechocolatier.org/';
   }
   ngOnInit() {
+    //The below jQuery collapses hamburger icon when navigation is executed
+    $('.nav a').on('click', function(){
+      $('.btn-navbar').click(); //bootstrap 2.x
+      $('.navbar-toggle').click() //bootstrap 3.x
+  });
 
     // For admin view, if there are TinyMCE editors on the page when it's navigated away from, it will kick errors
     // So before the navigate command is sent, we first destroy all editors.
