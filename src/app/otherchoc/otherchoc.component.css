@@ -1,15 +1,16 @@
+/* Descriptive paragraph */
 #otherchocPara {
   float: right;
   padding-top: 2vw;
   padding-right: 4vw;
 }
-
 h1 {
   font-size: 100%;
   line-height: 7vh;
   margin-top: 15vh;
 }
 
+/* Image slider */
 div#otherchocSlider {
   overflow: hidden;
   position: relative;
@@ -23,13 +24,11 @@ div#otherchocSlider {
   margin-bottom: 1.5em;
   background-color: rgba(189,189,189, 0.5);
 }
-
 div#otherchocSlider figure img {
   width: 16.666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666%;
   position: relative;
   float: left;
 }
-
 div#otherchocSlider figure {
   position: relative;
   width: 600%;
@@ -40,8 +39,6 @@ div#otherchocSlider figure {
   font-size: 0;
   animation: 30s slidy infinite;
 }
-
-
 @keyframes slidy {
   0%   { left: 0%; }
   15%  { left: 0%; }
@@ -61,6 +58,7 @@ div#otherchocSlider figure {
   100% { left: -500%; }
 }
 
+/* Resize image slider on smaller screens */
 @media screen and (max-width: 800px){
   div#otherchocSlider {
     overflow: hidden;

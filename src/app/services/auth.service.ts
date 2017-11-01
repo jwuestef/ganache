@@ -10,9 +10,7 @@ export class AuthService {
 
 
   // The contructor function runs automatically on service load, each and every time it's called
-  constructor(public afa: AngularFireAuth, public router: Router, public afd: AngularFireDatabase) {
-
-  }
+  constructor(public afa: AngularFireAuth, public router: Router, public afd: AngularFireDatabase) { }
 
 
 

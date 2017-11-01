@@ -1,31 +1,33 @@
 <div class="container-fluid">
-<div class="row">
-  <!-- Image slider -->
-  <div [ngClass]="{'col-md-push-6': !isAdmin}" class="col-xs-12 col-md-6" id="fudgeSlider">
-    <figure>
-      <img *ngIf="fudgeImage1Src && (fudgeImage1Link.toLowerCase() == 'na')" [src]="fudgeImage1Src" [alt]="fudgeImage1Description">
-      <a *ngIf="fudgeImage1Src && (fudgeImage1Link.toLowerCase() !== 'na')" [href]="fudgeImage1Link"><img [src]="fudgeImage1Src" [alt]="fudgeImage1Description"></a>
-
-      <img *ngIf="fudgeImage2Src && (fudgeImage2Link.toLowerCase() == 'na')" [src]="fudgeImage2Src" [alt]="fudgeImage2Description">
-      <a *ngIf="fudgeImage2Src && (fudgeImage2Link.toLowerCase() !== 'na')" [href]="fudgeImage2Link"><img [src]="fudgeImage2Src" [alt]="fudgeImage2Description"></a>
-
-      <img *ngIf="fudgeImage3Src && (fudgeImage3Link.toLowerCase() == 'na')" [src]="fudgeImage3Src" [alt]="fudgeImage3Description">
-      <a *ngIf="fudgeImage3Src && (fudgeImage3Link.toLowerCase() !== 'na')" [href]="fudgeImage3Link"><img [src]="fudgeImage3Src" [alt]="fudgeImage3Description"></a>
-
-      <img *ngIf="fudgeImage4Src && (fudgeImage4Link.toLowerCase() == 'na')" [src]="fudgeImage4Src" [alt]="fudgeImage4Description">
-      <a *ngIf="fudgeImage4Src && (fudgeImage4Link.toLowerCase() !== 'na')" [href]="fudgeImage4Link"><img [src]="fudgeImage4Src" [alt]="fudgeImage4Description"></a>
-
-      <img *ngIf="fudgeImage5Src && (fudgeImage5Link.toLowerCase() == 'na')" [src]="fudgeImage5Src" [alt]="fudgeImage5Description">
-      <a *ngIf="fudgeImage5Src && (fudgeImage5Link.toLowerCase() !== 'na')" [href]="fudgeImage5Link"><img [src]="fudgeImage5Src" [alt]="fudgeImage5Description"></a>
-
-      <img *ngIf="fudgeImage1Src && (fudgeImage1Link.toLowerCase() == 'na')" [src]="fudgeImage1Src" [alt]="fudgeImage1Description">
-      <a *ngIf="fudgeImage1Src && (fudgeImage1Link.toLowerCase() !== 'na')" [href]="fudgeImage1Link"><img [src]="fudgeImage1Src" [alt]="fudgeImage1Description"></a>
-    </figure>
-  </div>
+  <div class="row">
 
 
-  <!-- Fudge paragraph and chart, describes fudge -->
 
+    <!-- Image slider -->
+    <div [ngClass]="{'col-md-push-6': !isAdmin}" class="col-xs-12 col-md-6" id="fudgeSlider">
+      <figure>
+        <img *ngIf="fudgeImage1Src && (fudgeImage1Link.toLowerCase() == 'na')" [src]="fudgeImage1Src" [alt]="fudgeImage1Description">
+        <a *ngIf="fudgeImage1Src && (fudgeImage1Link.toLowerCase() !== 'na')" [href]="fudgeImage1Link"><img [src]="fudgeImage1Src" [alt]="fudgeImage1Description"></a>
+
+        <img *ngIf="fudgeImage2Src && (fudgeImage2Link.toLowerCase() == 'na')" [src]="fudgeImage2Src" [alt]="fudgeImage2Description">
+        <a *ngIf="fudgeImage2Src && (fudgeImage2Link.toLowerCase() !== 'na')" [href]="fudgeImage2Link"><img [src]="fudgeImage2Src" [alt]="fudgeImage2Description"></a>
+
+        <img *ngIf="fudgeImage3Src && (fudgeImage3Link.toLowerCase() == 'na')" [src]="fudgeImage3Src" [alt]="fudgeImage3Description">
+        <a *ngIf="fudgeImage3Src && (fudgeImage3Link.toLowerCase() !== 'na')" [href]="fudgeImage3Link"><img [src]="fudgeImage3Src" [alt]="fudgeImage3Description"></a>
+
+        <img *ngIf="fudgeImage4Src && (fudgeImage4Link.toLowerCase() == 'na')" [src]="fudgeImage4Src" [alt]="fudgeImage4Description">
+        <a *ngIf="fudgeImage4Src && (fudgeImage4Link.toLowerCase() !== 'na')" [href]="fudgeImage4Link"><img [src]="fudgeImage4Src" [alt]="fudgeImage4Description"></a>
+
+        <img *ngIf="fudgeImage5Src && (fudgeImage5Link.toLowerCase() == 'na')" [src]="fudgeImage5Src" [alt]="fudgeImage5Description">
+        <a *ngIf="fudgeImage5Src && (fudgeImage5Link.toLowerCase() !== 'na')" [href]="fudgeImage5Link"><img [src]="fudgeImage5Src" [alt]="fudgeImage5Description"></a>
+
+        <img *ngIf="fudgeImage1Src && (fudgeImage1Link.toLowerCase() == 'na')" [src]="fudgeImage1Src" [alt]="fudgeImage1Description">
+        <a *ngIf="fudgeImage1Src && (fudgeImage1Link.toLowerCase() !== 'na')" [href]="fudgeImage1Link"><img [src]="fudgeImage1Src" [alt]="fudgeImage1Description"></a>
+      </figure>
+    </div>
+
+
+    <!-- Fudge paragraph and chart, describes fudge -->
     <div [ngClass]="{'col-md-pull-6': !isAdmin}"class="col-xs-12 col-md-6">
       <!-- If not admin, show paragraph -->
       <h1 *ngIf="!isAdmin else inputFudgeParagraph" id="fudgeParagraph"></h1>
@@ -57,8 +59,8 @@
 
 
 
-
-  <!-- End of row for image slider -->
+  </div>
+  <!-- End of row containing main content -->
 
 
 
@@ -225,6 +227,8 @@
 
   </div>
   <!-- End of admin-only image -->
-</div>
+
+
+
 </div>
 <!-- End of container-fluid -->

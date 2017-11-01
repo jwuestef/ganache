@@ -1,61 +1,39 @@
-form{
+/* Contact Form */
+form {
   text-align: center;
+  margin: 3vh 0 2vh 2vw;
 }
-
-form input{
+form input {
   border: 1px solid #000;
   width:80%;
-  /* margin:-10px; */
 }
-
-form textarea{
+form textarea {
   border: 1px solid #000;
   width:80%
 }
-
-form label{
+form label {
   width:80%;
   text-align: left;
   font-size: 1.3em;
-  margin-top:-12px;
-  margin-bottom:-12px;
+  margin-bottom: -12px;
+  margin-top: .5em;
 }
 
-iframe{
-display:block;
-margin:auto;
-/* border: 10px solid #000000; */
-}
-
-#booton{
+/* Continue button to submit contact form */
+#booton {
   background-color:#4E2E28;
   width:30%;
 }
 
-/* .divMargy{
-  margin: 1em 0em 1em 0em;
-} */
+/* Embedded google map */
+iframe {
+  display:block;
+  margin:auto;
+}
 
-/* h5 {
-  text-align: center;
-} */
-
-#contacts1Paragraph {
+/* 3 paragraph columns contents */
+#contacts1Paragraph, #contacts2Paragraph, #contact3Paragraph, h1 {
   font-size: 100%;
+  margin-left: 3vw;
 }
 
-#contacts2Paragraph {
-  font-size: 100%;
-}
-
-#contact3Paragraph {
-  font-size: 100%;
-}
-
-#contactForm label{
-  margin-top: .5em;
-}
-
-h1 {
-  font-size: 100%;
-}

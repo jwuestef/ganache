@@ -5,12 +5,14 @@ header[role="banner"] #logo-main {
   margin: 10px auto;
   align-content: center;
 }
+
 /* The background leaves rounded corners if not transparent, padding sharpens it */
 #navbar-primary {
   background: transparent;
   padding: 0 2% 0 2%;
   border: none;
 }
+
 /* The font family is defined to override global styles */
 #navbar-primary.navbar-default .navbar-nav {
   width: 100%;
@@ -19,17 +21,16 @@ header[role="banner"] #logo-main {
   font-family: 'PT Serif', serif;
   color:#000;
 }
-
 #navbar-primary.navbar-default .navbar-nav>li {
   display: inline-block;
   float: none;
 }
-
 #navbar-primary.navbar-default .navbar-nav>li>a {
   padding-left: 0px;
   padding-right: 0px;
 }
-/* gradient defined for a variety of web browsers */
+
+/* Gradient defined for a variety of web browsers */
 .deskyNav {
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#4f3727), to(white));
   background-image: -webkit-linear-gradient(top, #fff, #7b6b63, #574232, #4f3727, #4f3727, #4f3727,#574232,#7b6b63, #fff);
@@ -42,29 +43,25 @@ header[role="banner"] #logo-main {
   position: flex;
 }
 
+/* Highlight link on hover */
 .dropdown:focus {
   border: 20px solid #000;
 }
 
-/* .navvy {
-  color: black;
-  margin: 0 5px 0 5px;
-  text-align: center;
-} */
-
-nav{
+/* Whole nav component */
+nav {
   font-size: 1.6em;
   display: block;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
-#navImg{
+/* Center the main navbar logo */
+#navImg {
   align-content: center;
 }
 
 /* Dropdown Button */
-
 .dropbtn {
   background-color: transparent;
   color: #000;
@@ -76,7 +73,6 @@ nav{
 }
 
 /* The container <div> - needed to position the dropdown content */
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -84,11 +80,9 @@ nav{
   margin-right: 2.5%;
   margin-bottom:1px;
   margin-top: 2px;
-
 }
 
 /* Dropdown Content (Hidden by Default) */
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -100,14 +94,12 @@ nav{
 }
 
 /* Links inside the dropdown */
-
 .dropdown-content a {
   color: black;
   padding: 0 5px 0 5px;
   display: block;
   font-size: .9em;
 }
-
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
@@ -116,21 +108,20 @@ nav{
 }
 
 /* Show the dropdown menu on hover */
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-
 /* Change the background color of the dropdown button when the dropdown content is shown */
-
 .dropdown:hover .dropbtn {
   background-color: transparent;
 }
 
+/* Remove border from dropdown */
 ul {
   border: none;
 }
+
 /* Rules for mobile navbar begin here */
 .navbar-inverse{
   background-color: transparent;
