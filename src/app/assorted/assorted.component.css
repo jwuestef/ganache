@@ -97,3 +97,16 @@ div p {
 .addItalics {
   font-style: italic;
 }
+
+/* Resize grid image popups on smaller screens */
+@media screen and (max-width:1000px){
+  .cropper:hover {
+    transform: scale(1.7);
+    -webkit-transform: scale(1.7);
+    transition: transform .4s ease;
+  }
+  /* Changes the font-size to allow for more text per line  */
+  .showhim:hover{
+    font-size: .7em;
+  }
+}

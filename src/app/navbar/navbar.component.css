@@ -124,5 +124,12 @@ ul {
 
 /* Rules for mobile navbar begin here */
 .navbar-inverse{
-  background-color:#4f3727;
+  background-color: transparent;
+}
+.brwnBtn{
+  float: left;
+  background-color: #4f3727;
+}
+.droppyDown{
+  background-color: #4f3727;
 }
