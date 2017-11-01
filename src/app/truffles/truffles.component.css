@@ -105,27 +105,16 @@ div p {
     margin-left: 5vw;
   }
 }
+
+/* Resize grid image popups on smaller screens */
 @media screen and (max-width:1000px){
   .cropper:hover {
     transform: scale(1.7);
     -webkit-transform: scale(1.7);
     transition: transform .4s ease;
   }
-  /* Below are two possible solutions to the text box displaying narrow and long */
-
-  /* The first is commented out and results in the p tag hanging off the edge of the display viewport */
-
-  /* .showme p{
-    width:50vw;
-    margin: 10vw;
-  } */
-
-  /* The second changes the font-size to allow for more text per line  */
-
+  /* Changes the font-size to allow for more text per line  */
   .showhim:hover{
-    /* border:none; */
     font-size: .7em;
   }
-
-
 }
