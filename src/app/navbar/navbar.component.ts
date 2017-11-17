@@ -36,7 +36,7 @@ export class NavbarComponent implements OnInit {
   }
   // When mobile navbar shop-link is clicked, navigate to outside website
   shopNav() {
-    window.location.href = 'https://shop.ganachechocolatier.org/';
+    window.location.href = 'https://shop.ganachechocolatier.com/';
   }
 
 
@@ -98,7 +98,7 @@ export class NavbarComponent implements OnInit {
 
     $('#shopBtnLink').on('click', function () {
       thisSaved.destroyAllEditors();
-      window.location.href = 'https://shop.ganachechocolatier.org/';
+      window.location.href = 'https://shop.ganachechocolatier.com/';
     });
 
     $('#contactBtnLink').on('click', function () {
