@@ -129,7 +129,7 @@ export class ContactComponent implements OnInit {
     const options = new RequestOptions({ headers: headers });
 
     // Url that we are sending the POST request to
-    const url = 'http://formspree.io/ganachezionsville@gmail.com';
+    const url = 'https://formspree.io/ganachezionsville@gmail.com';
 
     // WRONG
     // const data = {
