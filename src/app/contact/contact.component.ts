@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Http, Response, Headers, RequestOptions, URLSearchParams } from '@angular/http';
 
 import { AuthService } from '../services/auth.service';
 import { ContentService } from '../services/content.service';
@@ -20,11 +21,15 @@ export class ContactComponent implements OnInit {
   contactIframeSrc;
   contactIframeSrcDisplayed;
   contactIframeUpdated = false;
+  contactName;
+  contactPhone;
+  contactEmail;
+  contactComments;
 
 
 
   // The contructor function runs automatically on component load, each and every time it's called
-  constructor(public as: AuthService, public cs: ContentService, public sanitizer: DomSanitizer) {
+  constructor(public as: AuthService, public cs: ContentService, public sanitizer: DomSanitizer, private http: Http) {
     // Check to see if this is the logged in administrator
     this.isAdmin = this.as.isAuthed();
     // Pull updated content from Firebase
@@ -109,6 +114,44 @@ export class ContactComponent implements OnInit {
       thisSaved.contactIframeUpdated = true;
     });
   }
+
+
+
+  // Sends a POST request to Formspree with content of contact form.
+  // Formspree is not compatible with Angular by default, so we have to use the http client
+  postEmail() {
+
+    // Set the header options for the request
+    const headers = new Headers({
+      'Accept': 'application/json',
+      'Content-Type': 'application/x-www-form-urlencoded'
+    });
+    const options = new RequestOptions({ headers: headers });
+
+    // Url that we are sending the POST request to
+    const url = 'http://formspree.io/ganachezionsville@gmail.com';
+
+    // WRONG
+    // const data = {
+    //   name: name,
+    //   email: email,
+    //   message: message
+    // }
+
+    // RIGHT
+    const data = `name=${this.contactName}&phone=${this.contactPhone}&email=${this.contactEmail}&comments=${this.contactComments}`;
+
+    // Actually send the post request, and listen for a response.
+    this.http.post(url, data, options)
+      .subscribe(
+        value => { console.log('Response is: '); console.log(value); },
+        error => { alert('Error in submission - please contact us at ganachezionsville@gmail.com.'); console.log(error); },
+        () => { alert('Submission successful'); }
+      );
+
+  }
+
+
 
 
 

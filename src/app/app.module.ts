@@ -9,6 +9,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import * as $ from 'jquery';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
+import { HttpModule } from '@angular/http';
 
 // Components
 import { AppComponent } from './app.component';
@@ -59,7 +60,8 @@ import { ContentService } from './services/content.service';
     FormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     FlashMessagesModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpModule
   ],
   providers: [
     AngularFireAuth,

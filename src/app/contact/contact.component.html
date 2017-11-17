@@ -43,27 +43,27 @@
         </span>
       </ng-template>
       <div id="conForm">
-      <!-- This is the contact form which forwards through formspree via the action= tag, pointing towards the client's email address -->
-      <form action="https://formspree.io/ganachezionsville@gmail.com" method="POST" id="contactForm">
-        <label for="name">Name</label>
-        <br>
-        <input type="text" name="Name" id="name">
-        <br>
-        <label for="phone">Phone</label>
-        <br>
-        <input type="num" name="Phone" id="phone">
-        <br>
-        <label for="email">Email</label>
-        <br>
-        <input type="email" name="Email">
-        <br>
-        <label for="comments">Comment/Question</label>
-        <br>
-        <textarea id="comments" name="Comments"></textarea>
-        <br>
-        <input type="submit" value="Continue" class="btn btn-primary" id="booton">
-      </form>
-    </div>
+        <!-- This is the contact form which forwards through formspree via the action= tag, pointing towards the client's email address -->
+        <form action="https://formspree.io/ganachezionsville@gmail.com" method="POST" id="contactForm">
+          <label for="name">Name</label>
+          <br>
+          <input type="text" name="Name" id="name" [(ngModel)]="contactName">
+          <br>
+          <label for="phone">Phone</label>
+          <br>
+          <input type="num" name="Phone" id="phone" [(ngModel)]="contactPhone">
+          <br>
+          <label for="email">Email</label>
+          <br>
+          <input type="email" name="Email" [(ngModel)]="contactEmail">
+          <br>
+          <label for="comments">Comment/Question</label>
+          <br>
+          <textarea id="comments" name="Comments" [(ngModel)]="contactComments"></textarea>
+          <br>
+          <input type="submit" (click)="postEmail()" value="Continue" class="btn btn-primary" id="booton">
+        </form>
+      </div>
     </div>
     <!-- End of contact1 paragraph -->
 
